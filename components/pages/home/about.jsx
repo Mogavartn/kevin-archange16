@@ -48,7 +48,7 @@ const About = () => {
 
     return (
         <>
-        <div className="brand__area pt-115">
+        <div className="brand__area pt-50 pb-50">
             <div className="container">
                 <div className="row">
                     <div className="col-xl-12">

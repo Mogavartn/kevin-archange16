@@ -92,11 +92,12 @@ Contact Location Map
 * Footer Five CSS
 * Footer Copyright CSS
 * 404 CSS
+* Animation background
 
 /*==========================================================================
 * Google Fonts
 ==========================================================================*/
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");*/
 /*==========================================================================
 * Common CSS
 ==========================================================================*/
@@ -106,7 +107,20 @@ body {
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
+  /*height: 100vh; /* L'arrière-plan couvre la hauteur de la fenêtre */
+  overflow-x: hidden; /* Empêche les débordements horizontaux */
   text-transform: capitalize;
+  background: url(../img/video/2560x1440-bg.webp) no-repeat center center fixed;
+  background-size: 100%; /* Taille initiale de l'image (100%) */
+  position: relative;
+  background-color: var(--color-7);
+  /*background-image: url(../img/video/backgoundSection.jpg);*/
+}
+#contentAccueil {
+  position: relative;
+  z-index: 1; /* Place le contenu au-dessus de l'arrière-plan */
 }
 
 img {
@@ -270,7 +284,7 @@ h1 {
   line-height: 1.3;
   padding: 0;
   margin: 0;
-  color: var(--text-heading-color);
+  color: var(--text-white);
   font-family: var(--heading-font);
   font-weight: 700;
 }
@@ -280,7 +294,7 @@ h2 {
   line-height: 1.13;
   padding: 0;
   margin: 0;
-  color: var(--text-heading-color);
+  color: var(--text-white);
   font-family: var(--heading-font);
   font-weight: 700;
 }
@@ -300,7 +314,7 @@ h4 {
   line-height: 1.63;
   padding: 0;
   margin: 0;
-  color: var(--text-heading-color);
+  color: var(--text-white);
   font-family: var(--heading-font);
   font-weight: 700;
 }
@@ -310,7 +324,7 @@ h5 {
   line-height: 1.66;
   padding: 0;
   margin: 0;
-  color: var(--text-heading-color);
+  color: var(--text-white);
   font-family: var(--heading-font);
   font-weight: 700;
 }
@@ -320,7 +334,7 @@ h6 {
   line-height: 32px;
   padding: 0;
   margin: 0;
-  color: var(--text-heading-color);
+  color: var(--text-white);
   font-family: var(--heading-font);
   font-weight: 700;
 }
@@ -330,6 +344,7 @@ p {
   line-height: 30px;
   padding: 0;
   margin: 0;
+  color: var(--text-white);
 }
 
 .t-left {
@@ -404,7 +419,7 @@ p {
   line-height: 1.87;
   display: inline-block;
   margin-bottom: 14px;
-  background: rgba(14, 89, 242, 0.1019607843);
+  background: rgba(254, 254, 254, 0.102);
   padding: 1px 25px;
   border-radius: 10px;
 }
@@ -453,7 +468,7 @@ p {
 .btn-eight,
 .btn-nine {
   background: transparent;
-  color: var(--text-heading-color);
+  color: var(--text-white);
   display: inline-flex;
   align-items: center;
   font-size: 18px;
@@ -496,8 +511,8 @@ p {
 .btn-seven:hover,
 .btn-eight:hover,
 .btn-nine:hover {
-  background-color: var(--primary-color-1);
-  color: var(--text-white);
+  background-color: var(--text-white);
+  color: var(--primary-color-3);
 }
 .btn-one:hover i,
 .btn-two:hover i,
@@ -513,6 +528,9 @@ p {
   color: var(--text-white);
 }
 
+.btn-one {
+  background: var(--primary-color-1);
+}
 .btn-two {
   background: var(--primary-color-1);
   color: var(--text-white);
@@ -1044,6 +1062,7 @@ p {
 /* Pour empêcher les éléments de se redimensionner */
 .text__slider .scroll .brand__area-item {
   flex: 0 0 auto;
+  transition: transform 0.3s ease-in-out;
 }
 /* Animation linéaire qui déplace les éléments horizontalement */
 @keyframes scrollLinear {
@@ -1059,7 +1078,9 @@ p {
   display: flex;
   gap: 80px;
 }
-
+.brand__area {
+  background-color: var(--bg-white);
+}
 /* Lorsqu'on survole tout le conteneur .scroll, l'animation se met en pause */
 .text__slider .scroll:hover {
   animation-play-state: paused;
@@ -1068,6 +1089,7 @@ p {
 /* Lorsqu'on survole un des éléments .brand__area-item, l'animation se met également en pause */
 .text__slider .scroll .brand__area-item:hover {
   animation-play-state: paused;
+  transform: scale(1.2);
 }
 
 /* Nous utilisons aussi un événement pour garantir que tout l'ensemble de l'animation s'arrête même lors du survol des éléments */
@@ -1087,8 +1109,10 @@ p {
 * Bantec Color CSS
 ==========================================================================*/
 :root {
-  --body-font: "Space Grotesk", sans-serif;
-  --heading-font: "Space Grotesk", sans-serif;
+  /*--body-font: "Space Grotesk", sans-serif;
+  --heading-font: "Space Grotesk", sans-serif;*/
+  --body-font: "Roboto", sans-serif;
+  --heading-font: "Open Sans", sans-serif;
   --text-white: #FFFFFF;
   --bg-white: #FFFFFF;
   --btn-white: #FFFFFF;
@@ -3275,6 +3299,7 @@ p {
   padding: 0 30px;
   position: relative;
   z-index: 999;
+  background-color: #ffffff;
   /* =============== Header Two Style =============== */
   /* =============== Header Three Style =============== */
   /* =============== Header Four Style =============== */
@@ -3310,10 +3335,11 @@ p {
   transform: rotate(-180deg);
 }
 .header__area-menubar-center-menu ul li a {
-  color: var(--text-heading-color);
+  color: var(--black);
   display: block;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 24px;
+  font-weight: 700;
   transition: all 0.4s ease-out 0s;
   text-transform: capitalize;
   padding: 38px 10px;
@@ -3390,7 +3416,7 @@ p {
   align-items: end;
 }
 .header__area-menubar-center-menu ul li.menu-item-has-children > a i {
-  font-size: 14px;
+  font-size: 15px;
   margin-left: 7px;
   font-weight: 500;
   margin-bottom: 2px;
@@ -3821,7 +3847,7 @@ Responsive Menu Css
   height: 25px;
   display: block;
   font-size: 25px;
-  color: var(--text-heading-color);
+  color: var(--bg-white);
   cursor: pointer;
 }
 .menu__bar-popup {
@@ -3837,7 +3863,7 @@ Responsive Menu Css
   transition: 0.5s;
   transform: translateX(-100%);
   padding: 40px;
-  background: var(--color-5);
+  background: var(--bg-white);
 }
 .menu__bar-popup.show {
   opacity: 1;
@@ -3995,7 +4021,7 @@ Responsive Menu Css
 ==========================================================================*/
 .banner__one {
   padding: 95px 0;
-  background-image: linear-gradient(75deg, #fefefe 52%, var(--color-1) 48%);
+  /*background-image: linear-gradient(75deg, #fefefe 52%, var(--color-1) 48%);*/
   position: relative;
   overflow: hidden;
 }
@@ -4005,7 +4031,7 @@ Responsive Menu Css
 .banner__one .banner-shape-1 {
   width: 86px;
   height: 115px;
-  background-color: var(--primary-color-1);
+  background-color: var(--primary-color-2);
   top: 0;
   left: 46%;
   transform: skew(18deg);
@@ -4013,7 +4039,7 @@ Responsive Menu Css
 .banner__one .banner-shape-2 {
   width: 28px;
   height: 185px;
-  background-color: var(--primary-color-1);
+  background-color: var(--bg-white);
   bottom: 0;
   left: 52.5%;
   transform: skew(15deg);
@@ -4062,13 +4088,18 @@ Responsive Menu Css
   position: relative;
 }
 .banner__one-content h2 {
-  font-size: 72px;
+  font-size: 74px;
   line-height: 83px;
   margin-bottom: 20px;
   text-transform: none;
 }
+.banner__one-content span {
+  color: var(--border-white
+  );
+}
 .banner__one-content h2 span {
-  color: var(--primary-color-1);
+  color: var(--primary-color-2
+  );
 }
 .banner__one-content p {
   font-size: 18px;
@@ -4167,145 +4198,7 @@ Responsive Menu Css
     display: none;
   }
 }
-/*==========================================================================
-* Banner Two CSS
-==========================================================================*/
-.banner__two-single-slider {
-  padding: 155px 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
-  background-position: center center;
-}
-.banner__two .banner-two-shape .shape {
-  position: absolute;
-}
-.banner__two .banner-two-shape-1 {
-  bottom: 12%;
-  right: 23%;
-  z-index: 2;
-  position: absolute;
-}
-.banner__two .banner-two-shape-1 svg {
-  position: absolute;
-  left: 0;
-  fill: var(--primary-color-1);
-  width: 50px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.banner__two .banner-two-shape-2 {
-  top: 215px;
-  left: 45%;
-  width: 150px;
-}
-.banner__two .banner-two-shape-3 {
-  top: 0px;
-  left: 46%;
-}
-.banner__two .banner-two-shape-4 {
-  right: 22%;
-  bottom: 0;
-}
-.banner__two-content {
-  z-index: 3;
-  position: relative;
-  overflow: hidden;
-}
-.banner__two-content h2 {
-  font-size: 74px;
-  color: var(--text-white);
-  font-weight: 700;
-  line-height: 1.13;
-  margin-bottom: 25px;
-  opacity: 0;
-  transition: transform 1500ms ease, opacity 1500ms ease;
-  transform: translateX(200px);
-}
-.banner__two-content h2 .highlighted::before {
-  content: "";
-  width: 111%;
-  height: 4px;
-  bottom: 14%;
-  left: 0;
-  border-radius: 3px;
-}
-.banner__two-content p {
-  color: var(--text-white);
-  text-transform: none;
-  margin-bottom: 42px;
-  opacity: 0;
-  transition: transform 1700ms ease, opacity 1700ms ease;
-  transform: translateX(250px);
-}
-.banner__two-content .btn-two {
-  transform: perspective(400px) translateY(80px);
-  transform-origin: bottom;
-  transition: all 1900ms ease;
-}
-.banner__two-content .btn-two:hover {
-  color: var(--text-white);
-}
-.banner__two-content .btn-two:hover i {
-  color: var(--text-white);
-}
-.banner__two .swiper-slide-active .banner__two-content h2 {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 1500ms;
-}
-.banner__two .swiper-slide-active .banner__two-content p {
-  opacity: 0.7;
-  transform: translateX(0);
-  transition-delay: 1700ms;
-}
-.banner__two .swiper-slide-active .banner__two-content .btn-two {
-  transform: perspective(400px) translateY(0px);
-  transition-delay: 1900ms;
-}
 
-@media (max-width: 1399px) {
-  .banner__two-content h2 {
-    font-size: 68px;
-  }
-}
-@media (max-width: 1199px) {
-  .banner-two-shape-2 {
-    display: none;
-  }
-  .banner-two-shape-3 {
-    display: none;
-  }
-  .banner-two-shape-4 {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .banner-two-shape-1 {
-    display: none;
-  }
-  .banner__two-single-slider {
-    padding: 100px 0;
-    background-color: var(--color-7);
-    background-image: none !important;
-  }
-  .banner__two-content h2 {
-    font-size: 58px;
-  }
-}
-@media (max-width: 575px) {
-  .banner__two {
-    background-image: none;
-    background-color: var(--color-7);
-  }
-}
-@media (max-width: 480px) {
-  .banner__two-content h2 {
-    font-size: 45px;
-  }
-}
 /*==========================================================================
 * Banner Three CSS
 ==========================================================================*/
@@ -11232,3 +11125,20 @@ Responsive Menu Css
   background-color: var(--color-1);
   height: 100vh;
 }/*# sourceMappingURL=style.css.map */
+
+/*===========================================================================
+* Animation background
+=============================================================================*/
+image-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*height: 110vh;*/
+  overflow: hidden;
+  background-position: center center;
+  -moz-background-size: cover;
+       background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/video/2560x1440-bg.webp);
+}

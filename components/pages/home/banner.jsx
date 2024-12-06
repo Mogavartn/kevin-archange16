@@ -25,11 +25,8 @@ const BannerOne = () => {
                                 <div className="grid grid-cols-1 gap-10">
                                     <Link href="/services" className="btn-two">Je veux lancer mon business
                                     </Link>
-                                    <Link href="/services" className="btn-two1">Je veux me former
+                                    <Link href="/services" className="btn-one">Je veux me former
                                     </Link>
-                                    <span className="video-acceuil" >
-                                        <i className="fas fa-play"></i>
-                                    </span>
                                 </div>
                             </div>
                         </div>

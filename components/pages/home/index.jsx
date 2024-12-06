@@ -13,10 +13,20 @@ import Video from "./video";
 import Tab from "./tab/tab";
 import FooterThree from "@/components/layout/footers/footer-three";
 
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import imagesLoaded from 'imagesloaded';
+import ScrollAnimationBackground from "@/components/ScrollAnimationBackground";
+
 const HomeOne = () => {
     return (
         <div>
-            <SEO pageTitle='Technology' />
+            <div>
+                <ScrollAnimationBackground />
+            </div>
+            <div id="contentAccueil">
+            <SEO pageTitle='Formations' />
             <HeaderOne />
             <BannerOne />
             <About />
@@ -29,6 +39,7 @@ const HomeOne = () => {
             <Blog />
             <FooterThree />
             <ScrollToTop />
+            </div>
         </div>
     );
 };
