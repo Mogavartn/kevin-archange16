@@ -8,7 +8,7 @@ const Features = () => {
                 <div className="row justify-content-center text-center">
                     <div className="col-xl-7 col-lg-7 col-md-9 services__one-title">
                         <span className="subtitle-one">Services & Formations</span>
-                        <h2>Offrir des Solutions Concrètes</h2>
+                        <h2>Des solutions concrètes pour avancer 🚀</h2>
                     </div>
                 </div>
                 <div className="row align-items-center justify-content-center">
@@ -20,8 +20,8 @@ const Features = () => {
                                         <i className="flaticon-global-network"></i>
                                     </div>
                                     <div className="services__one-single-service-content">
-                                        <h4>Accompagnement à la Création d'Activité</h4>
-                                        <p>Un coaching personnalisé et des formations pour vous aider à lancer votre entreprise avec succès.</p>
+                                        <h4>Accompagnement à la création d’activité</h4>
+                                        <p>Coaching personnalisé et formations pour lancer votre entreprise comme un pro.</p>
                                     </div>
                                 </div>
                             </div>
@@ -31,8 +31,8 @@ const Features = () => {
                                         <i className="flaticon-mobile-phone-1"></i>
                                     </div>
                                     <div className="services__one-single-service-content">
-                                        <h4>Réorientation Professionnelle</h4>
-                                        <p>Nous vous aidons à acquérir les compétences pour réussir dans une nouvelle direction professionnelle.</p>
+                                        <h4>Réorientation professionnelle</h4>
+                                        <p>On vous aide à trouver votre nouvelle voie et les compétences pour briller.</p>
                                     </div>
                                 </div>
                             </div>
@@ -51,8 +51,8 @@ const Features = () => {
                                         <i className="flaticon-idea"></i>
                                     </div>
                                     <div className="services__one-single-service-content">
-                                        <h4>Formation Continue et Développement de Compétences</h4>
-                                        <p>Des formations pratiques pour développer les compétences nécessaires à votre réussite professionnelle.</p>
+                                        <h4>Formation continue et développement de compétences</h4>
+                                        <p>Des cours pratiques pour booster vos skills et réussir.</p>
                                     </div>
                                 </div>
                             </div>
@@ -62,8 +62,8 @@ const Features = () => {
                                         <i className="flaticon-it"></i>
                                     </div>
                                     <div className="services__one-single-service-content">
-                                        <h4>Solutions de Financement et Prises en Charge</h4>
-                                        <p>Nous vous guidons vers des financements et prises en charge pour rendre nos services accessibles.</p>
+                                        <h4>Solutions de financement accessibles</h4>
+                                        <p>On vous guide vers des aides et financements pour vous simplifier la vie.</p>
                                     </div>
                                 </div>
                             </div>

@@ -3,10 +3,11 @@ import brand2 from "../../../public/assets/img/brand/brand-2.png";
 import brand3 from "../../../public/assets/img/brand/brand-3.png";
 import brand4 from "../../../public/assets/img/brand/brand-4.png";
 import brand5 from "../../../public/assets/img/brand/brand-5.png";
+import brand6 from "../../../public/assets/img/brand/brand-6.png";
+import brand7 from "../../../public/assets/img/brand/brand-7.png";
 import about1 from "../../../public/assets/img/about/about-1.png";
 import about2 from "../../../public/assets/img/about/about-2.png";
 import Link from "next/link";
-import Count from "../common/count";
 import { useEffect } from 'react';
 
 const About = () => {
@@ -80,6 +81,16 @@ const About = () => {
                                             <img src={brand5.src} alt="image" />
                                         </a>
                                     </div>
+                                    <div className="brand__area-item">
+                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                            <img src={brand6.src} alt="image" />
+                                        </a>
+                                    </div>
+                                    <div className="brand__area-item">
+                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                            <img src={brand7.src} alt="image" />
+                                        </a>
+                                    </div>
                                 </div>
                                 <div className="sliders scroll">
                                     <div className="brand__area-item">
@@ -107,6 +118,16 @@ const About = () => {
                                             <img src={brand5.src} alt="image" />
                                         </a>
                                     </div>
+                                    <div className="brand__area-item">
+                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                            <img src={brand6.src} alt="image" />
+                                        </a>
+                                    </div>
+                                    <div className="brand__area-item">
+                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                            <img src={brand7.src} alt="image" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -120,42 +141,45 @@ const About = () => {
                     <div className="col-xl-6 col-lg-5">
                         <div className="about__one-image">
                             <div className="experience-bar animate-y-axis-slider">
-                                <i className="flaticon-consultant"></i>
+                                <i className="fa fa-people-carry"></i>
                                 <div className="experience-bar-right">
                                     <div className="experience-bar-counter">
-                                        <h4 className="counter"><Count number={25}/></h4>
-                                        <span>+</span>
+                                        <h4 className="counter"></h4>
+                                        <span></span>
                                     </div>
-                                    <span>Années d'expérience</span>
+                                    <span>Accompagnement</span>
                                 </div>
                             </div>
                             <div className="about__one-image-wrapper">
-                                <img src={about1.src} alt="image" className="image-1" />
-                                <img src={about2.src} alt="image" className="image-2" />
+                                <img src={about2.src} alt="image" className="image-1" />
+                                <img src={about1.src} alt="image" className="image-2" />
                             </div>
                         </div>
                     </div>
                     <div className="col-xl-6 col-lg-7 col-md-9">
                         <div className="about__one-content">
-                            <span className="subtitle-one">À Propos de nous</span>
-                            <h2>Transformez vos ambitions en réussites concrètes</h2>
-                            <p>Grâce à notre approche unique, nous vous aidons à donner vie à vos projets et à construire une carrière alignée sur vos valeurs. Découvrez comment vos aspirations peuvent devenir des réussites durables, porteuses de sens et de satisfaction personnelle.</p>
+                            <span className="subtitle-one">Qui sommes-nous</span>
+                            <h2>Transformez vos ambitions en réussites concrètes devient
+                                 "Faites passer vos ambitions au niveau supérieur 🚀"</h2>
+                            <p>Avec notre méthode quia faites preuves, on transforme vos idées en succès concrets ! Que ce soit
+                                pour donner vie à un projet ou aligner votre carrière avec vos valeurs, on vous accompagne à
+                                chaque étape. Ensemble, créons des réussites qui ont du sens et un vrai impact.</p>
                             <div className="about__one-content-service">
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Alignement stratégique</span>
+                                    <span>Des objectifs clairs et alignés 😎</span>
                                 </div>
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Création impactante</span>
+                                    <span>Des projets qui marquent 💡</span>
                                 </div>
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Transformation durable</span>
+                                    <span>Une transformation durable 🌱</span>
                                 </div>
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Croissance personnelle</span>
+                                    <span>Un développement personnel boosté ✨</span>
                                 </div>
                             </div>
                             <Link href="/about" className="btn-one">En savoir plus<i className="fas fa-arrow-right"></i></Link>

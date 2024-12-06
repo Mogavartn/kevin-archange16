@@ -1,34 +1,30 @@
 import Link from 'next/link';
 
-const TabContent = () => {
+const TabContent = ({title, description, servicesLeft, servicesRight, buttonText, buttonLink}) => {
     return (
         <>
             <div className="skill__two-tab-details-content">
-                <h2>Comprehensive Digital Assistance</h2>
-                <p>Streamline operations and enhance customer experience with our Digital assistance to efficient tech business management.</p>
+                <h2>{title}</h2>
+                <p>{description}</p>
                 <div className="skill__two-tab-details-content-service">
                     <div className="skill__two-tab-details-content-service-left">
-                        <div className="service">
-                            <i className="far fa-check-circle"></i>
-                            <span>Enhanced Security Features</span>
-                        </div>
-                        <div className="service">
-                            <i className="far fa-check-circle"></i>
-                            <span>Advanced Analytics Tools</span>
-                        </div>
+                        {servicesLeft.map((service, index) => (
+                            <div key={index} className="service">
+                                <i className="far fa-check-circle"></i>
+                                <span>{service}</span>
+                            </div>
+                        ))}
                     </div>
                     <div className="skill__two-tab-details-content-service-right">
-                        <div className="service">
-                            <i className="far fa-check-circle"></i>
-                            <span>Intuitive User Interface</span>
-                        </div>
-                        <div className="service">
-                            <i className="far fa-check-circle"></i>
-                            <span>Real-Time Insights Delivery</span>
-                        </div>
+                        {servicesRight.map((service, index) => (
+                            <div key={index} className="service">
+                                <i className="far fa-check-circle"></i>
+                                <span>{service}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
-                <Link href="/request-quote" className="btn-one">Request A Quote
+                <Link href={buttonLink} className="btn-one">{buttonText}
                     <i className="fas fa-arrow-right"></i>
                 </Link>
             </div>            

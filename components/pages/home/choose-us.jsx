@@ -11,9 +11,11 @@ const ChooseFour = () => {
                     <div className="col-xl-6 col-lg-6 col-md-10">
                         <div className="why-choose-us__three-left">
                             <div className="why-choose-us__three-title">
-                                <span className="subtitle-one">Pourquoi nous choisir</span>
-                                <h2>Une approche unique pour réussir vos projets</h2>
-                                <p>Avec plus de 2100 entrepreneurs accompagnés, notre méthode Ikigai vous aide à aligner passion, talents et valeurs. De plus, nous proposons des solutions de financement accessibles, sans reste à charge dans certains cas.</p>
+                                <span className="subtitle-one">Prêt à réussir avec nous ?</span>
+                                <h2>Une méthode qui fait ses preuves 🔥</h2>
+                                <p>Avec plus de 2 100 entrepreneurs accompagnés, notre méthode basée sur l’Ikigai vous aide à
+                                connecter votre passion, vos talents et vos valeurs. Bonus ? Des solutions de financement
+                                accessibles 💰 , parfois sans reste à charge !</p>
                             </div>
                             <div className="why-choose-us__three-bottom">
                                 <div className="why-choose-us__three-bottom-card">

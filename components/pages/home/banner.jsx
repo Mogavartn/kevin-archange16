@@ -19,9 +19,9 @@ const BannerOne = () => {
                     <div className="row align-items-center gy-4 justify-content-center">
                         <div className="col-xl-6 col-lg-6">
                             <div className="banner__one-content">
-                            <span className="subtitle-one">Booster votre Croissance</span>
+                            <span className="subtitle-one">Boostez votre succès</span>
                                 <h2>Donnez du sens à votre activité (ou vie?) <span>avec l'Ikigai</span></h2>
-                                <p>Des formations et accompagnements personnalisés pour donner du sens à vos projets professionnels.</p>
+                                <p>Boostez vos projets pros avec des formations inspirantes pour trouver ce qui vous fait vibrer ✨</p>
                                 <div className="grid grid-cols-1 gap-10">
                                     <Link href="/services" className="btn-two">Je veux lancer mon business
                                     </Link>

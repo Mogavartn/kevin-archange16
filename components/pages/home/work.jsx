@@ -1,22 +1,23 @@
-import workBg from "../../../public/assets/img/work-process/work-process-bg.png";
+import workBg from "../../../public/assets/img/video/backgoundSection.jpg";
 import image1 from "../../../public/assets/img/work-process/work-process-1.png";
 import image2 from "../../../public/assets/img/work-process/work-process-2.png";
 import Count from "../common/count";
 
 const WorkArea = () => {
     return (
-        <div className="work-process-area__one section-padding" style={{backgroundImage: `url(${workBg.src})`}}>
+        <div className="work-process-area__one section-padding" >
             <div className="container">
                 <div className="row align-items-end work-process-area__one-title">
                     <div className="col-xl-7 col-lg-7">
                         <div className="work-process-area__one-content-left">
-                            <span className="subtitle-one">Processus de travail</span>
-                            <h2>Nos qualités </h2>
+                            <span className="subtitle-one">Votre projet, notre méthode</span>
+                            <h2>Nos Skills ? </h2>
                         </div>
                     </div>
                     <div className="col-xl-4 offset-xl-1 col-lg-4 offset-lg-1">
                         <div className="work-process-area__one-content-right">
-                            <p>Nos cours sont élaborés par des experts passionnés, offrant une expertise pointue dans divers domaines.</p>
+                            <p>Nos cours sont élaborés par des experts passionnés, offrant une expertise pointue et une
+                                expérience enrichissante.</p>
                         </div>
                     </div>
                 </div>
@@ -26,21 +27,21 @@ const WorkArea = () => {
                             <span>01</span>
                             <div className="work-process-area__one-single-work-content">
                                 <h4>Expertise</h4>
-                                <p>Tous nos cours sont conçus par des experts dans leur domaine.</p>
+                                <p>Des contenus conçus par des pros reconnus dans leur domaine.</p>
                             </div>
                         </div>
                         <div className="work-process-area__one-single-work">
                             <span>02</span>
                             <div className="work-process-area__one-single-work-content">
                                 <h4>Flexibilité</h4>
-                                <p>Choisissez parmi une variété de cours couvrant divers sujets.</p>
+                                <p>Un large choix de cours adaptés à vos besoins et objectifs.</p>
                             </div>
                         </div>
                         <div className="work-process-area__one-single-work">
                             <span>03</span>
                             <div className="work-process-area__one-single-work-content">
                                 <h4>Expérience</h4>
-                                <p>Nous avons dispensé plus de 2 100 formations l'année dernière.</p>
+                                <p>Plus de 2 100 formations dispensées l’année dernière.</p>
                             </div>
                         </div>
                     </div>

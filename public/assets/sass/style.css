@@ -314,7 +314,7 @@ h4 {
   line-height: 1.63;
   padding: 0;
   margin: 0;
-  color: var(--text-white);
+  color: var(--primary-color-1);
   font-family: var(--heading-font);
   font-weight: 700;
 }
@@ -413,7 +413,7 @@ p {
   position: relative;
   text-transform: capitalize;
   font-family: var(--heading-font);
-  color: var(--primary-color-1);
+  color: var(--text-white);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.87;
@@ -4604,7 +4604,7 @@ Responsive Menu Css
   margin-bottom: 30px;
 }
 .about__one-content p {
-  color: var(--color-2);
+  color: var(--color-1);
   margin-bottom: 30px;
 }
 .about__one-content-service {
@@ -4619,7 +4619,7 @@ Responsive Menu Css
 }
 .about__one-content-service .service span {
   font-size: 18px;
-  color: var(--color-2);
+  color: var(--color-1);
 }
 .about__one-content-service .service i {
   color: var(--color-3);
@@ -5301,7 +5301,7 @@ Responsive Menu Css
   margin-bottom: 30px;
 }
 .skill__two-tab-details-content p {
-  color: var(--color-2);
+  color: var(--color-1);
   text-transform: none;
   margin-bottom: 30px;
 }
@@ -5317,7 +5317,7 @@ Responsive Menu Css
 }
 .skill__two-tab-details-content-service .service span {
   font-size: 18px;
-  color: var(--color-2);
+  color: var(--color-1);
 }
 .skill__two-tab-details-content-service .service i {
   color: var(--color-3);
@@ -5388,6 +5388,7 @@ Responsive Menu Css
 .services__one-single-service-content h4 {
   font-size: 22px;
   margin-bottom: 12px;
+  color: var(--primary-color-3);
 }
 .services__one-single-service-content p {
   color: var(--color-2);
@@ -7073,6 +7074,7 @@ Responsive Menu Css
 ==========================================================================*/
 .why-choose-us__three {
   background-color: var(--color-7);
+  opacity: 0.9;
 }
 .why-choose-us__three .subtitle-one{
   color: var(--color-1);
@@ -7121,8 +7123,9 @@ Responsive Menu Css
 .why-choose-us__three-bottom-card-counter h4 {
   font-size: 48px;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: none;
+  color: var(--primary-color-3);
 }
 .why-choose-us__three-image {
   position: relative;
@@ -7417,6 +7420,7 @@ Responsive Menu Css
 * Work Process One Style
 ==========================================================================*/
 .work-process-area__one {
+  background-color: #00000054;
   background-position: center center;
   background-size: cover;
   overflow: hidden;
@@ -8248,6 +8252,9 @@ Responsive Menu Css
 /*==========================================================================
 * Blog One Style
 ==========================================================================*/
+.blog__one {
+  background-color:#14121646 ;
+}
 .blog__one-title {
   margin-bottom: 50px;
 }
@@ -9463,7 +9470,7 @@ Responsive Menu Css
   background-color: var(--primary-color-1);
   top: 0;
   left: 0;
-  opacity: 0.2;
+  opacity: 0.8;
 }
 .testimonial__one-left-title {
   z-index: 4;
