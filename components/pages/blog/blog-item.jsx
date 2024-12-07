@@ -20,7 +20,7 @@ const BlogItem = ({currentBlogItems}) => {
 								<span><i className="far fa-comment-dots"></i>Comments ({data.comment})</span>
 							</div>
 							<Link href={`/blog/${data.id}`} className="blog__two-single-blog-content-title">{data.title}</Link>
-							<Link className="btn-three" href={`/blog/${data.id}`}>En savoir plus<i className="fas fa-chevron-right"></i></Link> 
+							<Link className="btn-one" href={`/blog/${data.id}`}>En savoir plus<i className="fas fa-chevron-right"></i></Link> 
 						</div>
 					</div>
 				</div>

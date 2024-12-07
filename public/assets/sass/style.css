@@ -1121,7 +1121,7 @@ p {
   --primary-color-1: #7222db;
   --primary-color-2: #F8E559;
   --primary-color-3: #b124fb;
-  --bg-heading-color: #130526;
+  --bg-heading-color: #130526ee;
   --text-heading-color: #1f0a3b;
   --btn-heading-color: #131313;
   --body-color: #343434;
@@ -4481,7 +4481,7 @@ Responsive Menu Css
 * Page Banner CSS
 ==========================================================================*/
 .page__banner {
-  background-color: var(--bg-heading-color);
+  background-color: #00000057;
   position: relative;
   overflow: hidden;
 }
@@ -8374,6 +8374,7 @@ Responsive Menu Css
   box-shadow: 0px 5px 60px 0px rgba(0, 0, 0, 0.0509803922);
   padding: 20px 40px 40px;
   border-radius: 0 0 20px 20px;
+  background-color: #ffffffd4;
 }
 .blog__two-single-blog-content-top {
   background-color: var(--color-1);
@@ -8406,7 +8407,7 @@ Responsive Menu Css
 }
 .blog__two-single-blog-content .btn-three a i {
   font-size: 14px;
-  color: var(--primary-color-1);
+  color: var(--primary-color-2);
 }
 .blog__two-single-blog-img {
   position: relative;
