@@ -1,8 +1,14 @@
 import banner1 from "../../../public/assets/img/banner/banner-right-img.jpg";
 import bannerShape from "../../../public/assets/img/shape/banner-shape.png";
+import { useState } from "react";
+import ModalVideo from "react-modal-video";
 import Link from "next/link";
 
 const BannerOne = () => {
+    const [openVideo, setOpenVideo] = useState(false);
+    const openVideoModal = () => {
+        setOpenVideo(true);
+    };
     return (
             <>
             <div className="banner__one"> 
@@ -22,12 +28,12 @@ const BannerOne = () => {
                             <span className="subtitle-one">Boostez votre succès</span>
                                 <h2>Donnez du sens à votre activité (ou vie?) <span>avec l'Ikigai</span></h2>
                                 <p>Boostez vos projets pros avec des formations inspirantes pour trouver ce qui vous fait vibrer ✨</p>
-                                <div className="grid grid-cols-1 gap-10">
-                                    <Link href="/services" className="btn-four">Je veux lancer mon business
+                                <div className="grid grid-cols-1 gap-10 justify-content-between">
+                                    <Link href="/services" className="btn-four mr-0  ">Je veux lancer mon business
                                     </Link>
-                                    <Link href="/services" className="btn-one">Je veux me former
+                                    <Link href="/services" className="btn-one ml-10 ">Je veux me former
                                     </Link>
-                                    <Link href="/services" className="btn-one">C'est quoi Ikigai?
+                                    <Link href="" className="btn-one mt-3 btn "  onClick={openVideoModal}>C'est quoi Ikigai?<i className="fas fa-play"></i>
                                     </Link>
                                 </div>
                                 
@@ -46,6 +52,7 @@ const BannerOne = () => {
                         </div>
                     </div>
                 </div>
+                <ModalVideo className='video-modal' channel="youtube" autoplay isOpen={openVideo} videoId="UnV3KK7hQeg" onClose={() => setOpenVideo(false)} />
             </div>
         </>
 
