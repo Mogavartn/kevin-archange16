@@ -114,7 +114,7 @@ body {
   /*background: url(../img/video/2560x1440-bg.webp) no-repeat center center fixed;*/
   background: url(../img/video/2560x1440-bgT1.webp) no-repeat center center fixed;
   /*background: url(../img/video/2560x1440-bgt2.webp) no-repeat center center fixed;*/
-  /*background-size: 100%; /* Taille initiale de l'image (100%) */
+  background-size: 100%; /* Taille initiale de l'image (100%) */
   position: relative;
   /*background-color: var(--color-7);*/
 }

@@ -27,7 +27,8 @@ const BannerOne = () => {
                                     </Link>
                                     <Link href="/services" className="btn-one">Je veux me former
                                     </Link>
-                                    
+                                    <Link href="/services" className="btn-one">C'est quoi Ikigai?
+                                    </Link>
                                 </div>
                                 
                             </div>
