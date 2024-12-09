@@ -109,14 +109,14 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  /*height: 100vh; /* L'arrière-plan couvre la hauteur de la fenêtre */
   overflow-x: hidden; /* Empêche les débordements horizontaux */
   text-transform: capitalize;
-  background: url(../img/video/2560x1440-bg.webp) no-repeat center center fixed;
-  background-size: 100%; /* Taille initiale de l'image (100%) */
+  /*background: url(../img/video/2560x1440-bg.webp) no-repeat center center fixed;*/
+  background: url(../img/video/2560x1440-bgT1.webp) no-repeat center center fixed;
+  /*background: url(../img/video/2560x1440-bgt2.webp) no-repeat center center fixed;*/
+  /*background-size: 100%; /* Taille initiale de l'image (100%) */
   position: relative;
-  background-color: var(--color-7);
-  /*background-image: url(../img/video/backgoundSection.jpg);*/
+  /*background-color: var(--color-7);*/
 }
 #contentAccueil {
   position: relative;
