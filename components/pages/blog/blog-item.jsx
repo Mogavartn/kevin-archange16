@@ -10,7 +10,7 @@ const BlogItem = ({currentBlogItems}) => {
 						<div className="blog__two-single-blog-img">
 							<div className="blog__two-single-blog-date">
 								<span className="date">{data.date}</span>
-								<span className="month">Mar</span>
+								<span className="month">{data.month}</span>
 							</div>
 							<Link href={`/blog/${data.id}`}><img src={data.image.src} alt="blog" /></Link>
 						</div>

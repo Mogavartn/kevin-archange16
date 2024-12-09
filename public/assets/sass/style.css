@@ -9165,7 +9165,9 @@ Responsive Menu Css
   margin-bottom: 28px;
 }
 .blog__details-quote {
-  background-color: var(--color-1);
+  width: 100%;
+  align-items: center;
+  /*background-color: var(--primary-color-2);*/
   padding: 38px 33px;
   margin-bottom: 38px;
 }

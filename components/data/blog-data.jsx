@@ -13,14 +13,29 @@ import avatar5 from "../../public/assets/img/avatar/avatar-5.jpg";
 import avatar6 from "../../public/assets/img/avatar/avatar-6.jpg";
 import avatar7 from "../../public/assets/img/avatar/avatar-7.jpg";
 
+import image01 from "../../public/assets/img/blog/img_car/01.png";
+import image02 from "../../public/assets/img/blog/img_car/02.png";
+import image03 from "../../public/assets/img/blog/img_car/03.png";
+import image04 from "../../public/assets/img/blog/img_car/04.png";
+import image05 from "../../public/assets/img/blog/img_car/05.png";
+
+import image01000 from "../../public/assets/img/blog/img_car/01000.jpg";
+import image02000 from "../../public/assets/img/blog/img_car/02000.jpg";
+import image03000 from "../../public/assets/img/blog/img_car/03000.jpg";
+import image04000 from "../../public/assets/img/blog/img_car/04000.jpg";
+import image05000 from "../../public/assets/img/blog/img_car/05000.jpg";
+
 const blogData = [
     {
         number: '01',
-        id: 'software-development-agility-a-primer',
-        date: '10',
+        id: '1',
+        date: '19',
+        month: 'Nov',
+        year: '2024',
         comment: '2',
         title: 'Software Development Agility a Primer',
-        image: image1,
+        image: image01,
+        images: [image02, image03, image04, image05], // Trois images pour cet élément
         avatar: avatar1,
         name: 'Derya Kurtulus',
         position: 'Heating Expert',
@@ -28,10 +43,13 @@ const blogData = [
     {
         number: '02',
         id: 'ux-ui-designing-the-future-web-design',
-        date: '12',
+        date: '21',
+        month: 'Nov',
+        year: '2024',
         comment: '3',
         title: 'UX/UI Designing the Future Web Design',
-        image: image2,
+        image: image01000,
+        images: [image02000, image03000, image04000, image05000], // Trois images pour cet élément
         avatar: avatar2,
         name: 'Steve Rhodes',
         position: 'Senior Manager',
@@ -39,10 +57,13 @@ const blogData = [
     {
         number: '03',
         id: 'pioneering-contactless-payment-technologies',
-        date: '13',
+        date: '23',
+        month: 'Nov',
+        year: '2024',
         comment: '6',
         title: 'Pioneering Contactless Payment Technologies',
-        image: image3,
+        image: image01000,
+        images: [image02000, image03000, image04000, image05000], // Trois images pour cet élément
         avatar: avatar3,
         name: 'Lisa Thompson',
         position: 'Senior Engineer',
@@ -50,10 +71,13 @@ const blogData = [
     {
         number: '04',
         id: 'balancing-ai-innovation-with-ethical-standards',
-        date: '15',
+        date: '26',
+        month: 'Nov',
+        year: '2024',
         comment: '7',
         title: 'Balancing AI Innovation with Ethical Standards',
-        image: image4,
+        image: image01000,
+        images: [image02000, image03000, image04000, image05000], // Trois images pour cet élément
         avatar: avatar4,
         name: 'David Martinez',
         position: 'Senior Technician',
@@ -61,10 +85,13 @@ const blogData = [
     {
         number: '05',
         id: 'empowering-your-business-with-it-solutions',
-        date: '17',
+        date: '29',
+        month: 'Nov',
+        year: '2024',
         comment: '5',
         title: 'Empowering Your Business with IT Solutions',
-        image: image5,
+        image: image01000,
+        images: [image02000, image03000, image04000, image05000], // Trois images pour cet élément
         avatar: avatar5,
         name: 'Cansu Tuman',
         position: 'Project Manager',
@@ -72,10 +99,13 @@ const blogData = [
     {
         number: '06',
         id: 'harnessing-the-power-of-technology',
-        date: '21',
+        date: '30',
+        month: 'Nov',
+        year: '2024',
         comment: '3',
         title: 'Harnessing the Power of Technology',
-        image: image6,
+        image: image01000,
+        images: [image02000, image03000, image04000, image05000], // Trois images pour cet élément
         avatar: avatar6,
         name: 'Devon Lane',
         position: 'Technician',
@@ -83,10 +113,41 @@ const blogData = [
     {
         number: '07',
         id: 'cloud-computing-solutions-for-business',
-        date: '12',
+        date: '05',
+        month: 'Dec',
+        year: '2024',
         comment: '7',
         title: 'Cloud Computing Solutions for Business',        
-        image: image7,
+        image: image01000,
+        images: [image02000, image03000, image04000, image05000], // Trois images pour cet élément
+        avatar: avatar7,
+        name: 'Courtney Henry',
+        position: 'Sr. Developer',
+    },
+    {
+        number: '08',
+        id: 'cloud-computing-solutions-for-business',
+        date: '05',
+        month: 'Dec',
+        year: '2024',
+        comment: '7',
+        title: 'Cloud Computing Solutions for Business',        
+        image: image01000,
+        images: [image02000, image03000, image04000, image05000], // Trois images pour cet élément
+        avatar: avatar7,
+        name: 'Courtney Henry',
+        position: 'Sr. Developer',
+    },
+    {
+        number: '09',
+        id: 'cloud-computing-solutions-for-business',
+        date: '05',
+        month: 'Dec',
+        year: '2024',
+        comment: '7',
+        title: 'Cloud Computing Solutions for Business',        
+        image: image01000,
+        images: [image02000, image03000, image04000, image05000], // Trois images pour cet élément
         avatar: avatar7,
         name: 'Courtney Henry',
         position: 'Sr. Developer',

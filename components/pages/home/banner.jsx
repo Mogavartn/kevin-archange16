@@ -22,12 +22,14 @@ const BannerOne = () => {
                             <span className="subtitle-one">Boostez votre succès</span>
                                 <h2>Donnez du sens à votre activité (ou vie?) <span>avec l'Ikigai</span></h2>
                                 <p>Boostez vos projets pros avec des formations inspirantes pour trouver ce qui vous fait vibrer ✨</p>
-                                <div className="grid grid-cols-1 gap-10">
-                                    <Link href="/services" className="btn-two">Je veux lancer mon business
+                                <div className="grid grid-cols-1 gap-5 border-1">
+                                    <Link href="/services" className="btn-four">Je veux lancer mon business
                                     </Link>
                                     <Link href="/services" className="btn-one">Je veux me former
                                     </Link>
+                                    
                                 </div>
+                                
                             </div>
                         </div>
                         <div className="col-xl-5 offset-xl-1 col-lg-6 col-md-9">

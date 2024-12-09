@@ -1,3 +1,5 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 import Social from '@/components/data/social';
 import blogData from '@/components/data/blog-data';
@@ -11,6 +13,31 @@ import avatar3 from '../../../public/assets/img/avatar/avatar-3.jpg';
 const BlogSingleMain = ({singleData}) => {
     const category = singleData?.title.split(' ').slice(0, 2).join(' ') + '..';
 
+    const swiperConfig = {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 1,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 3000, // Temps entre les transitions des slides
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2, // Afficher 2 images à la fois sur les écrans moyens
+            spaceBetween: 15,
+          },
+          1200: {
+            slidesPerView: 3, // Afficher 3 images à la fois sur les grands écrans
+            spaceBetween: 20,
+          },
+        },
+      };
+    
+
     return (
         <>
         <div className="blog__details section-padding">
@@ -18,9 +45,9 @@ const BlogSingleMain = ({singleData}) => {
                 <div className="row gy-4 flex-wrap-reverse">
                     <div className="col-xl-8">
                         <div className="blog__details-thumb">
-                            <span className="date">{singleData.date} septembre 2024</span>
+                            <span className="date">{singleData.date} {singleData.month} {singleData.year}</span>
                                 <img className="img__full" src={singleData.image.src} alt="blog-details-image" />
-                            </div>
+                        </div>
                         <div className="blog__details-content">
                             <div className="blog__details-content-top">
                                 <span>
@@ -35,52 +62,18 @@ const BlogSingleMain = ({singleData}) => {
                                     <i className="far fa-comments"></i>
                                     Commentaires (05)
                                 </span>
-                            </div>
-                            <h2>Transforming businesses through technology</h2>
-                            <p>IT Technology is a broad category encompassing all aspects of information the a technology and the application of technology in various industries IT Technology is a broad category encompas aspects of information IT Technology is a broad category encompassing all aspects</p>
-                            <p>IT Technology is a broad category encompassing all aspects of information the a technology and the application of technology in various industries IT  is a broad category </p>
-                            <div className="blog__details-quote">
-                                <div className="blog__details-quote-top">
-                                    <div className="blog__details-quote-avatar">
-                                        <div className="blog__details-quote-avatar-wrapper">
-                                            <img src={avatar1.src} alt="image" />
-                                        </div>
-                                        <h4>Marquer le bois</h4>
-                                    </div>
-                                    <div className="blog__details-quote-icon">
-                                        <img src={icon.src} alt="image" />
-                                    </div>
-                                </div>
-                                <div className="blog__details-quote-content">
-                                    <p>Real estate is a lucrative industry that involves the buying selling and renting properties It the encompasses residential commercial and industrial properties. Real estate agents play a  and crucial role in facilitating at transactions and helping commercial, and industrial</p>
+                                <div className="blog__details-quote">
+                                    <Swiper {...swiperConfig}>
+                                        {singleData.images.map((image, index) => (
+                                            <SwiperSlide key={index}>
+                                            <div className="single-slider">
+                                                <img src={image.src} alt={`Blog Image ${index + 1}`} />
+                                            </div>
+                                            </SwiperSlide>
+                                    ))}
+                                    </Swiper>
                                 </div>
                             </div>
-                            <h2>Showcase your talent with our portfolio</h2>
-                            <p>Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra  Aliquam justo a posuere lobortis, viverra laoreet augue mattis fermentum ullamcorper </p>
-                            <p>IT Technology is a broad category encompassing all aspects of information the a technology and the application of technology in various industries IT Technology is a broad category encompas aspects of information IT Technology is a broad category encompassing all aspects</p>
-                            <div className="blog__details-portfolio">
-                                <div className="blog__details-portfolio-left"> 
-                                    <img src={image.src} alt="image" />
-                                </div>
-                                <ul className="blog__details-portfolio-middle">
-                                    <li> 
-                                        <i className="fas fa-check-circle"></i>
-                                        Data Analytics Consulting
-                                    </li>
-                                    <li> 
-                                        <i className="fas fa-check-circle"></i>
-                                        Mobile App Development Services
-                                    </li>
-                                    <li> 
-                                        <i className="fas fa-check-circle"></i>
-                                        IT Project Management Services
-                                    </li>
-                                </ul>
-                                <div className="blog__details-portfolio-right">
-                                    <img src={image.src} alt="image" />
-                                </div>
-                            </div>
-                            <p>IT Technology is a broad category encompassing all aspects of information the a technology and the application of technology in various industries IT Technology is a broad category encompas aspects of information IT Technology is a broad category encompassing</p>
                         </div>
                         <div className="blog__details-pagination">
                             <div className="blog__details-pagination-btn blog__details-pagination-prev">
