@@ -1,8 +1,25 @@
+import image1 from "../../public/assets/img/portfolio/portfolio-6.jpg";
+import image2 from "../../public/assets/img/portfolio/portfolio-5.jpg";
+import image3 from "../../public/assets/img/portfolio/portfolio-4.jpg";
+import image4 from "../../public/assets/img/portfolio/portfolio-3.jpg";
+import image5 from "../../public/assets/img/portfolio/portfolio-2.jpg";
+import image6 from "../../public/assets/img/portfolio/portfolio-1.jpg";
+import image7 from "../../public/assets/img/portfolio/portfolio-6.jpg";
+import image8 from "../../public/assets/img/portfolio/portfolio-5.jpg";
+import image9 from "../../public/assets/img/portfolio/portfolio-4.jpg";
+import image10 from "../../public/assets/img/portfolio/portfolio-3.jpg";
+import image11 from "../../public/assets/img/portfolio/portfolio-2.jpg";
+import image12 from "../../public/assets/img/portfolio/portfolio-1.jpg";
+import image13 from "../../public/assets/img/portfolio/portfolio-3.jpg";
+import image14 from "../../public/assets/img/portfolio/portfolio-2.jpg";
+import image15 from "../../public/assets/img/portfolio/portfolio-1.jpg";
+import image16 from "../../public/assets/img/portfolio/portfolio-1.jpg";
 
 const servicesData = [
     {
       "id": "01",
       "titre": "LANGUES",
+      "image": image1,
       "liste": [
         {"id": "1", "intitule": "Anglais Débutant - Intermédiaire - Avancé"},
         {"id": "2", "intitule": "Anglais des affaires - Avancé C1-C2"},
@@ -27,6 +44,7 @@ const servicesData = [
     {
         "id": "02",
         "titre": "SOFT SKILLS",
+        "image": image2,
         "liste": [
           {"id": "1", "intitule": "Bâtir son estime de soi et sa confiance en soi"},
           {"id": "2", "intitule": "Gestion du stress"},
@@ -51,6 +69,7 @@ const servicesData = [
     {
         "id": "03",
         "titre": "BUREAUTIQUE",
+        "image": image3,
         "liste": [
           {"id": "1", "intitule": "Excel pour Office 365 Initiation - Intermédiaire - Avancé - Expert"},
           {"id": "2", "intitule": "Excel 2019 Initiation - Intermédiaire - Avancé - Expert"},
@@ -72,6 +91,7 @@ const servicesData = [
       {
         "id": "04",
         "titre": "COMPTABILITE / PAIE",
+        "image": image4,
         "liste": [
           {"id": "1", "intitule": "Comptabilité - Initiation"},
           {"id": "2", "intitule": "Comptabilité - Perfectionnement"},
@@ -90,6 +110,7 @@ const servicesData = [
       {
         "id": "05",
         "titre": "KINESITHERAPIE",
+        "image": image5,
         "liste": [
           {"id": "1", "intitule": "Kinésithérapie en réhabilitation respiratoire"},
           {"id": "2", "intitule": "Bilans et red-flags en kiné respiratoire ambulatoire"},
@@ -107,6 +128,7 @@ const servicesData = [
       {
         "id": "06",
         "titre": "VENTE MARKETING DIGITAL",
+        "image": image6,
         "liste": [
           {"id": "1", "intitule": "Le story telling"},
           {"id": "2", "intitule": "Surmonter les objections"},
@@ -123,6 +145,7 @@ const servicesData = [
       {
         "id": "07",
         "titre": "PRODUCTIVITE DE L’ENTREPRISE",
+        "image": image7,
         "liste": [
           {"id": "1", "intitule": "Les Fondements de la méthode Agile"},
           {"id": "2", "intitule": "Choisir les bons outils d’aide à la décision"},
@@ -139,6 +162,7 @@ const servicesData = [
       {
         "id": "08",
         "titre": "MANAGEMENT / RH",
+        "image": image8,
         "liste": [
           {"id": "1", "intitule": "Recruter sans discriminer"},
           {"id": "2", "intitule": "Accompagnement d’un nouveau salarié"},
@@ -154,6 +178,7 @@ const servicesData = [
       {
         "id": "09",
         "titre": "DEVELOPPEMENT WEB",
+        "image": image9,
         "liste": [
           {"id": "1", "intitule": "HTML5 et CSS3 de Débutant à Expert"},
           {"id": "2", "intitule": "JavaScript - les fondamentaux"},
@@ -168,6 +193,7 @@ const servicesData = [
       {
         "id": "10",
         "titre": "RECONVERSION PROFESSIONNELLE",
+        "image": image10,
         "liste": [
           {"id": "1", "intitule": "Initiation au métier de secrétaire bureautique"},
           {"id": "2", "intitule": "Initiation au métier de secrétaire médicale"},
@@ -180,6 +206,7 @@ const servicesData = [
       {
         "id": "11",
         "titre": "SOINS INFIRMIERS",
+        "image": image11,
         "liste": [
           {"id": "1", "intitule": "Prévention et prise en charge infirmière du risque suicidaire"},
           {"id": "2", "intitule": "Alzheimer et prise en charge infirmière"},
@@ -191,6 +218,7 @@ const servicesData = [
       {
         "id": "12",
         "titre": "CAO -DAO",
+        "image": image12,
         "liste": [
           {"id": "1", "intitule": "Revit 2021 - Les fondamentaux"},
           {"id": "2", "intitule": "Autocad 2021 - Les fondamentaux"},
@@ -201,6 +229,7 @@ const servicesData = [
     {
       "id": "13",
       "titre": "INFOGRAPHIE",
+      "image": image13,
       "liste": [
         {"id": "1", "intitule": "Photoshop CC 2019-2023 (Tous niveaux)"},
         {"id": "2", "intitule": "Illustrator CC 2019-2023 (Tous niveaux)"},
@@ -211,6 +240,7 @@ const servicesData = [
     {
         "id": "14",
         "titre": "SECURITE",
+        "image": image14,
         "liste": [
           {"id": "1", "intitule": "La méthode HACCP"},
           {"id": "2", "intitule": "La cybersécurité en entreprise"},
@@ -220,6 +250,7 @@ const servicesData = [
     {
       "id": "15",
       "titre": "VIDEO",
+      "image": image15,
       "liste": [
         {"id": "1", "intitule": "Adobe Premiere Pro 2020 2024"},
         {"id": "2", "intitule": "Adobe After Effects 2020 2024"}
@@ -228,6 +259,7 @@ const servicesData = [
     {
       "id": "16",
       "titre": "PHARMACIE",
+      "image": image16,
       "liste": [
         {"id": "1", "intitule": "Gestion de l'urgence à l'officine"},
         {"id": "2", "intitule": "Bilan de médication de la théorie à la pratique"}

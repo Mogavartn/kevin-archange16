@@ -81,13 +81,13 @@ const BlogSingleMain = ({singleData}) => {
                                     <i className="fas fa-arrow-left"></i>
                                 </Link>
                                 <div className="blog__details-pagination-text">
-                                    <span>Previous post</span>
+                                    <span>Article précédent</span>
                                     <span>Insure your peace of mind</span>
                                 </div>
                             </div>
                             <div className="blog__details-pagination-btn blog__details-pagination-next">
                                 <div className="blog__details-pagination-text">
-                                    <span>Next post</span>
+                                    <span>Article suivant</span>
                                     <span>Coverage you can count on</span>
                                 </div>
                                 <Link href="/blog/cloud-computing-solutions-for-business" className="pagination-btn">
@@ -95,7 +95,7 @@ const BlogSingleMain = ({singleData}) => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="blog__details-comments">
+                       {/*  <div className="blog__details-comments">
                             <h3>3 commentaires</h3>
                             <div className="blog__details-single-comment">
                                 <div className="blog__details-single-comment-user-pic">
@@ -125,14 +125,14 @@ const BlogSingleMain = ({singleData}) => {
                                     <Link href="#" className="comment-reply-btn">Reply</Link>
                                 </div>
                             </div>
-                        </div>
-                        <form action="#" className="blog__details-comment-form">
+                        </div> */}
+                        {/* <form action="#" className="blog__details-comment-form">
                             <h3>Leave a comment</h3>
                             <p>By using form u agree with the message sorage, you can contact us directly now By using form agree with the message sorage, you can contact us directly now</p>
                             <input type="text" placeholder="Name" />
                             <textarea placeholder="Message here..."></textarea>
                             <input type="submit" value="Sent Message" />
-                        </form>
+                        </form> */}
                     </div>
                     <div className="col-xl-4">
                         <BlogSidebar />

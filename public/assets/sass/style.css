@@ -5453,7 +5453,7 @@ Responsive Menu Css
 }
 .services__two-single-service {
   background: var(--bg-white);
-  padding: 40px 45px;
+  padding: 40px px;
   border-radius: 20px;
   transition: 0.4s;
   overflow: hidden;
@@ -5476,7 +5476,9 @@ Responsive Menu Css
   position: relative;
 }
 .services__two-single-service-content h4 {
-  font-size: 22px;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 20px;
   margin-bottom: 32px;
   text-transform: none;
   transition: 0.4s;
@@ -5502,19 +5504,19 @@ Responsive Menu Css
 .services__two-single-service:hover::before {
   opacity: 1;
   visibility: visible;
-  height: 100%;
+  height: 2%;
 }
 .services__two-single-service:hover .services__two-single-service-icon i {
-  color: var(--text-white);
+  color: var(--color-3);
 }
 .services__two-single-service:hover .services__two-single-service-content h4 {
-  color: var(--text-white);
+  color: var(--color-3);
 }
 .services__two-single-service:hover .services__two-single-service-content a {
-  color: var(--text-white);
+  color: var(--primary-color-3);
 }
 .services__two-single-service:hover .services__two-single-service-content a i {
-  color: var(--text-white);
+  color: var(--primary-color-3);
 }
 
 @media (max-width: 1399px) {
@@ -6853,7 +6855,7 @@ Responsive Menu Css
   right: 10px;
   transform: translateY(-50%);
   font-size: 16px;
-  color: var(--primary-color-1);
+  color: var(--bg-white);
   pointer-events: none; /* L'icône ne doit pas interférer avec l'interaction */
 }
 

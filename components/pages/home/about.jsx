@@ -159,8 +159,8 @@ const About = () => {
                     <div className="col-xl-6 col-lg-7 col-md-9">
                         <div className="about__one-content">
                             <span className="subtitle-one">Qui sommes-nous</span>
-                            <h2>Transformez vos ambitions en réussites concrètes devient
-                                 "Faites passer vos ambitions au niveau supérieur 🚀"</h2>
+                            <h2>Faites passer vos ambitions au niveau supérieur 🚀
+                            </h2>
                             <p>Avec notre méthode quia faites preuves, on transforme vos idées en succès concrets ! Que ce soit
                                 pour donner vie à un projet ou aligner votre carrière avec vos valeurs, on vous accompagne à
                                 chaque étape. Ensemble, créons des réussites qui ont du sens et un vrai impact.</p>

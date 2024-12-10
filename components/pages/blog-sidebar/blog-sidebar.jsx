@@ -31,7 +31,7 @@ const BlogSidebar = () => {
                     ))}
                 </div>
             </div>
-            <div className="all__sidebar-item">
+           {/*  <div className="all__sidebar-item">
                 <h6>Popular Tag</h6>
                 <div className="all__sidebar-item-tag">
                     <ul>
@@ -47,7 +47,7 @@ const BlogSidebar = () => {
                         })}
                     </ul>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
