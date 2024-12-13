@@ -11,7 +11,7 @@ const PortfolioDetailsMain = ({singleData}) => {
                         <div className="project-feature">
                             <h4>Database Management</h4>
                             <div className="project-feature-icon">
-                                <img src={icon.src} alt="image" />
+                                <img src={``} alt="image" />
                             </div>
                         </div>
                     </div>
@@ -19,7 +19,7 @@ const PortfolioDetailsMain = ({singleData}) => {
                         <div className="project-feature">
                             <h4>Cloud Computing</h4>
                             <div className="project-feature-icon">
-                                <img src={icon.src} alt="image" />
+                                <img src={``} alt="image" />
                             </div>
                         </div>
                     </div>
@@ -27,7 +27,7 @@ const PortfolioDetailsMain = ({singleData}) => {
                         <div className="project-feature">
                             <h4>Network Security</h4>
                             <div className="project-feature-icon">
-                                <img src={icon.src} alt="image" />
+                                <img src={``} alt="image" />
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ const PortfolioDetailsMain = ({singleData}) => {
                 <div className="row">
                     <div className="col-xl-12">
                         <div className="project__details-thumb">
-                            <img src={singleData.image.src} alt="image" />
+                            <img src={``} alt="image" />
                             <div className="project-info">
                                 <div className="project-info-top">
                                     <h4>Project Details</h4>
