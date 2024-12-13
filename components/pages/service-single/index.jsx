@@ -7,8 +7,8 @@ import FooterOne from "@/components/layout/footers/footer-one";
 import ScrollToTop from "../common/scroll/scroll-to-top";
 
 const ServicesSingle = ({serviceDetails}) => {
-    const words = serviceDetails.id.split(' ');
-    const firstAndSecondWord = words.slice(0, 2).join(' ');
+    const words = serviceDetails?.id.split(' ');
+    const firstAndSecondWord = words?.slice(0, 2).join(' ');
     return (
         <>
             <SEO pageTitle={serviceDetails?.title} />            

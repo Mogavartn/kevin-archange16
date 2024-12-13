@@ -1,8 +1,9 @@
-import portfolioData from "@/components/data/portfolio-data";
+import portfolioData from "@/components/data/formationsPrincipales";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay} from 'swiper/modules';
 import Link from "next/link";
 
+console.log(portfolioData);
 const Portfolio = () => {
     const slideControl = {
 		spaceBetween: 35,
@@ -29,6 +30,7 @@ const Portfolio = () => {
 				slidesPerView: 3
 			},
 		}
+       
     };
     return (
         <div className="portfolio__one section-padding">
@@ -53,7 +55,7 @@ const Portfolio = () => {
                         <SwiperSlide key={id} className="portfolio__one-single-portfolio single-portfolio">
                             <img src={data.image.src} alt="image" />
                             <div className="portfolio__one-single-portfolio-content">
-                                <h4><Link href={`/portfolio/${data.id}`}>{data.title}</Link></h4>
+                                <h4><Link href={`/portfolio/${data.id}`}>{data.titre}</Link></h4>
                                 <span>{data.subtitle}</span>
                             </div>
                         </SwiperSlide>

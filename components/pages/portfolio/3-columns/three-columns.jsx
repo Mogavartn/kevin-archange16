@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import portfolioData from '../../../data/portfolio-data';
+import portfolioData from '../../../data/formationsPrincipales';
 import Link from 'next/link';
 
 const showPortfolioItem = 5;
