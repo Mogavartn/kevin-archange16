@@ -1,9 +1,9 @@
-import portfolioData from "@/components/data/formationsPrincipales";
+import formationData from "@/components/data/formationt-date";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay} from 'swiper/modules';
 import Link from "next/link";
 
-console.log(portfolioData);
+console.log(formationData);
 const Portfolio = () => {
     const slideControl = {
 		spaceBetween: 35,
@@ -51,11 +51,11 @@ const Portfolio = () => {
             </div>
             <div className="container custom__container">
                 <Swiper modules={[EffectFade, Autoplay]} {...slideControl} className="py-5">
-                    {portfolioData?.map((data, id) => (
+                    {formationData?.map((data, id) => (
                         <SwiperSlide key={id} className="portfolio__one-single-portfolio single-portfolio">
                             <img src={data.image.src} alt="image" />
                             <div className="portfolio__one-single-portfolio-content">
-                                <h4><Link href={`/portfolio/${data.id}`}>{data.titre}</Link></h4>
+                                <h4><Link href={`/services/${data.id}`}>{data.titre}</Link></h4>
                                 <span>{data.subtitle}</span>
                             </div>
                         </SwiperSlide>

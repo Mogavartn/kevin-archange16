@@ -1,7 +1,8 @@
 "use client"
 import { useParams, useRouter } from "next/navigation";
-import formationsData  from '@/components/data/listesFormation';
-import PortfolioDetailsMain from "@/components/pages/portfolio/portfolio-details/portfolio-details";
+import formationsData  from '@/components/data/formationt-date';
+import PortfolioDetails from "@/components/pages/portfolio/portfolio-details";
+import Tab from "@/components/pages/portfolio/portfolio-details/tab/tab";
 
 const ServiceDetails = () => {
    const params = useParams();
@@ -16,15 +17,11 @@ const ServiceDetails = () => {
 
   // Trouve le groupe de formations avec l'ID de formation spécifié
   const selectedFormation = formationsData.find(
-    (formationGroup) => formationGroup.formation_id === id
+    (formationGroup) => formationGroup.id === id
   );
 
-  console.log(selectedFormation);
-
   // Trouve la formation spécifique dans la liste
-  const formation = selectedFormation.liste.find((f) => f.id === id_formation);
-
- console.log(formation);
+  const formation = selectedFormation.liste_langue.find((f) => f.id === id_formation);
 
     if (!formation) {
         return router.push("/404-error");
@@ -32,7 +29,8 @@ const ServiceDetails = () => {
     
     return (
         <>
-            <PortfolioDetailsMain singleData={formation} />
+            <PortfolioDetails singleData={formation}/>
+            <Tab  singleData={formation}/>
         </>
     );
 };

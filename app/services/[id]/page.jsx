@@ -1,6 +1,6 @@
 "use client"
 import { useParams, useRouter } from "next/navigation";
-import ServicegData from '@/components/data/services-data';
+import ServicegData from '@/components/data/formationt-date';
 import ServicesSingle from "@/components/pages/service-single";
 
 const ServiceDetails = () => {

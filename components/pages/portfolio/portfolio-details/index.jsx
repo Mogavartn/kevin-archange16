@@ -9,9 +9,9 @@ import ScrollToTop from "../../common/scroll/scroll-to-top";
 const PortfolioDetails = ({singleData}) => {
     return (
         <>
-            <SEO pageTitle={singleData?.title} />
+            <SEO pageTitle={singleData?.intitule} />
             <HeaderOne />
-            <BreadCrumb title={singleData?.title} innerTitle={singleData?.title} />
+            <BreadCrumb title={singleData?.intitule} innerTitle={singleData?.intitule} />
             <PortfolioDetailsMain singleData={singleData} />
             <FooterOne />
             <ScrollToTop />
