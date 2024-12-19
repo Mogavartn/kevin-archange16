@@ -6,7 +6,6 @@ import Tab from './tab/tab';
 const PortfolioDetailsMain = ({singleData}) => {
     return (
       <>
-        <Tab dataformation = {singleData}/>
       </>
     );
 };

@@ -30,7 +30,6 @@ const ServiceDetails = () => {
     return (
         <>
             <PortfolioDetails singleData={formation}/>
-            <Tab  singleData={formation}/>
         </>
     );
 };

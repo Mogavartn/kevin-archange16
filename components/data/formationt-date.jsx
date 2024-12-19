@@ -26,8 +26,18 @@ const formationsData = [
           "intitule": "Anglais Débutant - Intermédiaire - Avancé",
           "formations": [
             {
-              "nom": "Anglais - Débutant (A1-A2)",
+              "id": "Anglais - Débutant (A1-A2)",
               "niveau": "A1-A2",
+              "image": image1,
+              "description": " Cette formation en Anglais, 100% en ligne, de niveau A1-A2 s’adresse aux apprenants désirant acquérir les bases de la langue anglaise.source de révision ou de validation des connaissances pour ceux qui ont un niveau élevé dans cette langue.",
+              "propiete": {
+                "className":"skill__two-tab nav-link active", 
+                "id":"topic-1-tab" ,
+                "databstoggle":"pill" ,
+                "databstarget":"#topic-1" ,
+                "role":"button" ,
+                "ariacontrols":"topic-1"
+              },
               "objectif": [
                 "Acquérir les fondamentaux de la conjugaison et de la grammaire anglaises",
                 "Acquérir les bases du vocabulaire anglais",
@@ -85,8 +95,18 @@ const formationsData = [
               "formateur": "Disposant de plusieurs années d’expérience dans l’enseignement de cette discipline"
             },
             {
-              "nom": "Anglais - Intermédiaire (B1-B2)",
+              "id": "Anglais - Intermédiaire (B1-B2)",
               "niveau": "B1-B2",
+              "image": image1,
+              "description": "Cette formation en Anglais, 100% en ligne, de niveau B1-B2 s’adresse auxapprenants désirant acquérir un niveau intermédiaire en anglais. Elleconstitue également une source de révision ou de validation desconnaissances pour ceux qui ont un niveau élevé dans cette langue.",
+              "propiete": {
+                "className":"skill__two-tab nav-link", 
+                "id":"topic-2-tab" ,
+                "databstoggle":"pill" ,
+                "databstarget":"#topic-2" ,
+                "role":"button" ,
+                "ariacontrols":"topic-2"
+              },
               "objectif": [
                 "Comprendre les points essentiels d’une discussion quand un langage clair et standard est utilisé",
                 "Être autonome dans la plupart des situations où la langue cible est parlée",
@@ -140,8 +160,18 @@ const formationsData = [
               "formateur": "Disposant de plusieurs années d’expérience dans l’enseignement de cette discipline"
             },
             {
-              "nom": "Anglais - Avancé (C1-C2)",
+              "id": "Anglais - Avancé (C1-C2)",
               "niveau": "C1-C2",
+              "image": image1,
+              "description": "Cette formation en Anglais, 100% en ligne, de niveau C1-C2 s’adresse auxapprenants désirant acquérir un niveau intermédiaire en anglais. Elleconstitue également une source de révision ou de validation desconnaissances pour ceux qui ont un niveau élevé dans cette langue.",
+              "propiete": {
+                "className":"skill__two-tab nav-link", 
+                "id":"topic-3-tab" ,
+                "databstoggle":"pill" ,
+                "databstarget":"#topic-3" ,
+                "role":"button" ,
+                "ariacontrols":"topic-3"
+              },
               "objectif": [
                 "Maîtriser les temps verbaux du présent, passé, et futur",
                 "Utiliser correctement le future perfect et future perfect continuous",
@@ -242,7 +272,8 @@ const formationsData = [
         { 
           "id": "3", 
           "intitule": "Anglais Médical Débutant A1-A2",
-          "formation": {
+          "formations": [
+            {
               "titre": "ANGLAIS - MÉDICAL (A1-A2)",
               "description": "Acquérez les bases de la communication médicale en anglais, de la salutation à la compréhension de documents médicaux. Enrichissez votre vocabulaire avec des termes médicaux spécifiques et développez les compétences nécessaires pour interagir efficacement dans des contextes cliniques anglophones.",
               "objectifs_pedagogiques": [
@@ -323,6 +354,7 @@ const formationsData = [
                 "audiodescription_sous_titrage": "Non disponibles"
               }
             } 
+          ]
         },
         { "id": "4", 
           "intitule": "ESL Beginner - Intermediate - Advanced - Business",
