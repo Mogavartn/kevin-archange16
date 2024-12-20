@@ -19,9 +19,10 @@ const FooterThree = () => {
                         <div className="footer__three-widget">
                             <div className="footer__three-widget-about">
                                 <Link href="/"><img src={logo.src} alt="image" /></Link>
-                                <p>Financial planners help people to gain knowledge about</p>
+                                <p>Lancez votre business ou projet pro avec style 🚀 ! Coaching, formations et conseils pour aligner vos ambitions, vos talents et vos valeurs. Prêt à transformer vos idées en succès ?
+                                </p>
                                 <form action="#">
-                                    <input type="text" name="email" placeholder="Your e-mail" required="" />
+                                    <input type="text" name="email" placeholder="Votre e-mail" required="" />
                                     <button type="submit"><i className="fas fa-paper-plane"></i></button>
                                  </form>
                             </div>
@@ -48,10 +49,10 @@ const FooterThree = () => {
                             <h4 className="ml-60">Resources​</h4>
                             <div className="footer__three-widget-solution">
                                 <ul>
-									<li><Link href="services"><i className="far fa-chevron-double-right"></i>Service</Link></li>
+									<li><Link href="services"><i className="far fa-chevron-double-right"></i>Formations</Link></li>
 									<li><Link href="faq"><i className="far fa-chevron-double-right"></i>FAQ</Link></li>
 									<li><Link href="testimonial"><i className="far fa-chevron-double-right"></i>Testimonial</Link></li>
-									<li><Link href="about"><i className="far fa-chevron-double-right"></i>About Us</Link></li>
+									<li><Link href="about"><i className="far fa-chevron-double-right"></i>A propos</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -66,7 +67,7 @@ const FooterThree = () => {
                                     </div>
                                     <div className="footer__three-widget-location-item-info email">
                                         <span>Email</span>
-                                        <Link href="mailto:helpinfo@gmail.com">helpinfo@gmail.com</Link>
+                                        <Link href="mailto:kevin@jak-company.com">kevin@jak-company.com</Link>
                                     </div>
                                 </div>
                                 <div className="footer__three-widget-location-item">
@@ -75,7 +76,7 @@ const FooterThree = () => {
                                     </div>
                                     <div className="footer__three-widget-location-item-info">
                                         <span>Address</span>
-                                        <Link href="https://google.com/maps">321 Data Drive, Cloud City, WA 67890</Link>
+                                        <Link href="https://google.com/maps">France</Link>
                                     </div>
                                 </div>
                             </div>
@@ -88,13 +89,13 @@ const FooterThree = () => {
                     <div className="row justify-content-between copyright__one-container-area">
                         <div className="col-xl-5 col-lg-6"> 
                             <div className="copyright__one-left">
-                                <p>© ThemeOri  2024 | All Rights Reserved</p>
+                                <p>© ThemeOri  2024 | Ikigai</p>
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-6">
                             <div className="copyright__one-right">
-                                <Link href="/about">Privacy Policy</Link>
-                                <Link href="/contact">Contact Us</Link>
+                                <Link href="/">Privacy Policy</Link>
+                                <Link href="/">Contact Us</Link>
                             </div>
                         </div>
                     </div>

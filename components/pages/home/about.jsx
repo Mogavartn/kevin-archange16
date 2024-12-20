@@ -57,7 +57,7 @@ const About = () => {
                             <div className="text-slide">
                                 <div className="sliders scroll">
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/kevin-jean" target="_blank" rel="noopener noreferrer">
                                             <img src={brand1.src} alt="image" />
                                         </a>
                                     </div>
@@ -67,34 +67,34 @@ const About = () => {
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.instagram.com/kevin_a2ta2l" target="_blank" rel="noopener noreferrer">
                                             <img src={brand3.src} alt="image" />
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://web.facebook.com/profile.php?id=61563587830934" target="_blank" rel="noopener noreferrer">
                                             <img src={brand4.src} alt="image" />
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.youtube.com/@kevin-A2ta2l" target="_blank" rel="noopener noreferrer">
                                             <img src={brand5.src} alt="image" />
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://x.com/Kevin_A2ta2l" target="_blank" rel="noopener noreferrer">
                                             <img src={brand6.src} alt="image" />
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.tiktok.com/@kevin_attallah" target="_blank" rel="noopener noreferrer">
                                             <img src={brand7.src} alt="image" />
                                         </a>
                                     </div>
                                 </div>
                                 <div className="sliders scroll">
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/kevin-jean" target="_blank" rel="noopener noreferrer">
                                             <img src={brand1.src} alt="image" />
                                         </a>
                                     </div>
@@ -104,27 +104,27 @@ const About = () => {
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.instagram.com/kevin_a2ta2l" target="_blank" rel="noopener noreferrer">
                                             <img src={brand3.src} alt="image" />
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://web.facebook.com/profile.php?id=61563587830934" target="_blank" rel="noopener noreferrer">
                                             <img src={brand4.src} alt="image" />
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.youtube.com/@kevin-A2ta2l" target="_blank" rel="noopener noreferrer">
                                             <img src={brand5.src} alt="image" />
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://x.com/Kevin_A2ta2l" target="_blank" rel="noopener noreferrer">
                                             <img src={brand6.src} alt="image" />
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.tiktok.com/@kevin_attallah" target="_blank" rel="noopener noreferrer">
                                             <img src={brand7.src} alt="image" />
                                         </a>
                                     </div>
