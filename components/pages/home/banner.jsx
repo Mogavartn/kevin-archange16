@@ -29,12 +29,10 @@ const BannerOne = () => {
                                 <h2>Donnez du sens à votre activité (ou vie?) <span>avec l'Ikigai</span></h2>
                                 <p>Boostez vos projets pros avec des formations inspirantes pour trouver ce qui vous fait vibrer ✨</p>
                                 <div className="grid grid-cols-1 gap-10 justify-content-between">
-                                    <Link href="/services" className="btn-four mr-0  ">Je veux lancer mon business
+                                    <Link href="https://www.kevin-attallah.com/formation-creation-entreprise" className="btn-two mr-0  teste">Je veux lancer mon business
                                     </Link>
                                     <Link href="/services" className="btn-one ml-10 ">Je veux me former
-                                    </Link>
-                                    <Link href="" className="btn-one mt-3 btn "  onClick={openVideoModal}>C'est quoi Ikigai?<i className="fas fa-play"></i>
-                                    </Link>
+                                    </Link>                                
                                 </div>
                                 
                             </div>
@@ -47,6 +45,9 @@ const BannerOne = () => {
                                         <div className="shape shape-2"></div>
                                     </div>
                                     <img src={banner1.src} alt="banner-image" />
+                                        <span className="video-play-btn-one" onClick={openVideoModal}>
+                                            <i className="fas fa-play"></i>
+                                        </span>
                                 </div>
                             </div>
                         </div>

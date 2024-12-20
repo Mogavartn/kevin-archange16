@@ -52,8 +52,8 @@ const slideControl = {
                                 <div className="single-slider">
                                     <div className="single-slider-user">
                                         <div className="single-slider-user-name">
-                                            <h4>Nasir Al Shakib</h4>
-                                            <span>Content Creator</span>
+                                            <h4>M. Frederic</h4>
+                                            <span>FM SERVICES</span>
                                         </div>
                                         <div className="single-slider-user-rating">
                                             <i className="fas fa-star"></i>
@@ -63,15 +63,15 @@ const slideControl = {
                                             <i className="fas fa-star not-rated"></i>
                                         </div>
                                     </div>
-                                    <p>Their product exceeded his my ro expectations. The the quality and attention to  moutstandin an  and it has become an essential most a education the a man who can do tant clearly</p>
+                                    <p>Super formation, Kevin est au top</p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="single-slider">
                                     <div className="single-slider-user">
                                         <div className="single-slider-user-name">
-                                            <h4>Devon Lane</h4>
-                                            <span>Marketing</span>
+                                            <h4>Anthony J</h4>
+                                            <span>Apprenant</span>
                                         </div>
                                         <div className="single-slider-user-rating">
                                             <i className="fas fa-star"></i>
@@ -81,7 +81,43 @@ const slideControl = {
                                             <i className="fas fa-star not-rated"></i>
                                         </div>
                                     </div>
-                                    <p>Their product exceeded his my ro expectations. The the quality and attention to  moutstandin an  and it has become an essential most a education the a man who can do tant clearly</p>
+                                    <p>Accompagnement pro et sérieux, je recommande!</p>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="single-slider">
+                                    <div className="single-slider-user">
+                                        <div className="single-slider-user-name">
+                                            <h4>Sarah F</h4>
+                                            <span>Citys & Co</span>
+                                        </div>
+                                        <div className="single-slider-user-rating">
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star not-rated"></i>
+                                        </div>
+                                    </div>
+                                    <p>Kevin m'a accompagné de la création de mes statuts jusqu'à mon lancement, merci à lui !</p>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="single-slider">
+                                    <div className="single-slider-user">
+                                        <div className="single-slider-user-name">
+                                            <h4>David B</h4>
+                                            <span>DB prestige</span>
+                                        </div>
+                                        <div className="single-slider-user-rating">
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star not-rated"></i>
+                                        </div>
+                                    </div>
+                                    <p>J’hésitais avant ma formation à me lancer, du coup c'est décidé grâce aux conseils de Kevin</p>
                                 </div>
                             </SwiperSlide>
                         </Swiper>

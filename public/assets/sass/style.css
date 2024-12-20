@@ -532,14 +532,14 @@ p {
   background: var(--primary-color-1);
 }
 .btn-two {
-  background: var(--primary-color-1);
+  background: var(--primary-color-2);
   color: var(--text-white);
   text-transform: none;
   margin-right: 10px;
 }
 .btn-two:hover {
   background-color: transparent;
-  color: var(--text-heading-color);
+  color: var(--text-white);
 }
 .btn-two:hover i {
   color: var(--text-heading-color);
@@ -1119,7 +1119,7 @@ p {
   --border-white: #FFFFFF;
   --black: #000000;
   --primary-color-1: #7222db;
-  --primary-color-2: #F8E559;
+  --primary-color-2: #fb6206;
   --primary-color-3: #b124fb;
   --bg-heading-color: #130526ee;
   --text-heading-color: #1f0a3b;
@@ -4020,7 +4020,7 @@ Responsive Menu Css
 * Banner One CSS
 ==========================================================================*/
 .banner__one {
-  padding: 95px 0;
+  padding: 30px 0;
   /*background-image: linear-gradient(75deg, #fefefe 52%, var(--color-1) 48%);*/
   position: relative;
   overflow: hidden;
@@ -4110,6 +4110,29 @@ Responsive Menu Css
 .banner__one-image-wrapper {
   position: relative;
   border-radius: 50%;
+}
+.banner__one-image-wrapper .video-play-btn-one{
+  position: absolute;
+  top: 86%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--primary-color-2);
+  color: var(--text-white);
+  width: 75px;
+  height: 75px;
+  font-size: 28px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 100;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.banner__one-image-wrapper .video-play-btn-one:hover{
+  background: var(--color-6);
+  width: 80px;
+  height: 80px;
 }
 .banner__one-image-wrapper-shapes {
   width: 100%;

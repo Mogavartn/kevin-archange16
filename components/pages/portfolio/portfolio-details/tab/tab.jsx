@@ -6,13 +6,13 @@ import React from 'react';
 import TabContent from './tab-content';
 
 const Tab = ({singleData}) => {
+
     // Déclaration de la variable d'état
-  const [variable, setVariable] = useState("Anglais - Débutant (A1-A2)");
+  const [variable, setVariable] = useState(singleData.formations[0]?.id);
 
   // Fonction de gestion des clics
   const handleButtonClick = (id) => {
     setVariable(id); // Modifier la valeur de la variable
-    console.log(handleButtonClick);
   };
     return (
         <>
@@ -21,8 +21,8 @@ const Tab = ({singleData}) => {
                     <ul className="row nav mb-5 gy-4 justify-content-around">
                         <div className="row gy-4 mb-4 justify-content-around">
                             {/* Bouton Débutant */}
-                            {singleData.formations.map((formations, id) =>(
-                                <li key={id} className="nav-item col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                            {singleData.formations.map((formations) =>(
+                                <li key={formations.id} className="nav-item col-xl-4 col-lg-4 col-md-4 col-sm-6">
                                     <div className={formations.propiete.className} id={formations.propiete.id} data-bs-toggle={formations.propiete.databstoggle} data-bs-target={formations.propiete.databstarget} role={formations.propiete.role} aria-controls={formations.propiete.ariacontrols}>
                                     <span className="skill__two-tab-icon">
                                         <i className="flaticon-it-service"></i>

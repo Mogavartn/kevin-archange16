@@ -212,10 +212,21 @@ const formationsData = [
         { 
           "id": "2", 
           "intitule": "Anglais des affaires - Avancé C1-C2",
-          "formation": {
-              "titre": "ANGLAIS - AVANCÉ (C1-C2)",
+          "formations": [
+            {
+              "id":"Anglais des affaires - Avancé C1-C2",
+              "niveau":"Avancé C1-C2",
+              "image": image1,
               "description": "Cette formation en Anglais, 100% en ligne, de niveau C1-C2 s’adresse aux apprenants désirant acquérir un niveau intermédiaire en anglais. Elle constitue également une source de révision ou de validation des connaissances pour ceux qui ont un niveau élevé dans cette langue.",
-              "objectifs_pedagogiques": [
+              "propiete": {
+                "className":"skill__two-tab nav-link active", 
+                "id":"topic-1-tab" ,
+                "databstoggle":"pill" ,
+                "databstarget":"#topic-1" ,
+                "role":"button" ,
+                "ariacontrols":"topic-1"
+              },
+              "objectif": [
                 "Maîtriser les temps verbaux du présent, passé, et futur",
                 "Utiliser correctement le future perfect et future perfect continuous",
                 "Réviser les temps passés, futurs, et conditionnels",
@@ -248,13 +259,13 @@ const formationsData = [
                 "Disposer d'un ordinateur ou d’une tablette",
                 "Une connexion Internet"
               ],
-              "modalites_evaluation": [
+              "évaluation": [
                 "Auto-évaluation sous forme de questionnaires",
                 "Exercices sous forme d’ateliers pratiques",
                 "Questionnaire de positionnement",
                 "Évaluation à chaud"
               ],
-              "moyens_pedagogiques": [
+              "moyens_pédagogiques": [
                 "Accès au cours en ligne",
                 "Cours théorique au format vidéo",
                 "Accessible via un ordinateur ou une tablette",
@@ -268,15 +279,26 @@ const formationsData = [
                 "audiodescription_sous_titrage": "Non disponibles"
               }
             } 
+          ]
         },
         { 
           "id": "3", 
           "intitule": "Anglais Médical Débutant A1-A2",
           "formations": [
             {
-              "titre": "ANGLAIS - MÉDICAL (A1-A2)",
-              "description": "Acquérez les bases de la communication médicale en anglais, de la salutation à la compréhension de documents médicaux. Enrichissez votre vocabulaire avec des termes médicaux spécifiques et développez les compétences nécessaires pour interagir efficacement dans des contextes cliniques anglophones.",
-              "objectifs_pedagogiques": [
+              "id": "ANGLAIS - MÉDICAL (A1-A2)",
+              "niveau": "A1-A2",
+              "image": image1,
+              "description": " Cette formation en Anglais, 100% en ligne, de niveau A1-A2 s’adresse aux apprenants désirant acquérir les bases de la langue anglaise.source de révision ou de validation des connaissances pour ceux qui ont un niveau élevé dans cette langue.",
+              "propiete": {
+                "className":"skill__two-tab nav-link active", 
+                "id":"topic-1-tab" ,
+                "databstoggle":"pill" ,
+                "databstarget":"#topic-1" ,
+                "role":"button" ,
+                "ariacontrols":"topic-1"
+              },
+              "objectif": [
                 "Acquérir les fondamentaux de la conjugaison et de la grammaire anglaises",
                 "Acquérir les bases du vocabulaire anglais et du vocabulaire médical",
                 "Comprendre et utiliser des expressions courantes et quotidiennes",
@@ -334,13 +356,13 @@ const formationsData = [
                 "Disposer d'un ordinateur ou d’une tablette",
                 "Une connexion Internet"
               ],
-              "modalites_evaluation": [
+              "évaluation": [
                 "Auto-évaluation sous forme de questionnaires",
                 "Exercices sous forme d’ateliers pratiques",
                 "Questionnaire de positionnement",
                 "Évaluation à chaud"
               ],
-              "moyens_pedagogiques": [
+              "moyens_pédagogiques": [
                 "Accès au cours en ligne",
                 "Cours théorique au format vidéo",
                 "Accessible via un ordinateur ou une tablette",
@@ -353,67 +375,344 @@ const formationsData = [
                 "formation_distancielle": "Accessibilité aux personnes à mobilité réduite",
                 "audiodescription_sous_titrage": "Non disponibles"
               }
+            },
+            {
+              "id": "Anglais Médical (B1-B2)",
+              "niveau": "B1-B2",
+              "image": image1,
+              "description": "Cette formation en Anglais, 100% en ligne, de niveau B1-B2 aux apprenants ayant les bases de la langue anglaise et souhaitant approfondir leurs acquis pour passer d'un niveau à un niveau intermédiaire et par la même occasion acquérir les bases du vocabulaire et des expressions en lien avec le domaine médical.",
+              "propiete": {
+                "className":"skill__two-tab nav-link", 
+                "id":"topic-2-tab" ,
+                "databstoggle":"pill" ,
+                "databstarget":"#topic-2" ,
+                "role":"button" ,
+                "ariacontrols":"topic-2"
+              },
+              "objectif": [
+                "Comprendre les points essentiels d’une discussion quand un langage clair et standard est utilisé",
+                "Pouvoir produire un discours simple et cohérent sur des sujets familiers et dans ses domaines d’intérêt",
+                "Communiquer dans le domaine médical",
+                "Savoir raconter un événement, une expérience"
+              ],
+              "niveau": "Intermédiaire",
+              "public": "Tous publics",
+              "durée": "20h environ",
+              "prérequis": "Bases de la langue anglaise",
+              "accessibilité": "Remote training accessible to people with reduced mobility.",
+              "évaluation": [
+                  "Auto-évaluation sous forme de questionnaires",
+                  "Exercices sous formes d’ateliers pratiques",
+                  "Questionnaire de positionnement",
+                  "Évaluation à chaud",
+                  "Questionnaire de positionnement  et Evaluation à chaud."
+                ],
+              "moyens_pédagogiques": [
+                "Accès au cours en ligne",
+                "Cours théorique au format vidéo ",
+                "Accessible via un ordinateur ou une tablette",
+                "Assistance par téléphone et/ou email"
+              ],
+              "formateur": {
+                "expérience": "Plusieurs années d'expérience dans l'enseignement de cette discipline"
+              },
+              "matériel_nécessaire": [
+                "Ordinateur ou tablette",
+                "Connexion Internet"
+              ],
+              "programme": [
+                "Verbes modaux",
+                "Modals passés",
+                "Donner des commandes et des conseils",
+                "Présent parfait continu",
+                "Futur continu",
+                "Comparatifs et superlatifs",
+                "Plus-que-parfait",
+                "Passé parfait continu",
+                "Conditionnel / conditionnel continu",
+                "Conditionnel parfait / conditionnel parfait continu",
+                "Premier et deuxième conditionnel",
+                "Le present Continuous",
+                "Deuxième et troisième conditionnel",
+                "Décrire des endroits",
+                "Décrire les gens",
+                "Décrire les espoirs et les projets",
+                "Exprimer son opinion",
+                "Conjonctions de coordination",
+                "Mode interrogatif",
+                "Faire des récits",
+                "La colocation",
+                "Les voyages",
+                "Les loisirs",
+                "Le restaurant",
+                "La santé",
+                "Diriger et gérer les discussions",
+                "La douleur",
+                "Les soins relationnels",
+                "L'anatomie",
+                "L'anatomie partie 2",
+                "Les instructions",
+                "Les soins techniques",
+                "Les spécialités",
+                "L'équipement",
+                "La médication",
+                "Les régimes"
+              ]
             } 
           ]
         },
         { "id": "4", 
           "intitule": "ESL Beginner - Intermediate - Advanced - Business",
-          "formation": {
-            "titre": "BUSINESS ENGLISH AS A SECOND LANGUAGE",
-            "description": "This course hones professional skills, including resume writing, job interviews, communication (email, meetings, presentations, and reports), customer service, negotiation, and workplace dynamics. Enhance your employability, career growth, and overall professional capabilities.",
-            "objectifs_pedagogiques": [
-              "Develop strong resume and cover letter writing skills for effective job applications",
-              "Acquire proficiency in communication through written and verbal channels",
-              "Gain a deeper understanding of workplace dynamics, customer service, negotiation, and various job-related situations"
-            ],
-            "niveau": "Beginner",
-            "public": "All",
-            "durée": "3h",
-            "prerequis": "No requirement",
-            "accessibilité": "Remote training accessible to people with reduced mobility. For any disability accessibility questions, contact us. Audio description and subtitles unavailable.",
-            "programme": [
-              "Resumes and Cover Letters",
-              "What is a Resume",
-              "Job Interviews",
-              "Emails",
-              "Meetings",
-              "Presentations",
-              "Business Reports",
-              "Customer Service - First Impressions",
-              "Telephone Customer Service",
-              "Negotiation",
-              "Dealing With the Everyday People In Your Workplace",
-              "Business Trips",
-              "Work Stations",
-              "Managing Up",
-              "Quitting Your Job",
-              "Annual Review Process",
-              "Being Late For Work",
-              "Types of Businesses"
-            ],
-            "matériel_necessaire": [
-              "Computer or tab with an Internet connection",
-              "Web connexion"
-            ],
-            "modalites_evaluation": [
-              "Self-assessment in the form of questionnaires",
-              "Exercises in the form of practical workshops",
-              "Positioning questionnaire",
-              "Hot evaluation"
-            ],
-            "moyens_pedagogiques": [
-              "Online access to the course",
-              "Theoretical courses in video format",
-              "Training accessible via a computer or tablet"
-            ],
-            "formateur": {
-              "experience": "Several years as teacher in this field"
+          "formations": [
+            {
+              "id": "ENGLISH AS A SECOND LANGUAGE - ESL - BEGINNER LEVEL",
+              "niveau": "Business",
+              "image": image1,
+              "description": "This course covers the basics of the English language, including countries, nationalities, personal descriptions, family and friends, daily life, and time-related vocabulary. As you progress, you will also delve into more advanced topics. Get ready for an engaging journey to enhance your English language skills and communication abilities.",
+              "propiete": {
+                "className":"skill__two-tab nav-link active", 
+                "id":"topic-1-tab" ,
+                "databstoggle":"pill" ,
+                "databstarget":"#topic-1" ,
+                "role":"button" ,
+                "ariacontrols":"topic-1"
+              },
+              "objectif": [
+                "Develop a fundamental understanding of the English language",
+                "Learn to express countries and nationalities in English",
+                "Describe oneself and discuss family and friends in English",
+                "Explore topics related to daily life and routines",
+                "Gain proficiency in discussing time and schedules in English"
+              ],
+              "public": "Beginner",
+              "durée": "12h",
+              "prérequis": "No requirement",
+              "audio_description_subtitles": "Unavailable",
+              "necessary_material": "Computer or tab with an Internet connection.",
+              "acquired_assessment_methods": [
+                "COACH: Several years as teacher in this field.",
+                "Self-assessment in the form of questionnaires",
+                "Exercises in the form of practical workshops",
+                "Positioning questionnaire",
+                "Hot evaluation"
+              ],
+              "educational_and_technical_means": [
+                "Online access to the course",
+                "Theoretical courses in video format",
+                "Training accessible via a computer or tablet"
+              ],
+              "accessibility": "Remote training accessible to people with reduced mobility. For any disability accessibility questions, contact us.",
+              "program": [
+                "The basics of English",
+                "Countries and nationalities",
+                "All about you",
+                "Family and Friends",
+                "The way I live",
+                "The Time in English",
+                "My favorites",
+                "Where I live",
+                "Times past",
+                "We had a great time",
+                "I can do it!",
+                "Please and Thank you",
+                "Here and now",
+                "It is time to go",
+                "Hello everybody",
+                "Meeting people",
+                "Let's talk about the future",
+                "How often do you exercise?",
+                "Where do you live",
+                "Can you speak English",
+                "Now and Then",
+                "Fanboys",
+                "Food you like",
+                "Bigger and Better",
+                "Looking good",
+                "Have you ever?",
+                "Getting to know",
+                "The way we live",
+                "Life's an adventure",
+                "Come on, You can do it!"
+              ]
             },
-            "accessibilite": {
-              "formation_distancielle": "Remote training accessible to people with reduced mobility",
-              "audiodescription_sous_titrage": "Unavailable"
+            {
+              "id": "ENGLISH AS A SECOND LANGUAGE - ESL - INTERMEDIATE LEVEL",
+              "niveau": "A1-A2",
+              "image": image1,
+              "description": "This comprehensive course covers a wide range of English language skills and topics, from developing conversational abilities to discussing current events, leisure activities, and grammar. With a strong emphasis on grammar, tense usage, and practical communication, you'll be well-equipped to engage in various social and professional situations in English.",
+              "propiete": {
+                "className":"skill__two-tab nav-link", 
+                "id":"topic-2-tab" ,
+                "databstoggle":"pill" ,
+                "databstarget":"#topic-2" ,
+                "role":"button" ,
+                "ariacontrols":"topic-2"
+              },
+              "educational_goals": [
+                "Develop conversational and communication skills in English",
+                "Explore current events and engage in discussions",
+                "Expand your vocabulary related to food, beverages, and leisure activities",
+                "Gain a better understanding of grammar and tenses in English",
+                "Learn to express plans, arrange meetings, and discuss job-related topics in English"
+              ],
+              "level": "Intermediate",
+              "duration": "3h",
+              "requirements": "No requirement",
+              "audio_description_subtitles": "Unavailable",
+              "necessary_material": "Computer or tab with an Internet connection.",
+              "acquired_assessment_methods": [
+                "COACH: Several years as teacher in this field.",
+                "Self-assessment in the form of questionnaires",
+                "Exercises in the form of practical workshops",
+                "Positioning questionnaire",
+                "Hot evaluation"
+              ],
+              "educational_and_technical_means": [
+                "Online access to the course",
+                "Theoretical courses in video format",
+                "Training accessible via a computer or tablet"
+              ],
+              "accessibility": "Remote training accessible to people with reduced mobility. For any disability accessibility questions, contact us.",
+              "program": [
+                "Getting to know you",
+                "Whatever makes you happy",
+                "What's in the news",
+                "Eat, drink and be merry",
+                "Looking forward",
+                "The way I see it",
+                "Living history",
+                "Girls and boys",
+                "Time for a story",
+                "Tenses overview",
+                "Free Time",
+                "Let's watch movies",
+                "Determiners",
+                "Arranging to meet",
+                "Jobs",
+                "The world of work",
+                "Just imagine",
+                "Relationship",
+                "Tell me about it",
+                "Life's great event",
+                "Friends",
+                "Memories",
+                "Wealth",
+                "Change",
+                "Transitive and intransitive",
+                "In the end"
+              ]
+            },
+            {
+              "id": "ENGLISH AS A SECOND LANGUAGE - ESL - ADVANCED LEVEL",
+              "niveau": "A1-A2",
+              "image": image1,
+              "description": "This comprehensive course covers a wide range of English language skills and topics, from developing conversational abilities to discussing current events, leisure activities, and grammar. With a strong emphasis on grammar, tense usage, and practical communication, you'll be well-equipped to engage in various social and professional situations in English.",
+              "propiete": {
+                "className":"skill__two-tab nav-link", 
+                "id":"topic-3-tab" ,
+                "databstoggle":"pill" ,
+                "databstarget":"#topic-3" ,
+                "role":"button" ,
+                "ariacontrols":"topic-3"
+              },
+              "educational_goals": [
+                "Master the English tense system and avoid common present tense mistakes",
+                "Understand and apply narrative tenses for effective storytelling",
+                "Learn about diverse phrase types and their roles in sentences",
+                "Proficiently use various future forms to express future events",
+                "Gain expertise in English grammar, covering sentence structures"
+              ],
+              "public": "Advanced",
+              "durée": "3h",
+              "prérequis": "No requirement",
+              "audio_description_subtitles": "Unavailable",
+              "necessary_material": "Computer or tab with an Internet connection.",
+              "acquired_assessment_methods": [
+                "COACH: Several years as teacher in this field.",
+                "Self-assessment in the form of questionnaires",
+                "Exercises in the form of practical workshops",
+                "Positioning questionnaire",
+                "Hot evaluation"
+              ],
+              "educational_and_technical_means": [
+                "Online access to the course",
+                "Theoretical courses in video format",
+                "Training accessible via a computer or tablet"
+              ],
+              "accessibility": "Remote training accessible to people with reduced mobility. For any disability accessibility questions, contact us.",
+              "program": [
+                "The Tense System",
+                "Most Common Mistakes With the Present Tense",
+                "Narrative Tenses",
+                "Different Types of Phrases",
+                "Future Forms",
+                "Types of Sentences",
+                "Declarative vs Rhetorical Questions",
+                "The English Nouns",
+                "Ending a Sentence with a Preposition",
+                "Adverbs",
+                "Moods of the Verb",
+                "Articles"
+              ]
+            },
+            {
+              "id": "BUSINESS ENGLISH AS A SECOND LANGUAGE",
+              "niveau": "SECOND LANGUAGE",
+              "image": image1,
+              "description": "This course hones professional skills, including resume writing, job interviews, communication (email, meetings, presentations, and reports), customer service, negotiation, and workplace dynamics. Enhance your employability, career growth, and overall professional capabilities.",
+              "propiete": {
+                "className":"skill__two-tab nav-link", 
+                "id":"topic-4-tab" ,
+                "databstoggle":"pill" ,
+                "databstarget":"#topic-4" ,
+                "role":"button" ,
+                "ariacontrols":"topic-4"
+              },
+              "educational_goals": [
+                "Develop strong resume and cover letter writing skills for effective job applications",
+                "Acquire proficiency in communication through written and verbal channels",
+                "Gain a deeper understanding of workplace dynamics, customer service, negotiation, and various job-related situations"
+              ],
+              "level": "Beginner",
+              "duration": "3h",
+              "requirements": "No requirement",
+              "audio_description_subtitles": "Unavailable",
+              "necessary_material": "Computer or tab with an Internet connection.",
+              "acquired_assessment_methods": [
+                "COACH: Several years as teacher in this field.",
+                "Self-assessment in the form of questionnaires",
+                "Exercises in the form of practical workshops",
+                "Positioning questionnaire",
+                "Hot evaluation"
+              ],
+              "educational_and_technical_means": [
+                "Online access to the course",
+                "Theoretical courses in video format",
+                "Training accessible via a computer or tablet"
+              ],
+              "accessibility": "Remote training accessible to people with reduced mobility. For any disability accessibility questions, contact us.",
+              "program": [
+                "Resumes and Cover Letters",
+                "What is a Resume",
+                "Job Interviews",
+                "Emails",
+                "Meetings",
+                "Presentations",
+                "Business Reports",
+                "Customer Service- First Impressions",
+                "Telephone Customer Service",
+                "Negotiation",
+                "Dealing With the Everyday People In Your Workplace",
+                "Business Trips",
+                "Work Stations",
+                "Managing Up",
+                "Quitting Your Job",
+                "Annual Review Process",
+                "Being Late For Work",
+                "Types of Businesses"
+              ]
             }
-          } 
+          ]
         },
         { 
           "id": "5", 

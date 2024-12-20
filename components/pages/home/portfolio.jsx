@@ -44,7 +44,7 @@ const Portfolio = () => {
                     </div>
                     <div className="col-xl-3 col-lg-4">
                         <div className="portfolio__one-content-right text-lg-end">
-                            <Link href="/portfolio/3-columns" className="btn-one">Tout le Portfolio<i className="fas fa-arrow-right"></i></Link>
+                            <Link href="/services" className="btn-one">Tout les Formations<i className="fas fa-arrow-right"></i></Link>
                         </div>
                     </div>
                 </div>

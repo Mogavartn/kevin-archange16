@@ -9,12 +9,12 @@ const Tab = () => {
                     <ul className="row nav mb-5 gy-4 justify-content-center">
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
                         <div className="skill__two-tab nav-link active " id="topic-1-tab" data-bs-toggle="pill" data-bs-target="#topic-1" role="button" aria-controls="topic-1">
-                            <span>Inscription Directe</span>
+                            <span>Prise de Rendez-vous</span>
                         </div>
                         </li>
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
                             <div className="skill__two-tab nav-link " id="topic-2-tab" data-bs-toggle="pill" data-bs-target="#topic-2" role="button" aria-controls="topic-2">
-                                <span>Prise de Rendez-vous</span>
+                                <span>Inscription Directe</span>
                             </div>
                         </li>
                     </ul>
@@ -58,7 +58,7 @@ const Tab = () => {
                                   "Accès personnalisé"
                                 ]}
                                 buttonText="Contactez-nous"
-                                buttonLink="/contact"/>
+                                buttonLink="https://www.kevin-attallah.com/formation-creation-entreprise"/>
                             </div>
                             <div className="col-xl-6 col-lg-8">
                                 <div className="skill__two-tab-details-image">
