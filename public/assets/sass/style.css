@@ -1119,7 +1119,7 @@ p {
   --border-white: #FFFFFF;
   --black: #000000;
   --primary-color-1: #7222db;
-  --primary-color-2: #fb6206;
+  --primary-color-2: #fb3706;
   --primary-color-3: #b124fb;
   --bg-heading-color: #130526ee;
   --text-heading-color: #1f0a3b;
@@ -6964,6 +6964,7 @@ Responsive Menu Css
 
 .request-quote__area form label {
   font-size: 18px;
+  color: var(--text-white);
 }
 .request-quote__area form input::-moz-placeholder {
   font-size: 18px;

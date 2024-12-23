@@ -37,7 +37,7 @@ const FooterThree = () => {
 										const words = data.titre.split(' ');
 										const firstAndSecondWord = words.slice(0, 2).join(' ');
 										return (
-											<li key={id}><Link href={`/services/${data.id}`}><i className="far fa-chevron-double-right"></i>{firstAndSecondWord}</Link></li>
+											<li key={id}><Link href={`https://www.kevin-attallah.com/catalogue`} target="_blank"><i className="far fa-chevron-double-right"></i>{firstAndSecondWord}</Link></li>
 										);
 									})}
                                 </ul>
@@ -49,9 +49,9 @@ const FooterThree = () => {
                             <h4 className="ml-60">Resources​</h4>
                             <div className="footer__three-widget-solution">
                                 <ul>
-									<li><Link href="services"><i className="far fa-chevron-double-right"></i>Formations</Link></li>
-									<li><Link href="faq"><i className="far fa-chevron-double-right"></i>FAQ</Link></li>
-									<li><Link href="testimonial"><i className="far fa-chevron-double-right"></i>Testimonial</Link></li>
+									<li><Link href="https://www.kevin-attallah.com/catalogue" target="_blank"><i className="far fa-chevron-double-right"></i>Formations</Link></li>
+									<li><Link href="/"><i className="far fa-chevron-double-right"></i>FAQ</Link></li>
+									<li><Link href="testimonial"></Link></li>
 									<li><Link href="about"><i className="far fa-chevron-double-right"></i>A propos</Link></li>
                                 </ul>
                             </div>
@@ -76,7 +76,7 @@ const FooterThree = () => {
                                     </div>
                                     <div className="footer__three-widget-location-item-info">
                                         <span>Address</span>
-                                        <Link href="https://google.com/maps">France</Link>
+                                        <Link href="https://google.com/maps" target="_blank">France</Link>
                                     </div>
                                 </div>
                             </div>

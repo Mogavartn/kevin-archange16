@@ -9,9 +9,9 @@ import FooterThree from '@/components/layout/footers/footer-three';
 const RequestQuotePage = () => {
     return (
         <>
-            <SEO pageTitle="Demander un devis" />
+            <SEO pageTitle="Demander un devis 1" />
             <HeaderOne />
-            <BreadCrumb title="Demander un devis" innerTitle="Demander un devis" />
+            <BreadCrumb title="Demander un devis" innerTitle="Demander un devis 1" />
             <RequestQuoteMain />
             <FooterThree />
             <ScrollToTop />

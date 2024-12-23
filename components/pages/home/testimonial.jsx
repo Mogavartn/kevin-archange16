@@ -37,9 +37,9 @@ const slideControl = {
                     <div className="col-xl-6 col-lg-6">
                         <div className="testimonial__one-left" style={{backgroundImage: `url(${testimonialBg.src})`}}>
                             <div className="testimonial__one-left-title">
-                                <span className="subtitle-one">Témoignage client</span>
-                                <h2>Découvrez ce que disent nos clients ! <span className="highlighted">transfor</span> </h2>
-                                <Link href="/contact" className="btn-one">Obtenir de l'aide
+                                <span className="subtitle-one">Témoignage</span>
+                                <h2>Découvrez ce que disent nos <span className="highlighted">apprenant(e)s</span> </h2>
+                                <Link href="/contact" className="btn-one">Contactez-nous
                                     <i className="fas fa-arrow-right"></i>
                                 </Link>
                             </div>
@@ -63,7 +63,7 @@ const slideControl = {
                                             <i className="fas fa-star not-rated"></i>
                                         </div>
                                     </div>
-                                    <p>Super formation, Kevin est au top</p>
+                                    <p>Super formation, Kevin est au top.</p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
@@ -99,7 +99,7 @@ const slideControl = {
                                             <i className="fas fa-star not-rated"></i>
                                         </div>
                                     </div>
-                                    <p>Kevin m'a accompagné de la création de mes statuts jusqu'à mon lancement, merci à lui !</p>
+                                    <p>Kevin m'a accompagné de la création de mes statuts jusqu'à mon lancement, merci à lui!</p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
@@ -117,7 +117,7 @@ const slideControl = {
                                             <i className="fas fa-star not-rated"></i>
                                         </div>
                                     </div>
-                                    <p>J’hésitais avant ma formation à me lancer, du coup c'est décidé grâce aux conseils de Kevin</p>
+                                    <p>J’hésitais avant ma formation à me lancer, du coup c'est décidé grâce aux conseils de Kevin.</p>
                                 </div>
                             </SwiperSlide>
                         </Swiper>

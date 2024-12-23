@@ -44,7 +44,7 @@ const Portfolio = () => {
                     </div>
                     <div className="col-xl-3 col-lg-4">
                         <div className="portfolio__one-content-right text-lg-end">
-                            <Link href="/services" className="btn-one">Tout les Formations<i className="fas fa-arrow-right"></i></Link>
+                            <Link href="https://www.kevin-attallah.com/catalogue" target="_blank" className="btn-one">Toutes Nos Formations<i className="fas fa-arrow-right"></i></Link>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ const Portfolio = () => {
                         <SwiperSlide key={id} className="portfolio__one-single-portfolio single-portfolio">
                             <img src={data.image.src} alt="image" />
                             <div className="portfolio__one-single-portfolio-content">
-                                <h4><Link href={`/services/${data.id}`}>{data.titre}</Link></h4>
+                                <h4>{data.titre}</h4>
                                 <span>{data.subtitle}</span>
                             </div>
                         </SwiperSlide>

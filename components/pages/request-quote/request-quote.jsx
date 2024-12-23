@@ -33,7 +33,7 @@ const RequestQuoteMain = () => {
                     </div>
                     <label for="message" className="mb-2">Message *</label>
                     <textarea id="message" placeholder="Type Here"></textarea>
-                    <input type="submit" value="Envoyer" className="btn-two mt-4" />
+                    <input type="submit" value="Envoyer" className="btn-one mt-4" />
                 </form>
             </div>
         </div>
