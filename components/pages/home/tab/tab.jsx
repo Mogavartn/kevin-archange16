@@ -9,12 +9,12 @@ const Tab = () => {
                     <ul className="row nav mb-5 gy-4 justify-content-center">
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
                         <div className="skill__two-tab nav-link active " id="topic-1-tab" data-bs-toggle="pill" data-bs-target="#topic-1" role="button" aria-controls="topic-1">
-                            <span>Prise de Rendez-vous</span>
+                            <span>JE SUIS FINANCÉ PAR LE CPF</span>
                         </div>
                         </li>
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
                             <div className="skill__two-tab nav-link " id="topic-2-tab" data-bs-toggle="pill" data-bs-target="#topic-2" role="button" aria-controls="topic-2">
-                                <span>Inscription Directe</span>
+                                <span>JE ME FINANCE TOUT SEUL</span>
                             </div>
                         </li>
                     </ul>
@@ -22,8 +22,10 @@ const Tab = () => {
                         <div className="row align-items-center flex-wrap-reverse gy-4 tab-pane fade show active" role="tabpanel" id="topic-1" aria-labelledby="topic-1-tab">
                             <div className="col-xl-6 col-lg-7 col-md-9">
                                 <TabContent 
-                                title="Prenez rendez-vous en ligne"
-                                description="Planifiez un rendez-vous avec l’un de nos experts en toute simplicité. Que ce soit pour une consultation, une présentation ou une assistance, nous sommes là pour vous aider"
+                                title="Faites financer votre avenir sans dépenser �  !"
+                                description="Prenez rendez-vous avec un conseiller et
+                                            découvrez comment utiliser votre CPF pour réaliser vos ambitions, sans reste à charge ✨ . Et aussi
+                                            bénéficier d’une aide pour choisir votre formation"
                                 servicesLeft={[
                                   "Flexibilité totale",
                                   "Conseils d’experts"
@@ -33,7 +35,7 @@ const Tab = () => {
                                   "Service personnalisé"
                                 ]}
                                 buttonText="Contactez-nous"
-                                buttonLink="/contact"
+                                buttonLink="https://meet.brevo.com/kevin-a2ta2l"
                                 />
                             </div>
                             <div className="col-xl-6 col-lg-8">
@@ -47,8 +49,10 @@ const Tab = () => {
                         <div className="row align-items-center flex-wrap-reverse gy-4 tab-pane fade" role="tabpanel" id="topic-2" aria-labelledby="topic-2-tab">
                             <div className="col-xl-6 col-lg-7 col-md-9">
                                 <TabContent 
-                                title="Inscrivez-vous dès maintenant"
-                                description="Rejoignez notre communauté et accédez à tous nos services en quelques clics ! En vous inscrivant, vous pourrez profiter d'avantages exclusifs et d'une expérience personnalisée qui répondra à vos besoins."
+                                title="Vous savez quelle formation suivre !"
+                                description="Alors prenez les choses en main � ! Financez votre
+                                            formation en toute liberté et commencez à construire votre succès dès maintenant. Vous avez le
+                                            contrôle, on vous donne les clés � ."
                                 servicesLeft={[
                                   "Accès immédiat",
                                   "Offres exclusives"
@@ -57,8 +61,8 @@ const Tab = () => {
                                   "Sécurisé et rapide",
                                   "Accès personnalisé"
                                 ]}
-                                buttonText="Contactez-nous"
-                                buttonLink="https://www.kevin-attallah.com/formation-creation-entreprise"/>
+                                buttonText="Commencez"
+                                buttonLink="https://www.kevin-attallah.com/catalogue"/>
                             </div>
                             <div className="col-xl-6 col-lg-8">
                                 <div className="skill__two-tab-details-image">
