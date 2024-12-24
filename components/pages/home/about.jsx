@@ -54,6 +54,9 @@ const About = () => {
                 <div className="row">
                     <div className="col-xl-12">
                         <div className="text__slider">
+                            <div className="mb-20 text-center">
+                                <h3>Suivez-nous sur les réseaux sociaux!</h3>
+                            </div>
                             <div className="text-slide">
                                 <div className="sliders scroll">
                                     <div className="brand__area-item">

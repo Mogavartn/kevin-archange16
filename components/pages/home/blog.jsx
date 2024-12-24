@@ -22,7 +22,7 @@ const Blog = () => {
                                 </div>
                                 <div className="blog__one-single-blog-date">
                                     <span className="date">{data.date}</span>
-                                    <span className="month">Mar</span>
+                                    <span className="month">{data.month}</span>
                                 </div>
                                 <div className="blog__one-single-blog-content">
                                     <div className="blog__one-single-blog-content-top">

@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useState } from 'react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import Link from 'next/link';
@@ -37,7 +38,24 @@ const BlogSingleMain = ({singleData}) => {
           },
         },
       };
-    
+
+      const [currentIndex, setCurrentIndex] = useState(0);
+      // Fonction pour aller à l'article suivant
+        const handleNext = () => {
+            if (currentIndex < singleData.length - 1) {
+            setCurrentIndex(currentIndex + 1);
+            }
+        };
+
+        // Fonction pour aller à l'article précédent
+        const handlePrev = () => {
+            if (currentIndex > 0) {
+            setCurrentIndex(currentIndex - 1);
+            }
+        };
+
+        const currentPost = singleData[currentIndex];
+    console.log(singleData)
 
     return (
         <>
@@ -84,7 +102,8 @@ const BlogSingleMain = ({singleData}) => {
                         </div>
                         <div className="blog__details-pagination">
                             <div className="blog__details-pagination-btn blog__details-pagination-prev">
-                                <Link href="/blog/software-development-agility-a-primer" className="pagination-btn">
+                                <Link onClick={handlePrev} 
+                                    disabled={currentIndex === 0} className="pagination-btn">
                                     <i className="fas fa-arrow-left"></i>
                                 </Link>
                                 <div className="blog__details-pagination-text">
@@ -97,7 +116,8 @@ const BlogSingleMain = ({singleData}) => {
                                     <span>Article suivant</span>
                                     <span></span>
                                 </div>
-                                <Link href="/blog/cloud-computing-solutions-for-business" className="pagination-btn">
+                                <Link onClick={handleNext} 
+                                    disabled={currentIndex === singleData.length - 1} className="pagination-btn">
                                     <i className="fas fa-arrow-right"></i>
                                 </Link>
                             </div>
