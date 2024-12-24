@@ -44,12 +44,12 @@ const BlogSingleMain = ({singleData}) => {
             <div className="container">
                 <div className="row gy-4 flex-wrap-reverse">
                     <div className="col-xl-8">
-                        <div className="blog__details-thumb">
+                        <div className="blog__details-thumb ">
                             <span className="date">{singleData.date} {singleData.month} {singleData.year}</span>
                                 <img className="img__full" src={singleData.image.src} alt="blog-details-image" />
                         </div>
                         <div className="blog__details-content">
-                            <div className="blog__details-content-top">
+                            <div className="blog__details-content-top border">
                                 <span>
                                     <i className="far fa-user"></i>
                                     Administrateur
@@ -62,7 +62,7 @@ const BlogSingleMain = ({singleData}) => {
                                     <i className="far fa-comments"></i>
                                     Commentaires (05)
                                 </span>
-                                <div className="blog__details-quote">
+                                <div className="blog__details-quote border">
                                     <Swiper {...swiperConfig}>
                                         {singleData.images.map((image, index) => (
                                             <SwiperSlide key={index}>
@@ -72,6 +72,12 @@ const BlogSingleMain = ({singleData}) => {
                                             </SwiperSlide>
                                     ))}
                                     </Swiper>
+                                    <div className="blog__details-quote-bottom">
+                                        <div className="slider-arrow">
+                                            <i className="swiper-button-prev fas fa-arrow-left"></i>
+                                            <i className="swiper-button-next fas fa-arrow-right"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -95,44 +101,6 @@ const BlogSingleMain = ({singleData}) => {
                                 </Link>
                             </div>
                         </div>
-                       {/*  <div className="blog__details-comments">
-                            <h3>3 commentaires</h3>
-                            <div className="blog__details-single-comment">
-                                <div className="blog__details-single-comment-user-pic">
-                                    <img src={avatar2.src} alt="image" />
-                                </div>
-                                <div className="blog__details-single-comment-body">
-                                    <div className="blog__details-single-comment-body-top">
-                                        <h5>Stanio lainto</h5>
-                                        <span>16 février 2024</span>
-                                        <Social />
-                                    </div>
-                                    <p>Ished fact that a reader will be distrol acted bioii the.ished fact that a reader will be distrol acted laoreet Aliquam fact that a reader will be distrol </p>
-                                    <Link href="#" className="comment-reply-btn">Reply</Link>
-                                </div>
-                            </div>
-                            <div className="blog__details-single-comment">
-                                <div className="blog__details-single-comment-user-pic">
-                                    <img src={avatar3.src} alt="image" />
-                                </div>
-                                <div className="blog__details-single-comment-body">
-                                    <div className="blog__details-single-comment-body-top">
-                                        <h5>Court Henry</h5>
-                                        <span>16 février 2024</span>
-                                        <Social />
-                                    </div>
-                                    <p>Ished fact that a reader will be distrol acted bioii the.ished fact that a reader will be distrol acted laoreet Aliquam fact that a reader will be distrol </p>
-                                    <Link href="#" className="comment-reply-btn">Reply</Link>
-                                </div>
-                            </div>
-                        </div> */}
-                        {/* <form action="#" className="blog__details-comment-form">
-                            <h3>Leave a comment</h3>
-                            <p>By using form u agree with the message sorage, you can contact us directly now By using form agree with the message sorage, you can contact us directly now</p>
-                            <input type="text" placeholder="Name" />
-                            <textarea placeholder="Message here..."></textarea>
-                            <input type="submit" value="Sent Message" />
-                        </form> */}
                     </div>
                     <div className="col-xl-4">
                         <BlogSidebar />

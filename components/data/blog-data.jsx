@@ -17,7 +17,7 @@ import image03000 from "../../public/assets/img/blog/img_car/novembre30/03.png";
 import image04000 from "../../public/assets/img/blog/img_car/novembre30/04.png";
 import image05000 from "../../public/assets/img/blog/img_car/novembre30/05.png";
 
-import image0100 from "../../public/assets/img/blog/img_car/decembre7/02.png";
+import image0100 from "../../public/assets/img/blog/img_car/decembre7/01.png";
 import image0200 from "../../public/assets/img/blog/img_car/decembre7/02.png";
 import image0300 from "../../public/assets/img/blog/img_car/decembre7/03.png";
 import image0400 from "../../public/assets/img/blog/img_car/decembre7/04.png";
