@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import React, { useState } from 'react';
 import { Autoplay, Navigation } from 'swiper/modules';
+import React, { useState } from 'react';
 import 'swiper/swiper-bundle.css';
 import Link from 'next/link';
 import Social from '@/components/data/social';
@@ -38,24 +38,24 @@ const BlogSingleMain = ({singleData}) => {
           },
         },
       };
+    
+      const [currentIndex, setCurrentIndex] = useState(0); // Initialiser l'index à 0
 
-      const [currentIndex, setCurrentIndex] = useState(0);
-      // Fonction pour aller à l'article suivant
-        const handleNext = () => {
-            if (currentIndex < singleData.length - 1) {
-            setCurrentIndex(currentIndex + 1);
-            }
-        };
+    const handleNext = () => {
+        if (currentIndex < blogData.length - 1) {
+            setCurrentIndex(currentIndex + 1); // Incrémenter l'index pour le prochain article
+        }
+    };
 
-        // Fonction pour aller à l'article précédent
-        const handlePrev = () => {
-            if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-            }
-        };
+    const handlePrev = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(currentIndex - 1); // Décrémenter l'index pour l'article précédent
+        }
+    };
 
-        const currentPost = singleData[currentIndex];
-    console.log(singleData)
+    const currentPost = singleData; //blogData[currentIndex]; // L'article actuellement sélectionné
+
+    console.log(currentPost);
 
     return (
         <>
@@ -102,8 +102,7 @@ const BlogSingleMain = ({singleData}) => {
                         </div>
                         <div className="blog__details-pagination">
                             <div className="blog__details-pagination-btn blog__details-pagination-prev">
-                                <Link onClick={handlePrev} 
-                                    disabled={currentIndex === 0} className="pagination-btn">
+                                <Link href={``} onClick={handlePrev} disabled={currentIndex === 0} className="pagination-btn">
                                     <i className="fas fa-arrow-left"></i>
                                 </Link>
                                 <div className="blog__details-pagination-text">
@@ -116,8 +115,7 @@ const BlogSingleMain = ({singleData}) => {
                                     <span>Article suivant</span>
                                     <span></span>
                                 </div>
-                                <Link onClick={handleNext} 
-                                    disabled={currentIndex === singleData.length - 1} className="pagination-btn">
+                                <Link href={``} onClick={handleNext} disabled={currentIndex === blogData.length - 1} className="pagination-btn">
                                     <i className="fas fa-arrow-right"></i>
                                 </Link>
                             </div>

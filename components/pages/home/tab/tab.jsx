@@ -22,7 +22,7 @@ const Tab = () => {
                         <div className="row align-items-center flex-wrap-reverse gy-4 tab-pane fade show active" role="tabpanel" id="topic-1" aria-labelledby="topic-1-tab">
                             <div className="col-xl-6 col-lg-7 col-md-9">
                                 <TabContent 
-                                title="Faites financer votre avenir sans dépenser �  !"
+                                title={`Faites financer votre avenir sans dépenser � !`}
                                 description="Prenez rendez-vous avec un conseiller et
                                             découvrez comment utiliser votre CPF pour réaliser vos ambitions, sans reste à charge ✨ . Et aussi
                                             bénéficier d’une aide pour choisir votre formation"
