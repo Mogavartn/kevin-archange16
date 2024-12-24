@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
 import Link from 'next/link';
 import Social from '@/components/data/social';
 import blogData from '@/components/data/blog-data';
@@ -49,7 +50,7 @@ const BlogSingleMain = ({singleData}) => {
                                 <img className="img__full" src={singleData.image.src} alt="blog-details-image" />
                         </div>
                         <div className="blog__details-content">
-                            <div className="blog__details-content-top border">
+                            <div className="blog__details-content-top ">
                                 <span>
                                     <i className="far fa-user"></i>
                                     Administrateur
@@ -62,13 +63,13 @@ const BlogSingleMain = ({singleData}) => {
                                     <i className="far fa-comments"></i>
                                     Commentaires (05)
                                 </span>
-                                <div className="blog__details-quote border">
+                                <div className="blog__details-quote ">
                                     <Swiper {...swiperConfig}>
                                         {singleData.images.map((image, index) => (
                                             <SwiperSlide key={index}>
-                                            <div className="single-slider">
-                                                <img src={image.src} alt={`Blog Image ${index + 1}`} />
-                                            </div>
+                                                <div className="single-slider">
+                                                    <img src={image.src} alt={`Blog Image ${index + 1}`} />
+                                                </div>
                                             </SwiperSlide>
                                     ))}
                                     </Swiper>
@@ -88,13 +89,13 @@ const BlogSingleMain = ({singleData}) => {
                                 </Link>
                                 <div className="blog__details-pagination-text">
                                     <span>Article précédent</span>
-                                    <span>Insure your peace of mind</span>
+                                    <span></span>
                                 </div>
                             </div>
                             <div className="blog__details-pagination-btn blog__details-pagination-next">
                                 <div className="blog__details-pagination-text">
                                     <span>Article suivant</span>
-                                    <span>Coverage you can count on</span>
+                                    <span></span>
                                 </div>
                                 <Link href="/blog/cloud-computing-solutions-for-business" className="pagination-btn">
                                     <i className="fas fa-arrow-right"></i>

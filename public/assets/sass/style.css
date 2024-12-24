@@ -9229,12 +9229,12 @@ Responsive Menu Css
 }
 .blog__details-content-top span {
   font-size: 14px;
-  color: var(--color-2);
+  color: var(--color-1);
   margin-right: 27px;
 }
 .blog__details-content-top span i {
-  color: var(--text-heading-color);
-  margin-right: 3px;
+  color: var(--primary-color-2);
+  margin-right: 5px;
 }
 .blog__details-content h2 {
   font-size: 32px;
@@ -9333,7 +9333,9 @@ Responsive Menu Css
   margin-left: 30px;
 }
 .blog__details-quote-bottom{
-  position: absolute;
+  position: relative;
+  padding-top: 30px;
+  align-items: center;
 }
 .blog__details-content .swiper-button-prev, .blog__details-content .swiper-button-next {
   padding: 20px 23px;
@@ -9348,22 +9350,22 @@ Responsive Menu Css
 .blog__details-content .swiper-button-prev:hover, .blog__details-content .swiper-button-next:hover {
   background: var(--primary-color-1);
   border-color: var(--primary-color-1);
-  color: var(--text-white);
+  color: var(--color-6);
 }
 .blog__details-content .swiper-button-prev {
-  left: 61px;
+  left: 5px;
 }
 .blog__details-content .swiper-button-next {
-  left: 120px;
+  left: 740px;
 }
 .blog__details-pagination-text span {
   font-size: 18px;
   text-transform: none;
   display: block;
-  color: var(--color-2);
+  color: var(--border-color-2);
 }
 .blog__details-pagination-text span:last-child {
-  color: var(--text-heading-color);
+  color: var(--bg-white);
   font-weight: 700;
 }
 .blog__details-pagination-btn {
