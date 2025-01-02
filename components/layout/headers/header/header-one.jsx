@@ -66,7 +66,7 @@ const HeaderOne = ({variant}) => {
                                 </div>
                             </div>
                             <div className="header__area-menubar-right-box-btn">
-                                <Link className="btn-one" href="https://www.kevin-attallah.com/formation-creation-entreprise" target="_blank">Je suis autonome, je gère mon ikigaï<i className="fas fa-arrow-right"></i></Link>
+                                <Link className="btn-one" href="https://www.kevin-attallah.com/formation-creation-entreprise" target="_blank">Je veux lancer mon business<i className="fas fa-arrow-right"></i></Link>
                             </div>
                         <div className="header__area-menubar-right-responsive-menu menu__bar">
                             <i className="flaticon-menu-1" onClick={() => setMenuSidebar(true)}></i>

@@ -5248,9 +5248,9 @@ Responsive Menu Css
 .skill__two-tab {
   background: var(--bg-white);
   border: 1px solid var(--color-4);
-  padding: 25px 10px 50px 10px;
+  padding: 50px 10px 50px 10px;
   border-radius: 10px;
-  text-align: left;
+  text-align: center;
   transition: 0.5s;
   position: relative;
 }
@@ -8394,7 +8394,7 @@ Responsive Menu Css
   position: relative;
   width: 90%;
   background-color: var(--bg-white);
-  padding: 30px;
+  padding: 25px;
   border-radius: 15px;
   margin: auto;
   margin-top: -58px;

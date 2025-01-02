@@ -11,7 +11,7 @@ const Tab = () => {
                         <span className="subtitle-one">Je veux lancer mon business</span>
                         <h2>Je veux lancer mon business🧑‍💼</h2>
                     </div>
-                </div>
+                </div>-
                     <ul className="row nav mb-5 gy-4 justify-content-center">
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
                         <div className="skill__two-tab nav-link active " id="topic-1-tab" data-bs-toggle="pill" data-bs-target="#topic-1" role="button" aria-controls="topic-1">

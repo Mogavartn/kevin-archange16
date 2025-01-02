@@ -48,7 +48,7 @@ const BannerOne = () => {
                                         <span className="video-play-btn-one" onClick={openVideoModal}>
                                             <i className="fas fa-play"></i>
                                         </span>
-                                        <h6>suivre notre vidéo</h6>
+                                        <h6>Découvrir l’ikigaï</h6>
                                 </div>
                             </div>
                         </div>
