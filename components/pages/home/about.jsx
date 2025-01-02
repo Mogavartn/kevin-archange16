@@ -164,25 +164,25 @@ const About = () => {
                             <span className="subtitle-one">Qui sommes-nous</span>
                             <h2>Faites passer vos ambitions au niveau supérieur 🚀
                             </h2>
-                            <p>Avec notre méthode quia faites preuves, on transforme vos idées en succès concrets ! Que ce soit
+                            <p>Avec notre méthode qui a faites preuves, on transforme vos idées en succès concrets ! Que ce soit
                                 pour donner vie à un projet ou aligner votre carrière avec vos valeurs, on vous accompagne à
                                 chaque étape. Ensemble, créons des réussites qui ont du sens et un vrai impact.</p>
                             <div className="about__one-content-service">
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Des objectifs clairs et alignés 😎</span>
+                                    <span>Des objectifs clairs et alignés. 😎</span>
                                 </div>
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Des projets qui marquent 💡</span>
+                                    <span>Des projets qui marquent. 💡</span>
                                 </div>
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Une transformation durable 🌱</span>
+                                    <span>Une transformation durable. 🌱</span>
                                 </div>
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Un développement personnel boosté ✨</span>
+                                    <span>Un développement personnel boosté. ✨</span>
                                 </div>
                             </div>
                             <Link href="/about" className="btn-one">En savoir plus<i className="fas fa-arrow-right"></i></Link>

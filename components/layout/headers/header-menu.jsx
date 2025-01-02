@@ -13,7 +13,6 @@ const MainMenu = () => {
                 </li>
                 <li className="menu-item-has-children"><Link href="/blog">Blog</Link>   
                 </li>
-                <li><Link href="/contact">Contact</Link></li>
             </ul>
         </>
     );

@@ -89,7 +89,7 @@ const FooterThree = () => {
                     <div className="row justify-content-between copyright__one-container-area">
                         <div className="col-xl-5 col-lg-6"> 
                             <div className="copyright__one-left">
-                                <p>© ThemeOri  2024 | Ikigai</p>
+                                <p>© Kevin Attallah 2024 | Ikigai</p>
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-6">

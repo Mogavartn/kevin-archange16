@@ -4112,6 +4112,13 @@ Responsive Menu Css
   margin-bottom: 40px;
   width: 93%;
 }
+.banner__one-image h6 {
+  position: absolute;
+  top: 92%;
+  left: 38%;
+  z-index: 100;
+  font-size: 15px;
+}
 .banner__one-image-wrapper {
   position: relative;
   border-radius: 50%;
@@ -4628,12 +4635,14 @@ Responsive Menu Css
   border: 10px solid var(--bg-white);
 }
 .about__one-content h2 {
-  text-transform: none;
+  text-transform:none;
   margin-bottom: 30px;
 }
 .about__one-content p {
   color: var(--color-1);
   margin-bottom: 30px;
+  text-transform:none;
+
 }
 .about__one-content-service {
   display: flex;
@@ -4648,6 +4657,8 @@ Responsive Menu Css
 .about__one-content-service .service span {
   font-size: 18px;
   color: var(--color-1);
+  text-transform:none;
+
 }
 .about__one-content-service .service i {
   color: var(--color-3);
@@ -8418,6 +8429,12 @@ Responsive Menu Css
 .blog__one-single-blog-content a {
   display: block;
   text-align: left;
+}
+.blog__one-single-blog-content .btn-three {
+  color: #000000;
+}
+.blog__one-single-blog-content .btn-three:hover{
+  color: var(--primary-color-1);
 }
 .blog__one-single-blog-content .btn-three i {
   margin-left: 5px;

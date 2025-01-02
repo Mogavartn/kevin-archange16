@@ -6,15 +6,21 @@ const Tab = () => {
         <>
             <div className="skill__two section-padding">
                 <div className="container">
+                <div className="row justify-content-center text-center">
+                    <div className="col-xl-9 col-lg-9 col-md-12 services__one-title">
+                        <span className="subtitle-one">Je veux lancer mon business</span>
+                        <h2>Je veux lancer mon business🧑‍💼</h2>
+                    </div>
+                </div>
                     <ul className="row nav mb-5 gy-4 justify-content-center">
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
                         <div className="skill__two-tab nav-link active " id="topic-1-tab" data-bs-toggle="pill" data-bs-target="#topic-1" role="button" aria-controls="topic-1">
-                            <span>JE SUIS FINANCÉ PAR LE CPF</span>
+                            <span>J'ai besoin d'un accompagnement</span>
                         </div>
                         </li>
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
                             <div className="skill__two-tab nav-link " id="topic-2-tab" data-bs-toggle="pill" data-bs-target="#topic-2" role="button" aria-controls="topic-2">
-                                <span>JE ME FINANCE TOUT SEUL</span>
+                                <span>Je suis autonome, je gère mon ikigaï</span>
                             </div>
                         </li>
                     </ul>
@@ -22,7 +28,7 @@ const Tab = () => {
                         <div className="row align-items-center flex-wrap-reverse gy-4 tab-pane fade show active" role="tabpanel" id="topic-1" aria-labelledby="topic-1-tab">
                             <div className="col-xl-6 col-lg-7 col-md-9">
                                 <TabContent 
-                                title={`Faites financer votre avenir sans dépenser � !`}
+                                title={`Faites financer votre avenir sans dépenser 💰 !`}
                                 description="Prenez rendez-vous avec un conseiller et
                                             découvrez comment utiliser votre CPF pour réaliser vos ambitions, sans reste à charge ✨ . Et aussi
                                             bénéficier d’une aide pour choisir votre formation"
@@ -50,9 +56,9 @@ const Tab = () => {
                             <div className="col-xl-6 col-lg-7 col-md-9">
                                 <TabContent 
                                 title="Vous savez quelle formation suivre !"
-                                description="Alors prenez les choses en main � ! Financez votre
+                                description="Alors prenez les choses en main 💪🏼 ! Financez votre
                                             formation en toute liberté et commencez à construire votre succès dès maintenant. Vous avez le
-                                            contrôle, on vous donne les clés � ."
+                                            contrôle, on vous donne les clés 🚀 ."
                                 servicesLeft={[
                                   "Accès immédiat",
                                   "Offres exclusives"

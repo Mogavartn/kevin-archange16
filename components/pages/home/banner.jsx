@@ -26,8 +26,8 @@ const BannerOne = () => {
                         <div className="col-xl-6 col-lg-6">
                             <div className="banner__one-content">
                             <span className="subtitle-one">Boostez votre succès</span>
-                                <h2>Donnez du sens à votre activité (ou vie?) <span>avec l'Ikigai</span></h2>
-                                <p>Boostez vos projets pros avec des formations inspirantes pour trouver ce qui vous fait vibrer ✨</p>
+                                <h2>Donnez du sens à votre activité (ou vie?) <span>avec l'Ikigai.</span></h2>
+                                <p>Boostez vos projets pros avec des formations inspirantes pour trouver ce qui vous fait vibrer. ✨</p>
                                 <div className="grid grid-cols-1 gap-10 justify-content-between">
                                     <Link href="https://www.kevin-attallah.com/formation-creation-entreprise" target="_blank" className="btn-two mb-10  teste">Je veux lancer mon business
                                     </Link>
@@ -48,6 +48,7 @@ const BannerOne = () => {
                                         <span className="video-play-btn-one" onClick={openVideoModal}>
                                             <i className="fas fa-play"></i>
                                         </span>
+                                        <h6>suivre notre vidéo</h6>
                                 </div>
                             </div>
                         </div>

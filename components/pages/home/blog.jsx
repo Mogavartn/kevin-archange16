@@ -29,7 +29,7 @@ const Blog = () => {
                                         <span><i className="far fa-user"></i>par Administrateur</span>
                                         <span><i className="far fa-comment-dots"></i>Comments ({data.comment})</span>
                                     </div>
-                                    <Link className="blog-heading" href={`/blog/${data.id}`}>{data.title}</Link>
+                                    <Link className="blog-heading" href={`/blog/${data.id}`}>{data.title.slice(0, 75)}</Link>
                                     <Link className="btn-three" href={`/blog/${data.id}`}>En savoir plus<i className="fas fa-angle-right"></i></Link>
                                 </div>
                             </div>
