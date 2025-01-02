@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Navigation} from 'swiper/modules';
 import testimonialBg from "../../../public/assets/img/testimonial/testimonial.png";
 import Link from "next/link";
+import VideoPage from "../video/video";
 
 const Testimonial = () => {
 const slideControl = {
@@ -47,86 +48,13 @@ const slideControl = {
                     </div>
                     <div className="col-xl-6 col-lg-6">
                         <div className="testimonial__one-right">
-                        <Swiper modules={[EffectFade, Autoplay, Navigation]} {...slideControl}>
-                            <SwiperSlide>
-                                <div className="single-slider">
-                                    <div className="single-slider-user">
-                                        <div className="single-slider-user-name">
-                                            <h4>M. Frederic</h4>
-                                            <span>FM SERVICES</span>
-                                        </div>
-                                        <div className="single-slider-user-rating">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star not-rated"></i>
-                                        </div>
-                                    </div>
-                                    <p>Super formation, Kevin est au top.</p>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="single-slider">
-                                    <div className="single-slider-user">
-                                        <div className="single-slider-user-name">
-                                            <h4>Anthony J</h4>
-                                            <span>Apprenant</span>
-                                        </div>
-                                        <div className="single-slider-user-rating">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star not-rated"></i>
-                                        </div>
-                                    </div>
-                                    <p>Accompagnement pro et sérieux, je recommande!</p>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="single-slider">
-                                    <div className="single-slider-user">
-                                        <div className="single-slider-user-name">
-                                            <h4>Sarah F</h4>
-                                            <span>Citys & Co</span>
-                                        </div>
-                                        <div className="single-slider-user-rating">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star not-rated"></i>
-                                        </div>
-                                    </div>
-                                    <p>Kevin m'a accompagné de la création de mes statuts jusqu'à mon lancement, merci à lui!</p>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="single-slider">
-                                    <div className="single-slider-user">
-                                        <div className="single-slider-user-name">
-                                            <h4>David B</h4>
-                                            <span>DB prestige</span>
-                                        </div>
-                                        <div className="single-slider-user-rating">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star not-rated"></i>
-                                        </div>
-                                    </div>
-                                    <p>J’hésitais avant ma formation à me lancer, du coup c'est décidé grâce aux conseils de Kevin.</p>
-                                </div>
-                            </SwiperSlide>
-                        </Swiper>
-                            <div className="testimonial__one-right-bottom">
-                                <div className="slider-arrow">
-                                    <i className="swiper-button-prev fas fa-arrow-left"></i>
-                                    <i className="swiper-button-next fas fa-arrow-right"></i>
-                                </div>
-                            </div>
+                         <VideoPage />
+                        </div>
+                    </div>
+
+                    <div className="col-xl-6 col-lg-6">
+                        <div className="">
+                         <VideoPage />
                         </div>
                     </div>
                 </div>
