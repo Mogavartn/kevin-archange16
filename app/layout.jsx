@@ -10,6 +10,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
+                <script src="//app.quickreviewer.com/proof/webproof/qrv2.js" defer></script>
                 <link rel='icon' type='image/png' href='../favicon.ico' />
             </head>
             <body>
