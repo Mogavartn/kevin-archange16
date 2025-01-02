@@ -51,12 +51,6 @@ const slideControl = {
                          <VideoPage />
                         </div>
                     </div>
-
-                    <div className="col-xl-6 col-lg-6">
-                        <div className="">
-                         <VideoPage />
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>     
