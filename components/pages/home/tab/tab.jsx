@@ -40,7 +40,7 @@ const Tab = () => {
                                   "Prise en charge rapide",
                                   "Service personnalisé"
                                 ]}
-                                buttonText="Contactez-nous"
+                                buttonText="Prendre RDV"
                                 buttonLink="https://meet.brevo.com/kevin-a2ta2l"
                                 />
                             </div>
