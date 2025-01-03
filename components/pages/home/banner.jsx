@@ -29,7 +29,7 @@ const BannerOne = () => {
                                 <h2>Donnez du sens à votre activité (ou vie?) <span>avec l'Ikigai.</span></h2>
                                 <p>Boostez vos projets pros avec des formations inspirantes pour trouver ce qui vous fait vibrer. ✨</p>
                                 <div className="grid grid-cols-1 gap-10 justify-content-between">
-                                    <Link href="/contact" target="_blank" className="btn-two mb-10  teste">Je veux lancer mon business
+                                    <Link href="/contact" className="btn-two mb-10  teste">Je veux lancer mon business
                                     </Link>
                                     <Link href="https://www.kevin-attallah.com/catalogue" target="_blank" className="btn-one ml-10 ">Je veux me former
                                     </Link>                                
