@@ -4600,10 +4600,11 @@ Responsive Menu Css
   right: 110px;
   top: 80px;
 }
-.about__one-image .experience-bar i {
+.about__one-image .experience-bar img {
   color: var(--text-white);
   font-size: 70px;
-  margin-right: 30px;
+  margin-right: 10px;
+  width: 100px;
 }
 .about__one-image .experience-bar span {
   font-size: 18px;
@@ -9601,7 +9602,7 @@ Responsive Menu Css
   background-color: var(--primary-color-1);
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .testimonial__one-left-title {
   z-index: 4;

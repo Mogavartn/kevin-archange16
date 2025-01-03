@@ -7,6 +7,7 @@ import brand6 from "../../../public/assets/img/brand/brand-6.png";
 import brand7 from "../../../public/assets/img/brand/brand-7.png";
 import about1 from "../../../public/assets/img/about/about-1.png";
 import about2 from "../../../public/assets/img/about/about-2.png";
+import logo from "../../../public/assets/img/about/ikigai_white.png";
 import Link from "next/link";
 import { useEffect } from 'react';
 
@@ -144,7 +145,7 @@ const About = () => {
                     <div className="col-xl-6 col-lg-5">
                         <div className="about__one-image">
                             <div className="experience-bar animate-y-axis-slider">
-                                <i className="fa fa-people-carry"></i>
+                                <img src={logo.src} alt="image" className="" />
                                 <div className="experience-bar-right">
                                     <div className="experience-bar-counter">
                                         <h4 className="counter"></h4>
