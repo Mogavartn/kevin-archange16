@@ -8,7 +8,7 @@ const Tab = () => {
                 <div className="container">
                 <div className="row justify-content-center text-center">
                     <div className="col-xl-9 col-lg-9 col-md-12 services__one-title">
-                        <span className="subtitle-one">Je veux lancer mon business</span>
+                        {/* <span className="subtitle-one">Je veux lancer mon business</span> */}
                         <h2>Je veux lancer mon business🧑‍💼</h2>
                     </div>
                 </div>-
