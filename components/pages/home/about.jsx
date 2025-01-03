@@ -65,7 +65,7 @@ const About = () => {
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://wa.me/33756949491" target="_blank" rel="noopener noreferrer">
                                             <img src={brand2.src} alt="image" />
                                         </a>
                                     </div>
@@ -102,7 +102,7 @@ const About = () => {
                                         </a>
                                     </div>
                                     <div className="brand__area-item">
-                                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://wa.me/33756949491" target="_blank" rel="noopener noreferrer">
                                             <img src={brand2.src} alt="image" />
                                         </a>
                                     </div>

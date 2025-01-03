@@ -14,14 +14,14 @@ const SideBar = ({ isOpen, setIsOpen }) => {
 				</div>
 				<p>Lancez votre business ou projet pro avec style 🚀 ! Coaching, formations et conseils pour aligner vos ambitions, vos talents et vos valeurs. Prêt à transformer vos idées en succès ?</p>
 				<div className="header__area-menubar-right-sidebar-popup-contact">
-					<h4 className="mb-30">Get In Touch</h4>
+					<h4 className="mb-30">Entrer en contact avec nous</h4>
 					<div className="header__area-menubar-right-sidebar-popup-contact-item">
 						<div className="header__area-menubar-right-sidebar-popup-contact-item-icon">
 							<i className="fal fa-phone-alt icon-animation"></i>
 						</div>
 						<div className="header__area-menubar-right-sidebar-popup-contact-item-content">
 							<span>Appelez maintenant</span>
-							<h6><Link href="tel:+125(895)658568">+125 (895) 658 568</Link></h6>
+							<h6><Link href="https://wa.me/33756949491" target="_blank" rel="noopener noreferrer">+33 (756) 94 94 91</Link></h6>
 						</div>
 					</div>
 					<div className="header__area-menubar-right-sidebar-popup-contact-item">

@@ -11,9 +11,9 @@ import Tab from "../home/tab/tab";
 const ContactUs = () => {
     return (
         <>
-            <SEO pageTitle="Contactez-nous" />        
+            <SEO pageTitle="Avec-ou-sans-accompagnement" />        
             <HeaderOne />
-            <BreadCrumb title="Contactez-nous" innerTitle="Contactez-nous" />
+            <BreadCrumb title="Avec ou sans accompagnement " innerTitle="Avec ou sans accompagnement" />
             <Tab/>
             <FooterThree />
             <ScrollToTop />
