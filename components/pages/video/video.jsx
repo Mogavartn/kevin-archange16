@@ -1,13 +1,15 @@
 const VideoPage = () => {
     return (
-      <div>
+      <div className="bg-primary">
         <video
-          src="/assets/video/temoignage.webm" // Chemin relatif depuis le dossier public
+          src="/assets/video/temoig.webm" // Chemin relatif depuis le dossier public
           autoPlay
           loop
           muted
-          controls
-          style={{ width: '100%', height: '100%' }}
+          playsInline
+          disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
+          className=""
         >
         </video>
       </div>

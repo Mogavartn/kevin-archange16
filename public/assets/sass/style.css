@@ -9628,17 +9628,31 @@ Responsive Menu Css
 .testimonial__one-left-title .btn-one:hover i {
   color: var(--text-heading-color);
 }
-.testimonial__one-right {
+testimonial__one-right {
   background: var(--black);
   z-index: 3;
   position: relative;
-  padding: 100px 20px;
-  width: 700px;
+  padding: 20px 20px;
+  width: 800px;
   padding-bottom: 5px;
   margin-top: 33%;
   transform: translateY(-50%);
   border-radius: 30px;
   box-shadow: rgba(99, 99, 99, 0.09) 0px 2px 8px 0px;
+}
+.testimonial__one-right video{
+  position:relative;
+  width: 100%;              /* La vidéo prend toute la largeur disponible */
+  height: auto;             /* Maintient le ratio d'aspect */
+  max-width: 1000px;         /* Limite la taille maximale à 800px */
+  margin: 0 auto;           /* Centrer la vidéo horizontalement */
+  display: block;
+  background-color: var(--bg-white);
+  margin-top: 33%;
+  transform: translateY(-50%);
+  border-radius: 30px;
+  padding: 70px 30px;
+
 }
 .testimonial__one-right .single-slider-user {
   display: flex;

@@ -48,7 +48,17 @@ const slideControl = {
                     </div>
                     <div className="col-xl-6 col-lg-6">
                         <div className="testimonial__one-right">
-                         <VideoPage />
+                            <video
+                                src="/assets/video/temoig.webm" // Chemin relatif depuis le dossier public
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                disablePictureInPicture
+                                controlsList="nodownload nofullscreen noremoteplayback"
+                                className=""
+                                >
+                            </video>
                         </div>
                     </div>
                 </div>
