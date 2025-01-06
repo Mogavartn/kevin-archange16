@@ -26,8 +26,13 @@ const BannerOne = () => {
                         <div className="col-xl-6 col-lg-6">
                             <div className="banner__one-content">
                             <span className="subtitle-one">Boostez votre succès</span>
-                                <h2>Donnez du sens à votre activité (ou vie?) <span>avec l'Ikigai.</span></h2>
-                                <p>Boostez vos projets pros avec des formations inspirantes pour trouver ce qui vous fait vibrer. ✨</p>
+                                <h2>Donne du sens à ta <span>vie!</span></h2>
+                                <p>Tu veux monter ton business ou développer de nouvelles compétences ? ✨ <br/>On t’aide à trouver ce qui a du sens pour toi, sans blabla ni perte de temps.
+                                    Grâce à l’Ikigaï, on analyse ce qui compte vraiment :<br/>
+                                    <span>👉 Est-ce que cette compétence te sert vraiment ?</span> <br/>
+                                    <span>👉 Lancer ton projet ? Ton idées est elle viable ? Est-ce aligné avec qui tu es ?</span> 
+                                    Pas de phrases toutes faites, pas d’artifice : juste toi, ton projet et des solutions qui te correspondent.
+                                    Prêt·e à passer à l’action ?</p>
                                 <div className="grid grid-cols-1 gap-10 justify-content-between">
                                     <Link href="/contact" className="btn-two mb-10  teste">Je veux lancer mon business
                                     </Link>

@@ -483,7 +483,7 @@ p {
   z-index: 3;
   position: relative;
   transition: 0.4s;
-  text-transform: capitalize;
+  text-transform: none;
   overflow: hidden;
   border-radius: 50px;
   border: 1px solid var(--primary-color-1);
@@ -1083,6 +1083,16 @@ p {
 }
 .brand__area {
   background-color: var(--bg-white);
+ /* background-color: #6A0DAD;
+  background-color: #FF6F3C;
+  background-color: #3EB489;
+  background-color: #D9A500;
+  background-color: 66D9EF;
+  background-color: A3E7FF;*/
+}
+.brand__area h3 {
+  text-transform: none;
+  color: #6A0DAD;
 }
 /* Lorsqu'on survole tout le conteneur .scroll, l'animation se met en pause */
 .text__slider .scroll:hover {
@@ -4095,7 +4105,7 @@ Responsive Menu Css
 }
 .banner__one-content h2 {
   font-size: 74px;
-  line-height: 83px;
+  line-height: 70px;
   margin-bottom: 20px;
   text-transform: none;
 }
@@ -4111,7 +4121,7 @@ Responsive Menu Css
   font-size: 18px;
   text-transform: none;
   margin-bottom: 40px;
-  width: 93%;
+  width: 97%;
 }
 .banner__one-image h6 {
   position: absolute;
@@ -5449,7 +5459,7 @@ Responsive Menu Css
 }
 .services__one .single-service {
   background: var(--bg-white);
-  padding: 30px 30px 33px 30px;
+  padding: 30px 10px 33px 10px;
   padding-top: 0;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 15px 0px;
@@ -5483,10 +5493,14 @@ Responsive Menu Css
   font-size: 22px;
   margin-bottom: 12px;
   color: var(--primary-color-3);
+  text-align: center;
+  text-transform: none;
 }
 .services__one-single-service-content p {
   color: var(--color-2);
   margin-bottom: 20px;
+  text-align: center;
+  text-transform: none;
 }
 .services__one .services-image-wrapper {
   text-align: center;
