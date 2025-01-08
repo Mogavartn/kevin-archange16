@@ -3,14 +3,8 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import React, { useState } from 'react';
 import 'swiper/swiper-bundle.css';
 import Link from 'next/link';
-import Social from '@/components/data/social';
 import blogData from '@/components/data/blog-data';
 import BlogSidebar from '../blog-sidebar/blog-sidebar';
-import icon from '../../../public/assets/img/icon/blog-details-quote.png';
-import image from '../../../public/assets/img/blog/blog-details.png';
-import avatar1 from '../../../public/assets/img/avatar/avatar-1.jpg';
-import avatar2 from '../../../public/assets/img/avatar/avatar-2.jpg';
-import avatar3 from '../../../public/assets/img/avatar/avatar-3.jpg';
 
 const BlogSingleMain = ({singleData}) => {
     const category = singleData?.title.split(' ').slice(0, 2).join(' ') + '..';
@@ -82,7 +76,7 @@ const BlogSingleMain = ({singleData}) => {
                                     Commentaires (05)
                                 </span>
                                 <div className="blog__details-quote ">
-                                    <Swiper {...swiperConfig}>
+                                    <Swiper modules={[Navigation ]} {...swiperConfig} className="py-2">
                                         {singleData.images.map((image, index) => (
                                             <SwiperSlide key={index}>
                                                 <div className="single-slider">

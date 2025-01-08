@@ -1,9 +1,10 @@
 import formationData from "@/components/data/formationt-date";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay} from 'swiper/modules';
+import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
 import Link from "next/link";
 
 console.log(formationData);
+
 const Portfolio = () => {
     const slideControl = {
 		spaceBetween: 35,
@@ -15,6 +16,10 @@ const Portfolio = () => {
             delay: 4500,
             reverseDirection: false,
             disableOnInteraction: false,
+        },
+        navigation: {
+            prevEl: '.swiper-button-prev',  // Sélecteur pour la flèche précédente
+            nextEl: '.swiper-button-next',  // Sélecteur pour la flèche suivante
         },
 		breakpoints: {
 			0: {
@@ -30,8 +35,8 @@ const Portfolio = () => {
 				slidesPerView: 3
 			},
 		}
-       
     };
+
     return (
         <div className="portfolio__one section-padding">
             <div className="container">
@@ -44,13 +49,13 @@ const Portfolio = () => {
                     </div>
                     <div className="col-xl-3 col-lg-4">
                         <div className="portfolio__one-content-right text-lg-end">
-                            <Link href="https://www.kevin-attallah.com/catalogue" target="_blank" className="btn-one">Toutes Nos Formations<i className="fas fa-arrow-right"></i></Link>
+                            <Link href="/services" className="btn-one">Toutes Nos Formations<i className="fas fa-arrow-right"></i></Link>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="container custom__container">
-                <Swiper modules={[EffectFade, Autoplay]} {...slideControl} className="py-5">
+                <Swiper modules={[Navigation, EffectFade, Autoplay]} {...slideControl} className="py-5">
                     {formationData?.map((data, id) => (
                         <SwiperSlide key={id} className="portfolio__one-single-portfolio single-portfolio">
                             <img src={data.image.src} alt="image" />
@@ -61,6 +66,11 @@ const Portfolio = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+                {/* Flèches de navigation */}
+                <div className="swiper-button">
+                    <div className="swiper-button-prev fas fa-arrow-left"></div>
+                    <div className="swiper-button-next fas fa-arrow-right"></div>
+                </div>
             </div>
         </div>
     );

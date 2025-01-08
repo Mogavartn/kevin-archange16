@@ -50,7 +50,7 @@ const FooterThree = () => {
                             <div className="footer__three-widget-solution">
                                 <ul>
 									<li><Link href="https://www.kevin-attallah.com/catalogue" target="_blank"><i className="far fa-chevron-double-right"></i>Formations</Link></li>
-									<li><Link href="/"><i className="far fa-chevron-double-right"></i>FAQ</Link></li>
+									<li><Link href="/blog"><i className="far fa-chevron-double-right"></i>Blog</Link></li>
 									<li><Link href="testimonial"></Link></li>
 									<li><Link href="about"><i className="far fa-chevron-double-right"></i>A propos</Link></li>
                                 </ul>

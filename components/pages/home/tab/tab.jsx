@@ -1,5 +1,6 @@
 import React from 'react';
 import TabContent from './tab-content';
+import Link from 'next/link';
 
 const Tab = () => {
     return (
@@ -14,14 +15,18 @@ const Tab = () => {
                 </div>-
                     <ul className="row nav mb-5 gy-4 justify-content-center">
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <Link href="https://meet.brevo.com/kevin-a2ta2l" target="_blank">
                         <div className="skill__two-tab nav-link active " id="topic-1-tab" data-bs-toggle="pill" data-bs-target="#topic-1" role="button" aria-controls="topic-1">
                             <span>J'ai besoin d'un accompagnement</span>
                         </div>
+                        </Link>
                         </li>
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                         <Link href="https://www.kevin-attallah.com/catalogue" target="_blank">
                             <div className="skill__two-tab nav-link " id="topic-2-tab" data-bs-toggle="pill" data-bs-target="#topic-2" role="button" aria-controls="topic-2">
                                 <span>Je suis autonome, je gère mon ikigaï</span>
                             </div>
+                         </Link>
                         </li>
                     </ul>
                     <div className="skill__two-tab-details tab-content">
