@@ -15,23 +15,23 @@ const Tab = () => {
                 </div>-
                     <ul className="row nav mb-5 gy-4 justify-content-center">
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                        <Link href="https://meet.brevo.com/kevin-a2ta2l" target="_blank">
-                        <div className="skill__two-tab nav-link active " id="topic-1-tab" data-bs-toggle="pill" data-bs-target="#topic-1" role="button" aria-controls="topic-1">
-                            <span>J'ai besoin d'un accompagnement</span>
-                        </div>
-                        </Link>
+                            <Link href="https://meet.brevo.com/kevin-a2ta2l" target="_blank">
+                                <div className="skill__two-tab nav-link active " data-bs-toggle="pill" role="button">
+                                    <span>J'ai besoin d'un accompagnement</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                         <Link href="https://www.kevin-attallah.com/catalogue" target="_blank">
-                            <div className="skill__two-tab nav-link " id="topic-2-tab" data-bs-toggle="pill" data-bs-target="#topic-2" role="button" aria-controls="topic-2">
-                                <span>Je suis autonome, je gère mon ikigaï</span>
-                            </div>
-                         </Link>
+                            <Link href="https://www.kevin-attallah.com/catalogue" target="_blank">
+                                <div className="skill__two-tab nav-link " data-bs-toggle="pill" data-bs-target="#topic-2" role="button">
+                                    <span>Je suis autonome, je gère mon ikigaï</span>
+                                </div> 
+                            </Link>                       
                         </li>
                     </ul>
-                    <div className="skill__two-tab-details tab-content">
+                    <div className="skill__two-tab-details ">
                         <div className="row align-items-center flex-wrap-reverse gy-4 tab-pane fade show active" role="tabpanel" id="topic-1" aria-labelledby="topic-1-tab">
-                            <div className="col-xl-6 col-lg-7 col-md-9">
+                            <div className="col-xl-6 col-lg-6 col-md-9 p-4 formation_rigth">
                                 <TabContent 
                                 title={`Faites financer votre avenir sans dépenser 💰 !`}
                                 description="Prenez rendez-vous avec un conseiller et
@@ -49,38 +49,23 @@ const Tab = () => {
                                 buttonLink="https://meet.brevo.com/kevin-a2ta2l"
                                 />
                             </div>
-                            <div className="col-xl-6 col-lg-8">
-                                <div className="skill__two-tab-details-image">
-                                    <div className="skill__two-tab-details-image-wrapper">
-                                        <img src="assets/img/skill/skill-two.png" alt="" className="image-1" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row align-items-center flex-wrap-reverse gy-4 tab-pane fade" role="tabpanel" id="topic-2" aria-labelledby="topic-2-tab">
-                            <div className="col-xl-6 col-lg-7 col-md-9">
-                                <TabContent 
-                                title="Vous savez quelle formation suivre !"
-                                description="Alors prenez les choses en main 💪🏼 ! Financez votre
-                                            formation en toute liberté et commencez à construire votre succès dès maintenant. Vous avez le
-                                            contrôle, on vous donne les clés 🚀 ."
-                                servicesLeft={[
-                                  "Accès immédiat",
-                                  "Offres exclusives"
-                                ]}
-                                servicesRight={[
-                                  "Sécurisé et rapide",
-                                  "Accès personnalisé"
-                                ]}
-                                buttonText="Commencez"
-                                buttonLink="https://www.kevin-attallah.com/catalogue"/>
-                            </div>
-                            <div className="col-xl-6 col-lg-8">
-                                <div className="skill__two-tab-details-image">
-                                    <div className="skill__two-tab-details-image-wrapper">
-                                        <img src="assets/img/skill/skill-two1.png" alt="" className="image-1" />
-                                    </div>
-                                </div>
+                            <div className="col-xl-6 col-lg-6 col-md-9 p-4 ormation_left">
+                                        <TabContent 
+                                        title="Vous savez quelle formation suivre !"
+                                        description="Alors prenez les choses en main 💪🏼 ! Financez votre
+                                                    formation en toute liberté et commencez à construire votre succès dès maintenant. Vous avez le
+                                                    contrôle, on vous donne les clés 🚀 ."
+                                        servicesLeft={[
+                                        "Accès immédiat",
+                                        "Offres exclusives"
+                                        ]}
+                                        servicesRight={[
+                                        "Sécurisé et rapide",
+                                        "Accès personnalisé"
+                                        ]}
+                                        buttonText="Commencez"
+                                        buttonLink="https://www.kevin-attallah.com/catalogue"
+                                    />
                             </div>
                         </div>
                     </div>

@@ -293,7 +293,7 @@ h1 {
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 45px;
   line-height: 1.13;
   padding: 0;
   margin: 0;
@@ -3622,6 +3622,9 @@ p {
 }
 .header__area-menubar-right-sidebar-popup-logo {
   margin-bottom: 30px;
+  position: absolute;
+  top: 40px;
+  left: 20px;
 }
 .header__area-menubar-right-sidebar-popup-logo a {
   display: inline-block;
@@ -3632,12 +3635,13 @@ p {
   z-index: 999;
 }
 .header__area-menubar-right-sidebar-popup p {
+  margin-top: 30px;
   color: var(--color-4);
   text-transform: none;
 }
 .header__area-menubar-right-sidebar-popup-contact {
-  margin: 40px 0;
-  padding: 40px 0;
+  margin: 4px 0;
+  padding: 4px 0;
   border-top: 1px solid var(--color-19);
   border-bottom: 1px solid var(--color-19);
 }
@@ -4140,7 +4144,7 @@ Responsive Menu Css
   );
 }
 .banner__one-content p {
-  font-size: 18px;
+  font-size: 17px;
   text-transform: none;
   margin-bottom: 40px;
   width: 97%;
@@ -5342,6 +5346,10 @@ Responsive Menu Css
 .skill__two-tab.active span {
   color: var(--text-white);
 }
+.skill__two-tab-details .formation_rigth{
+  background-color: #7222db4d;
+  border-radius: 10px;
+}
 .skill__two-tab-details-image {
   position: relative;
 }
@@ -5373,6 +5381,7 @@ Responsive Menu Css
 }
 .skill__two-tab-details-content h2 {
   margin-bottom: 0px;
+  text-transform: none;  
 }
 .skill__two-tab-details-content h3 {
   color: var(--text-white);

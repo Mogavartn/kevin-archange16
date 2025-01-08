@@ -67,7 +67,7 @@ const FooterThree = () => {
                                     </div>
                                     <div className="footer__three-widget-location-item-info email">
                                         <span>Email</span>
-                                        <Link href="mailto:kevin@jak-company.com">kevin@jak-company.com</Link>
+                                        <Link href="">kevin@jak-company.com</Link>
                                     </div>
                                 </div>
                                 <div className="footer__three-widget-location-item">
@@ -89,7 +89,7 @@ const FooterThree = () => {
                     <div className="row justify-content-between copyright__one-container-area">
                         <div className="col-xl-5 col-lg-6"> 
                             <div className="copyright__one-left">
-                                <p>© Kevin Attallah 2024 | Ikigai</p>
+                                <p>© Kevin Attallah 2025 | Ikigai</p>
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-6">

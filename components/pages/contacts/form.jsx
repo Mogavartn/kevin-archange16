@@ -5,33 +5,38 @@ const FormArea = () => {
         <>
             <form action="#">
                 <div className="row">
-                    <div className="col-md-6 mb-30">
+                    <div className="col-md-6 mb-3">
                         <div className="contact__form-area-item">
-                            <input type="text" name="name" placeholder="Full Name" required="required" />
+                            <input type="text" name="first_name" placeholder="Prénom" required="required" />
                         </div>
                     </div>
-                    <div className="col-md-6 md-mb-30">
+                    <div className="col-md-6 mb-3">
                         <div className="contact__form-area-item">
-                            <input type="email" name="email" placeholder="Email Address" required="required" />
+                            <input type="text" name="last_name" placeholder="Nom" required="required" />
                         </div>
                     </div>
-                    <div className="col-md-12 mb-30">
+                    <div className="col-md-12 mb-3">
                         <div className="contact__form-area-item">
-                            <input type="text" name="subject" placeholder="Subject" />
+                            <input type="text" name="company" placeholder="Société (si applicable)" />
                         </div>
                     </div>
-                    <div className="col-md-12 mb-30">
+                    <div className="col-md-12 mb-3">
                         <div className="contact__form-area-item">
-                            <textarea name="message" placeholder="Message"></textarea>
+                            <input type="text" name="subject" placeholder="Objet du message" />
                         </div>
                     </div>
-                    <div className="col-md-12">
+                    <div className="col-md-12 mb-3">
+                        <div className="contact__form-area-item">
+                            <textarea name="message" placeholder="Message" required="required"></textarea>
+                        </div>
+                    </div>
+                    <div className="col-md-12 mb-4">
                         <div className="contact__two-right-form-item">
-                            <button className="btn-one" type="submit">Envoyer</button>
+                            <button className="btn-one" >Envoyer</button>
                         </div>
                     </div>
                 </div>
-            </form>            
+            </form>
         </>
     );
 };
