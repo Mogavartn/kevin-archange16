@@ -10973,7 +10973,7 @@ testimonial__one-right {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  display: block;
+  display: inline;
   transition: 0.4s;
   width: 90%;
 }

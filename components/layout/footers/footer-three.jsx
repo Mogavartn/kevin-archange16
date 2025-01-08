@@ -63,11 +63,11 @@ const FooterThree = () => {
                             <div className="footer__three-widget-location">
                                 <div className="footer__three-widget-location-item">
                                     <div className="footer__three-widget-location-item-icon">
-                                        <i className="flaticon-mail"></i>
+                                        <i className="fa fa-phone"></i>
                                     </div>
                                     <div className="footer__three-widget-location-item-info email">
-                                        <span>Email</span>
-                                        <Link href="">kevin@jak-company.com</Link>
+                                        <span>Téléphone</span>
+                                        <Link href="https://wa.me/33756949491">+33 7 56 94 94 91</Link>
                                     </div>
                                 </div>
                                 <div className="footer__three-widget-location-item">
