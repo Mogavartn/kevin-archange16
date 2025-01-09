@@ -5529,7 +5529,7 @@ Responsive Menu Css
 
 .skill__two-tab-details_profil_des_apprenants{
   display: flex;
-  justify-content:space-between;
+  justify-content:space-around;
 }
 .skill__two-tab-details_profil_des_apprenants .project-info{
   width: 90%;
@@ -8237,6 +8237,25 @@ Responsive Menu Css
   transition: 0.5s;
   border-left: 3px solid var(--color-4);
 }
+/***/
+.faq-collapse-item-card-header-content ul {
+  border-top: 0;
+  padding: 23px 30px;
+  border-radius: 0 0 0 10px;
+  list-style-type: none;
+  margin: 0;
+}
+.faq-collapse-item-card-header-content ul li {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.faq-collapse-item-card-header-content ul li span {
+  color: var(--text-white);
+  margin-left: 10px;
+  font-weight: 400;
+}
+/****/
 .faq__one .faq-collapse-item-card.active {
   border-color: transparent;
   border-left: 3px solid var(--primary-color-1);

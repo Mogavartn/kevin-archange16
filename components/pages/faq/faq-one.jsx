@@ -36,7 +36,12 @@ const FaqOne = ({singleData}) => {
                                 <h6>{faq.question}</h6>
                             </div>
                             <div className={`faq-collapse-item-card-header-content ${activeIndex === index ? 'active' : 'display-none'}`}>
-                                <p>{faq.answer}</p>
+                                <ul>
+                                    {faq.answer.map((objectif, index) => (
+                                    <li key={index}><span>{objectif}</span></li>
+                                    ))}
+                                </ul>
+                                {/* <p>{faq.answer}</p> */}
                             </div>
                         </div>
                     </div>

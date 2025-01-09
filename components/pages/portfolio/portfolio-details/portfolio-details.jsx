@@ -37,7 +37,8 @@ const PortfolioDetailsMain = ({singleData}) => {
                 </div>
               </div>
               <div className="skill__two-tab-details-content-service">
-              <div className="project-info">
+                <div>
+                    <div className="project-info ">
                       <div className="project-info-top">
                           <h4>Objectifs pédagogiques</h4>
                       </div>
@@ -46,20 +47,41 @@ const PortfolioDetailsMain = ({singleData}) => {
                             <li key={index}><span>{objectif}</span></li>
                             ))}
                       </ul>               
+                    </div>
                 </div>
-                <div className="faq__three section-padding">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-12">
-                                <div className="faq-collapse">
-                                    <FaqOne singleData={singleData}/>
-                                </div>	
+
+                <div className=" d-flex justify-content-between align-items-center ">
+                    <div className="faq__three section-padding">
+                        <div className="">
+                            <div className="row">
+                                <div className="col-xl mr-20">
+                                    <div className="faq-collapse">
+                                        <FaqOne singleData={singleData}/>
+                                    </div>	
+                                </div>
                             </div>
                         </div>
+                    </div>  
+                    <div className="project-info w-50 ml-20">
+                      <div className="project-info-top">
+                          <h4>Profil des apprenants</h4>
+                      </div>
+                      
+                      <ul>
+                            <h6 className="text-dark fs-5">Pour qui :</h6>
+                          <li>Type:<span>{singleData.formation?.type}</span></li>
+                          <li>durée:<span>{singleData.formation?.duree}</span></li>
+                          <li>Equipe pédagogique:<span>{singleData.equipe_pedagogique?.nom}</span></li>
+                            <h6 className="text-dark fs-5">Prérequis :</h6>
+                          <li>Type:<span>{singleData.formation?.type}</span></li>
+                          <li>durée:<span>{singleData.formation?.duree}</span></li>
+                          <li>Equipe pédagogique:<span>{singleData.equipe_pedagogique?.nom}</span></li>
+                      </ul>           
                     </div>
-                </div>  
-                <div className="skill__two-tab-details-content-service-right pt-5">
-                    <div className="skill__two-tab-details_profil_des_apprenants">
+                </div>
+                <div>
+                <div className="skill__two-tab-details-content-service-right pt-5 ">
+                    <div className="skill__two-tab-details_profil_des_apprenants ">
                         <div className="project-info mr-10">
                             <div className="project-info-top">
                                 <h4>Objectifs pédagogiques</h4>
@@ -93,6 +115,8 @@ const PortfolioDetailsMain = ({singleData}) => {
                         </div>                         
                     </div>
                 </div>
+              
+             </div>
                  
                
                 <Link href={'buttonLink'} className="btn-one">{'Acheter maintenant'}
