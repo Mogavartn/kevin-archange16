@@ -1,4 +1,4 @@
-import formationData from "@/components/data/formationt-date";
+import formationData from "@/components/data/listesFormation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
 import Link from "next/link";

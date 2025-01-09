@@ -5377,7 +5377,7 @@ Responsive Menu Css
   border-radius: 20px;
 }
 .skill__two-tab-details-content {
-  padding-right: 0px;
+  padding: 20px 50px;
 }
 .skill__two-tab-details-content h2 {
   margin-bottom: 0px;
@@ -5394,10 +5394,8 @@ Responsive Menu Css
 }
 /*Info*/
 .skill__two-tab-details-content .project-info {
-  /*position: absolute;
-  bottom: -44%;
-  right: 0;
-  width: 410px;*/
+  position: relative;
+  width: 500px;
   border-radius: 10px 10px 10px 10px;
   overflow: hidden;
 }
@@ -5440,13 +5438,60 @@ Responsive Menu Css
 }
 /*Info end */
 .skill__two-tab-details-content-service {
-  display: flex;
-  justify-content:space-evenly;
+  /*isplay: flex;
+  /*justify-content:space-evenly;
   /*align-items: center;*/
   flex-wrap: wrap;
   margin-top: 50px;
   margin-bottom: 30px;
 }
+
+/*Information*/
+.skill__two-tab-details-content-service .project-info{
+  position: relative;
+  width: 100%;
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+}
+.skill__two-tab-details-content-service .project-info .project-info-top {
+  background: var(--primary-color-1);
+  text-align: center;
+  padding: 7px 0;
+}
+.skill__two-tab-details-content-service .project-info .project-info-top h4 {
+  color: var(--text-white);
+  font-size: 18px;
+}
+.skill__two-tab-details-content-service .project-info ul {
+  background: var(--bg-white);
+  border: 1px solid var(--color-4);
+  border-top: 0;
+  padding: 23px 30px;
+  border-radius: 0 0 0 10px;
+  list-style-type: none;
+  margin: 0;
+}
+.skill__two-tab-details-content-service .project-info ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.skill__two-tab-details-content-service .project-info ul li span {
+  color: var(--color-2);
+  margin-left: 10px;
+  font-weight: 400;
+}
+.skill__two-tab-details-content-service .project-info ul li .value {
+  color: var(--primary-color-1);
+  font-size: 22px;
+  font-weight: 600;
+}
+.skill__two-tab-details-content-service .project-info ul .project-rating i {
+  color: #FBA758;
+  margin-right: 5px;
+}
+/* End information*/
+
 .skill__two-tab-details-content-service .service {
   margin-bottom: 5px;
 }
@@ -5457,6 +5502,11 @@ Responsive Menu Css
 .skill__two-tab-details-content-service .service i {
   color: var(--color-3);
   margin-right: 10px;
+}
+.skill__two-tab-details-content .skill__two-tab_image {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
 
 @media (max-width: 1399px) {
@@ -5475,6 +5525,25 @@ Responsive Menu Css
   .skill__two-tab {
     width: 100%;
   }
+}
+
+.skill__two-tab-details_profil_des_apprenants{
+  display: flex;
+  justify-content:space-between;
+}
+.skill__two-tab-details_profil_des_apprenants .project-info{
+  width: 90%;
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+}
+.skill__two-tab-details_profil_des_apprenants .project-info .project-info-top {
+  background: var(--primary-color-1);
+  text-align: center;
+  padding: 7px 0;
+}
+.skill__two-tab-details_profil_des_apprenants .project-info .project-info-top h4 {
+  color: var(--text-white);
+  font-size: 18px;
 }
 /*==========================================================================
 * Services One Style
@@ -8328,8 +8397,8 @@ Responsive Menu Css
 * FAQ Style Three
 ==========================================================================*/
 .faq__three {
-  padding-top: 120px;
-  padding-bottom: 87px;
+  padding-top: 50px;
+  padding-bottom: 0px;
 }
 .faq__three-title {
   margin-bottom: 60px;
@@ -8339,7 +8408,7 @@ Responsive Menu Css
   margin-bottom: 35px;
 }
 .faq__three-title p {
-  color: var(--color-2);
+  color: var(--color-3);
   text-transform: none;
   font-size: 17px;
 }
@@ -8350,7 +8419,7 @@ Responsive Menu Css
 .faq__three .faq-collapse-item-card {
   border-radius: 5px;
   transition: 0.5s;
-  background-color: var(--bg-white);
+  background-color: var(--primary-color-1);
 }
 .faq__three .faq-collapse-item-card-header {
   display: flex;

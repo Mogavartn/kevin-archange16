@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import servicesData from '@/components/data/formationt-date';
+import servicesData from '@/components/data/listesFormation';
 
 const ServicesMain = () => {
     return (

@@ -1,18 +1,29 @@
 "use client"
 import { useParams, useRouter } from "next/navigation";
-import ServicegData from '@/components/data/formationt-date';
-import ServicesSingle from "@/components/pages/service-single";
+import formationsData  from '@/components/data/listesFormation';
+import PortfolioDetails from "@/components/pages/portfolio/portfolio-details";
+
 
 const ServiceDetails = () => {
-    const params = useParams();
-    const singleFormation = ServicegData?.find((service) => service.id === params.id);
+   const params = useParams();
     const router = useRouter();
-    if (!singleFormation) {
+    const id = params.id; 
+    if (!id ) {
+      return <div>Chargement...</div>;
+    }
+  // Trouve le groupe de formations avec l'ID de formation spécifié
+  const selectedFormation = formationsData.find(
+    (formation) => formation.id === id
+  );
+
+  console.log(selectedFormation);
+  
+    if (!selectedFormation) {
         return router.push("/404-error");
     }
     return (
         <>
-            <ServicesSingle singleData={singleFormation} />
+            <PortfolioDetails singleData={selectedFormation}/>
         </>
     );
 };

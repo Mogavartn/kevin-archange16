@@ -1,6 +1,6 @@
 import image6 from "../../../public/assets/img/v1/2.jpg";
 
-import dataFormation from '@/components/data/formationt-date';
+import dataFormation from '@/components/data/listesFormation';
 import Link from 'next/link';
 
 

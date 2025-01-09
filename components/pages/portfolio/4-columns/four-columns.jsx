@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import portfolioData from '../../../data/formationsPrincipales';
+import portfolioData from '../../../data/listesFormation';
 
 const showPortfolioItem = 4;
 
