@@ -58,11 +58,13 @@ const Portfolio = () => {
                 <Swiper modules={[Navigation, EffectFade, Autoplay]} {...slideControl} className="py-5">
                     {formationData?.map((data, id) => (
                         <SwiperSlide key={id} className="portfolio__one-single-portfolio single-portfolio">
+                            <Link href={`/services/${data.id}`}>
                             <img src={data.image.src} alt="image" />
                             <div className="portfolio__one-single-portfolio-content">
                                 <h4>{data.titre}</h4>
                                 <span>{data.subtitle}</span>
                             </div>
+                            </Link>
                         </SwiperSlide>
                     ))}
                 </Swiper>

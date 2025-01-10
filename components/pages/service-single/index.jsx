@@ -3,8 +3,8 @@ import SEO from "@/components/data/seo";
 import HeaderOne from "@/components/layout/headers/header/header-one";
 import BreadCrumb from "../common/breadcrumb";
 import ServicesSingleMain from "./services-single";
-import FooterOne from "@/components/layout/footers/footer-one";
 import ScrollToTop from "../common/scroll/scroll-to-top";
+import FooterThree from "@/components/layout/footers/footer-three";
 
 const ServicesSingle = ({serviceDetails}) => {
     const words = serviceDetails?.id.split(' ');
@@ -15,7 +15,7 @@ const ServicesSingle = ({serviceDetails}) => {
             <HeaderOne />
             <BreadCrumb title={firstAndSecondWord} innerTitle={serviceDetails?.title} />
             <ServicesSingleMain firstAndSecondWord={firstAndSecondWord}/>
-            <FooterOne />
+            <FooterThree />
             <ScrollToTop />
         </>
     );
