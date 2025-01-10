@@ -50,12 +50,13 @@ const PortfolioDetailsMain = ({singleData}) => {
                     </div>
                 </div>
 
-                <div className=" d-flex justify-content-between align-items-center ">
+                <div className=" d-flex justify-content-between align-items-center pt-5">
                     <div className="faq__three section-padding">
                         <div className="">
                             <div className="row">
                                 <div className="col-xl mr-20">
-                                    <div className="faq-collapse">
+                                    <h4 className="text-light">Contenu de la formation</h4>
+                                    <div className="faq-collapse pt-5">
                                         <FaqOne singleData={singleData}/>
                                     </div>	
                                 </div>
@@ -66,21 +67,26 @@ const PortfolioDetailsMain = ({singleData}) => {
                       <div className="project-info-top">
                           <h4>Profil des apprenants</h4>
                       </div>
-                      
                       <ul>
-                            <h6 className="text-dark fs-5">Pour qui :</h6>
-                          <li>Type:<span>{singleData.formation?.type}</span></li>
-                          <li>durée:<span>{singleData.formation?.duree}</span></li>
-                          <li>Equipe pédagogique:<span>{singleData.equipe_pedagogique?.nom}</span></li>
-                            <h6 className="text-dark fs-5">Prérequis :</h6>
-                          <li>Type:<span>{singleData.formation?.type}</span></li>
-                          <li>durée:<span>{singleData.formation?.duree}</span></li>
-                          <li>Equipe pédagogique:<span>{singleData.equipe_pedagogique?.nom}</span></li>
+                         <div className="">
+                            <div>
+                                <h6 className="text-dark fs-5">Pour qui :</h6>
+                                {singleData.formation.profil_apprenants.pour_qui.map((objectif, index) => (
+                                <li key={index}><span>{objectif}</span></li>
+                                ))}
+                            </div>
+                            <div>
+                                <h6 className="text-dark fs-5">Prérequis :</h6>
+                                {singleData.formation.profil_apprenants.prerequis.map((objectif, index) => (
+                                <li key={index}><span>{objectif}</span></li>
+                                ))}
+                            </div>
+                         </div>
                       </ul>           
                     </div>
                 </div>
                 <div>
-                <div className="skill__two-tab-details-content-service-right pt-5 ">
+                <div className="skill__two-tab-details-content-service-right pt-5">
                     <div className="skill__two-tab-details_profil_des_apprenants ">
                         <div className="project-info mr-10">
                             <div className="project-info-top">
