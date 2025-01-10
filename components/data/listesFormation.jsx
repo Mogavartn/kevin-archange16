@@ -111,56 +111,52 @@ const formationsData = [
           "Accès à des outils de communication"
         ]
       },
-      "contenu_formation": {
-        "vocabulaire_specialise": {
-          "description": "Exploration des termes techniques essentiels dans divers domaines professionnels.",
-          "activites": [
-            "Identification et définition des termes techniques spécifiques à chaque domaine.",
-            "Utilisation de contextes pratiques et de cas d'étude pour illustrer l'utilisation appropriée de ces termes.",
-            "Exercices de renforcement du vocabulaire à travers des jeux de rôle et des simulations professionnelles."
+      "contenu_formation":[
+        {
+          "question": "Exploration des termes techniques essentiels dans divers domaines professionnels :",
+          "answer": [
+              "Identification et définition des termes techniques spécifiques à chaque domaine.",
+              "Utilisation de contextes pratiques et de cas d'étude pour illustrer l'utilisation appropriée de ces termes.",
+              "Exercices de renforcement du vocabulaire à travers des jeux de rôle et des simulations professionnelles."
           ]
         },
-        "grammaire_structure": {
-          "description": "Révision des principaux points grammaticaux avancés.",
-          "activites": [
-            "Explication des règles grammaticales complexes avec des exemples concrets et des exercices pratiques.",
-            "Analyse des erreurs fréquentes et des pièges grammaticaux courants rencontrés par les apprenants avancés."
+        {
+          "question": "Révision des principaux points grammaticaux avancés :",
+          "answer": [
+              "Explication des règles grammaticales complexes avec des exemples concrets et des exercices pratiques.",
+              "Analyse des erreurs fréquentes et des pièges grammaticaux courants rencontrés par les apprenants avancés."
           ]
         },
-        "competences_communication_professionnelle": {
-          "description": "Entraînement à la rédaction de documents professionnels et à la présentation.",
-          "activites": [
+        {
+          "question": "Entraînement à la rédaction de documents professionnels et à la présentation :",
+          "answer": [
             "Entraînement à la rédaction de rapports, courriels et présentations.",
             "Techniques de présentation efficaces, y compris la gestion du temps, du stress et l'utilisation de supports visuels.",
             "Pratique de la communication orale à travers des discussions dirigées, des débats et des présentations simulées."
           ]
-        }
-      },
+        },
+      ], 
       "equipe_pedagogique": [
-        {
-          "nom": "Garcia YOANN",
-          "role": "Formateur"
-        }
+           "Garcia YOANN",
+          "Formateur"
+        
       ],
-      "suivi_evaluation": {
-        "methodes": [
+      "suivi_evaluation":[
           "Questions écrites ou orales (QCM)",
           "Mises en situation",
           "Feuilles de présence"
-        ]
-      },
-      "ressources": {
-        "techniques_pedagogiques": [
+        ],
+      "techniques_pedagogiques": [
           "Manuels",
           "Guides pratiques",
           "Vidéos",
           "Présentations PowerPoint"
         ]
-      }
+      
     }
     },
     {
-      "id": "Assurer_les_opérations_comptables_au_quotidien",
+      "id": "Assurer_les_operations_comptables_au_quotidien",
       "titre": "Assurer les opérations comptables au quotidien",
       "image": image1,
       "formation": {
@@ -186,10 +182,10 @@ const formationsData = [
           "Aptitudes à l'analyse et à la résolution de problèmes"
         ]
       },
-      "contenu_formation": {
-        "gestion_clients": {
-          "description": "Assurer la gestion administrative et comptable des clients.",
-          "activites": [
+      "contenu_formation": [
+        {
+          "question": "Assurer la gestion administrative et comptable des clients :",
+          "answer": [
             "Création et maintenance des dossiers clients",
             "Suivi des relations clients",
             "Gestion des documents administratifs",
@@ -200,9 +196,9 @@ const formationsData = [
             "Gestion des risques et des audits"
           ]
         },
-        "gestion_fournisseurs": {
-          "description": "Assurer la gestion administrative et comptable des fournisseurs.",
-          "activites": [
+        {
+          "question": "Assurer la gestion administrative et comptable des fournisseurs :",
+          "answer": [
             "Création et mise à jour des dossiers fournisseurs",
             "Communication avec les fournisseurs",
             "Gestion des documents fournisseurs",
@@ -214,9 +210,9 @@ const formationsData = [
             "Gestion des audits et des contrôles"
           ]
         },
-        "gestion_tresorerie": {
-          "description": "Assurer la gestion administrative et comptable des opérations de trésorerie.",
-          "activites": [
+        {
+          "question": "Assurer la gestion administrative et comptable des opérations de trésorerie :",
+          "answer": [
             "Mise en place et suivi des opérations bancaires",
             "Gestion des flux de trésorerie",
             "Communication avec les institutions financières",
@@ -227,34 +223,28 @@ const formationsData = [
             "Gestion des risques de trésorerie",
             "Gestion des audits et des contrôles"
           ]
-        }
-      },
-      "equipe_pedagogique": [
-        {
-          "nom": "Garcia YOANN",
-          "role": "Formateur"
-        }
+        },
       ],
-      "suivi_evaluation": {
-        "methodes": [
+      "equipe_pedagogique": [
+          "Garcia YOANN",
+          "Formateur"
+      ],
+      "suivi_evaluation": [
           "Questions écrites ou orales (QCM)",
           "Mises en situation",
           "Feuilles de présence"
-        ]
-      },
-      "ressources": {
+        ],
         "techniques_pedagogiques": [
           "Manuels",
           "Guides pratiques",
           "Vidéos",
           "Présentations PowerPoint"
         ]
-      }
     }
     },
     {
-      "id": "ASSURER_LES_TRAVAUX_ADMINISTRATIFS_DE_SECRÉTARIAT_AU_QUOTIDIEN",
-      "titre": "ASSURER LES TRAVAUX ADMINISTRATIFS DE SECRÉTARIAT AU QUOTIDIEN",
+      "id": "Assurer_les_travaux_administratifs_de_secretariat_au_quotidien",
+      "titre": "Assurer les travaux administratifs de secrétariat au quotidien",
       "image": image1,
       "formation": {
       "nom": "Assurer les travaux administratifs de secrétariat au quotidien",
@@ -262,20 +252,13 @@ const formationsData = [
       "description": {
         "objectif": "Cette formation vise à fournir aux participants les compétences nécessaires pour assurer les travaux administratifs quotidiens d'une structure, en se concentrant sur l'utilisation des outils numériques, l'organisation de l'environnement de travail, la recherche et la transmission d'informations écrites, ainsi que l'accueil professionnel."
       },
-      "objectifs_pedagogiques": {
-        "presentation_documents": {
-          "description": "Présenter des documents professionnels courants à l'aide d'outils numériques."
-        },
-        "organisation_travail": {
-          "description": "Organiser son environnement de travail et son classement au quotidien."
-        },
-        "recherche_informations": {
-          "description": "Rechercher et transmettre des informations usuelles par écrit."
-        },
-        "accueil_structure": {
-          "description": "Assurer l'accueil d'une structure au quotidien."
-        }
-      },
+      "objectifs_pedagogiques": [
+          "Présenter des documents professionnels courants à l'aide d'outils numériques.",
+          "Organiser son environnement de travail et son classement au quotidien.",
+          "Rechercher et transmettre des informations usuelles par écrit.",
+          "Assurer l'accueil d'une structure au quotidien."
+        
+      ],
       "profil_apprenants": {
         "pour_qui": [
           "Entreprises privées",
@@ -290,66 +273,60 @@ const formationsData = [
           "Capacité à travailler en équipe"
         ]
       },
-      "contenu_formation": {
-        "presentation_documents": {
-          "description": "Présenter des documents professionnels courants à l'aide d'outils numériques.",
-          "activites": [
+      "contenu_formation": [
+        {
+          "question": "Présenter des documents professionnels courants à l'aide d'outils numériques.",
+          "answer": [
             "Maîtrise des outils numériques (PowerPoint, Google Slides, Apple Keynote)",
             "Structuration et design des présentations",
             "Communication efficace",
             "Préparation à la présentation et gestion des questions"
           ]
         },
-        "organisation_travail": {
-          "description": "Organiser son environnement de travail et son classement au quotidien.",
-          "activites": [
+        {
+          "question": "Organiser son environnement de travail et son classement au quotidien.",
+          "answer": [
             "Structuration de l'espace de travail",
             "Gestion du classement des documents physiques et numériques",
             "Optimisation de la productivité"
           ]
         },
-        "recherche_informations": {
-          "description": "Rechercher et transmettre des informations usuelles par écrit.",
-          "activites": [
+        {
+          "question": "Rechercher et transmettre des informations usuelles par écrit.",
+          "answer": [
             "Compétences en recherche d'informations",
             "Communication écrite efficace",
             "Utilisation des outils de communication écrite (Word, Google Docs, etc.)"
           ]
         },
-        "accueil_structure": {
-          "description": "Assurer l'accueil d'une structure au quotidien.",
-          "activites": [
+        {
+          "question": "Assurer l'accueil d'une structure au quotidien.",
+          "answer": [
             "Compétences en communication et en relation client",
             "Gestion des situations d'accueil complexes",
             "Organisation et gestion du flux d'accueil"
           ]
         }
-      },
-      "equipe_pedagogique": [
-        {
-          "nom": "Garcia YOANN",
-          "role": "Formateur"
-        }
       ],
-      "suivi_evaluation": {
-        "methodes": [
+      "equipe_pedagogique": [
+        "Garcia YOANN",
+        "Formateur"
+      ],
+      "suivi_evaluation":[
           "Questions écrites ou orales (QCM)",
           "Mises en situation",
           "Feuilles de présence"
-        ]
-      },
-      "ressources": {
-        "techniques_pedagogiques": [
+        ],
+      "techniques_pedagogiques": [
           "Manuels",
           "Guides pratiques",
           "Vidéos",
           "Présentations PowerPoint"
         ]
-      }
     }
     },
     {
-      "id": "Audits_Énergétiques",
+      "id": "Audits_energetiques",
       "titre": "Audits Énergétiques",
       "image": image1,
       "formation": {
@@ -359,23 +336,13 @@ const formationsData = [
       "description": {
         "objectif": "Cette formation vise à doter les participants des compétences nécessaires pour réaliser des audits énergétiques complets et optimiser la performance énergétique des bâtiments, industries et entreprises dans le cadre de la transition énergétique."
       },
-      "objectifs_pedagogiques": {
-        "enjeux_energie": {
-          "description": "Comprendre les enjeux de l’efficacité énergétique."
-        },
-        "methodologie_audit": {
-          "description": "Acquérir la méthodologie pour réaliser un audit énergétique."
-        },
-        "sources_pertes_energie": {
-          "description": "Savoir identifier les sources de pertes d'énergie dans les bâtiments et les entreprises."
-        },
-        "reglementations_audit": {
-          "description": "Connaître les réglementations relatives aux audits énergétiques."
-        },
-        "solutions_optimisation": {
-          "description": "Proposer des solutions pour améliorer l’efficacité énergétique et réduire les coûts."
-        }
-      },
+      "objectifs_pedagogiques": [
+        "Comprendre les enjeux de l’efficacité énergétique.",
+        "Acquérir la méthodologie pour réaliser un audit énergétique.",
+        "Savoir identifier les sources de pertes d'énergie dans les bâtiments et les entreprises.",
+        "Connaître les réglementations relatives aux audits énergétiques.",
+        "Proposer des solutions pour améliorer l’efficacité énergétique et réduire les coûts."
+      ],
       "profil_apprenants": {
         "pour_qui": [
           "Responsables techniques ou environnement",
