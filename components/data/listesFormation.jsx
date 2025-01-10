@@ -356,205 +356,145 @@ const formationsData = [
           "Intérêt pour l’optimisation énergétique et les solutions durables"
         ]
       },
-      "contenu_formation": {
-        "jour_1": {
-          "titre": "Introduction à l'Audit Énergétique",
-          "matin": {
-            "durée": "2h30",
-            "contenu": [
-              "Présentation et enjeux des audits énergétiques",
-              "Importance de l'efficacité énergétique dans un contexte de transition énergétique",
-              "Cadre légal et réglementaire (directive européenne, loi sur la transition énergétique)"
+      "contenu_formation":[
+       {
+          "question": "Jour 1 : Introduction à l'Audit Énergétique.",
+          "answer": [
+            "Matin (2h30) : Présentation et enjeux des audits énergétiques.",
+            "Importance de l'efficacité énergétique dans un contexte de transition énergétique.",
+            "Cadre légal et réglementaire (directive européenne, loi sur la transition énergétique).",
+            "Après-midi (2h30) : Méthodologie d’un audit énergétique.",
+            "Étapes clés d’un audit énergétique.",
+            "Collecte des données (consommation, usages, équipements).",
+            "Analyse des flux énergétiques."
             ]
-          },
-          "apres_midi": {
-            "durée": "2h30",
-            "contenu": [
-              "Méthodologie d’un audit énergétique",
-              "Étapes clés d’un audit énergétique",
-              "Collecte des données (consommation, usages, équipements)",
-              "Analyse des flux énergétiques"
-            ]
-          }
         },
-        "jour_2": {
-          "titre": "Collecte des Données Énergétiques",
-          "matin": {
-            "durée": "2h30",
-            "contenu": [
-              "Méthodologie de collecte des données énergétiques",
-              "Utilisation d'outils de mesure et de suivi de la consommation",
-              "Étude de cas : collecte de données énergétiques sur un bâtiment réel"
-            ]
-          },
-          "apres_midi": {
-            "durée": "2h30",
-            "contenu": [
-              "Interprétation des données collectées",
-              "Identification des premières sources de gaspillage",
-              "Évaluation de l'impact des comportements sur la consommation"
-            ]
-          }
-        },
-        "jour_3": {
-          "titre": "Analyse Approfondie des Données",
-          "matin": {
-            "durée": "2h30",
-            "contenu": [
-              "Analyse des usages de l’énergie par secteur (chauffage, éclairage, ventilation, etc.)",
-              "Comparaison des consommations avec des normes de référence",
-              "Détection des dysfonctionnements énergétiques"
-            ]
-          },
-          "apres_midi": {
-            "durée": "2h30",
-            "contenu": [
-              "Analyse de l'efficacité des équipements existants",
-              "Identification des zones à forte consommation",
-              "Techniques de mesure thermique et électrique"
-            ]
-          }
-        },
-        "jour_4": {
-          "titre": "Propositions de Solutions d’Optimisation",
-          "matin": {
-            "durée": "2h30",
-            "contenu": [
-              "Technologies économes en énergie (éclairage LED, isolation, etc.)",
-              "Améliorations des systèmes de chauffage et de climatisation",
-              "Gestion de l’énergie par automatisation"
-            ]
-          },
-          "apres_midi": {
-            "durée": "2h30",
-            "contenu": [
-              "Analyse d’exemples réels d’optimisation énergétique",
-              "Simulation d’actions d’amélioration",
-              "Calcul du retour sur investissement (ROI) des actions proposées"
-            ]
-          }
-        },
-        "jour_5": {
-          "titre": "Étude de la Réglementation et Normes Énergétiques",
-          "matin": {
-            "durée": "2h30",
-            "contenu": [
-              "Directives européennes et lois nationales",
-              "Normes ISO et exigences légales en matière d'audits énergétiques",
-              "Certifications énergétiques (HQE, BREEAM, LEED)"
-            ]
-          },
-          "apres_midi": {
-            "durée": "2h30",
-            "contenu": [
-              "Évaluation des écarts avec les standards réglementaires",
-              "Stratégies pour la mise en conformité",
-              "Cas pratiques sur les adaptations nécessaires"
-            ]
-          }
-        },
-        "jour_6": {
-          "titre": "Stratégies de Suivi et de Maintenance",
-          "matin": {
-            "durée": "2h30",
-            "contenu": [
-              "Outils pour le monitoring énergétique",
-              "Techniques pour la maintenance prédictive",
-              "Gestion des données de suivi"
-            ]
-          },
-          "apres_midi": {
-            "durée": "2h30",
-            "contenu": [
-              "Processus d'amélioration continue",
-              "Utilisation des données de suivi pour ajuster les stratégies",
-              "Étude de cas sur l'optimisation en continu"
-            ]
-          }
-        },
-        "jour_7": {
-          "titre": "Techniques Avancées de Mesure et de Vérification",
-          "matin": {
-            "durée": "2h30",
-            "contenu": [
-              "Thermographie infrarouge, analyseurs de réseaux électriques",
-              "Vérification de l’efficacité des systèmes installés"
-            ]
-          },
-          "apres_midi": {
-            "durée": "2h30",
-            "contenu": [
-              "Méthodes de mesure et de vérification des résultats",
-              "Ajustements basés sur les performances réelles",
-              "Simulation d’audits de vérification"
-            ]
-          }
-        },
-        "jour_8": {
-          "titre": "Préparation et Présentation des Résultats de l’Audit",
-          "matin": {
-            "durée": "2h30",
-            "contenu": [
-              "Rédaction des résultats et recommandations",
-              "Présentation claire et compréhensible des données collectées"
-            ]
-          },
-          "apres_midi": {
-            "durée": "2h30",
-            "contenu": [
-              "Techniques de communication et persuasion",
-              "Présentation d’un rapport d’audit simulé"
-            ]
-          }
-        },
-        "jour_9": {
-          "titre": "Projet Final : Audit d’un Cas Réel ou Simulé",
-          "durée": "5h",
-          "contenu": [
-            "Réalisation d’un audit énergétique complet sur un cas réel ou simulé",
-            "Analyse des données, propositions de solutions, rédaction du rapport",
-            "Travail en équipe pour favoriser les échanges"
+        {
+          "question": "Jour 2 : Collecte des Données Énergétiques",
+          "answer": [
+            "Matin (2h30) : Techniques et outils de collecte",
+            "Méthodologie de collecte des données énergétiques.",
+            "Utilisation d'outils de mesure et de suivi de la consommation.",
+            "Étude de cas : collecte de données énergétiques sur un bâtiment réel.",
+            "Après-midi (2h30) : Analyse préliminaire des données",
+            "Interprétation des données collectées.",
+            "Identification des premières sources de gaspillage.",
+            "Évaluation de l'impact des comportements sur la consommation."
           ]
         },
-        "jour_10": {
-          "titre": "Présentation et Évaluation des Projets",
-          "matin": {
-            "durée": "2h30",
-            "contenu": [
-              "Exposition des résultats et recommandations",
-              "Discussion des points forts et axes d’amélioration"
-            ]
-          },
-          "apres_midi": {
-            "durée": "2h30",
-            "contenu": [
-              "QCM et études de cas pour évaluer les connaissances",
-              "Retour sur les projets présentés",
-              "Clôture de la formation et remise des certificats"
-            ]
-          }
-        }
-      },
-      "equipe_pedagogique": [
         {
-          "nom": "GARCIA Yoann",
-          "role": "Formateur"
-        }
+          "question": "Jour 3 : Analyse Approfondie des Données",
+          "answer": [
+            "Matin (2h30) : Analyse des usages de l’énergie par secteur",
+            "Secteurs d’utilisation : chauffage, éclairage, ventilation, etc.",
+            "Comparaison des consommations avec des normes de référence.",
+            "Détection des dysfonctionnements énergétiques.",
+            "Après-midi (2h30) : Détection des sources de gaspillage énergétique",
+            "Analyse de l'efficacité des équipements existants.",
+            "Identification des zones à forte consommation.",
+            "Techniques de mesure thermique et électrique."
+          ]
+        },
+        {
+          "question": "Jour 4 : Propositions de Solutions d’Optimisation",
+          "answer": [
+            "Matin (2h30) : Solutions d’optimisation énergétique",
+            "Technologies économes en énergie : éclairage LED, isolation, etc.",
+            "Améliorations des systèmes de chauffage et de climatisation.",
+            "Gestion de l’énergie par automatisation.",
+            "Après-midi (2h30) : Études de cas pratiques",
+            "Analyse d’exemples réels d’optimisation énergétique.",
+            "Simulation d’actions d’amélioration.",
+            "Calcul du retour sur investissement (ROI) des actions proposées."
+          ]
+        },
+        {
+          "question": "Jour 5 : Étude de la Réglementation et Normes Énergétiques",
+          "answer": [
+            "Matin (2h30) : Cadre réglementaire des audits énergétiques",
+            "Directives européennes et lois nationales.",
+            "Normes ISO et exigences légales en matière d'audits énergétiques.",
+            "Certifications énergétiques (HQE, BREEAM, LEED).",
+            "Après-midi (2h30) : Mise en conformité avec les réglementations",
+            "Évaluation des écarts avec les standards réglementaires.",
+            "Stratégies pour la mise en conformité.",
+            "Cas pratiques sur les adaptations nécessaires."
+          ]
+        },
+        {
+          "question": "Jour 6 : Stratégies de Suivi et de Maintenance",
+          "answer": [
+            "Matin (2h30) : Suivi des consommations et analyse continue",
+            "Outils pour le monitoring énergétique.",
+            "Techniques pour la maintenance prédictive.",
+            "Gestion des données de suivi.",
+            "Après-midi (2h30) : Optimisation continue des performances énergétiques",
+            "Processus d'amélioration continue.",
+            "Utilisation des données de suivi pour ajuster les stratégies.",
+            "Étude de cas sur l'optimisation en continu."
+          ]
+        },
+        {
+          "question": "Jour 7 : Techniques Avancées de Mesure et de Vérification",
+          "answer": [
+            "Matin (2h30) : Outils de mesure avancés",
+            "Thermographie infrarouge, analyseurs de réseaux électriques, etc.",
+            "Vérification de l’efficacité des systèmes installés.",
+            "Après-midi (2h30) : Vérification des économies d’énergie réalisées",
+            "Méthodes de mesure et de vérification des résultats.",
+            "Ajustements basés sur les performances réelles.",
+            "Simulation d’audits de vérification.",
+          ]
+        },
+        {
+          "question": "Jour 8 : Préparation et Présentation des Résultats de l’Audit",
+          "answer": [
+            "Matin (2h30) : Structuration du rapport d'audit",
+            "Rédaction des résultats et recommandations.",
+            "Présentation claire et compréhensible des données collectées.",
+            "Après-midi (2h30) : Techniques de présentation orale des résultats",
+            "Techniques de communication et persuasion.",
+            "Présentation d’un rapport d’audit simulé.",
+          ]
+        },
+        {
+          "question": "Jour 9 : Projet Final : Audit d’un Cas Réel ou Simulé",
+          "answer": [
+            "Journée complète (5h) :",
+            "Réalisation d’un audit énergétique complet sur un cas réel ou simulé.",
+            "Analyse des données, propositions de solutions, rédaction du rapport.",
+            "Travail en équipe pour favoriser les échanges.",
+          ]
+        },
+        {
+          "question": "Jour 10 : Présentation et Évaluation des Projets",
+          "answer": [
+            "Matin (2h30) : Présentation des projets devant le groupe",
+            "Exposition des résultats et recommandations.",
+            "Discussion des points forts et axes d’amélioration.",
+            "Après-midi (2h30) : Évaluation finale et retour sur les compétences acquises",
+            "QCM et études de cas pour évaluer les connaissances.",
+            "Retour sur les projets présentés.",
+            "Clôture de la formation et remise des certificats.",
+          ]
+        },
+        
       ],
-      "suivi_evaluation": {
-        "methodes": [
+      "equipe_pedagogique": [
+          "GARCIA Yoann",
+          "Formateur"
+        
+      ],
+      "suivi_evaluation":[
           "Feuilles de présence",
           "Sessions de tutorat en ligne",
           "Retour régulier sur les travaux pratiques"
-        ]
-      },
-      "ressources": {
-        "techniques_pedagogiques": [
+        ],
+      "techniques_pedagogiques": [
           "QCM à la fin de chaque module",
           "Études de cas pratiques",
           "Présentation finale des travaux"
         ]
-      }
     }
     },
     {

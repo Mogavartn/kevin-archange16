@@ -1,6 +1,6 @@
 import Link from "next/link";
 import logo from "../../../public/assets/img/logo-2.png";
-import servicesData from "@/components/data/services-data";
+import servicesData from "@/components/data/listesFormation";
 import Social from "@/components/data/social";
 
 const FooterThree = () => {
@@ -15,7 +15,7 @@ const FooterThree = () => {
                     </div>
                 </div>
                 <div className="row gy-4 justify-content-between">
-                    <div className="col-xl-3 col-md-6 col-sm-7 xl-mb-30">
+                    <div className="col-xl-4 col-md-6 col-sm-7 xl-mb-30">
                         <div className="footer__three-widget">
                             <div className="footer__three-widget-about">
                                 <Link href="/"><img src={logo.src} alt="image" /></Link>
@@ -28,14 +28,14 @@ const FooterThree = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 col-md-6 col-sm-5 sm-mb-30">
+                    <div className="col-xl-4 col-md-6 col-sm-5 sm-mb-30">
                         <div className="footer__three-widget border-one">
                             <h4 className="ml-60">Nos Formations</h4>
                             <div className="footer__three-widget-solution">
                                 <ul>
 									{servicesData.slice(0, 4).map((data, id) => {
 										const words = data.titre.split(' ');
-										const firstAndSecondWord = words.slice(0, 2).join(' ');
+										const firstAndSecondWord = words.slice(0, 5).join(' ');
 										return (
 											<li key={id}><Link href={`https://www.kevin-attallah.com/catalogue`} target="_blank"><i className="far fa-chevron-double-right"></i>{firstAndSecondWord}</Link></li>
 										);
@@ -44,7 +44,7 @@ const FooterThree = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 col-md-6 col-sm-5 sm-mb-30">
+                    <div className="col-xl-4 col-md-6 col-sm-5 sm-mb-30">
                         <div className="footer__three-widget border-one">
                             <h4 className="ml-60">Resources​</h4>
                             <div className="footer__three-widget-solution">
@@ -57,31 +57,7 @@ const FooterThree = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 col-md-6 col-sm-6 sm-mb-30">
-                        <div className="footer__three-widget border-one">
-                            <h4>Contact</h4>
-                            <div className="footer__three-widget-location">
-                                <div className="footer__three-widget-location-item">
-                                    <div className="footer__three-widget-location-item-icon">
-                                        <i className="fa fa-phone"></i>
-                                    </div>
-                                    <div className="footer__three-widget-location-item-info email">
-                                        <span>Téléphone</span>
-                                        <Link href="https://wa.me/33756949491">+33 7 56 94 94 91</Link>
-                                    </div>
-                                </div>
-                                <div className="footer__three-widget-location-item">
-                                    <div className="footer__three-widget-location-item-icon">
-                                        <i className="flaticon-location"></i>
-                                    </div>
-                                    <div className="footer__three-widget-location-item-info">
-                                        <span>Address</span>
-                                        <Link href="https://google.com/maps" target="_blank">France</Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <div className="copyright__one two">
@@ -89,13 +65,12 @@ const FooterThree = () => {
                     <div className="row justify-content-between copyright__one-container-area">
                         <div className="col-xl-5 col-lg-6"> 
                             <div className="copyright__one-left">
-                                <p>© Kevin Attallah 2025 | Ikigai</p>
+                                <p>© Kevin Attallah 2025</p>
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-6">
                             <div className="copyright__one-right">
-                                <Link href="/">Privacy Policy</Link>
-                                <Link href="/contact">Contactez-nous</Link>
+                                <Link href="/contact">Prendre RDV</Link>
                             </div>
                         </div>
                     </div>

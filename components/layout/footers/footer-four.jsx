@@ -75,7 +75,7 @@ const FooterFour = () => {
 						<div className="col-xl-5 col-lg-6">
 							<div className="copyright__one-right">
 								<Link href="/about">Privacy Policy</Link>
-								<Link href="/contact">Contact Us</Link>
+								<Link href="/contact">Prendre RDV</Link>
 							</div>
 						</div>
 					</div>
