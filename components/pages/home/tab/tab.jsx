@@ -22,7 +22,7 @@ const Tab = () => {
                             </Link>
                         </li>
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                            <Link href="https://www.kevin-attallah.com/catalogue" target="_blank">
+                            <Link href="/services">
                                 <div className="skill__two-tab nav-link " data-bs-toggle="pill" data-bs-target="#topic-2" role="button">
                                     <span>Je suis autonome, je gère mon ikigaï</span>
                                 </div> 
@@ -64,7 +64,7 @@ const Tab = () => {
                                         "Accès personnalisé"
                                         ]}
                                         buttonText="Commencez"
-                                        buttonLink="https://www.kevin-attallah.com/catalogue"
+                                        buttonLink="/services"
                                     />
                             </div>
                         </div>

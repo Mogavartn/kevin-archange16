@@ -24,7 +24,7 @@ const TabContent = ({title, description, servicesLeft, servicesRight, buttonText
                         ))}
                     </div>
                 </div>
-                <Link href={buttonLink} className="btn-one" target="_blank">{buttonText}
+                <Link href={buttonLink} className="btn-one">{buttonText}
                     <i className="fas fa-arrow-right"></i>
                 </Link>
             </div>            

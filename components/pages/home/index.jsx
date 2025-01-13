@@ -26,13 +26,13 @@ const HomeOne = () => {
             <HeaderOne />
             <BannerOne />
             <About />
+            <Portfolio />
             <Features />
             <ChooseUs />
             <Testimonial />
-            <Portfolio />
-            <Video />
             <Tab />
             <Blog />
+            <Video />
             <FooterThree />
             <ScrollToTop />
             </div>
