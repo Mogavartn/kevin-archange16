@@ -33,7 +33,12 @@ const PortfolioDetailsMain = ({singleData}) => {
                               <i className="fas fa-star"></i>
                               <i className="fas fa-star"></i>
                           </li>
-                      </ul>               
+                      </ul>    
+                      <div className="btn-achat-formation">
+                        <Link href={'buttonLink'} className="btn-one">{'Acheter maintenant'}
+                            <i className="fas fa-arrow-right"></i>
+                         </Link>
+                    </div>           
                 </div>
               </div>
               <div className="skill__two-tab-details-content-service">

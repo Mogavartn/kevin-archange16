@@ -5403,6 +5403,13 @@ Responsive Menu Css
   border-radius: 10px 10px 10px 10px;
   overflow: hidden;
 }
+.skill__two-tab-details-content .project-info .btn-achat-formation{
+  position: absolute;
+  top: 70%;
+  right: 20px;
+  border: 1px solid #fff;
+  display: inline;
+}
 .skill__two-tab-details-content .project-info .project-info-top {
   background: var(--primary-color-1);
   text-align: center;
