@@ -33,13 +33,8 @@ const FooterThree = () => {
                             <h4 className="ml-60">Nos Formations</h4>
                             <div className="footer__three-widget-solution">
                                 <ul>
-									{servicesData.slice(0, 4).map((data, id) => {
-										const words = data.titre.split(' ');
-										const firstAndSecondWord = words.slice(0, 5).join(' ');
-										return (
-											<li key={id}><Link href={`https://www.kevin-attallah.com/catalogue`} target="_blank"><i className="far fa-chevron-double-right"></i>{firstAndSecondWord}</Link></li>
-										);
-									})}
+									<li><Link href={`https://www.kevin-attallah.com/formation-creation-entreprise`} target="_blank"><i className="far fa-chevron-double-right"></i>Création d’Entreprise</Link></li>
+									<li><Link href={`/services`} ><i className="far fa-chevron-double-right"></i>Voir le catalogue complet</Link></li>
                                 </ul>
                             </div>
                         </div>

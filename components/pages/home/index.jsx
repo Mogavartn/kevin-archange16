@@ -15,6 +15,7 @@ import FooterThree from "@/components/layout/footers/footer-three";
 
 import ScrollAnimationBackground from "@/components/ScrollAnimationBackground";
 import FormationCreation from "./formation-creation";
+import LienReseau from "./liens-reseaux";
 
 const HomeOne = () => {
     return (
@@ -26,9 +27,10 @@ const HomeOne = () => {
             <SEO pageTitle='Formations' />
             <HeaderOne />
             <BannerOne />
+            <LienReseau />
+            <FormationCreation />
             <About />
             <Portfolio />
-            <FormationCreation />
             <Features />
             <ChooseUs />
             <Testimonial />

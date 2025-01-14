@@ -5,6 +5,7 @@ import BreadCrumb from "../common/breadcrumb";
 import ScrollToTop from "../common/scroll/scroll-to-top";
 import FooterThree from "@/components/layout/footers/footer-three";
 import About from "../home/about";
+import LienReseau from "../home/liens-reseaux";
 
 const AboutUs = () => {
     return (
@@ -12,6 +13,7 @@ const AboutUs = () => {
         <SEO pageTitle="À propos de nous" />
         <HeaderOne />
         <BreadCrumb title="À propos de nous" innerTitle="À propos de Ikigai" />
+        <LienReseau />
         <About />
         <FooterThree />        
         <ScrollToTop />
