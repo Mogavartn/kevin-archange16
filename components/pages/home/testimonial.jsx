@@ -1,9 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Navigation} from 'swiper/modules';
+import { useEffect, useState } from 'react';
 import testimonialBg from "../../../public/assets/img/testimonial/testimonial.png";
 import Link from "next/link";
+import SideBar from "@/components/layout/headers/offcanvas";
 
 const Testimonial = () => {
+const [sidebarOpen, setSidebarOpen] = useState(false);
 const slideControl = {
     loop: true,
     spaceBetween: 30,
@@ -39,9 +42,9 @@ const slideControl = {
                             <div className="testimonial__one-left-title">
                                 <span className="subtitle-one">Témoignages</span>
                                 <h2>Découvrez ce que disent nos <span className="highlighted">apprenant(e)s</span> </h2>
-                                <Link href="/contact" className="btn-one">Contactez-nous
+                                <button  className="btn-one" onClick={() => setSidebarOpen(true)}>Contactez-nous
                                     <i className="fas fa-arrow-right"></i>
-                                </Link>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -63,6 +66,7 @@ const slideControl = {
                 </div>
             </div>
         </div>     
+        <SideBar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
         </>
     );
 };

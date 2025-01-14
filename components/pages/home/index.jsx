@@ -14,6 +14,7 @@ import Tab from "./tab/tab";
 import FooterThree from "@/components/layout/footers/footer-three";
 
 import ScrollAnimationBackground from "@/components/ScrollAnimationBackground";
+import FormationCreation from "./formation-creation";
 
 const HomeOne = () => {
     return (
@@ -27,6 +28,7 @@ const HomeOne = () => {
             <BannerOne />
             <About />
             <Portfolio />
+            <FormationCreation />
             <Features />
             <ChooseUs />
             <Testimonial />

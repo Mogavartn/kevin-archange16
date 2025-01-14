@@ -4741,6 +4741,9 @@ Responsive Menu Css
 /*==========================================================================
 * About Area Two CSS
 ==========================================================================*/
+.about__two {
+  background-color: #00000030;
+}
 .about__two-content {
   padding-left: 54px;
 }
@@ -4749,9 +4752,10 @@ Responsive Menu Css
   margin-bottom: 17px;
 }
 .about__two-content p {
-  color: var(--color-2);
+  color: var(--primary-color-3);
   margin-bottom: 30px;
   text-transform: none;
+  font-size: 20px;
 }
 .about__two-content-service {
   display: block;
@@ -4762,7 +4766,7 @@ Responsive Menu Css
 }
 .about__two-content-service .service span {
   font-size: 18px;
-  color: var(--color-2);
+  color: var(--text-white);
 }
 .about__two-content-service .service i {
   color: var(--primary-color-1);
@@ -4796,7 +4800,7 @@ Responsive Menu Css
   height: 100%;
   border: 2px dashed var(--primary-color-1);
   border-radius: 0 10px 10px 0;
-  padding: 15px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4814,8 +4818,8 @@ Responsive Menu Css
 }
 .about__two-left-progressbar-value span {
   position: relative;
-  font-size: 20px;
-  color: var(--color-2);
+  font-size: 40px;
+  color: var(--primary-color-1);
 }
 .about__two-left-progressbar-value::before {
   content: "";

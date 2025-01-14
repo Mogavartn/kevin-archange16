@@ -186,7 +186,7 @@ const About = () => {
                                     <span>Un développement personnel boosté. ✨</span>
                                 </div>
                             </div>
-                            <Link href="/contact" className="btn-one">En savoir plus<i className="fas fa-arrow-right"></i></Link>
+                            {/* <Link href="/contact" className="btn-one">En savoir plus<i className="fas fa-arrow-right"></i></Link> */}
                         </div>
                     </div>
                 </div>
