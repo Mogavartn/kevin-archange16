@@ -4811,7 +4811,7 @@ Responsive Menu Css
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: conic-gradient(var(--primary-color-1) 270deg, var(--color-4) 0deg);
+  background: conic-gradient(var(--primary-color-1) 270deg, var(--primary-color-2) 0deg);
   display: flex;
   justify-content: center;
   align-items: center;

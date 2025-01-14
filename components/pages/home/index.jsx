@@ -32,7 +32,6 @@ const HomeOne = () => {
             <Features />
             <ChooseUs />
             <Testimonial />
-            <Tab />
             <Blog />
             <Video />
             <FooterThree />
