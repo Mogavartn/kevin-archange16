@@ -34,8 +34,8 @@ const FormationCreation = () => {
                         </div>
                         <div className="col-xl-6 col-lg-6">
                             <div className="about__two-content">
-                                <span className="subtitle-one">Créez votre ENTREPRISE</span>
-                                <h2>Créez votre ENTREPRISE et Lancez votre ACTIVITÉ avec SUCCÈS ! 🚀</h2>
+                                <span className="subtitle-one">Créez votre entreprise</span>
+                                <h2>Créez votre entreprise et lancez votre activité avec succès ! 🚀</h2>
                                 <p>On vous montre comment la transformer en business qui cartonne.</p>
                                 <div className="about__two-content-service">
                                     <div className="service">

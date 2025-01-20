@@ -4634,7 +4634,7 @@ Responsive Menu Css
   padding: 25px 50px 25px 25px;
   border-radius: 10px;
   right: 110px;
-  top: 80px;
+  top: 211px;
 }
 .about__one-image .experience-bar img {
   color: var(--text-white);
@@ -4767,6 +4767,7 @@ Responsive Menu Css
 .about__two-content-service .service span {
   font-size: 18px;
   color: var(--text-white);
+  text-transform: none;
 }
 .about__two-content-service .service i {
   color: var(--primary-color-1);
@@ -9789,18 +9790,17 @@ testimonial__one-right {
 }
 .testimonial__one-right video{
   position:relative;
-  width: 100%;              /* La vidéo prend toute la largeur disponible */
-  height: auto;             /* Maintient le ratio d'aspect */
-  max-width: 1500px;         /* Limite la taille maximale à 800px */
-  margin: 0 auto;           /* Centrer la vidéo horizontalement */
+  width: 140%;  
+  right: 32% ;            /* La vidéo prend toute la largeur disponible */
+  /* height: auto; */             /* Maintient le ratio d'aspect */
+  /* max-width: 1000px;  */        /* Limite la taille maximale à 800px */
   display: block;
   background: var(--bg-heading-color);
-  margin-top: 33%;
+  margin-top: 31%;
   transform: translateY(-50%);
   border-radius: 30px;
-  padding: 70px 30px;
+  padding: 5px 10px;
   box-shadow: rgba(99, 99, 99, 0.09) 0px 2px 8px 0px;
-
 }
 .testimonial__one-right .single-slider-user {
   display: flex;
