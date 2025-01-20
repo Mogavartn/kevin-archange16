@@ -30,19 +30,19 @@ const About = () => {
                             <div className="about__one-content-service">
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Des objectifs clairs et alignés. 😎</span>
+                                    <span>Des objectifs clairs et alignés 😎</span>
                                 </div>
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Des projets qui marquent. 💡</span>
+                                    <span>Des projets qui marquent 💡</span>
                                 </div>
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Une transformation durable. 🌱</span>
+                                    <span>Une transformation durable 🌱</span>
                                 </div>
                                 <div className="service">
                                     <i className="far fa-check-circle"></i>
-                                    <span>Un développement personnel boosté. ✨</span>
+                                    <span>Un développement personnel boosté ✨</span>
                                 </div>
                             </div>
                             {/* <Link href="/contact" className="btn-one">En savoir plus<i className="fas fa-arrow-right"></i></Link> */}

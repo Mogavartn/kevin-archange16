@@ -48,7 +48,7 @@ const FormationCreation = () => {
                                     </div>
                                     <div className="service">
                                         <i className="far fa-check-circle"></i>
-                                        <span>    Tarifs avantageux et compétitifs.</span>
+                                        <span>Tarif Unique.</span>
                                     </div>
                                 </div>
                                 <Link href="https://www.kevin-attallah.com/formation-creation-entreprise" className="btn-one" target="_blank">Lancer ma formation entreprise<i className="fas fa-arrow-right"></i></Link>

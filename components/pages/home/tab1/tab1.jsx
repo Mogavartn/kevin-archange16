@@ -29,18 +29,25 @@ const Tab = () => {
                             </Link>                       
                         </li>
                     </ul>
+                    <div className="text-center">
+                        <p>Grâce à l’Ikigaï, on analyse ce qui compte vraiment :
+                                👉 Est-ce que cette compétence te sert vraiment ?
+                                👉 Lancer ton projet ? Ton idées est elle viable ?
+                            Est-ce aligné avec qui tu es ?Pas de phrases toutes faites, pas d’artifice : juste toi, ton projet et des solutions qui te correspondent. Prêt·e à passer à l’action ? </p>
+                    </div>
                     <div className="skill__two-tab-details ">
                         <div className="row align-items-center flex-wrap-reverse gy-4 tab-pane fade show active" role="tabpanel" id="topic-1" aria-labelledby="topic-1-tab">
                             <div className="col-xl-6 col-lg-6 col-md-9 p-4 formation_rigth">
                                 <TabContent 
                                 title={`Construisez votre entreprise avec un expert à vos côtés 💼 !`}
-                                description="Profitez d’un accompagnement personnalisé pour chaque étape : de l’idée au lancement. Bénéficiez du soutien dont vous avez besoin pour transformer vos ambitions en succès durable 🚀. Faites financer votre projet sans reste à charge grâce à votre CPF 💰."
+                                description="Profitez d’un accompagnement personnalisé pour chaque étape : de l’idée au lancement. Bénéficiez du soutien dont vous avez besoin pour transformer vos ambitions en succès durable 🚀."
+                                description2="Et cerise sur le gateau, votre formation peut-être financée par votre CPF 💰."
                                 servicesLeft={[
                                   "Plan d’action clair et efficace",
                                   "Conseil stratégique sur mesure"
                                 ]}
                                 servicesRight={[
-                                  "Suivi pas-à-pas jusqu’au lancement",
+                                  "Vous avancez comme vous voulez",
                                   "Accès à des outils pratiques et performants"
                                 ]}
                                 buttonText="Prendre RDV"
@@ -56,7 +63,7 @@ const Tab = () => {
                                         "Contenu 100% en ligne"
                                         ]}
                                         servicesRight={[
-                                        "Accès à vie à la formation",
+                                        "Créez Votre Entreprise",
                                         "Outils concrets et clés en main"
                                         ]}
                                         buttonText="Je lance mon business"

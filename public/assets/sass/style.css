@@ -5605,6 +5605,7 @@ Responsive Menu Css
   color: var(--primary-color-3);
   text-align: center;
   text-transform: none;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.734); /* Ombre légère */
 }
 .services__one-single-service-content p {
   color: var(--color-2);
@@ -9790,7 +9791,7 @@ testimonial__one-right {
   position:relative;
   width: 100%;              /* La vidéo prend toute la largeur disponible */
   height: auto;             /* Maintient le ratio d'aspect */
-  max-width: 1000px;         /* Limite la taille maximale à 800px */
+  max-width: 1500px;         /* Limite la taille maximale à 800px */
   margin: 0 auto;           /* Centrer la vidéo horizontalement */
   display: block;
   background: var(--bg-heading-color);

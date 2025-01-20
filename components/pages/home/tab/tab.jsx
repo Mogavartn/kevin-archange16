@@ -15,7 +15,7 @@ const Tab = () => {
                 </div>-
                     <ul className="row nav mb-5 gy-4 justify-content-center">
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                            <Link href="https://meet.brevo.com/kevin-a2ta2l" target="_blank">
+                            <Link href="https://www.kevin-attallah.com/formation-creation-entreprise" target="_blank">
                                 <div className="skill__two-tab nav-link active " data-bs-toggle="pill" role="button">
                                     <span>J'ai besoin d'un accompagnement</span>
                                 </div>
@@ -46,7 +46,7 @@ const Tab = () => {
                                   "Service personnalisé"
                                 ]}
                                 buttonText="Prendre RDV"
-                                buttonLink="https://meet.brevo.com/kevin-a2ta2l"
+                                buttonLink="https://www.kevin-attallah.com/formation-creation-entreprise"
                                 />
                             </div>
                             <div className="col-xl-6 col-lg-6 col-md-9 p-4 ormation_left">

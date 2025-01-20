@@ -7,9 +7,11 @@ import logo1 from "../../../../public/assets/img/logo-1.png";
 import logo2 from "../../../../public/assets/img/logo-2.png";
 import MobileMenuPopup from '../mobile-menu/menu-area';
 import Link from 'next/link';
+import SideBarContact from '../offcanvas_cont';
 
 const HeaderOne = ({variant}) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [sidebarOpen1, setSidebarOpen1] = useState(false);
     const [menuSidebar, setMenuSidebar] = useState(false);
     const [search, setSearch] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
@@ -66,7 +68,7 @@ const HeaderOne = ({variant}) => {
                                 </div>
                             </div>
                             <div className="header__area-menubar-right-box-btn">
-                                <Link className="btn-one" href="https://www.kevin-attallah.com/formation-creation-entreprise" target="_blank">Lancer ma formation entreprise<i className="fas fa-arrow-right"></i></Link>
+                                <button className="btn-one"  target="_blank"  onClick={() => setSidebarOpen1(true)}>Nous Contacter<i className="fas fa-arrow-right"></i></button>
                             </div>
                         <div className="header__area-menubar-right-responsive-menu menu__bar">
                             <i className="flaticon-menu-1" onClick={() => setMenuSidebar(true)}></i>
@@ -77,6 +79,7 @@ const HeaderOne = ({variant}) => {
             </div>
         </div>
         <SideBar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
+        <SideBarContact isOpen={sidebarOpen1} setIsOpen={setSidebarOpen1} />
         <MobileMenuPopup isOpen={menuSidebar} setIsOpen={setMenuSidebar} popupLogo={logo2} />
         <Search isOpen={search} setIsOpen={setSearch} />
         </>

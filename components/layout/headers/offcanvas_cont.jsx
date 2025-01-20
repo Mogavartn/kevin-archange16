@@ -4,7 +4,8 @@ import Social from '@/components/data/social';
 import React, { useState, useEffect, useRef } from 'react';
 import FormArea from '@/components/pages/contacts/form';
 
-const SideBar = ({ isOpen, setIsOpen }) => {
+
+const SideBarContact = ({ isOpen, setIsOpen }) => {
     // Référence au sidebar pour détecter les clics en dehors
     const sidebarRef = useRef(null);
 
@@ -39,27 +40,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 <p>Lancez votre business ou projet pro avec style 🚀 !</p>
                 <div className="header__area-menubar-right-sidebar-popup-contact">
                     <h4 className="mb-3">Pour toute question, contactez-nous, nous répondrons rapidement.</h4>
-                    <div className="mb-4">
-                        <div className="col-xl-12 col-md-6 col-sm-5 sm-mb-30">
-                            <div className="footer__three-widget border-one">
-                                <h4 className="ml-60">Nos Liens utiles</h4>
-                                <div className="footer__three-widget-solution">
-                                    <ul>
-                                        <li><Link href={`https://www.kevin-attallah.com/formation-creation-entreprise`} target="_blank"><i className="far fa-chevron-double-right"></i>Création d’Entreprise</Link></li>
-                                        <li><Link href={`/services`} ><i className="far fa-chevron-double-right"></i>Voir le catalogue complet</Link></li>
-                                        <li><Link href={`/blog`} ><i className="far fa-chevron-double-right"></i>Blog</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="footer__three-widget-about">
-                            <h4>Rester connectez</h4>
-                            <form action="#">
-                                <input type="text" name="email" placeholder="Votre e-mail" required="" />
-                                <button type="submit"><i className="fas fa-paper-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
+                    <FormArea />
                 </div>
                 <div className="header__area-menubar-right-sidebar-popup-social social__icon">
                     <Social />
@@ -70,4 +51,4 @@ const SideBar = ({ isOpen, setIsOpen }) => {
     );
 };
 
-export default SideBar;
+export default SideBarContact;

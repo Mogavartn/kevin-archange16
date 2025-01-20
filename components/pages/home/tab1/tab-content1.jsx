@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-const TabContent = ({title, description, servicesLeft, servicesRight, buttonText, buttonLink}) => {
+const TabContent = ({title, description, description2, servicesLeft, servicesRight, buttonText, buttonLink}) => {
     return (
         <>
             <div className="skill__two-tab-details-content">
                 <h2>{title}</h2>
-                <p>{description}</p>
+                <p>{description}<br/>{description2}</p>
                 <div className="skill__two-tab-details-content-service">
                     <div className="skill__two-tab-details-content-service-left">
                         {servicesLeft.map((service, index) => (
