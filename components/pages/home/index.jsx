@@ -32,8 +32,6 @@ const HomeOne = () => {
             <ChooseUs />
             <Portfolio />
             <Testimonial />
-
-           
             <Blog />
             <Video />
             <FooterThree />
