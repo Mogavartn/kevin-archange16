@@ -18,8 +18,8 @@ const ServicesMain = () => {
                                         <img className="img__full " src={image1?.src} alt="{data.titre}" />
                                     </div>
                                     <div className="services__two-single-service-content formation-solution">
-                                        <h4>Créez votre ENTREPRISE et Lancez votre ACTIVITÉ avec SUCCÈS ! 🚀</h4> 
-                                        <Link href={`/services`} className="btn-one mb-20 ml-20">
+                                        <h4>Créez votre entreprise et lancez votre activité avec succès ! 🚀</h4> 
+                                        <Link href={`https://www.kevin-attallah.com/formation-creation-entreprise` } target="_blank" className="btn-one mb-20 ml-20">
                                                 Voir plus
                                         </Link>
                                     </div>

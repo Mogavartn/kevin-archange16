@@ -9727,7 +9727,6 @@ Responsive Menu Css
 ==========================================================================*/
 .testimonial__one {
   overflow: hidden;
-  padding-bottom: 0;
 }
 .testimonial__one-left {
   background-size: cover;
@@ -9783,7 +9782,7 @@ testimonial__one-right {
   padding: 20px 20px;
   width: 800px;
   padding-bottom: 5px;
-  margin-top: 33%;
+  /* margin-top: 33%; */
   transform: translateY(-50%);
   border-radius: 30px;
   box-shadow: rgba(99, 99, 99, 0.09) 0px 2px 8px 0px;
@@ -9791,13 +9790,10 @@ testimonial__one-right {
 .testimonial__one-right video{
   position:relative;
   width: 140%;  
-  right: 32% ;            /* La vidéo prend toute la largeur disponible */
-  /* height: auto; */             /* Maintient le ratio d'aspect */
-  /* max-width: 1000px;  */        /* Limite la taille maximale à 800px */
+  right: 32% ;            
   display: block;
   background: var(--bg-heading-color);
-  margin-top: 31%;
-  transform: translateY(-50%);
+  margin-top: -6%;
   border-radius: 30px;
   padding: 5px 10px;
   box-shadow: rgba(99, 99, 99, 0.09) 0px 2px 8px 0px;

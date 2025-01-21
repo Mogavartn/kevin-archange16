@@ -29,11 +29,11 @@ const HomeOne = () => {
             <BannerOne />
             <LienReseau />
             <FormationCreation />
-            <About />
-            <Portfolio />
-            <Features />
             <ChooseUs />
+            <Portfolio />
             <Testimonial />
+
+           
             <Blog />
             <Video />
             <FooterThree />

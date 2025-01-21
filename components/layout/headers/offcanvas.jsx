@@ -52,7 +52,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="footer__three-widget-about">
+                        <div className="footer__three-widget-about mt-2">
                             <h4>Rester connectez</h4>
                             <form action="#">
                                 <input type="text" name="email" placeholder="Votre e-mail" required="" />
