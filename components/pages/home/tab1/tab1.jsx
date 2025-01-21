@@ -13,7 +13,7 @@ const Tab = () => {
                         <h2>Je veux lancer mon business🧑‍💼</h2>
                     </div>
                 </div>-
-                    <ul className="row nav mb-5 gy-4 justify-content-center">
+                    <ul className="row nav mb-2 gy-4 justify-content-center">
                         <li className="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-6">
                             <Link href="https://meet.brevo.com/kevin-a2ta2l/presentation" target="_blank">
                                 <div className="skill__two-tab nav-link active " data-bs-toggle="pill" role="button">
@@ -30,10 +30,10 @@ const Tab = () => {
                         </li>
                     </ul>
                     <div className="text-center">
-                        <p>Grâce à l’Ikigaï, on analyse ce qui compte vraiment :
-                                👉 Est-ce que cette compétence te sert vraiment ?
-                                👉 Lancer ton projet ? Ton idées est elle viable ?
-                            Est-ce aligné avec qui tu es ?Pas de phrases toutes faites, pas d’artifice : juste toi, ton projet et des solutions qui te correspondent. Prêt·e à passer à l’action ? </p>
+                        <p><span className="fw-bold fs-4">Grâce à l’Ikigaï, on analyse ce qui compte vraiment :</span><br />
+                                👉 Est-ce que cette compétence te sert vraiment ?<br />
+                                👉 Lancer ton projet ? Ton idée est-elle viable et alignée avec qui tu es ?<br/>
+                            Est-ce aligné avec qui tu es ? <br />Pas de phrases toutes faites, pas d’artifice :<br /> juste toi, ton projet et des solutions qui te correspondent. Prêt·e à passer à l’action ? </p>
                     </div>
                     <div className="skill__two-tab-details ">
                         <div className="row align-items-center flex-wrap-reverse gy-4 tab-pane fade show active" role="tabpanel" id="topic-1" aria-labelledby="topic-1-tab">

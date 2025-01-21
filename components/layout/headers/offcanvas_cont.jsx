@@ -37,9 +37,8 @@ const SideBarContact = ({ isOpen, setIsOpen }) => {
                             <img className='logo_one' src={logo2.src} alt="logo" />
                         </Link>
                     </div>    
-                <p>Lancez votre business ou projet pro avec style 🚀 !</p>
                 <div className="header__area-menubar-right-sidebar-popup-contact">
-                    <h4 className="mb-3">Pour toute question, contactez-nous, nous répondrons rapidement.</h4>
+                    <h4 className="mb-3">Lancez votre business ou projet pro avec style 🚀 <br />Pour toute question, contactez-nous, nous répondrons rapidement.</h4>
                     <FormArea />
                 </div>
                 <div className="header__area-menubar-right-sidebar-popup-social social__icon">

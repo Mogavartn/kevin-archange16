@@ -290,6 +290,7 @@ h1 {
   color: var(--text-white);
   font-family: var(--heading-font);
   font-weight: 700;
+  text-transform: none;
 }
 
 h2 {
@@ -300,6 +301,7 @@ h2 {
   color: var(--text-white);
   font-family: var(--heading-font);
   font-weight: 700;
+  text-transform: none;
 }
 
 h3 {
@@ -310,6 +312,7 @@ h3 {
   color: var(--text-heading-color);
   font-family: var(--heading-font);
   font-weight: 700;
+  text-transform: none;
 }
 
 h4 {
@@ -320,6 +323,7 @@ h4 {
   color: var(--primary-color-1);
   font-family: var(--heading-font);
   font-weight: 700;
+  text-transform: none;
 }
 
 h5 {
@@ -330,6 +334,7 @@ h5 {
   color: var(--text-white);
   font-family: var(--heading-font);
   font-weight: 700;
+  text-transform: none;
 }
 
 h6 {
@@ -340,6 +345,7 @@ h6 {
   color: var(--text-white);
   font-family: var(--heading-font);
   font-weight: 700;
+  text-transform: none;
 }
 
 p {
@@ -348,6 +354,7 @@ p {
   padding: 0;
   margin: 0;
   color: var(--text-white);
+  text-transform: none;
 }
 
 .t-left {
@@ -3680,6 +3687,8 @@ p {
 }
 .header__area-menubar-right-sidebar-popup-contact h4 {
   color: var(--text-white);
+  text-transform: none;
+  text-align: center;
 }
 .header__area-menubar-right-sidebar-popup-social ul {
   padding: 0;
@@ -5395,7 +5404,7 @@ Responsive Menu Css
 .skill__two-tab-details-content p {
   color: var(--color-1);
   text-transform: none;
-  margin-bottom: 30px;
+  margin-bottom: -30px;
 }
 /*Info*/
 .skill__two-tab-details-content .project-info {
@@ -10976,7 +10985,7 @@ testimonial__one-right {
 }
 .footer__three-widget-about form {
   position: relative;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .footer__three-widget-about form input {
   background-color: transparent;

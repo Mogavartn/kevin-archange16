@@ -36,13 +36,12 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                             <img className='logo_one' src={logo2.src} alt="logo" />
                         </Link>
                     </div>    
-                <p>Lancez votre business ou projet pro avec style 🚀 !</p>
                 <div className="header__area-menubar-right-sidebar-popup-contact">
-                    <h4 className="mb-3">Pour toute question, contactez-nous, nous répondrons rapidement.</h4>
+                    <h4 className="mb-3">Lancez votre business ou projet pro avec style 🚀 !</h4>
                     <div className="mb-4">
                         <div className="col-xl-12 col-md-6 col-sm-5 sm-mb-30">
                             <div className="footer__three-widget border-one">
-                                <h4 className="ml-60">Nos Liens utiles</h4>
+                                <h4 className="text-start mb-1">Nos Liens utiles</h4>
                                 <div className="footer__three-widget-solution">
                                     <ul>
                                         <li><Link href={`https://www.kevin-attallah.com/formation-creation-entreprise`} target="_blank"><i className="far fa-chevron-double-right"></i>Création d’Entreprise</Link></li>
@@ -52,8 +51,8 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="footer__three-widget-about mt-2">
-                            <h4>Rester connectez</h4>
+                        <div className="footer__three-widget-about">
+                            <h4 className="text-start mb-1">Restez Connecté</h4>
                             <form action="#">
                                 <input type="text" name="email" placeholder="Votre e-mail" required="" />
                                 <button type="submit"><i className="fas fa-paper-plane"></i></button>
