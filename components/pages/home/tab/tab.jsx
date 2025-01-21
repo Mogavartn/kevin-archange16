@@ -34,9 +34,8 @@ const Tab = () => {
                             <div className="col-xl-6 col-lg-6 col-md-9 p-4 formation_rigth">
                                 <TabContent 
                                 title={`Faites financer votre avenir sans dépenser 💰 !`}
-                                description="Prenez rendez-vous avec un conseiller et
-                                            découvrez comment utiliser votre CPF pour réaliser vos ambitions, sans reste à charge ✨ . Et aussi
-                                            bénéficier d’une aide pour choisir votre formation"
+                                description="Prenez rendez-vous avec un conseiller et découvrez comment utiliser votre CPF pour réaliser vos ambitions, sans reste à charge ✨ ."
+                                description1="Et aussi bénéficier d’une aide pour choisir votre formation"
                                 servicesLeft={[
                                   "Flexibilité totale",
                                   "Conseils d’experts"

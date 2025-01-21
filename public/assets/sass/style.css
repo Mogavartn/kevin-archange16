@@ -9539,11 +9539,11 @@ Responsive Menu Css
 }
 .blog__details-pagination-btn .pagination-btn {
   background-color: transparent;
-  width: 60px;
+  width: 50px;
   height: 60px;
   border: 1px solid var(--color-4);
   text-align: center;
-  line-height: 60px;
+  line-height: 30px;
   border-radius: 5px;
   transition: 0.4s;
   font-size: 19px;
@@ -11437,3 +11437,78 @@ image-background {
   background-repeat: no-repeat;
   background-image: url(../img/video/2560x1440-bg.webp);
 }
+
+/*===================================================================
+*Modal blog
+=====================================================================*/
+/* Modal overlay (fond sombre derrière le modal) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Contenu du modal */
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Image dans le modal */
+.modal-image img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+}
+
+/* Bouton de fermeture */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  color: var(--primary-color-1);
+  cursor: pointer;
+  z-index: 10000; /* Assurez-vous que le bouton est au-dessus du Swiper */
+}
+
+/* Styles pour Swiper dans le modal */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--primary-color-1);
+  z-index: 10;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+/* Styliser les boutons de navigation dans le modal */
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
