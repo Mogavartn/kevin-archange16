@@ -150,32 +150,41 @@ const BlogSingleMain = ({ singleData }) => {
                 </div>
             </div>
             {/* Modal pour afficher les images agrandies */}
-            {isModalOpen && (
+            {/* {isModalOpen && (
                 <div className="modal-overlay">
                 <div className="modal-content">
-                    <Swiper
-                    initialSlide={modalIndex}
-                    loop={true}
-                    spaceBetween={10}
-                    slidesPerView={1}
-                    navigation
-                    zoom
-                    >
-                    {modalImages.map((image, index) => (
-                        <SwiperSlide key={index}>
-                        <div className="modal-image">
-                            <h3>Bonjours</h3>
-                            <img src={image.src} alt={`Modal Image ${index + 1}`} />
-                        </div>
-                        </SwiperSlide>
-                    ))}
+                <div className="blog__details-quote">
+                <Swiper 
+                        initialSlide={modalIndex}
+                        loop={true}
+                        spaceBetween={10}
+                        slidesPerView={1}
+                        navigation
+                        zoom
+                        >
+                        {singleData.images.map((image, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="single-slider" 
+                                onClick={() => handleImageClick(index)}
+                                >
+                                    <img src={image.src} alt={`Blog Image ${index + 1}`}  />
+                                </div>
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
+                    <div className="blog__details-quote-bottom">
+                        <div className="slider-arrow">
+                            <i className="swiper-button-prev fas fa-arrow-left"></i>
+                            <i className="swiper-button-next fas fa-arrow-right"></i>
+                        </div>
+                    </div>
                     <button className="close-modal" onClick={closeModal}>
-                    ×
+                        ×
                     </button>
-                </div>
-                </div>
-            )}
+                </div>                                              
+            </div>
+        </div>
+        )} */}
         </>
     );
 };

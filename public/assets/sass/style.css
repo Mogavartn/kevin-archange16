@@ -302,6 +302,7 @@ h2 {
   font-family: var(--heading-font);
   font-weight: 700;
   text-transform: none;
+  text-shadow: 5px 6px 0px rgba(0, 0, 0, 0.255);
 }
 
 h3 {
@@ -9743,9 +9744,10 @@ Responsive Menu Css
   padding: 50px 55px;
   padding-right: 120px;
   border-radius: 30px;
-  width: 700px;
+  width: 600px;
   position: relative;
   overflow: hidden;
+  margin-left: -56px;
 }
 .testimonial__one-left::before {
   content: "";

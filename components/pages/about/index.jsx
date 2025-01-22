@@ -15,7 +15,7 @@ const AboutUs = () => {
       <>
         <SEO pageTitle="À propos de nous" />
         <HeaderOne />
-        <BreadCrumb title="À propos de nous" innerTitle="À propos de Ikigai" />
+        <BreadCrumb title="À propos de nous" innerTitle="À propos dde nous" />
         <LienReseau />
         <About />
         <Features />
