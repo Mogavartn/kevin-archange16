@@ -9,6 +9,7 @@ import LienReseau from "../home/liens-reseaux";
 import Features from "../home/features";
 import Testimonial from "../home/testimonial";
 import ChooseFour from "../home/choose-us";
+import WorkArea from "../home/work";
 
 const AboutUs = () => {
     return (
@@ -21,6 +22,7 @@ const AboutUs = () => {
         <Features />
         <Testimonial />
         <ChooseFour />
+        <WorkArea/>
         <FooterThree />        
         <ScrollToTop />
       </>
