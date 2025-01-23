@@ -7676,7 +7676,7 @@ Responsive Menu Css
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  border: 2px solid var(--color-5);
+  border: 2px solid var(--bg-white);
   padding: 29px 29px;
   border-radius: 20px;
 }
@@ -7710,6 +7710,10 @@ Responsive Menu Css
 .work-process-area__one-single-work-content {
   width: calc(100% - 65px);
 }
+.work-process-area__one-content-right p{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
 .work-process-area__one-right-counter-img {
   display: flex;
   margin-top: 30px;
@@ -7734,6 +7738,7 @@ Responsive Menu Css
   color: var(--bg-white);
   text-transform: lowercase;
   line-height: 1.63;
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.693);
 }
 .work-process-area__one-right-counter-img img {
   width: 65%;

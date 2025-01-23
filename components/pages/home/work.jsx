@@ -14,12 +14,7 @@ const WorkArea = () => {
                             <h2>Nos Skills ? </h2>
                         </div>
                     </div>
-                    <div className="col-xl-4 offset-xl-1 col-lg-4 offset-lg-1">
-                        <div className="work-process-area__one-content-right">
-                            <p>Nos cours sont élaborés par des experts passionnés, offrant une expertise pointue et une
-                                expérience enrichissante.</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div className="row justify-content-center gy-4">
                     <div className="col-xl-6">
@@ -46,6 +41,12 @@ const WorkArea = () => {
                         </div>
                     </div>
                     <div className="col-xl-6">
+                        <div className="col-xl-12 col-lg-6 pl-35">
+                            <div className="work-process-area__one-content-right">
+                                <p>Nos cours sont élaborés par des experts passionnés, offrant une expertise pointue et une
+                                    expérience enrichissante.</p>
+                            </div>
+                        </div>
                         <div className="work-process-area__one-right-img">
                             <img src={image1.src} alt="image" />
                         </div>
