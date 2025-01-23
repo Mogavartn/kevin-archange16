@@ -4796,15 +4796,16 @@ Responsive Menu Css
      object-fit: cover;
 }
 .about__two-left-progressbar {
-  background-color: var(--color-1);
-  width: 100%;
-  height: 230px;
   border-radius: 0 10px 10px 0;
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  height: 214px;
+}
+.about__two-left-progressbar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about__two-left-progressbar-wrapper {
   width: 100%;

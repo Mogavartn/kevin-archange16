@@ -1,5 +1,6 @@
 import image1 from "../../../public/assets/img/about/about-three.png";
-import image2 from "../../../public/assets/img/about/about-four-1.png";
+import image2 from "../../../public/assets/img/about/about-two-2.png";
+import image3 from "../../../public/assets/img/about/about-two-3.png";
 import Link from "next/link";
 
 const FormationCreation = () => {
@@ -21,12 +22,13 @@ const FormationCreation = () => {
                                             <img src={image2.src} alt="image" />
                                         </div>
                                         <div className="about__two-left-progressbar">
-                                            <div className="about__two-left-progressbar-wrapper">
+                                        <img src={image3.src} alt="image" />
+                                           {/*  <div className="about__two-left-progressbar-wrapper">
                                                 <div className="about__two-left-progressbar-value">
                                                     <span>299</span>
                                                 </div>
                                                 <h4 className="about__two-right-progressbar-title">Euro (€)</h4>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import servicesData from '@/components/data/listesFormation';
-import image1 from "@/public/assets/img/v1/22.jpg"
+import image1 from "@/public/assets/img/v1/CREATION-ENTREPRISE.jpg"
 
 
 const ServicesMain = () => {

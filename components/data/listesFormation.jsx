@@ -1,10 +1,13 @@
 import image1 from "../../public/assets/img/v1/2.jpg";
+import image2 from "../../public/assets/img/v1/02-accompagnement.jpg";
+import image3 from "../../public/assets/img/v1/03-anglais.jpg";
+import image4 from "../../public/assets/img/v1/04-comptable.jpg";
 
 const formationsData = [
     {
       "id": "Accompagnement_d_un_nouveau_salarie",
       "titre": "Accompagnement d’un nouveau salarié",
-      "image": image1,
+      "image": image2,
       "formation": {
       "nom": "Accompagnement d’un nouveau salarié",
       "type": "Formation à distance",
@@ -76,7 +79,7 @@ const formationsData = [
     {
       "id": "Anglais_technique_Niveau_C1_C2",
       "titre": "Anglais technique - Niveau C1 C2",
-      "image": image1,
+      "image": image3,
       "formation": {
       "nom": "Anglais technique - Niveau C1 C2",
       "type": "Formation à distance",
@@ -158,7 +161,7 @@ const formationsData = [
     {
       "id": "Assurer_les_operations_comptables_au_quotidien",
       "titre": "Assurer les opérations comptables au quotidien",
-      "image": image1,
+      "image": image4,
       "formation": {
       "nom": "Assurer les opérations comptables au quotidien",
       "type": "Formation à distance",
