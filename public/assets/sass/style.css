@@ -291,6 +291,7 @@ h1 {
   font-family: var(--heading-font);
   font-weight: 700;
   text-transform: none;
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.693);
 }
 
 h2 {
@@ -314,6 +315,7 @@ h3 {
   font-family: var(--heading-font);
   font-weight: 700;
   text-transform: none;
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.693);
 }
 
 h4 {
@@ -325,6 +327,7 @@ h4 {
   font-family: var(--heading-font);
   font-weight: 700;
   text-transform: none;
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.693);
 }
 
 h5 {
@@ -336,6 +339,7 @@ h5 {
   font-family: var(--heading-font);
   font-weight: 700;
   text-transform: none;
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.693);
 }
 
 h6 {
@@ -347,6 +351,7 @@ h6 {
   font-family: var(--heading-font);
   font-weight: 700;
   text-transform: none;
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.693);
 }
 
 p {
@@ -5363,8 +5368,8 @@ Responsive Menu Css
   color: var(--text-white);
 }
 .skill__two-tab-details .formation_rigth{
-  background-color: #7222db4d;
-  border-radius: 10px;
+  /* background-color: #7222db4d;
+  border-radius: 10px; */
 }
 .skill__two-tab-details-image {
   position: relative;
@@ -9753,7 +9758,7 @@ Responsive Menu Css
   width: 600px;
   position: relative;
   overflow: hidden;
-  margin-left: -56px;
+  margin-left: -75px;
 }
 .testimonial__one-left::before {
   content: "";
@@ -9807,7 +9812,7 @@ testimonial__one-right {
 .testimonial__one-right video{
   position:relative;
   width: 140%;  
-  right: 32% ;            
+  right: 30% ;            
   display: block;
   background: var(--bg-heading-color);
   margin-top: -6%;

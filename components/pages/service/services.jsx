@@ -19,7 +19,7 @@ const ServicesMain = () => {
                                     </div>
                                     <div className="services__two-single-service-content formation-solution">
                                         <h4>Créez votre entreprise et lancez votre activité avec succès ! 🚀</h4> 
-                                        <Link href={`https://www.kevin-attallah.com/formation-creation-entreprise` } target="_blank" className="btn-one mb-20 ml-20">
+                                        <Link href={`/business` } className="btn-one mb-20 ml-20">
                                                 Voir plus
                                         </Link>
                                     </div>

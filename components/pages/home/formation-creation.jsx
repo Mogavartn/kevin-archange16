@@ -53,7 +53,7 @@ const FormationCreation = () => {
                                         <span>Tarif Unique.</span>
                                     </div>
                                 </div>
-                                <Link href="https://www.kevin-attallah.com/formation-creation-entreprise" className="btn-one" target="_blank">👉 Devenir Entrepreneur<i className="fas fa-arrow-right"></i></Link>
+                                <Link href="https://www.kevin-attallah.com/formation-creation-entreprise" className="btn-one" target="_blank">👉 Devenir Entrepreneur</Link>
                             </div>
                         </div>
                     </div>
