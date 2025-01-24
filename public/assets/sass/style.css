@@ -5435,19 +5435,19 @@ Responsive Menu Css
 }
 .skill__two-tab-details-content .btn-one{
   position: relative;
-  left: 30%;
+  left: 39%;
 }
 /*Info*/
 .skill__two-tab-details-content .project-info {
   position: relative;
-  width: 500px;
+  width: 95%;
   border-radius: 10px 10px 10px 10px;
   overflow: hidden;
 }
 .skill__two-tab-details-content .project-info .btn-achat-formation{
   position: absolute;
   top: 70%;
-  right: 20px;
+  right: 150px;
   border: 1px solid #fff;
   display: inline;
 }
@@ -5476,8 +5476,9 @@ Responsive Menu Css
 }
 .skill__two-tab-details-content .project-info ul li span {
   color: var(--color-2);
-  margin-left: 10px;
+  /* margin-left: 10px; */
   font-weight: 400;
+  text-transform: none;
 }
 .skill__two-tab-details-content .project-info ul li .value {
   color: var(--primary-color-1);
@@ -5530,7 +5531,7 @@ Responsive Menu Css
 }
 .skill__two-tab-details-content-service .project-info ul li span {
   color: var(--color-2);
-  margin-left: 10px;
+ /*  margin-left: 10px; */
   font-weight: 400;
 }
 .skill__two-tab-details-content-service .project-info ul li .value {
@@ -5559,6 +5560,9 @@ Responsive Menu Css
  display: flex;
  justify-content: space-between;
  align-items: center;
+}
+.skill__two-tab-details-content .skill__two-tab_image .image-formation{
+ width: 50%;
 }
 
 @media (max-width: 1399px) {

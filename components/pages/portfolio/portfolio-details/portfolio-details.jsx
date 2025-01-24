@@ -9,37 +9,63 @@ const PortfolioDetailsMain = ({singleData}) => {
    console.log(singleData);
     return (
       
-      <div className="skill__two-tab-details-content section-padding ">
+      <div className="skill__two-tab-details-content section-padding">
+        <div>
             <h2>{singleData?.titre}</h2>
             <p>{singleData.formation.description?.objectif}</p>
-              <div className="skill__two-tab_image">
-                <div className="w-60">
+        </div>
+
+        <div className="skill__two-tab_image mt-50">
+                <div className="image-formation">
                     <img className="img__full rounded" src={singleData.image?.src} alt={singleData.id} />
                 </div> 
-                <div className="project-info">
-                      <div className="project-info-top">
-                          <h4>{singleData?.titre}</h4>
-                      </div>
-                      <ul>
-                          <li>Type:<span>{singleData.formation?.type}</span></li>
-                          <li>durée:<span>{singleData.formation?.duree}</span></li>
-                          <li>Equipe pédagogique:<span>{singleData.equipe_pedagogique?.nom}</span></li>
-                          <li>Prix:<span className="value">69 €</span></li>
-                          <li className="project-rating">
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                          </li>
-                      </ul>    
-                      <div className="btn-achat-formation">
-                        <Link href={'buttonLink'} className="btn-one">{'Acheter maintenant'}
-                            <i className="fas fa-arrow-right"></i>
-                         </Link>
-                    </div>           
+                <div>
+                    <div className="project-info ml-30">
+                        <div className="project-info-top">
+                            <h4>{singleData?.titre}</h4>
+                        </div>
+                        <ul>
+                            <li>Type:<span>{singleData.formation?.type}</span></li>
+                            <li>durée:<span>{singleData.formation?.duree}</span></li>
+                            <li>Equipe pédagogique:<span>{singleData.equipe_pedagogique?.nom}</span></li>
+                            <li>Prix:<span className="value">69 €</span></li>
+                            <li className="project-rating">
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                            </li>
+                        </ul>    
+                        <div className="btn-achat-formation">
+                            <Link href={'buttonLink'} className="btn-one">{'Acheter maintenant'}
+                                <i className="fas fa-arrow-right"></i>
+                            </Link>
+                        </div>           
+                    </div>
+                    <div className="project-info ml-30 mt-20">
+                            <div className="project-info-top">
+                                <h4>Profil des apprenants</h4>
+                            </div>
+                            <ul>
+                                <div className="">
+                                    <div>
+                                        <h6 className="text-dark fs-5">Pour qui :</h6>
+                                        {singleData.formation.profil_apprenants.pour_qui.map((objectif, index) => (
+                                        <li key={index}><span>{objectif}</span></li>
+                                        ))}
+                                    </div>
+                                    <div>
+                                        <h6 className="text-dark fs-5">Prérequis :</h6>
+                                        {singleData.formation.profil_apprenants.prerequis.map((objectif, index) => (
+                                        <li key={index}><span>{objectif}</span></li>
+                                        ))}
+                                    </div>
+                                </div>
+                            </ul>           
+                        </div>
                 </div>
-              </div>
+              </div>    
               <div className="skill__two-tab-details-content-service">
                 <div>
                     <div className="project-info ">
@@ -53,7 +79,6 @@ const PortfolioDetailsMain = ({singleData}) => {
                       </ul>               
                     </div>
                 </div>
-
                     <div className="faq__three section-padding">
                         <div className="">
                             <div className="row">
@@ -66,73 +91,12 @@ const PortfolioDetailsMain = ({singleData}) => {
                             </div>
                         </div>
                     </div>  
-
                 <div>
-                <div className="skill__two-tab-details-content-service-right pt-5">
-                    <div className="skill__two-tab-details_profil_des_apprenants ">
-
-                        <div className="project-info mr-10">
-                            <div className="project-info-top">
-                                <h4>Objectifs pédagogiques</h4>
-                            </div>
-                            <ul>
-                                <div>
-                                <h6 className="text-dark fs-5">Équipe pédagogique :</h6>
-                                    {singleData.formation.equipe_pedagogique.map((objectif, index) => (
-                                    <li key={index}><span>{objectif}</span></li>
-                                    ))}
-                                </div>
-                                <div className="">
-                                <h6 className="text-dark fs-5">Suivi de l'exécution et évaluation des résultats :</h6>
-                                    {singleData.formation.suivi_evaluation.map((objectif, index) => (
-                                    <li key={index}><span>{objectif}</span></li>
-                                ))}
-                                </div>
-                                <div className="">
-                                <h6 className="text-dark fs-5">Ressources techniques et pédagogiques :</h6>
-                                        {singleData.formation.techniques_pedagogiques.map((objectif, index) => (
-                                            <li key={index}><span>{objectif}</span></li>
-                                        ))}
-                                </div>
-                            </ul>
-                        </div>
-
-                        
-
-                        
-
-                        <div className="project-info w-50 ml-20">
-                      <div className="project-info-top">
-                          <h4>Profil des apprenants</h4>
-                      </div>
-                      <ul>
-                         <div className="">
-                            <div>
-                                <h6 className="text-dark fs-5">Pour qui :</h6>
-                                {singleData.formation.profil_apprenants.pour_qui.map((objectif, index) => (
-                                <li key={index}><span>{objectif}</span></li>
-                                ))}
-                            </div>
-                            <div>
-                                <h6 className="text-dark fs-5">Prérequis :</h6>
-                                {singleData.formation.profil_apprenants.prerequis.map((objectif, index) => (
-                                <li key={index}><span>{objectif}</span></li>
-                                ))}
-                            </div>
-                         </div>
-                      </ul>           
-                    </div>
-
-                     </div>                         
-                    </div>
-                </div>
-              
-             </div>
-                 
-               
-                <Link href={'buttonLink'} className="btn-one">{'Acheter maintenant'}
-                    <i className="fas fa-arrow-right"></i>
-                </Link>
+            </div>
+        </div>
+            <Link href={'buttonLink'} className="btn-one">{'Acheter maintenant'}
+                <i className="fas fa-arrow-right"></i>
+            </Link>
         </div>     
     );
 };
