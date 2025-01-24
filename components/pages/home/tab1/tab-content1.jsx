@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const TabContent = ({title, description, description2, servicesLeft, servicesRight, buttonText, buttonLink}) => {
+const TabContent = ({title, description, description2, servicesLeft, servicesRight, buttonText, buttonLink, class1}) => {
     return (
         <>
             <div className="skill__two-tab-details-content">
@@ -24,7 +24,7 @@ const TabContent = ({title, description, description2, servicesLeft, servicesRig
                         ))}
                     </div>
                 </div>
-                <Link href={buttonLink} className="btn-one" target="_blank">{buttonText}
+                <Link href={buttonLink} className= {class1} target="_blank">{buttonText}
                     <i className="fas fa-arrow-right"></i>
                 </Link>
             </div>            

@@ -52,7 +52,7 @@ const Tab = () => {
                                   "Accès à des outils pratiques et performants"
                                 ]}
                                 buttonText="Prendre RDV"
-                                buttonLink="https://meet.brevo.com/kevin-a2ta2l/presentation"
+                                buttonLink="https://meet.brevo.com/kevin-a2ta2l/presentation" class1="btn-one btn-one-busn1"
                                 />
                             </div>
                             <div className="col-xl-6 col-lg-6 col-md-9 ml-5 ormation_left">
@@ -68,7 +68,7 @@ const Tab = () => {
                                         "Outils concrets et clés en main"
                                         ]}
                                         buttonText="Je lance mon business"
-                                        buttonLink="https://www.kevin-attallah.com/formation-creation-entreprise"
+                                        buttonLink="https://www.kevin-attallah.com/formation-creation-entreprise" class1="btn-one btn-one-busn2"
                                     />
                             </div>
                         {/* </div> */}

@@ -5356,12 +5356,16 @@ Responsive Menu Css
   text-transform: none;
 }
 .skill__two-tab:hover {
-  border: 1px solid var(--color-1);
-  background-color: var(--color-1);
+  border: 1px solid var(--primary-color-2);
+  background-color: var(--primary-color-2);
 }
 .skill__two-tab.active {
   border: 1px solid var(--primary-color-1);
   background: var(--primary-color-1);
+}
+.skill__two-tab.active:hover {
+  border: 1px solid var(--primary-color-2);
+  background-color: var(--primary-color-2);
 }
 .skill__two-tab.active::before {
   opacity: 1;
@@ -5433,9 +5437,19 @@ Responsive Menu Css
   margin-bottom: -35px;
   padding-top: 10px;
 }
-.skill__two-tab-details-content .btn-one{
+.skill__two-tab-details-content .btn-one-busn1{
   position: relative;
-  left: 39%;
+  background-color: var(--bg-white);
+  color: var(--primary-color-3);
+  left: 30%;
+}
+.skill__two-tab-details-content .btn-one-busn1:hover {
+  background-color: var(--primary-color-1);
+  color: var(--bg-white);
+}
+.skill__two-tab-details-content .btn-one-busn2{
+  position: relative;
+  left: 30%;
 }
 /*Info*/
 .skill__two-tab-details-content .project-info {
@@ -5531,7 +5545,6 @@ Responsive Menu Css
 }
 .skill__two-tab-details-content-service .project-info ul li span {
   color: var(--color-2);
- /*  margin-left: 10px; */
   font-weight: 400;
 }
 .skill__two-tab-details-content-service .project-info ul li .value {
