@@ -25,10 +25,9 @@ const PortfolioDetailsMain = ({singleData}) => {
                             <h4>{singleData?.titre}</h4>
                         </div>
                         <ul>
-                            <li>Type:<span>{singleData.formation?.type}</span></li>
-                            <li>durée:<span>{singleData.formation?.duree}</span></li>
-                            <li>Equipe pédagogique:<span>{singleData.equipe_pedagogique?.nom}</span></li>
-                            <li>Prix:<span className="value">69 €</span></li>
+                            <li>Type:<span> {singleData.formation?.type}</span></li>
+                            <li>durée:<span> {singleData.formation?.duree}</span></li>
+                            <li>Prix:<span className="value"> 69 €</span></li>
                             <li className="project-rating">
                                 <i className="fas fa-star"></i>
                                 <i className="fas fa-star"></i>
