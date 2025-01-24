@@ -5559,7 +5559,7 @@ Responsive Menu Css
 .skill__two-tab-details-content .skill__two-tab_image {
  display: flex;
  justify-content: space-between;
- align-items: center;
+ /* align-items: center; */
 }
 .skill__two-tab-details-content .skill__two-tab_image .image-formation{
  width: 50%;
