@@ -37,12 +37,12 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                         </Link>
                     </div>    
                 <div className="header__area-menubar-right-sidebar-popup-contact">
-                    <h4 className="mb-3">Lancez votre business ou projet pro avec style 🚀 !</h4>
+                    <h5 className="mb-3">Lancez votre business ou projet pro avec style 🚀 !</h5>
+                    <h5 className="text-start mb-4">Nos Liens utiles</h5>
                     <div className="mb-4">
                         <div className="col-xl-12 col-md-6 col-sm-5 sm-mb-30">
                             <div className="footer__three-widget border-one">
-                                <h4 className="text-start mb-1">Nos Liens utiles</h4>
-                                <div className="footer__three-widget-solution">
+                                <div className="footer__three-widget-solution ">
                                     <ul>
                                         <li><Link href={`https://www.kevin-attallah.com/formation-creation-entreprise`} target="_blank"><i className="far fa-chevron-double-right"></i>Création d’Entreprise</Link></li>
                                         <li><Link href={`/services`} ><i className="far fa-chevron-double-right"></i>Voir le catalogue complet</Link></li>
@@ -51,17 +51,21 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="footer__three-widget-about">
-                            <h4 className="text-start mb-1">Restez Connecté</h4>
+                       
+                    </div>
+                </div>
+                <h5 className="text-start mb-2">Restez Connecté</h5>
+                <div className="header__area-menubar-right-sidebar-popup-social social__icon">
+                        <div className="footer__three-widget-about mb-30">
                             <form action="#">
                                 <input type="text" name="email" placeholder="Votre e-mail" required="" />
                                 <button type="submit"><i className="fas fa-paper-plane"></i></button>
                             </form>
                         </div>
-                    </div>
-                </div>
-                <div className="header__area-menubar-right-sidebar-popup-social social__icon">
-                    <Social />
+                        <div className="sidebar__reseau">
+                            <Social />
+                        </div>
+                        
                 </div>
             </div>
             <div className={`sidebar-overlay ${isOpen ? 'show' : ''}`}></div>
