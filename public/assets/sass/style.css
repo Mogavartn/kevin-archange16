@@ -11059,6 +11059,7 @@ testimonial__one-right {
 .footer__three-widget-solution ul {
   padding: 0;
   margin: 0;
+  margin-bottom: -20px;
 }
 .footer__three-widget-solution ul li {
   padding: 0;
