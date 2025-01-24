@@ -327,7 +327,7 @@ h4 {
   font-family: var(--heading-font);
   font-weight: 700;
   text-transform: none;
-  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.693);
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.262);
 }
 
 h5 {
@@ -339,7 +339,7 @@ h5 {
   font-family: var(--heading-font);
   font-weight: 700;
   text-transform: none;
-  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.693);
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.318);
 }
 
 h6 {
@@ -351,7 +351,7 @@ h6 {
   font-family: var(--heading-font);
   font-weight: 700;
   text-transform: none;
-  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.693);
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.388);
 }
 
 p {
@@ -5343,10 +5343,11 @@ Responsive Menu Css
   line-height: 0 !important;
 }
 .skill__two-tab span {
-  font-size: 22px;
+  font-size: 30px;
   line-height: 1.63;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-heading-color);
+  text-transform: none;
 }
 .skill__two-tab:hover {
   border: 1px solid var(--color-1);
@@ -5367,9 +5368,21 @@ Responsive Menu Css
 .skill__two-tab.active span {
   color: var(--text-white);
 }
+.skill__two-tab-title-text {
+  position: relative;
+  left: 25%;
+  margin-bottom: 15px;
+}
+.skill__two-tab-title {
+  display: flex;
+  padding-bottom: 10px;
+}
+.skill__two-tab-details {
+  display: flex;
+}
 .skill__two-tab-details .formation_rigth{
-  /* background-color: #7222db4d;
-  border-radius: 10px; */
+  background-color: #7222db4d;
+  border-radius: 10px;
 }
 .skill__two-tab-details-image {
   position: relative;
@@ -5411,7 +5424,12 @@ Responsive Menu Css
 .skill__two-tab-details-content p {
   color: var(--color-1);
   text-transform: none;
-  margin-bottom: -30px;
+  margin-bottom: -35px;
+  padding-top: 10px;
+}
+.skill__two-tab-details-content .btn-one{
+  position: relative;
+  left: 30%;
 }
 /*Info*/
 .skill__two-tab-details-content .project-info {
