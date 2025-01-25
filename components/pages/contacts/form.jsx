@@ -1,139 +1,135 @@
 import React, { useState } from 'react';
 
 const FormArea = () => {
-    const [formData, setFormData] = useState({
-        first_name: '',
-        last_name: '',
-        company: '',
-        subject: '',
-        message: '',
-        email: '' // Ajouter un champ pour l'email
-    });
-    
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [statusMessage, setStatusMessage] = useState('');
+  const [formData, setFormData] = useState({
+    first_name: '',
+    last_name: '',
+    company: '',
+    subject: '',
+    message: '',
+    email: '',
+  });
 
-    // Gérer les changements dans les champs du formulaire
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
 
-    // Gérer la soumission du formulaire
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setStatusMessage('Envoi en cours...');
-        
-        try {
-            const response = await fetch('/api/submitForm', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-            const result = await response.json();
-            if (response.ok) {
-                setStatusMessage('Message envoyé avec succès !');
-            } else {
-                // Afficher correctement l'erreur si l'API retourne une erreur
-                setStatusMessage(result.message || 'Une erreur est survenue.');
-            }
-        } catch (error) {
-            // Si une erreur se produit dans le bloc `catch`, afficher l'erreur proprement
-            setStatusMessage(`Erreur lors de l'envoi du message: ${error.message || JSON.stringify(error)}`);
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatusMessage('Envoi en cours...');
 
-    return (
-        <>
-            <form onSubmit={handleSubmit}>
-                <div className="row">
-                    <div className="col-md-6 mb-3">
-                        <div className="contact__form-area-item">
-                            <input
-                                type="text"
-                                name="first_name"
-                                placeholder="Prénom"
-                                required
-                                value={formData.first_name}
-                                onChange={handleChange}
-                            />
-                        </div>
-                    </div>
-                    <div className="col-md-6 mb-3">
-                        <div className="contact__form-area-item">
-                            <input
-                                type="text"
-                                name="last_name"
-                                placeholder="Nom"
-                                required
-                                value={formData.last_name}
-                                onChange={handleChange}
-                            />
-                        </div>
-                    </div>
-                    <div className="col-md-12 mb-3">
-                        <div className="contact__form-area-item">
-                            <input
-                                type="text"
-                                name="company"
-                                placeholder="Société (si applicable)"
-                                value={formData.company}
-                                onChange={handleChange}
-                            />
-                        </div>
-                    </div>
-                    <div className="col-md-12 mb-3">
-                        <div className="contact__form-area-item">
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Votre Email"
-                                required
-                                value={formData.email}
-                                onChange={handleChange}
-                            />
-                        </div>
-                    </div>
-                    <div className="col-md-12 mb-3">
-                        <div className="contact__form-area-item">
-                            <input
-                                type="text"
-                                name="subject"
-                                placeholder="Objet du message"
-                                value={formData.subject}
-                                onChange={handleChange}
-                            />
-                        </div>
-                    </div>
-                    <div className="col-md-12 mb-3">
-                        <div className="contact__form-area-item">
-                            <textarea
-                                name="message"
-                                placeholder="Message"
-                                required
-                                value={formData.message}
-                                onChange={handleChange}
-                            ></textarea>
-                        </div>
-                    </div>
-                    <div className="col-md-12 mb-4">
-                        <div className="contact__two-right-form-item">
-                            <button type="submit" className="btn-one" disabled={isSubmitting}>
-                                {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            {statusMessage && <p>{statusMessage}</p>}
-        </>
-    );
+    try {
+      const response = await fetch('/api/send-email1', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        setStatusMessage('Message envoyé avec succès !');
+      } else {
+        setStatusMessage(result.message || 'Une erreur est survenue.');
+      }
+    } catch (error) {
+      setStatusMessage(`Erreur lors de l'envoi du message: ${error.message || JSON.stringify(error)}`);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
+        <div className="row">
+          <div className="col-md-6 mb-3">
+            <div className="contact__form-area-item">
+              <input
+                type="text"
+                name="first_name"
+                placeholder="Prénom"
+                required
+                value={formData.first_name}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="col-md-6 mb-3">
+            <div className="contact__form-area-item">
+              <input
+                type="text"
+                name="last_name"
+                placeholder="Nom"
+                required
+                value={formData.last_name}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="col-md-12 mb-3">
+            <div className="contact__form-area-item">
+              <input
+                type="text"
+                name="company"
+                placeholder="Société (si applicable)"
+                value={formData.company}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="col-md-12 mb-3">
+            <div className="contact__form-area-item">
+              <input
+                type="email"
+                name="email"
+                placeholder="Votre Email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="col-md-12 mb-3">
+            <div className="contact__form-area-item">
+              <input
+                type="text"
+                name="subject"
+                placeholder="Objet du message"
+                value={formData.subject}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="col-md-12 mb-3">
+            <div className="contact__form-area-item">
+              <textarea
+                name="message"
+                placeholder="Message"
+                required
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+          </div>
+          <div className="col-md-12 mb-4">
+            <div className="contact__two-right-form-item">
+              <button type="submit" className="btn-one" disabled={isSubmitting}>
+                {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      {statusMessage && <p>{statusMessage}</p>}
+    </>
+  );
 };
 
 export default FormArea;

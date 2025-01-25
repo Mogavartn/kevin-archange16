@@ -6,7 +6,6 @@ import FaqOne from '../../faq/faq-one';
 
 
 const PortfolioDetailsMain = ({singleData}) => {
-   console.log(singleData);
     return (
       
       <div className="skill__two-tab-details-content section-padding">
