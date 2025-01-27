@@ -5389,9 +5389,15 @@ Responsive Menu Css
 }
 .skill__two-tab-details {
   display: flex;
+  justify-content: space-between; /* espace entre les deux divs */
+  /*gap: 20px;  optionnel, pour espacer un peu les deux divs */
 }
 .skill__two-tab-details .formation_rigth{
   background-color: #7222db4d;
+  border-radius: 10px;
+}
+.skill__two-tab-details .formation_left{
+  background-color: #d1aeff4d;
   border-radius: 10px;
 }
 .skill__two-tab-details-image {
@@ -5424,6 +5430,7 @@ Responsive Menu Css
   padding: 20px 50px;
 }
 .skill__two-tab-details-content h2 {
+  font-size: 42px;
   margin-bottom: 0px;
   text-transform: none;  
 }
@@ -5751,6 +5758,7 @@ Responsive Menu Css
 .services__two-single-service-content {
   z-index: 3;
   position: relative;
+  text-align: center;
 }
 .services__two-single-service-content h4 {
   margin-left: 20px;

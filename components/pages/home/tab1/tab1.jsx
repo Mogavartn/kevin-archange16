@@ -14,7 +14,7 @@ const Tab = () => {
                         </div>
                     </div>
                     <div className="row col-xl-6 col-lg-6 col-md-6 align-items-center skill__two-tab-title-text">
-                            <p><span className="fw-bold fs-4">Grâce à l’Ikigaï, on analyse ce qui compte vraiment :</span><br />
+                            <p><span className="fw-bold fs-4">Ensemble, on analyse ce qui compte vraiment :</span><br />
                                     👉 Est-ce que cette compétence te sert vraiment ?<br />
                                     👉 Lancer ton projet ? <br />
                                     👉 Ton idée est-elle viable et alignée avec qui tu es ?<br/>
@@ -55,10 +55,11 @@ const Tab = () => {
                                 buttonLink="https://meet.brevo.com/kevin-a2ta2l/presentation" class1="btn-one btn-one-busn1"
                                 />
                             </div>
-                            <div className="col-xl-6 col-lg-6 col-md-9 ml-5 ormation_left">
+                            <div className="col-xl-6 col-lg-6 col-md-9 ml-5 formation_left">
                                         <TabContent 
                                         title="Vous êtes prêt(e) à passer à l’action, à votre rythme et sans contraintes ! 💼"
-                                        description="Profitez de notre formation complète pour construire votre projet d’entreprise en totale liberté. Vous avancez comme vous voulez, où vous voulez, avec des outils clairs et pratiques pour transformer vos idées en réalité 🚀."
+                                        description="Profitez de notre formation complète pour construire votre projet d’entreprise en totale liberté."
+                                        description2="Vous avancez comme vous voulez, où vous voulez, avec des outils clairs et pratiques pour transformer vos idées en réalité 🚀."
                                         servicesLeft={[
                                         "Liberté totale",
                                         "Contenu 100% en ligne"

@@ -37,8 +37,8 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                         </Link>
                     </div>    
                 <div className="header__area-menubar-right-sidebar-popup-contact">
-                    <h5 className="text-center mb-3">Lancez votre business ou projet pro avec style ! 🚀 </h5>
-                    <h5 className="text-start mb-2 pl-15">Nos Liens utiles</h5>
+                    <h5 className="text-center mb-4">Lancez votre business ou projet pro avec style ! 🚀 </h5>
+                    <h5 className="text-start mb-4 pl-15">Nos Liens utiles</h5>
                     <div className="mb-4">
                         <div className="col-xl-12 col-md-6 col-sm-5 sm-mb-30">
                             <div className="footer__three-widget border-one">
@@ -54,7 +54,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                        
                     </div>
                 </div>
-                <h5 className="text-start mb-2 pl-15">Restez Connecté</h5>
+                <h5 className="text-start mb-4 pl-15">Restez Connecté</h5>
                 <div className="header__area-menubar-right-sidebar-popup-social social__icon">
                         <div className="footer__three-widget-about mb-30 pl-15">
                             <form action="#">
