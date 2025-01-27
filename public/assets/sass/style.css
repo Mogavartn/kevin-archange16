@@ -5619,7 +5619,7 @@ Responsive Menu Css
 ==========================================================================*/
 .services__one{
   background: var(--color-6);
-  background-image: url();
+  /* background-image: url(); */
 }
 .services__one-title h2 {
   margin: auto;

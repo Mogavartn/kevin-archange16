@@ -24,7 +24,7 @@ const FormArea = () => {
     setStatusMessage('Envoi en cours...');
 
     try {
-      const response = await fetch('/api/send-email1', {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
