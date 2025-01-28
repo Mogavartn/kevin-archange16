@@ -5761,7 +5761,7 @@ Responsive Menu Css
   text-align: center;
 }
 .services__two-single-service-content h4 {
-  margin-left: 20px;
+  padding: 0 20px;
   margin-top: 20px;
   font-size: 20px;
   margin-bottom: 32px;
@@ -6191,6 +6191,7 @@ Responsive Menu Css
 .portfolio__one-single-portfolio-content h4 {
   font-size: 28px;
   font-weight: 600;
+  text-align: center;
 }
 .portfolio__one-single-portfolio-content h4 a {
   transition: 0.4s;

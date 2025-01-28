@@ -17,7 +17,7 @@ export default async function handler(req, res) {
         {
           sender: {
             name: `${first_name} ${last_name}`,
-            email: 'virguenolngot@gmail.com' // L'email de l'expéditeur (remplacer avec le vôtre)
+            email: 'kevin@cuspide.fr' // L'email de l'expéditeur (remplacer avec le vôtre)
           },
           to: [
             {
