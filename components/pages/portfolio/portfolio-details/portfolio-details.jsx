@@ -100,13 +100,13 @@ const PortfolioDetailsMain = ({ singleData }) => {
             <ul>
               <div className="">
                 <div>
-                  <h6 className="text-dark fs-5">Pour qui :</h6>
+                  <h6 className="text-dark fs-5 mb-2">Pour qui :</h6>
                   {singleData?.formation?.profil_apprenants?.pour_qui?.map((objectif, index) => (
                     <li key={index}><span>{objectif}</span></li>
                   ))}
                 </div>
                 <div>
-                  <h6 className="text-dark fs-5">Prérequis :</h6>
+                  <h6 className="text-dark fs-5 mb-2">Prérequis :</h6>
                   {singleData?.formation?.profil_apprenants?.prerequis?.map((objectif, index) => (
                     <li key={index}><span>{objectif}</span></li>
                   ))}
