@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const FormArea = () => {
   const [formData, setFormData] = useState({
@@ -23,20 +24,27 @@ const FormArea = () => {
     setIsSubmitting(true);
     setStatusMessage('Envoi en cours...');
 
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    const templateParams = {
+      first_name: formData.first_name,
+      last_name: formData.last_name,
+      company: formData.company,
+      subject: formData.subject,
+      message: formData.message,
+      email: formData.email,
+    };
 
-      const result = await response.json();
-      if (response.ok) {
+    try {
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Service ID
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Template ID
+        templateParams, // Données du formulaire
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID // User ID
+      );
+
+      if (response.status === 200) {
         setStatusMessage('Message envoyé avec succès !');
       } else {
-        setStatusMessage(result.message || 'Une erreur est survenue.');
+        setStatusMessage('Une erreur est survenue.');
       }
     } catch (error) {
       setStatusMessage(`Erreur lors de l'envoi du message: ${error.message || JSON.stringify(error)}`);
