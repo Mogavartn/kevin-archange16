@@ -5,7 +5,7 @@ const TabContent = ({title, description, description2, servicesLeft, servicesRig
         <>
             <div className="skill__two-tab-details-content">
                 <h2>{title}</h2>
-                <p>{description}<br/>{description2}</p>
+                <p className="mt-1">{description}<br/>{description2}</p>
                 <div className="skill__two-tab-details-content-service">
                     <div className="skill__two-tab-details-content-service-left">
                         {servicesLeft.map((service, index) => (

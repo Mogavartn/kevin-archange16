@@ -1,7 +1,23 @@
-import image1 from "../../public/assets/img/v1/2.jpg";
 import image2 from "../../public/assets/img/v1/02-accompagnement.jpg";
 import image3 from "../../public/assets/img/v1/03-anglais.jpg";
 import image4 from "../../public/assets/img/v1/04-comptable.jpg";
+import image5 from "../../public/assets/img/v1/05 - Administratif.jpg";
+import image6 from "../../public/assets/img/v1/06 - energy.jpg";
+import image7 from "../../public/assets/img/v1/07 - BILAN ECO CARBONE.png";
+import image8 from "../../public/assets/img/v1/08 - CFAO.jpg";
+import image9 from "../../public/assets/img/v1/09 - 3D.png";
+import image10 from "../../public/assets/img/v1/10 - Wordpress.png";
+import image11 from "../../public/assets/img/v1/11 SITE WEB DEBUTANT.png";
+import image12 from "../../public/assets/img/v1/12 - django.png";
+import image13 from "../../public/assets/img/v1/13 - python.png";
+import image14 from "../../public/assets/img/v1/14 - risques naturels.jpg";
+import image15 from "../../public/assets/img/v1/15 - Fiscalité.jpg";
+import image16 from "../../public/assets/img/v1/16 - francais.png";
+import image17 from "../../public/assets/img/v1/17 - Gestion Temps.png";
+import image18 from "../../public/assets/img/v1/18 - stress.jpg";
+import image19 from "../../public/assets/img/v1/19 - comptabilite.png";
+import image20 from "../../public/assets/img/v1/20 - conflits.png";
+import image21 from "../../public/assets/img/v1/21 - fluides.png";
 
 const formationsData = [
     {
@@ -248,7 +264,7 @@ const formationsData = [
     {
       "id": "Assurer_les_travaux_administratifs_de_secretariat_au_quotidien",
       "titre": "Assurer les travaux administratifs de secrétariat au quotidien",
-      "image": image1,
+      "image": image5,
       "formation": {
       "nom": "Assurer les travaux administratifs de secrétariat au quotidien",
       "type": "Formation à distance",
@@ -331,7 +347,7 @@ const formationsData = [
     {
       "id": "Audits_energetiques",
       "titre": "Audits Énergétiques",
-      "image": image1,
+      "image": image6,
       "formation": {
       "nom": "Audits Énergétiques",
       "type": "Formation à distance",
@@ -503,7 +519,7 @@ const formationsData = [
     {
       "id": "Bilan_Carbone_et_Eco-Diagnostics",
       "titre": "Bilan Carbone et Éco-Diagnostics",
-      "image": image1,
+      "image": image7,
       "formation": {
       "nom": "Bilan Carbone et Éco-Diagnostics",
       "type": "Formation à distance",
@@ -665,7 +681,7 @@ const formationsData = [
     {
       "id": "CFAO_Transition_Numerique",
       "titre": "CFAO : Transition Numérique",
-      "image": image1,
+      "image": image8,
       "formation": {
       "nom": "CFAO : Transition Numérique",
       "type": "Formation à distance",
@@ -766,7 +782,7 @@ const formationsData = [
     {
       "id": "Creation_de_plan_et_projection_3D",
       "titre": "Création de plan et projection 3D",
-      "image": image1,
+      "image": image9,
       "formation": {
       "nom": "Création de plan et projection 3D",
       "type": "Formation à distance",
@@ -846,7 +862,7 @@ const formationsData = [
     {
       "id": "Creation_de_Sites_Web_avec_WordPress",
       "titre": "Création de Sites Web avec WordPress",
-      "image": image1,
+      "image": image10,
       "formation": {
       "nom": "Création de Sites Web avec WordPress",
       "type": "Formation à distance",
@@ -949,7 +965,7 @@ const formationsData = [
     {
       "id": "Creation_d_un_site_web_pour_debutants",
       "titre": "Création d'un site web pour débutants",
-      "image": image1,
+      "image": image11,
       "formation": {
       "nom": "Création d'un site web pour débutants",
       "type": "Formation à distance",
@@ -1061,7 +1077,7 @@ const formationsData = [
     {
       "id": "Developpement_d_Applications_Web_avec_Django",
       "titre": "Développement d'Applications Web avec Django",
-      "image": image1,
+      "image": image12,
       "formation": {
       "nom": "Développement d'Applications Web avec Django",
       "type": "Formation à distance",
@@ -1163,7 +1179,7 @@ const formationsData = [
     {
       "id": "Developpement_Web_avec_Python_et_Flask",
       "titre": "Développement Web avec Python et Flask",
-      "image": image1,
+      "image": image13,
       "formation": {
       "nom": "Développement Web avec Python et Flask",
       "type": "Formation à distance",
@@ -1268,7 +1284,7 @@ const formationsData = [
     {
       "id": "Evaluation_des_Risques_Naturels_et_Technologiques",
       "titre": "Évaluation des Risques Naturels et Technologiques",
-      "image": image1,
+      "image": image14,
       "formation": {
       "nom": "Évaluation des Risques Naturels et Technologiques",
       "type": "Formation présentielle",
@@ -1397,7 +1413,7 @@ const formationsData = [
     {
       "id": "Expertise_en_Fiscalite_Professionnelle",
       "titre": "Expertise en Fiscalité Professionnelle",
-      "image": image1,
+      "image": image15,
       "formation": {
       "nom": "Expertise en Fiscalité Professionnelle",
       "type": "Formation à distance",
@@ -1632,7 +1648,7 @@ const formationsData = [
     {
       "id": "Francais_langue_etrangere_(FLE)_Niveaux_A1_a_B2",
       "titre": "Français langue étrangère (FLE) - Niveaux A1 à B2",
-      "image": image1,
+      "image": image16,
       "formation": {
       "nom": "Français Langue Étrangère (FLE) - Niveaux A1 à B2",
       "type": "Formation à distance",
@@ -1701,7 +1717,7 @@ const formationsData = [
     {
       "id": "Gerer_efficacement_son_temps",
       "titre": "Gérer efficacement son temps",
-      "image": image1,
+      "image": image17,
       "formation": {
       "nom": "Gérer efficacement son temps",
       "type": "Formation à distance",
@@ -1793,7 +1809,7 @@ const formationsData = [
     {
       "id": "Gestion_du_stress",
       "titre": "Gestion du stress",
-      "image": image1,
+      "image": image18,
       "formation": {
       "nom": "Gestion du stress",
       "type": "Formation à distance",
@@ -1896,7 +1912,7 @@ const formationsData = [
     {
       "id": "Initiation_a_la_comptabilite",
       "titre": "Initiation à la comptabilité",
-      "image": image1,
+      "image": image19,
       "formation": {
       "nom": "Initiation à la comptabilité",
       "type": "Formation à distance",
@@ -1986,7 +2002,7 @@ const formationsData = [
     {
       "id": "La_resolution_des_conflits",
       "titre": "La résolution des conflits",
-      "image": image1,
+      "image": image20,
       "formation": {
       "nom": "La résolution des conflits",
       "type": "Formation à distance",
@@ -2056,7 +2072,7 @@ const formationsData = [
     {
       "id": "Maitrise_et_Manipulation_des_Fluides_Frigorigenes",
       "titre": "Maîtrise et Manipulation des Fluides Frigorigènes",
-      "image": image1,
+      "image": image21,
       "formation": {
       "nom": "Maîtrise et Manipulation des Fluides Frigorigènes",
       "type": "Formation à distance",
