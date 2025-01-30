@@ -4738,7 +4738,6 @@ Responsive Menu Css
   font-size: 18px;
   color: var(--color-1);
   text-transform:none;
-
 }
 .about__one-content-service .service i {
   color: var(--color-3);
@@ -4775,8 +4774,8 @@ Responsive Menu Css
     width: 100%;
   }
   .about__one-image .experience-bar {
-    right: 0;
-    top: 32px;
+    right: 5px;
+    top: 220px;
   }
 }
 /*==========================================================================
@@ -5825,9 +5824,10 @@ Responsive Menu Css
 }
 
 @media (max-width: 1399px) {
-  .services__two-single-service {
+  /* .services__two-single-service {
     padding: 20px 18px 26px 23px;
-  }
+    
+  } */
   .services__two-single-service-content h4 {
     font-size: 19px;
   }
