@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import SideBar from '../offcanvas';
 import logo1 from "../../../../public/assets/img/logo-1.png";
 import logo2 from "../../../../public/assets/img/logo-2.png";
+import formulaire from "../../../../public/assets/img/icon/contact-mail.png";
 import MobileMenuPopup from '../mobile-menu/menu-area';
 import Link from 'next/link';
 import SideBarContact from '../offcanvas_cont';
@@ -53,13 +54,13 @@ const HeaderOne = ({variant}) => {
                     </div>
                     <div className="header__area-menubar-right">
                         <div className="header__area-menubar-right-box">
-                            <div className="header__area-menubar-right-box-search">
+                           {/*  <div className="header__area-menubar-right-box-search">
                                 <div className="search">	
                                     <span className="header__area-menubar-right-box-search-icon open" onClick={() => setSearch(true)}>
                                         <i className="flaticon-loupe"></i>
                                     </span>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="header__area-menubar-right-box-sidebar">
                                 <div className="header__area-menubar-right-box-sidebar-popup-icon" onClick={() => setSidebarOpen(true)}>
                                     <span className="bar-1"></span>
@@ -70,9 +71,12 @@ const HeaderOne = ({variant}) => {
                             <div className="header__area-menubar-right-box-btn">
                                 <button className="btn-one"  target="_blank"  onClick={() => setSidebarOpen1(true)}>Nous Contacter<i className="fas fa-arrow-right"></i></button>
                             </div>
-                        <div className="header__area-menubar-right-responsive-menu menu__bar">
-                            <i className="flaticon-menu-1" onClick={() => setMenuSidebar(true)}></i>
-                        </div>
+                            <div className="header__area-menubar-right-box-btn1">
+                                <i className=""  target="_blank"  onClick={() => setSidebarOpen1(true)}><img src={formulaire.src} alt="logo"/></i>
+                            </div>
+                            <div className="header__area-menubar-right-responsive-menu menu__bar">
+                                <i className="flaticon-menu-1" onClick={() => setMenuSidebar(true)}></i>
+                            </div>
                         </div>
                     </div>
                 </div>

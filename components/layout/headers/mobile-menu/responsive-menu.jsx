@@ -1,8 +1,10 @@
 "use client"
 import Link from 'next/link';
 import React, { useState } from 'react';
+import SideBarContact from '../offcanvas_cont';
 
 const ResponsiveMenu = () => {
+    const [sidebarOpen1, setSidebarOpen1] = useState(false);
     const [activeMenu, setActiveMenu] = useState(null);
     const active = (value) => setActiveMenu(value === activeMenu ? null : value),
     activeIcon = (value) => (activeMenu == value ? "mean-clicked" : ""),
@@ -25,8 +27,9 @@ const ResponsiveMenu = () => {
                 </li>
                 <li className='menu-item-has-children'><Link href='/blog'>Blog</Link>
                 </li>
-                <li><Link href="/contact">Contact</Link></li>   
+                <li className='menu-item-has-children' onClick={() => setSidebarOpen1(true)}>Nous Contacter</li>
             </ul>  
+            <SideBarContact isOpen={sidebarOpen1} setIsOpen={setSidebarOpen1} />
         </>
     );
 };

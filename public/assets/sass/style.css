@@ -118,6 +118,7 @@ body {
 @media (max-width: 768px) {
   body {
     background-attachment: scroll; /* Désactive l'effet de fond fixe sur mobile */
+    background: url(../img/video/2560x1440-bgT1.webp) no-repeat center center fixed;
   }
 }
 #contentAccueil {
@@ -3901,7 +3902,13 @@ Responsive Menu Css
 .header__area-menubar.three .menu-item-has-children ul li li a:hover {
   color: var(--primary-color-3);
 }
-
+.header__area-menubar-right-responsive-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.header__area-menubar-right-responsive-menu .image{
+  width: 15%;
+}
 .menu__bar {
   display: none;
 }
@@ -4043,6 +4050,19 @@ Responsive Menu Css
 }
 
 @media (max-width: 1399px) {
+  .header__area-menubar-right-box-btn1 {
+    display: block;
+    width: 45px;
+    margin: 0 12px;
+  }
+}
+@media (min-width: 990px) {
+  .header__area-menubar-right-box-btn1 {
+    display: none;
+  }
+}
+
+@media (max-width: 1399px) {
   .header__area-menubar-right-box-btn {
     display: none;
   }
@@ -4055,9 +4075,9 @@ Responsive Menu Css
   .header__area {
     padding: 10px 0;
   }
-  .header__area-menubar-right-box-sidebar {
-    display: none;
-  }
+  /* .header__area-menubar-right-box-sidebar {
+     display: none; 
+  } */
   .header__area-menubar-right-box-search-icon i {
     border: 0;
     padding: 0;

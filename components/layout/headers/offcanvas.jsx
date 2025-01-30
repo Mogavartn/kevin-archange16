@@ -65,7 +65,6 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                         <div className="sidebar__reseau pl-15">
                             <Social />
                         </div>
-                        
                 </div>
             </div>
             <div className={`sidebar-overlay ${isOpen ? 'show' : ''}`}></div>
