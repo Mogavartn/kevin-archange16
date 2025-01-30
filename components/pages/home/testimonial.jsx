@@ -50,7 +50,7 @@ const slideControl = {
                         </div>
                     </div>
 
-                    <div className="col-xl-6 col-lg-6 testimonial__one-right ">
+                    <div className="col-xl-6 col-lg-6 testimonial__one-right">
                         <video
                              src="/assets/video/temoig.webm"
                              autoPlay

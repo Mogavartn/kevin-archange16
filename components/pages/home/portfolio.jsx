@@ -70,8 +70,8 @@ const Portfolio = () => {
                 </Swiper>
                 {/* Flèches de navigation */}
                 <div className="swiper-button">
-                    <div className="swiper-button-prev fas fa-arrow-left"></div>
-                    <div className="swiper-button-next fas fa-arrow-right"></div>
+                    <div className="swiper-button-prev fas fa-arrow-left border"></div>
+                    <div className="swiper-button-next fas fa-arrow-right border"></div>
                 </div>
             </div>
         </div>
