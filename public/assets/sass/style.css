@@ -5482,14 +5482,14 @@ Responsive Menu Css
 /*Info*/
 .skill__two-tab-details-content .project-info {
   position: relative;
-  width: 95%;
+  width: 100%;
   border-radius: 10px 10px 10px 10px;
   overflow: hidden;
 }
 .skill__two-tab-details-content .project-info .btn-achat-formation{
   position: absolute;
-  top: 70%;
-  right: 150px;
+  top: 66%;
+  right: 15px;
   border: 1px solid #fff;
   display: inline;
 }
@@ -5600,10 +5600,12 @@ Responsive Menu Css
 .skill__two-tab-details-content .skill__two-tab_image {
  display: flex;
  justify-content: space-between;
- /* align-items: center; */
+ 
 }
 .skill__two-tab-details-content .skill__two-tab_image .image-formation{
- width: 50%;
+  position: relative;
+  width: 100%;
+  margin: 0 15px;
 }
 
 @media (max-width: 1399px) {
@@ -5623,11 +5625,12 @@ Responsive Menu Css
   .skill__two-tab_image{
     display: flex;
     flex-direction: column; /* Aligne les éléments en colonne */
-    border: 1px solid #fff;
   }
-  .image-formation {
+  .skill__two-tab-details-content .skill__two-tab_image .image-formation{
+    position: relative;
     width: 100%;
-
+    margin: 0 0;
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 480px) {
@@ -5640,11 +5643,16 @@ Responsive Menu Css
   .skill__two-tab_image{
     display: flex;
     flex-direction: column; /* Aligne les éléments en colonne */
-    border: 1px solid #fff;
   }
   .image-formation {
     width: 100%;
 
+  }
+  .skill__two-tab-details-content .skill__two-tab_image .image-formation{
+    position: relative;
+    width: 100%;
+    margin: 0 0;
+    margin-bottom: 15px;
   }
 }
 

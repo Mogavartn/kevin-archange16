@@ -56,8 +56,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
         <div className="image-formation">
           <img className="img__full rounded" src={singleData?.image?.src} alt={singleData?.id} />
         </div>
-        <div>
-          <div className="project-info ml-30">
+        <div className="project-info-left">
+          <div className="project-info">
             <div className="project-info-top">
               <h4>{singleData?.titre}</h4>
             </div>
@@ -94,7 +94,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
               </div>
             )}
           </div>
-          <div className="project-info ml-30 mt-20">
+          <div className="project-info mt-20">
             <div className="project-info-top">
               <h4>Profil des apprenants</h4>
             </div>
@@ -144,10 +144,14 @@ const PortfolioDetailsMain = ({ singleData }) => {
           </div>
         </div>
       </div>
-      <Link href={'buttonLink'} className="btn-one">
-        {'Acheter maintenant'}
-        <i className="fas fa-arrow-right"></i>
-      </Link>
+          <button
+            onClick={handlePayment}
+            disabled={isLoading}
+            className="btn-one"
+            >
+            {isLoading ? 'Traitement...' : 'Acheter maintenant'}
+              <i className="fas fa-arrow-right"></i>
+          </button>
     </div>
   );
 };
