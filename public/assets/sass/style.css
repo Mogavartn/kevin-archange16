@@ -5617,10 +5617,34 @@ Responsive Menu Css
     margin: auto;
     width: 55%;
   }
+  .skill__two-tab-details-content{
+    padding: 30px 20px;
+  }
+  .skill__two-tab_image{
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    border: 1px solid #fff;
+  }
+  .image-formation {
+    width: 100%;
+
+  }
 }
 @media (max-width: 480px) {
   .skill__two-tab {
     width: 100%;
+  }
+  .skill__two-tab-details-content{
+    padding: 30px 20px;
+  }
+  .skill__two-tab_image{
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    border: 1px solid #fff;
+  }
+  .image-formation {
+    width: 100%;
+
   }
 }
 

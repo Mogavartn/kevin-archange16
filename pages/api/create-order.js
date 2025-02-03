@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { amount, currency } = req.body;
+    const { amount, currency, description } = req.body;
 
     // Vérifie la validité des données
     if (!amount || !currency) {
@@ -12,17 +12,19 @@ export default async function handler(req, res) {
 
     const data = JSON.stringify({
       amount,
-      currency
+      currency,
+      description
     });
 
     const config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: 'https://sandbox-merchant.revolut.com/api/orders',
+      url: 'https://merchant.revolut.com/api/orders',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Authorization': `Bearer ${process.env.REVOLUT_API_KEY}`, // La clé API
+        'Revolut-Api-Version': '2024-09-01'
       },
       data
     };

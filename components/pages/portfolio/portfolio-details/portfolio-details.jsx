@@ -6,7 +6,7 @@ import FaqOne from '../../faq/faq-one';
 import { useState } from 'react';
 
 const PortfolioDetailsMain = ({ singleData }) => {
-  const [amount, setAmount] = useState(singleData?.formation?.prix || 69); // Dynamique à partir de singleData
+  const [amount, setAmount] = useState(singleData?.formation?.prix || 69 * 100); // Dynamique à partir de singleData
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // Pour gérer le statut de chargement
   const [paymentUrl, setPaymentUrl] = useState(null); // Pour l'URL de paiement
@@ -23,7 +23,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
         },
         body: JSON.stringify({
           amount, // Utilise le prix dynamique
-          currency // Devise
+          currency, // Devise
+          description: singleData?.formation?.nom || 'Formation', // Description dynamique ou valeur par défaut
         })
       });
 
@@ -31,8 +32,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
 
       if (response.ok) {
         // Si la commande est créée avec succès, redirige l'utilisateur vers l'URL de paiement
-        setPaymentUrl(data.payment_url); // Récupère l'URL de paiement de l'API Revolut
-        window.location.href = data.payment_url; // Redirection automatique vers la page de paiement
+        setPaymentUrl(data.checkout_url); // Récupère l'URL de paiement de l'API Revolut
+        window.location.href = data.checkout_url; // Redirection automatique vers la page de paiement
       } else {
         setError(data.error || 'Erreur inconnue lors de la création de la commande');
       }
@@ -63,7 +64,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
             <ul>
               <li>Type:<span> {singleData?.formation?.type}</span></li>
               <li>Durée:<span> {singleData?.formation?.duree}</span></li>
-              <li>Prix:<span className="value"> {amount} €</span></li> {/* Affiche le prix dynamique */}
+              <li>Prix:<span className="value"> 69 €</span></li> {/* Affiche le prix dynamique */}
               <li className="project-rating">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
