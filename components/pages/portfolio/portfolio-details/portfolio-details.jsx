@@ -46,78 +46,78 @@ const PortfolioDetailsMain = ({ singleData }) => {
   };
 
   return (
-    <div className="skill__two-tab-details-content section-padding">
-      <div>
-        <h2>{singleData?.titre}</h2>
-        <p>{singleData?.formation?.description?.objectif}</p>
-      </div>
-
-      <div className="skill__two-tab_image mt-50">
-        <div className="image-formation">
-          <img className="img__full rounded" src={singleData?.image?.src} alt={singleData?.id} />
-        </div>
-        <div className="project-info-left">
-          <div className="project-info">
-            <div className="project-info-top">
-              <h4>{singleData?.titre}</h4>
+    <div className="skill__two-tab-details-content mt-5 mb-5">
+      <div className="row justify-content-center gy-4">
+          <div className="col-xl-7">
+            <div>
+              <h2>{singleData?.titre}</h2>
+              <p>{singleData?.formation?.description?.objectif}</p>
             </div>
-            <ul>
-              <li>Type:<span> {singleData?.formation?.type}</span></li>
-              <li>Durée:<span> {singleData?.formation?.duree}</span></li>
-              <li>Prix:<span className="value"> 69 €</span></li> {/* Affiche le prix dynamique */}
-              <li className="project-rating">
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-              </li>
-            </ul>
-            <div className="btn-achat-formation">
-              <button
-                onClick={handlePayment}
-                disabled={isLoading}
-                className="btn-one"
-              >
-                {isLoading ? 'Traitement...' : 'Acheter maintenant'}
-                <i className="fas fa-arrow-right"></i>
-              </button>
-            </div>
-            {paymentUrl && (
-              <div>
-                <p>Paiement réussi! <a href={paymentUrl} target="_blank" rel="noopener noreferrer">Clique ici pour payer</a></p>
-              </div>
-            )}
-            {error && (
-              <div className="error-message" style={{ color: 'red', marginTop: '10px' }}>
-                <p>{error}</p>
-              </div>
-            )}
+            <div className="image-formation">
+            <img className="img__full rounded mt-5" src={singleData?.image?.src} alt={singleData?.id} />
           </div>
-          <div className="project-info mt-20">
-            <div className="project-info-top">
-              <h4>Profil des apprenants</h4>
-            </div>
-            <ul>
-              <div className="">
-                <div>
-                  <h6 className="text-dark fs-5 mb-2">Pour qui :</h6>
-                  {singleData?.formation?.profil_apprenants?.pour_qui?.map((objectif, index) => (
-                    <li key={index}><span>{objectif}</span></li>
-                  ))}
-                </div>
-                <div>
-                  <h6 className="text-dark fs-5 mb-2">Prérequis :</h6>
-                  {singleData?.formation?.profil_apprenants?.prerequis?.map((objectif, index) => (
-                    <li key={index}><span>{objectif}</span></li>
-                  ))}
-                </div>
-              </div>
-            </ul>
           </div>
-        </div>
+          <div className="col-xl-5 project-info-left">
+            <div className="project-info">
+                <div className="project-info-top">
+                  <h4>{singleData?.titre}</h4>
+                </div>
+                <ul>
+                  <li>Type:<span> {singleData?.formation?.type}</span></li>
+                  <li>Durée:<span> {singleData?.formation?.duree}</span></li>
+                  <li>Prix:<span className="value"> 69 €</span></li> {/* Affiche le prix dynamique */}
+                  <li className="project-rating">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </li>
+                </ul>
+                <div className="btn-achat-formation">
+                  <button
+                    onClick={handlePayment}
+                    disabled={isLoading}
+                    className="btn-one"
+                  >
+                    {isLoading ? 'Traitement...' : 'Acheter maintenant'}
+                    <i className="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+                {paymentUrl && (
+                  <div>
+                    <p>Paiement réussi! <a href={paymentUrl} target="_blank" rel="noopener noreferrer">Clique ici pour payer</a></p>
+                  </div>
+                )}
+                {error && (
+                  <div className="error-message" style={{ color: 'red', marginTop: '10px' }}>
+                    <p>{error}</p>
+                  </div>
+                )}
+              </div>
+              <div className="project-info mt-20">
+              <div className="project-info-top">
+                <h4>Profil des apprenants</h4>
+              </div>
+              <ul>
+                <div className="">
+                  <div>
+                    <h6 className="text-dark fs-5 mb-2">Pour qui :</h6>
+                    {singleData?.formation?.profil_apprenants?.pour_qui?.map((objectif, index) => (
+                      <li key={index}><span>{objectif}</span></li>
+                    ))}
+                  </div>
+                  <div>
+                    <h6 className="text-dark fs-5 mb-2">Prérequis :</h6>
+                    {singleData?.formation?.profil_apprenants?.prerequis?.map((objectif, index) => (
+                      <li key={index}><span>{objectif}</span></li>
+                    ))}
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
       </div>
-
       <div className="skill__two-tab-details-content-service">
         <div>
           <div className="project-info ">

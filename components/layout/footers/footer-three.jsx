@@ -19,7 +19,7 @@ const FooterThree = () => {
                         <div className="footer__three-widget">
                             <div className="footer__three-widget-about">
                                 <Link href="/"><img src={logo.src} alt="image" /></Link>
-                                <p>Lancez votre business ou projet pro avec style 🚀 ! Coaching, formations et conseils pour aligner vos ambitions, vos talents et vos valeurs. Prêt à transformer vos idées en succès ?
+                                <p>Lancez votre business ou projet pro avec style 🚀 ! Coaching, formations et conseils pour aligner vos ambitions, vos talents et vos valeurs. <br/> Prêt à transformer vos idées en succès ?
                                 </p>
                                 <form action="#">
                                     <input type="text" name="email" placeholder="Votre e-mail" required="" />

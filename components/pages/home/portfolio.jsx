@@ -13,7 +13,7 @@ const Portfolio = () => {
         speed: 2000,
         loop: true,
         autoplay: {
-            delay: 4500,
+            delay: 1000,
             reverseDirection: false,
             disableOnInteraction: false,
         },

@@ -37,7 +37,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                         </Link>
                     </div>    
                 <div className="header__area-menubar-right-sidebar-popup-contact">
-                    <h5 className="text-center mb-5">Lancez votre business ou projet pro avec style ! 🚀 </h5>
+                    <h4 className="text-center mb-5">Lancez votre business ou projet pro avec style ! 🚀 </h4>
                     <h5 className="text-start mb-4 pl-15">Nos Liens utiles</h5>
                     <div className="mb-5">
                         <div className="col-xl-12 col-md-6 col-sm-5 sm-mb-30">
