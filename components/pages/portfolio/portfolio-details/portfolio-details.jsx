@@ -4,6 +4,7 @@ import image2 from '../../../../public/assets/img/portfolio/project-details-2.pn
 import Link from 'next/link';
 import FaqOne from '../../faq/faq-one';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 const PortfolioDetailsMain = ({ singleData }) => {
   const [amount, setAmount] = useState(singleData?.formation?.prix || 69 * 100); // Dynamique à partir de singleData
@@ -45,6 +46,26 @@ const PortfolioDetailsMain = ({ singleData }) => {
     }
   };
 
+   useEffect(() => {
+          const handleClick = () => {
+            fbq('track', 'Lead', {
+              content_name: singleData?.formation?.nom, //'Formation ABC',
+              content_category: singleData?.formation?.description // 'Développement personnel',
+            });
+          };
+          const button = document.getElementById('btn-formation');
+  
+          if (button) {
+          button.addEventListener('click', handleClick);
+          }
+  
+          return () => {
+          if (button) {
+              button.removeEventListener('click', handleClick);
+          }
+          };
+      }, []);
+
   return (
     <div className="skill__two-tab-details-content mt-5 mb-5">
       <div className="row justify-content-center gy-4">
@@ -79,6 +100,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                     onClick={handlePayment}
                     disabled={isLoading}
                     className="btn-one"
+                    id="btn-formation"
                   >
                     {isLoading ? 'Traitement...' : 'Acheter maintenant'}
                     <i className="fas fa-arrow-right"></i>
@@ -148,6 +170,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
             onClick={handlePayment}
             disabled={isLoading}
             className="btn-one"
+            id="btn-formation"
             >
             {isLoading ? 'Traitement...' : 'Acheter maintenant'}
               <i className="fas fa-arrow-right"></i>
