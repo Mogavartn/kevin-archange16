@@ -5329,6 +5329,10 @@ Responsive Menu Css
 /*==========================================================================
 * Skill Style 1 Area Style
 ==========================================================================*/
+.skill__two p{
+ text-align: left;
+ padding-left: 30%;
+}
 .skill__two .tab-content > .active {
   display: flex;
 }
@@ -5413,13 +5417,17 @@ Responsive Menu Css
   justify-content: space-between; /* espace entre les deux divs */
   /*gap: 20px;  optionnel, pour espacer un peu les deux divs */
 }
-.skill__two-tab-details .formation_rigth{
+.formation_rigth{
   background-color: #7222db4d;
   border-radius: 10px;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
-.skill__two-tab-details .formation_left{
+.formation_left{
   background-color: #d1aeff4d;
   border-radius: 10px;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 .skill__two-tab-details-image {
   position: relative;
@@ -5609,6 +5617,18 @@ Responsive Menu Css
   .skill__two-tab {
     padding: 35px 0 30px 40px;
   }
+  .skill__two-tab-details-content .btn-one-busn2{
+    position: relative;
+    left: 5%;
+  }
+  .skill__two-tab-details-content .btn-one-busn1{
+    position: relative;
+    left: 20%;
+  }
+  .skill__two p{
+    text-align: left;
+    padding-left: 1px;
+   }
 }
 @media (max-width: 575px) {
   .skill__two-tab {
