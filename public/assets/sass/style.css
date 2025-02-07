@@ -5329,7 +5329,7 @@ Responsive Menu Css
 /*==========================================================================
 * Skill Style 1 Area Style
 ==========================================================================*/
-.skill__two p{
+.skill__two .p1{
  text-align: left;
  padding-left: 30%;
 }
@@ -5625,7 +5625,7 @@ Responsive Menu Css
     position: relative;
     left: 20%;
   }
-  .skill__two p{
+  .skill__two .p1{
     text-align: left;
     padding-left: 1px;
    }

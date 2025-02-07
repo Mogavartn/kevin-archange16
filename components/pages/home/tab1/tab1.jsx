@@ -13,7 +13,7 @@ const Tab = () => {
                             <h2>Je veux lancer mon business🧑‍💼</h2>
                         </div>
                         <div className="mb-5 ">
-                            <p><span className="fw-bold fs-4">Ensemble, on analyse ce qui compte vraiment :</span><br />
+                            <p className="p1"><span className="fw-bold fs-4">Ensemble, on analyse ce qui compte vraiment :</span><br />
                                     👉 Est-ce que cette compétence te sert vraiment ?<br />
                                     👉 Lancer ton projet ? <br />
                                     👉 Ton idée est-elle viable et alignée avec qui tu es ?<br/>
