@@ -27,7 +27,6 @@ const ResponsiveMenu = () => {
                 </li>
                 <li className='menu-item-has-children'><Link href='/blog'>Blog</Link>
                 </li>
-                <li className='menu-item-has-children' onClick={() => setSidebarOpen1(true)}>Nous Contacter</li>
             </ul>  
             <SideBarContact isOpen={sidebarOpen1} setIsOpen={setSidebarOpen1} />
         </>

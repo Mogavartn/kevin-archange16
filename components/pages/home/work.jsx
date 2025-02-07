@@ -16,7 +16,7 @@ const WorkArea = () => {
                     </div>
                     
                 </div>
-                <div className="row justify-content-center gy-4 border">
+                <div className="row justify-content-center gy-4">
                     <div className="col-xl-6">
                         <div className="work-process-area__one-single-work">
                             <span>01</span>
@@ -41,7 +41,7 @@ const WorkArea = () => {
                         </div>
                     </div>
                     <div className="col-xl-6">
-                        <div className="col-xl-12 col-lg-6 pl-35">
+                        <div className="col-xl-12 col-lg-6 ">
                             <div className="work-process-area__one-content-right">
                                 <p>Nos cours sont élaborés par des experts passionnés, offrant une expertise pointue et une
                                     expérience enrichissante.</p>

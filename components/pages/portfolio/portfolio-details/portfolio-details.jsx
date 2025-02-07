@@ -102,7 +102,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                     className="btn-one"
                     id="btn-formation"
                   >
-                    {isLoading ? 'Traitement...' : 'Acheter maintenant'}
+                    {isLoading ? 'Traitement...' : 'Acheter'}
                     <i className="fas fa-arrow-right"></i>
                   </button>
                 </div>
