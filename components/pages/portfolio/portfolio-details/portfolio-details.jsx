@@ -4,7 +4,7 @@ import image2 from '../../../../public/assets/img/portfolio/project-details-2.pn
 import Link from 'next/link';
 import FaqOne from '../../faq/faq-one';
 import { useState } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useRef  } from 'react';
 
 const PortfolioDetailsMain = ({ singleData }) => {
   const [amount, setAmount] = useState(singleData?.formation?.prix || 69 * 100); // Dynamique à partir de singleData
@@ -46,25 +46,29 @@ const PortfolioDetailsMain = ({ singleData }) => {
     }
   };
 
-   useEffect(() => {
-          const handleClick = () => {
-            fbq('track', 'Lead', {
-              content_name: singleData?.formation?.nom, //'Formation ABC',
-              content_category: singleData?.formation?.description // 'Développement personnel',
-            });
-          };
-          const button = document.getElementById('btn-formation');
-  
-          if (button) {
-          button.addEventListener('click', handleClick);
-          }
-  
-          return () => {
-          if (button) {
-              button.removeEventListener('click', handleClick);
-          }
-          };
-      }, []);
+  const buttonRef = useRef(null); // Utilisation de useRef pour accéder au bouton
+  useEffect(() => {
+    const handleClick = () => {
+      // Vérifie que les données sont disponibles avant d'envoyer l'événement
+      if (singleData?.formation?.nom && singleData?.formation?.description) {
+        fbq('track', 'Lead', {
+          content_name: singleData.formation.nom,
+          content_category: singleData.formation.description,
+        });
+      }
+    };
+    // Si le bouton existe, on ajoute l'événement
+    const button = buttonRef.current;
+    if (button) {
+      button.addEventListener('click', handleClick);
+    }
+    // Clean-up de l'événement lorsque le composant est démonté
+    return () => {
+      if (button) {
+        button.removeEventListener('click', handleClick);
+      }
+    };
+  }, [singleData]); // Dépendance sur `singleData` pour re-réagir si les données changent
 
   return (
     <div className="skill__two-tab-details-content mt-5 mb-5">
@@ -96,12 +100,15 @@ const PortfolioDetailsMain = ({ singleData }) => {
                   </li>
                 </ul>
                 <div className="btn-achat-formation">
-                  <button
-                    onClick={handlePayment}
-                    disabled={isLoading}
-                    className="btn-one"
-                    id="btn-formation"
-                  >
+                <button
+                      onClick={(e) => {
+                        handleClick(); // Suivre l'événement avec Meta Pixel
+                        handlePayment(e); // Traiter le paiement
+                      }}
+                      disabled={isLoading}
+                      className="btn-one"
+                      id="btn-formation"
+                    >
                     {isLoading ? 'Traitement...' : 'Acheter'}
                     <i className="fas fa-arrow-right"></i>
                   </button>
