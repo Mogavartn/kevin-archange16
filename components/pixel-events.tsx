@@ -1,6 +1,4 @@
-// src/components/pixel-events.tsx
-"use client"; // Pour que ce fichier soit traité côté client dans Next.js
-
+"use client";
 import React, { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 
