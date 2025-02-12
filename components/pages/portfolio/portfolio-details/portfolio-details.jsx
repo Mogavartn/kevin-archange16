@@ -92,19 +92,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
         </div>
        
         <div className="col-xl-5 project-info-left">
-        <div className="border">
-        <video
-              src="/assets/video/ANIMATION RATING.webm"
-              autoPlay
-              loop
-               muted
-               playsInline
-               disablePictureInPicture
-               controlsList="nodownload nofullscreen noremoteplayback"
-               className="w-100"
-                             >   
-              </video>
-        </div>
+       
           <div className="project-info">
             <div className="project-info-top">
               <h4>{singleData?.titre}</h4>
@@ -113,15 +101,15 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <li>Type: <span> {singleData?.formation?.type}</span></li>
               <li>Durée: <span> {singleData?.formation?.duree}</span></li>
               <li>Prix: <span className="value"> {amount / 100} €</span></li> {/* Affiche le prix dynamique */}
-              <li className="project-rating">
+            {/*   <li className="project-rating">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
-              </li>
-            </ul>
-            <div className="btn-achat-formation">
+              </li> */}
+              <li>
+              
               <button
                 onClick={() => setShowModal(true)} // Ouvre le pop-up
                 disabled={isLoading}
@@ -130,6 +118,20 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 {isLoading ? 'Traitement...' : 'Acheter'}
                 <i className="fas fa-arrow-right"></i>
               </button>
+              </li>
+            </ul>
+            <div className="btn-achat-formation">
+                <video
+                  src="/assets/video/ANIMATION RATING.webm"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  disablePictureInPicture
+                  controlsList="nodownload nofullscreen noremoteplayback"
+                  className=""
+                              >   
+                </video>
             </div>
             {paymentUrl && (
               <div>

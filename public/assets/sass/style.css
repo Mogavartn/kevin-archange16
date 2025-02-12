@@ -5497,11 +5497,13 @@ Responsive Menu Css
   overflow: hidden;
 }
 .skill__two-tab-details-content .project-info .btn-achat-formation{
+  width: 50%;
   position: absolute;
-  top: 66%;
-  right: 15px;
-  border: 1px solid #fff;
-  display: inline;
+  top: 15%;
+  right: -20px;
+}
+.btn-achat-formation video{
+  width: 80%;
 }
 .skill__two-tab-details-content .project-info .project-info-top {
   background: var(--primary-color-1);
