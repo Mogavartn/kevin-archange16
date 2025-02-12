@@ -5632,7 +5632,8 @@ Responsive Menu Css
   .skill__two .p1{
     text-align: left;
     padding-left: 1px;
-   }
+  }
+  
 }
 @media (max-width: 575px) {
   .skill__two-tab {
@@ -5655,8 +5656,8 @@ Responsive Menu Css
   }
   .skill__two-tab-details-content .project-info .btn-achat-formation{
     position: absolute;
-    top: 70%;
-    right: 10px;
+    top: 45%;
+    right: -35px;
     display: inline;
   }
 }
