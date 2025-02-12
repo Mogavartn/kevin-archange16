@@ -2,7 +2,13 @@ import axios from 'axios';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { amount, currency, description } = req.body;
+    const { amount, currency, description,  
+      firstName, 
+      lastName,
+      email,
+      address,
+      city,
+      postalCode } = req.body;
 
     // Vérifie la validité des données
     if (!amount || !currency) {
@@ -13,7 +19,13 @@ export default async function handler(req, res) {
     const data = JSON.stringify({
       amount,
       currency,
-      description
+      description,
+      firstName,
+      lastName,
+      email,
+      address,
+      city,
+      postalCode
     });
 
     const config = {
@@ -28,7 +40,7 @@ export default async function handler(req, res) {
       },
       data
     };
-
+    console.log(data)
     try {
       console.log('Envoi de la requête à Revolut...');
       const response = await axios(config);

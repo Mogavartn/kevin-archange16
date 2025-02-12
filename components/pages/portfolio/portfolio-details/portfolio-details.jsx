@@ -1,10 +1,4 @@
-import icon from '../../../../public/assets/img/icon/project-details-icon.png';
-import image1 from '../../../../public/assets/img/portfolio/project-details.png';
-import image2 from '../../../../public/assets/img/portfolio/project-details-2.png';
-import Link from 'next/link';
-import FaqOne from '../../faq/faq-one';
 import { useState } from 'react';
-import { useEffect } from 'react';
 
 const PortfolioDetailsMain = ({ singleData }) => {
   const [amount, setAmount] = useState(singleData?.formation?.prix || 69 * 100); // Dynamique à partir de singleData
@@ -12,6 +6,20 @@ const PortfolioDetailsMain = ({ singleData }) => {
   const [isLoading, setIsLoading] = useState(false); // Pour gérer le statut de chargement
   const [paymentUrl, setPaymentUrl] = useState(null); // Pour l'URL de paiement
   const [error, setError] = useState(null); // Pour afficher des erreurs
+  const [showModal, setShowModal] = useState(false); // Gérer l'affichage du pop-up
+
+  // Informations de l'acheteur
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    address: '',
+    city: 'France', // Ville par défaut
+    postalCode: '',
+  });
+
+  // Étape de vérification (étape 1 ou 2)
+  const [step, setStep] = useState(1); // Étape 1 : Informations sur l'acheteur, Étape 2 : Vérification
 
   const handlePayment = async () => {
     setIsLoading(true);
@@ -20,13 +28,19 @@ const PortfolioDetailsMain = ({ singleData }) => {
       const response = await fetch('/api/create-order', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           amount, // Utilise le prix dynamique
           currency, // Devise
           description: singleData?.formation?.nom || 'Formation', // Description dynamique ou valeur par défaut
-        })
+          firstName: formData.firstName, // Prénom
+          lastName: formData.lastName,   // Nom
+          email: formData.email,         // Email
+          address: formData.address,     // Adresse complète
+          city: formData.city,           // Ville
+          postalCode: formData.postalCode, // Code postal
+        }),
       });
 
       const data = await response.json();
@@ -46,113 +60,220 @@ const PortfolioDetailsMain = ({ singleData }) => {
     }
   };
 
+  // Handler pour les changements de formulaire
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // Passer à l'étape suivante
+  const handleNextStep = () => {
+    if (step === 1 && formData.firstName && formData.lastName && formData.email && formData.address && formData.postalCode) {
+      setStep(2); // Passer à l'étape de vérification
+    } else {
+      setError('Tous les champs sont obligatoires.');
+    }
+  };
+
   return (
     <div className="skill__two-tab-details-content mt-5 mb-5">
       <div className="row justify-content-center gy-4">
-          <div className="col-xl-7">
-            <div>
-              <h2>{singleData?.titre}</h2>
-              <p>{singleData?.formation?.description?.objectif}</p>
-            </div>
-            <div className="image-formation">
+        <div className="col-xl-7">
+          <div>
+            <h2>{singleData?.titre}</h2>
+            <p>{singleData?.formation?.description?.objectif}</p>
+          </div>
+          <div className="image-formation">
             <img className="img__full rounded mt-5" src={singleData?.image?.src} alt={singleData?.id} />
           </div>
-          </div>
-          <div className="col-xl-5 project-info-left">
-            <div className="project-info">
-                <div className="project-info-top">
-                  <h4>{singleData?.titre}</h4>
-                </div>
-                <ul>
-                  <li>Type:<span> {singleData?.formation?.type}</span></li>
-                  <li>Durée:<span> {singleData?.formation?.duree}</span></li>
-                  <li>Prix:<span className="value"> 69 €</span></li> {/* Affiche le prix dynamique */}
-                  <li className="project-rating">
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                  </li>
-                </ul>
-                <div className="btn-achat-formation">
-                  <button
-                    onClick={handlePayment}
-                    disabled={isLoading}
-                    className="btn-one"
-                  >
-                    {isLoading ? 'Traitement...' : 'Acheter'}
-                    <i className="fas fa-arrow-right"></i>
-                  </button>
-                </div>
-                {paymentUrl && (
-                  <div>
-                    <p>Paiement réussi! <a href={paymentUrl} target="_blank" rel="noopener noreferrer">Clique ici pour payer</a></p>
-                  </div>
-                )}
-                {error && (
-                  <div className="error-message" style={{ color: 'red', marginTop: '10px' }}>
-                    <p>{error}</p>
-                  </div>
-                )}
-              </div>
-              <div className="project-info mt-20">
-              <div className="project-info-top">
-                <h4>Profil des apprenants</h4>
-              </div>
-              <ul>
-                <div className="">
-                  <div>
-                    <h6 className="text-dark fs-5 mb-2">Pour qui :</h6>
-                    {singleData?.formation?.profil_apprenants?.pour_qui?.map((objectif, index) => (
-                      <li key={index}><span>{objectif}</span></li>
-                    ))}
-                  </div>
-                  <div>
-                    <h6 className="text-dark fs-5 mb-2">Prérequis :</h6>
-                    {singleData?.formation?.profil_apprenants?.prerequis?.map((objectif, index) => (
-                      <li key={index}><span>{objectif}</span></li>
-                    ))}
-                  </div>
-                </div>
-              </ul>
-            </div>
-          </div>
-      </div>
-      <div className="skill__two-tab-details-content-service">
-        <div>
-          <div className="project-info ">
+        </div>
+       
+        <div className="col-xl-5 project-info-left">
+        <div className="border">
+        <video
+              src="/assets/video/ANIMATION RATING.webm"
+              autoPlay
+              loop
+               muted
+               playsInline
+               disablePictureInPicture
+               controlsList="nodownload nofullscreen noremoteplayback"
+               className="w-100"
+                             >   
+              </video>
+        </div>
+          <div className="project-info">
             <div className="project-info-top">
-              <h4>Objectifs pédagogiques</h4>
+              <h4>{singleData?.titre}</h4>
             </div>
             <ul>
-              {singleData?.formation?.objectifs_pedagogiques?.map((objectif, index) => (
-                <li key={index}><span>{objectif}</span></li>
-              ))}
+              <li>Type: <span> {singleData?.formation?.type}</span></li>
+              <li>Durée: <span> {singleData?.formation?.duree}</span></li>
+              <li>Prix: <span className="value"> {amount / 100} €</span></li> {/* Affiche le prix dynamique */}
+              <li className="project-rating">
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+              </li>
+            </ul>
+            <div className="btn-achat-formation">
+              <button
+                onClick={() => setShowModal(true)} // Ouvre le pop-up
+                disabled={isLoading}
+                className="btn-one"
+              >
+                {isLoading ? 'Traitement...' : 'Acheter'}
+                <i className="fas fa-arrow-right"></i>
+              </button>
+            </div>
+            {paymentUrl && (
+              <div>
+                <p>Paiement réussi! <a href={paymentUrl} target="_blank" rel="noopener noreferrer">Clique ici pour payer</a></p>
+              </div>
+            )}
+            {error && (
+              <div className="error-message" style={{ color: 'red', marginTop: '10px' }}>
+                <p>{error}</p>
+              </div>
+            )}
+          </div>
+          <div className="project-info mt-20">
+            <div className="project-info-top">
+              <h4>Profil des apprenants</h4>
+            </div>
+            <ul>
+              <div>
+                <div>
+                  <h6 className="text-dark fs-5 mb-2">Pour qui :</h6>
+                  {singleData?.formation?.profil_apprenants?.pour_qui?.map((objectif, index) => (
+                    <li key={index}><span>{objectif}</span></li>
+                  ))}
+                </div>
+                <div>
+                  <h6 className="text-dark fs-5 mb-2">Prérequis :</h6>
+                  {singleData?.formation?.profil_apprenants?.prerequis?.map((objectif, index) => (
+                    <li key={index}><span>{objectif}</span></li>
+                  ))}
+                </div>
+              </div>
             </ul>
           </div>
         </div>
-        <div className="faq__three section-padding">
-          <div className="">
-            <div className="row">
-              <div className="col-xl mr-20">
-                <h4 className="text-light">Contenu de la formation</h4>
-                <div className="faq-collapse pt-5">
-                  <FaqOne singleData={singleData} />
-                </div>
+      </div>
+
+      {/* Pop-up de paiement */}
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <span
+              className="close"
+              onClick={() => setShowModal(false)} // Fermer le pop-up
+            >
+              &times;
+            </span>
+
+            {step === 1 ? (
+              <div>
+                <p>Étape 1 : Informations sur l'acheteur</p>
+                <>
+                  <form>
+                    <div className="row">
+                      <div className="col-md-6 mb-3">
+                        <div className="contact__form-area-item">
+                          <input
+                            type="text"
+                            name="firstName"
+                            placeholder="Prénom"
+                            required
+                            value={formData.firstName}
+                            onChange={handleInputChange} // Correction du gestionnaire d'événements
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-6 mb-3">
+                        <div className="contact__form-area-item">
+                          <input
+                            type="text"
+                            name="lastName"
+                            placeholder="Nom"
+                            required
+                            value={formData.lastName}
+                            onChange={handleInputChange} // Correction du gestionnaire d'événements
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-12 mb-3">
+                        <div className="contact__form-area-item">
+                          <input
+                            type="text"
+                            name="address"
+                            placeholder="Adresse complète"
+                            required
+                            value={formData.address}
+                            onChange={handleInputChange} // Correction du gestionnaire d'événements
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-12 mb-3">
+                        <div className="contact__form-area-item">
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Votre Email"
+                            required
+                            value={formData.email}
+                            onChange={handleInputChange} // Correction du gestionnaire d'événements
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-12 mb-3">
+                        <div className="contact__form-area-item">
+                          <input
+                            type="text"
+                            name="city"
+                            placeholder="Ville"
+                            value={formData.city}
+                            onChange={handleInputChange} // Correction du gestionnaire d'événements
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-12 mb-3">
+                        <div className="contact__form-area-item">
+                          <input
+                            type="text"
+                            name="postalCode"
+                            placeholder="Code postal"
+                            value={formData.postalCode}
+                            onChange={handleInputChange} // Correction du gestionnaire d'événements
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button onClick={handleNextStep} disabled={isLoading}>
+                      {isLoading ? 'Traitement...' : 'Confirmer et Payer'}
+                      <i className="fas fa-arrow-right"></i>
+                    </button>
+                  </form>
+                </>
               </div>
-            </div>
+            ) : (
+              <div>
+                <h2>Étape 2 : Vérification</h2>
+                <p>Merci pour votre commande. Veuillez vérifier vos informations et confirmer.</p>
+                <button onClick={handlePayment} disabled={isLoading}>
+                  {isLoading ? 'Traitement...' : 'Confirmer et Payer'}
+                  <i className="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            )}
           </div>
         </div>
-      </div>
-          <button
-            onClick={handlePayment}
-            disabled={isLoading}
-            className="btn-one"
-            >
-            {isLoading ? 'Traitement...' : 'Acheter maintenant'}
-              <i className="fas fa-arrow-right"></i>
-          </button>
+      )}
     </div>
   );
 };
