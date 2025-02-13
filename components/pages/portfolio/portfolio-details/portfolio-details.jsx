@@ -83,7 +83,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
       <div className="row justify-content-center gy-4">
         <div className="col-xl-7">
           <div>
-            <h2>{singleData?.titre}</h2>
+            <h2 className="text-center">{singleData?.titre}</h2>
             <p>{singleData?.formation?.description?.objectif}</p>
           </div>
           <div className="image-formation">
