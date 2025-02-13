@@ -44,7 +44,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                             <div className="footer__three-widget border-one">
                                 <div className="footer__three-widget-solution ">
                                     <ul>
-                                        <li><Link href={`https://www.kevin-attallah.com/formation-creation-entreprise`} target="_blank"><i className="far fa-chevron-double-right"></i>Création d’Entreprise</Link></li>
+                                        <li><Link href={`/business`} ><i className="far fa-chevron-double-right"></i>Création d’Entreprise</Link></li>
                                         <li><Link href={`/services`} ><i className="far fa-chevron-double-right"></i>Voir le catalogue complet</Link></li>
                                         <li><Link href={`/blog`} ><i className="far fa-chevron-double-right"></i>Blog</Link></li>
                                     </ul>
@@ -54,7 +54,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                        
                     </div>
                 </div>
-                <h5 className="text-start mb-4 pl-15">Restez Connecté</h5>
+                <h5 className="text-start mb-4 pl-15">Notre Newsletter</h5>
                 <div className="header__area-menubar-right-sidebar-popup-social social__icon">
                         <div className="footer__three-widget-about mb-30 pl-15">
                             <form action="#">
@@ -62,6 +62,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                                 <button type="submit"><i className="fas fa-paper-plane"></i></button>
                             </form>
                         </div>
+                        <h5 className="text-start mb-4 pl-15">Restez Connecté</h5>
                         <div className="sidebar__reseau pl-15">
                             <Social />
                         </div>

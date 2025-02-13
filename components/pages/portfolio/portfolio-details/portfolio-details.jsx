@@ -172,16 +172,12 @@ const PortfolioDetailsMain = ({ singleData }) => {
       {showModal && (
         <div className="modal">
           <div className="modal-content">
-            <span
-              className="close"
-              onClick={() => setShowModal(false)} // Fermer le pop-up
-            >
-              &times;
-            </span>
-
+              <div className="pop-pop-close-btn" onClick={() => setShowModal(false)}>
+                        <i className="fal fa-times"></i>
+              </div>
             {step === 1 ? (
               <div>
-                <p>Étape 1 : Informations sur l'acheteur</p>
+                <h3 className="mb-2">Informations sur l'acheteur</h3>
                 <>
                   <form>
                     <div className="row">
@@ -256,8 +252,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
                         </div>
                       </div>
                     </div>
-                    <button onClick={handleNextStep} disabled={isLoading}>
-                      {isLoading ? 'Traitement...' : 'Confirmer et Payer'}
+                    <button onClick={handleNextStep} disabled={isLoading} className="btn-one">
+                      {isLoading ? 'Traitement...' : 'Envoyer'}
                       <i className="fas fa-arrow-right"></i>
                     </button>
                   </form>
@@ -265,10 +261,18 @@ const PortfolioDetailsMain = ({ singleData }) => {
               </div>
             ) : (
               <div>
-                <h2>Étape 2 : Vérification</h2>
-                <p>Merci pour votre commande. Veuillez vérifier vos informations et confirmer.</p>
-                <button onClick={handlePayment} disabled={isLoading}>
-                  {isLoading ? 'Traitement...' : 'Confirmer et Payer'}
+                <h3>Vérification</h3>
+                <p className="mb-1 ">Merci pour votre commande. Veuillez vérifier vos informations et confirmer.</p>
+                <div className="mb-3 text-start pl-50">
+                  <p className="mb-1"><strong>Prénom :</strong> {formData.firstName}</p>
+                  <p className="mb-1"><strong>Nom :</strong> {formData.lastName}</p>
+                  <p className="mb-1"><strong>Adresse :</strong> {formData.address}</p>
+                  <p className="mb-1"><strong>Email :</strong> {formData.email}</p>
+                  <p className="mb-1"><strong>Ville:</strong> {formData.city}</p>
+                  <p className="mb-1"><strong>Code postal :</strong> {formData.postalCode}</p>
+                </div>
+                <button onClick={handlePayment} disabled={isLoading} className="btn-one">
+                  {isLoading ? 'Traitement...' : 'Confirmer et passer au paiement'}
                   <i className="fas fa-arrow-right"></i>
                 </button>
               </div>

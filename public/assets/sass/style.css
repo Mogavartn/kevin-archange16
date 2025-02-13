@@ -11707,22 +11707,38 @@ image-background {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
 }
 
 .modal-content {
-  background-color: white;
-  padding: 20px;
+  background: var(--color-5);
+  padding: 50px 20px;
   border-radius: 5px;
   width: 600px;
   text-align: center;
+  transition: 0.5s;
 }
 
-.close {
+.pop-pop-close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 30px;
+  transform: rotate(0);
+}
+
+.pop-pop-close-btn i::before {
+  background: var(--primary-color-1);
+  width: 40px;
+  color: var(--text-white);
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
   cursor: pointer;
+  display: block;
+}
+.pop-pop-close-btn:hover {
+  animation: rotate 0.4s ease 0s;
 }
 
 

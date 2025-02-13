@@ -14,10 +14,10 @@ const Tab = () => {
                         </div>
                         <div className="mb-5 ">
                             <p className="p1"><span className="fw-bold fs-4">Ensemble, on analyse ce qui compte vraiment :</span><br />
-                                    👉 Est-ce que cette compétence te sert vraiment ?<br />
-                                    👉 Lancer ton projet ? <br />
-                                    👉 Ton idée est-elle viable et alignée avec qui tu es ?<br/>
-                                    Pas de phrases toutes faites, pas d’artifice :<br /> juste toi, ton projet et des solutions qui te correspondent. Prêt·e à passer à l’action ? 
+                                    👉 Quelles sont tes forces et comment les exploiter ?<br />
+                                    👉 Ton idée est-elle viable et alignée avec qui tu es ? <br />
+                                    👉 Comment structurer ton projet pour qu'il prenne vie ?<br/>
+                                    Pas de phrases toutes faites, pas d’artifice :<br /> juste toi, ton projet et des solutions qui te correspondent. Prêt·e à passer à l’action ?
                             </p>
                         </div>
                     </div>
@@ -68,9 +68,9 @@ const Tab = () => {
                                         "Contenu 100% en ligne"
                                         ]}
                                         servicesRight={[
+                                        "Accessible immédiatement",
                                         "Créez Votre Entreprise",
-                                        "Outils concrets et clés en main",
-                                        ""
+                                        "Outils Concrets Et Clés En Main"
                                         ]}
                                         buttonText="Je lance mon business"
                                         buttonLink="https://www.kevin-attallah.com/formation-creation-entreprise" class1="btn-one btn-one-busn2"

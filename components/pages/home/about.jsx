@@ -24,7 +24,7 @@ const About = () => {
                             <span className="subtitle-one">Qui sommes-nous</span>
                             <h2>Faites passer vos ambitions au niveau supérieur 🚀
                             </h2>
-                            <p>Avec notre méthode qui a faites preuves, on transforme vos idées en succès concrets ! Que ce soit
+                            <p>Avec notre méthode qui a fait ses preuves, on transforme vos idées en succès concrets ! Que ce soit
                                 pour donner vie à un projet ou aligner votre carrière avec vos valeurs, on vous accompagne à
                                 chaque étape. Ensemble, créons des réussites qui ont du sens et un vrai impact.</p>
                             <div className="about__one-content-service">

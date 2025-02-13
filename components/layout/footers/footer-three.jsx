@@ -21,6 +21,7 @@ const FooterThree = () => {
                                 <Link href="/"><img src={logo.src} alt="image" /></Link>
                                 <p>Lancez votre business ou projet pro avec style 🚀 ! Coaching, formations et conseils pour aligner vos ambitions, vos talents et vos valeurs. <br/> Prêt à transformer vos idées en succès ?
                                 </p>
+                                <h6>Inscrivez-vous à notre Newsletter</h6>
                                 <form action="#">
                                     <input type="text" name="email" placeholder="Votre e-mail" required="" />
                                     <button type="submit"><i className="fas fa-paper-plane"></i></button>
@@ -33,7 +34,7 @@ const FooterThree = () => {
                             <h4 className="ml-60">Nos Formations</h4>
                             <div className="footer__three-widget-solution">
                                 <ul>
-									<li><Link href={`https://www.kevin-attallah.com/formation-creation-entreprise`} target="_blank"><i className="far fa-chevron-double-right"></i>Création d’Entreprise</Link></li>
+									<li><Link href={`/business`}><i className="far fa-chevron-double-right"></i>Création d’Entreprise</Link></li>
 									<li><Link href={`/services`} ><i className="far fa-chevron-double-right"></i>Voir le catalogue complet</Link></li>
                                 </ul>
                             </div>

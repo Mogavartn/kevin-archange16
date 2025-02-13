@@ -26,7 +26,7 @@ const BannerOne = () => {
                         <div className="col-xl-6 col-lg-6">
                             <div className="banner__one-content">
                             <span className="subtitle-one">Boostez votre succès</span>
-                                <h2>Donne du sens à ta <span>vie!</span></h2>
+                                <h2 className="text-center">Donne du sens à ta <span>vie!</span></h2>
                                 <p>Tu veux monter ton business ou développer de nouvelles compétences ? ✨
                                 <br/>👉 On t’aide à trouver ce qui a du sens pour toi, sans blabla ni perte de temps.<br/>
                                 👉 Coaching, formations et conseils pour aligner vos ambitions, vos talents et vos valeurs. <br />🔥Prêt à transformer vos idées en succès ?🔥</p>
@@ -35,8 +35,7 @@ const BannerOne = () => {
                                     </Link>
                                     <Link href="/services" className="btn-one ml-10 ">👉 Je veux me former
                                     </Link>                                
-                                </div>
-                                
+                                </div>                                
                             </div>
                         </div>
                         <div className="col-xl-5 offset-xl-1 col-lg-6 col-md-9">
