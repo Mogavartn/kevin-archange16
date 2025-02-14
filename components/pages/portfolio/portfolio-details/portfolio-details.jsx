@@ -82,7 +82,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
     <div className="skill__two-tab-details-content mt-5 mb-5">
       <div className="row justify-content-center gy-4">
         <div className="col-xl-7">
-          <div>
+          <div className="">
             <h2 className="text-center">{singleData?.titre}</h2>
             <p>{singleData?.formation?.description?.objectif}</p>
           </div>
