@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const PortfolioDetailsMain = ({ singleData }) => {
-  const [amount, setAmount] = useState(singleData?.formation?.prix || 69 * 100); // Dynamique à partir de singleData
+  const [amount, setAmount] = useState(singleData?.formation?.prix || 0.1 * 100); // Dynamique à partir de singleData
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // Pour gérer le statut de chargement
   const [paymentUrl, setPaymentUrl] = useState(null); // Pour l'URL de paiement
