@@ -38,7 +38,7 @@ const SideBarContact = ({ isOpen, setIsOpen }) => {
                         </Link>
                     </div>    
                 <div className="header__area-menubar-right-sidebar-popup-contact">
-                    <h4 className="">Lancez votre business ou projet pro avec style ! 🚀</h4>
+                    <h4 className="">Lancez votre projet pro avec style ! 🚀</h4>
                     <p className="mb-3 text-center fs-5 text-light">Pour toute question, contactez-nous, nous répondrons rapidement.</p>
                     <FormArea />
                 </div>

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import sendDataToBrevo from './sendDataToBrevo';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -46,6 +47,7 @@ export default async function handler(req, res) {
       const response = await axios(config);
       console.log('Réponse de Revolut:', response.data);
       res.status(200).json(response.data); // Réponse réussie
+      await sendDataToBrevo(data);
     } catch (error) {
       // Gestion détaillée des erreurs
       console.error('Erreur de création de commande:', error);
