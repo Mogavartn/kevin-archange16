@@ -1,15 +1,15 @@
 import axios from 'axios';
 
-export default async function sendDataToBrevo (req, res) {
+export default async function sendDataToBrevo(req, res) {
   if (req.method === 'POST') {
     const { firstName, lastName, address, email, city, postalCode } = req.body;
 
     try {
-      // Configuration de l'API Brevo pour ajouter un contact
+      // Envoi de la requête à l'API Brevo pour ajouter un contact
       const response = await axios.post(
-        'https://api.brevo.com/v3/contacts', // URL de l'API Brevo pour ajouter un contact
+        'https://api.brevo.com/v3/contacts', // URL de l'API Brevo
         {
-          email: email, 
+          email: email,
           attributes: {
             FIRSTNAME: firstName,
             LASTNAME: lastName,
@@ -18,27 +18,26 @@ export default async function sendDataToBrevo (req, res) {
             VILLE: city || 'Non précisé',
             CODE_POSTALE: postalCode || 'Non précisé',
           },
-          listIds: [53],  // Remplacez cela par l'ID de votre liste dans Brevo
+          listIds: [53],  // Remplace avec ton propre ID de liste
           updateEnabled: true,
         },
         {
           headers: {
             'Content-Type': 'application/json',
-            'accept': 'application/json',
-            'api-key': process.env.SENDINBLUE_API_KEY, // Clé API Brevo stockée dans les variables d'environnement
+            'Accept': 'application/json',
+            'api-key': process.env.SENDINBLUE_API_KEY, // Clé API dans les variables d'environnement
           },
         }
       );
 
-      // Répondre avec un message de succès
+      // Répondre avec succès
       res.status(200).json({ message: 'Formulaire soumis avec succès', data: response.data });
     } catch (error) {
       console.error('Erreur lors de l\'envoi du formulaire:', error);
-      // Répondre avec une erreur si l'API échoue
       res.status(500).json({ message: 'Erreur lors de l\'envoi du formulaire', error: error.message });
     }
   } else {
-    // Répondre avec un code 405 si la méthode n'est pas POST
+    // Répondre avec code 405 si la méthode n'est pas POST
     res.status(405).json({ message: 'Méthode non autorisée' });
   }
 }

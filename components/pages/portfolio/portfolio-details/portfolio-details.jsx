@@ -101,13 +101,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <li>Type: <span> {singleData?.formation?.type}</span></li>
               <li>Durée: <span> {singleData?.formation?.duree}</span></li>
               <li>Prix: <span className="value"> {amount / 100} €</span></li> {/* Affiche le prix dynamique */}
-            {/*   <li className="project-rating">
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-              </li> */}
               <li>
               
               <button
@@ -249,6 +242,17 @@ const PortfolioDetailsMain = ({ singleData }) => {
                             value={formData.postalCode}
                             onChange={handleInputChange} // Correction du gestionnaire d'événements
                           />
+                        </div>
+                      </div>
+                      <div className="col-md-12 mb-3">
+                        <div className="contact__form-area-item">
+                        <input
+                          type="date"
+                          name="date"
+                          placeholder="Date d'inscription"
+                          value={formData.date} 
+                          onChange={handleInputChange} 
+                        />
                         </div>
                       </div>
                     </div>
