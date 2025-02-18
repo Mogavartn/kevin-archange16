@@ -45,15 +45,6 @@ export default async function handler(req, res) {
       console.log('Envoi de la requête à Revolut...');
       const response = await axios(config);
       console.log('Réponse de Revolut:', response.data);
-      
-      await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/pages/api/sendDataToBrevo`, {
-        method: 'POST', // Méthode POST
-        headers: {
-          'Content-Type': 'application/json', // Indiquer que les données envoyées sont en JSON
-        },
-        body: JSON.stringify(data), // Convertir les données en chaîne JSON
-      });
-
       res.status(200).json(response.data); // Réponse réussie
     } catch (error) {
       // Gestion détaillée des erreurs
