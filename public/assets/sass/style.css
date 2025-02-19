@@ -3844,7 +3844,7 @@ Responsive Menu Css
   display: none !important;
 }
 .mean-container .mean-nav {
-  background: var(--color-5);
+  background: var(--color-7);
   margin: 0;
 }
 .mean-container .mean-nav ul li a {
@@ -3911,13 +3911,13 @@ Responsive Menu Css
 
 .mean-container .mean-nav ul li a,
 .mean-container .mean-nav ul li li a {
-  font-size: 18px;
+  font-size: 25px;
   line-height: 28px;
   color: var(--text-white);
   font-family: var(--heading-font);
   font-weight: 500;
   text-transform: capitalize;
-  border-top: 1px solid #26334b;
+  border-top: 1px solid var(--color-7);
   opacity: 1;
   padding: 12px 0;
   padding-left: 12px;
@@ -3970,7 +3970,7 @@ Responsive Menu Css
   transition: 0.5s;
   transform: translateX(-100%);
   padding: 40px;
-  background: var(--bg-white);
+  background: var(--color-7);
 }
 .menu__bar-popup.show {
   opacity: 1;
