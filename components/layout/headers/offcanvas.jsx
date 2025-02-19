@@ -25,6 +25,44 @@ const SideBar = ({ isOpen, setIsOpen }) => {
         };
     }, [setIsOpen]);
 
+    const [email, setEmail] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (!email) {
+            setMessage('Veuillez entrer un email valide.');
+            return;
+        }
+
+        setLoading(true);
+        setMessage('');
+
+        try {
+            // Appel à l'API route Next.js pour envoyer l'email à Brevo
+            const response = await fetch('/api/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setMessage('Votre email a été envoyé avec succès !');
+            } else {
+                setMessage(`Erreur: ${data.message}`);
+            }
+        } catch (error) {
+            setMessage('Une erreur est survenue. Veuillez réessayer.');
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <>
             <div className={`header__area-menubar-right-sidebar-popup ${isOpen ? 'active' : ''}`} ref={sidebarRef}>
@@ -57,10 +95,24 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 <h5 className="text-start mb-4 pl-15">Notre Newsletter</h5>
                 <div className="header__area-menubar-right-sidebar-popup-social social__icon">
                         <div className="footer__three-widget-about mb-30 pl-15">
-                            <form action="#">
-                                <input type="text" name="email" placeholder="Votre e-mail" required="" />
-                                <button type="submit"><i className="fas fa-paper-plane"></i></button>
-                            </form>
+                            <form onSubmit={handleSubmit}>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Votre e-mail"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                />
+                                 <button type="submit" disabled={loading}>
+                                    {loading ? 'Envoi...' : <i className="fas fa-paper-plane"></i>}
+                                </button>
+                                </form>
+                                {message && (
+                                    <div style={{ color: message.includes('succès') ? 'green' : 'red' }}>
+                                        {message}
+                                    </div>
+                                )}
                         </div>
                         <h5 className="text-start mb-4 pl-15">Restez Connecté</h5>
                         <div className="sidebar__reseau pl-15">
