@@ -26,32 +26,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
     setError(null); // Réinitialise l'erreur avant de faire la requête
     
     try {
-      const brevoResponse = await fetch('/api/sendDataToBrevo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          amount, // Utilise le prix dynamique
-          currency, // Devise
-          description: singleData?.formation?.nom || 'Formation', // Description dynamique ou valeur par défaut
-          firstName: formData.firstName, // Prénom
-          lastName: formData.lastName,   // Nom
-          email: formData.email,         // Email
-          address: formData.address,     // Adresse complète
-          city: formData.city,           // Ville
-          postalCode: formData.postalCode, // Code postal
-        }),
-      });
-      const brevoData = await brevoResponse.json();
-      if (!brevoResponse.ok) {
-        throw new Error(brevoData.error || 'Erreur lors de l\'envoi des données à Brevo');
-      }
-    } catch (brevoError) {
-      console.error('Erreur lors de l\'envoi des données à Brevo:', brevoError);
-    }
-
-    try {
       const response = await fetch('/api/create-order', {
         method: 'POST',
         headers: {
@@ -61,12 +35,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
           amount, // Utilise le prix dynamique
           currency, // Devise
           description: singleData?.formation?.nom || 'Formation', // Description dynamique ou valeur par défaut
-          firstName: formData.firstName, // Prénom
-          lastName: formData.lastName,   // Nom
-          email: formData.email,         // Email
-          address: formData.address,     // Adresse complète
-          city: formData.city,           // Ville
-          postalCode: formData.postalCode, // Code postal
         }),
       });
 
@@ -84,24 +52,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
       setError('Une erreur est survenue. Veuillez réessayer.');
     } finally {
       setIsLoading(false);
-    }
-  };
-
-  // Handler pour les changements de formulaire
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  // Passer à l'étape suivante
-  const handleNextStep = () => {
-    if (step === 1 && formData.firstName && formData.lastName && formData.email && formData.address && formData.postalCode) {
-      setStep(2); // Passer à l'étape de vérification
-    } else {
-      setError('Tous les champs sont obligatoires.');
     }
   };
 
@@ -130,13 +80,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <li>Prix: <span className="value"> {amount / 100} €</span></li> {/* Affiche le prix dynamique */}
               <li>
               
-              <button
-                onClick={() => setShowModal(true)} // Ouvre le pop-up
-                disabled={isLoading}
-                className="btn-one"
-              >
-                {isLoading ? 'Traitement...' : 'Acheter'}
-                <i className="fas fa-arrow-right"></i>
+              <button onClick={handlePayment} disabled={isLoading} className="btn-one">
+                  {isLoading ? 'Traitement...' : 'Acheter'}
+                  <i className="fas fa-arrow-right"></i>
               </button>
               </li>
             </ul>
@@ -187,119 +133,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
           </div>
         </div>
       </div>
-
-      {/* Pop-up de paiement */}
-      {showModal && (
-        <div className="modal">
-          <div className="modal-content">
-              <div className="pop-pop-close-btn" onClick={() => setShowModal(false)}>
-                        <i className="fal fa-times"></i>
-              </div>
-            {step === 1 ? (
-              <div>
-                <h3 className="mb-2">Informations sur l'acheteur</h3>
-                <>
-                  <form>
-                    <div className="row">
-                      <div className="col-md-6 mb-3">
-                        <div className="contact__form-area-item">
-                          <input
-                            type="text"
-                            name="firstName"
-                            placeholder="Prénom"
-                            required
-                            value={formData.firstName}
-                            onChange={handleInputChange} // Correction du gestionnaire d'événements
-                          />
-                        </div>
-                      </div>
-                      <div className="col-md-6 mb-3">
-                        <div className="contact__form-area-item">
-                          <input
-                            type="text"
-                            name="lastName"
-                            placeholder="Nom"
-                            required
-                            value={formData.lastName}
-                            onChange={handleInputChange} // Correction du gestionnaire d'événements
-                          />
-                        </div>
-                      </div>
-                      <div className="col-md-12 mb-3">
-                        <div className="contact__form-area-item">
-                          <input
-                            type="text"
-                            name="address"
-                            placeholder="Adresse complète"
-                            required
-                            value={formData.address}
-                            onChange={handleInputChange} // Correction du gestionnaire d'événements
-                          />
-                        </div>
-                      </div>
-                      <div className="col-md-12 mb-3">
-                        <div className="contact__form-area-item">
-                          <input
-                            type="email"
-                            name="email"
-                            placeholder="Votre Email"
-                            required
-                            value={formData.email}
-                            onChange={handleInputChange} // Correction du gestionnaire d'événements
-                          />
-                        </div>
-                      </div>
-                      <div className="col-md-12 mb-3">
-                        <div className="contact__form-area-item">
-                          <input
-                            type="text"
-                            name="city"
-                            placeholder="Ville"
-                            value={formData.city}
-                            onChange={handleInputChange} // Correction du gestionnaire d'événements
-                          />
-                        </div>
-                      </div>
-                      <div className="col-md-12 mb-3">
-                        <div className="contact__form-area-item">
-                          <input
-                            type="text"
-                            name="postalCode"
-                            placeholder="Code postal"
-                            value={formData.postalCode}
-                            onChange={handleInputChange} // Correction du gestionnaire d'événements
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <button onClick={handleNextStep} disabled={isLoading} className="btn-one">
-                      {isLoading ? 'Traitement...' : 'Envoyer'}
-                      <i className="fas fa-arrow-right"></i>
-                    </button>
-                  </form>
-                </>
-              </div>
-            ) : (
-              <div>
-                <h3>Vérification</h3>
-                <p className="mb-1 ">Merci pour votre commande. Veuillez vérifier vos informations et confirmer.</p>
-                <div className="mb-3 text-start pl-50">
-                  <p className="mb-1"><strong>Prénom :</strong> {formData.firstName}</p>
-                  <p className="mb-1"><strong>Nom :</strong> {formData.lastName}</p>
-                  <p className="mb-1"><strong>Adresse :</strong> {formData.address}</p>
-                  <p className="mb-1"><strong>Email :</strong> {formData.email}</p>
-                  <p className="mb-1"><strong>Ville:</strong> {formData.city}</p>
-                  <p className="mb-1"><strong>Code postal :</strong> {formData.postalCode}</p>
-                </div>
-                <button onClick={handlePayment} disabled={isLoading} className="btn-one">
-                  {isLoading ? 'Traitement...' : 'Confirmer et passer au paiement'}
-                  <i className="fas fa-arrow-right"></i>
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 };

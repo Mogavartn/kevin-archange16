@@ -2,13 +2,7 @@ import axios from 'axios';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { amount, currency, description,  
-      firstName, 
-      lastName,
-      email,
-      address,
-      city,
-      postalCode } = req.body;
+    const { amount, currency, description } = req.body;
 
     // Vérifie la validité des données
     if (!amount || !currency) {
@@ -20,12 +14,6 @@ export default async function handler(req, res) {
       amount,
       currency,
       description,
-      firstName,
-      lastName,
-      email,
-      address,
-      city,
-      postalCode
     });
 
     const config = {
@@ -38,7 +26,7 @@ export default async function handler(req, res) {
         'Authorization': `Bearer ${process.env.REVOLUT_API_KEY}`, // La clé API
         'Revolut-Api-Version': '2024-09-01'
       },
-      data
+      data:data
     };
     console.log(data)
     try {
@@ -46,6 +34,7 @@ export default async function handler(req, res) {
       const response = await axios(config);
       console.log('Réponse de Revolut:', response.data);
       res.status(200).json(response.data); // Réponse réussie
+      await createWebhook();
     } catch (error) {
       // Gestion détaillée des erreurs
       console.error('Erreur de création de commande:', error);
@@ -69,3 +58,20 @@ export default async function handler(req, res) {
     res.status(405).json({ error: 'Méthode non autorisée' });
   }
 }
+
+const createWebhook = async () => {
+  try {
+    const response = await fetch('/api/notify-payment', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({}), // Vous pouvez passer des données supplémentaires si nécessaire
+    });
+
+    const data = await response.json();
+    console.log('Webhook created:', data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
