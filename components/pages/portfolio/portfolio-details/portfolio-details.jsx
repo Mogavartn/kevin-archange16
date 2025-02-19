@@ -24,6 +24,32 @@ const PortfolioDetailsMain = ({ singleData }) => {
   const handlePayment = async () => {
     setIsLoading(true);
     setError(null); // Réinitialise l'erreur avant de faire la requête
+    
+    try {
+      const brevoResponse = await fetch('/api/sendDataToBrevo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          amount, // Utilise le prix dynamique
+          currency, // Devise
+          description: singleData?.formation?.nom || 'Formation', // Description dynamique ou valeur par défaut
+          firstName: formData.firstName, // Prénom
+          lastName: formData.lastName,   // Nom
+          email: formData.email,         // Email
+          address: formData.address,     // Adresse complète
+          city: formData.city,           // Ville
+          postalCode: formData.postalCode, // Code postal
+        }),
+      });
+      const brevoData = await brevoResponse.json();
+      if (!brevoResponse.ok) {
+        throw new Error(brevoData.error || 'Erreur lors de l\'envoi des données à Brevo');
+      }
+    } catch (brevoError) {
+      console.error('Erreur lors de l\'envoi des données à Brevo:', brevoError);
+    }
 
     try {
       const response = await fetch('/api/create-order', {
@@ -58,32 +84,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
       setError('Une erreur est survenue. Veuillez réessayer.');
     } finally {
       setIsLoading(false);
-    }
-
-    try {
-      const brevoResponse = await fetch('/api/sendDataToBrevo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          amount, // Utilise le prix dynamique
-          currency, // Devise
-          description: singleData?.formation?.nom || 'Formation', // Description dynamique ou valeur par défaut
-          firstName: formData.firstName, // Prénom
-          lastName: formData.lastName,   // Nom
-          email: formData.email,         // Email
-          address: formData.address,     // Adresse complète
-          city: formData.city,           // Ville
-          postalCode: formData.postalCode, // Code postal
-        }),
-      });
-      const brevoData = await brevoResponse.json();
-      if (!brevoResponse.ok) {
-        throw new Error(brevoData.error || 'Erreur lors de l\'envoi des données à Brevo');
-      }
-    } catch (brevoError) {
-      console.error('Erreur lors de l\'envoi des données à Brevo:', brevoError);
     }
   };
 
