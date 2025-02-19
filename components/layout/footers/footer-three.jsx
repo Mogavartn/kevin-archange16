@@ -33,8 +33,16 @@ const FooterThree = () => {
 
             if (response.ok) {
                 setMessage('Votre email a été envoyé avec succès !');
+                setEmail('');
+
+                setTimeout(() => {
+                    setMessage('');
+                }, 3000);
             } else {
                 setMessage(`Erreur: ${data.message}`);
+                setTimeout(() => {
+                    setMessage('');
+                }, 3000);
             }
         } catch (error) {
             setMessage('Une erreur est survenue. Veuillez réessayer.');
