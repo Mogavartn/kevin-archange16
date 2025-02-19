@@ -4320,20 +4320,11 @@ Responsive Menu Css
 }
 @media (max-width: 575px) {
   .banner__one-image-wrapper-shapes {
-    display: none;
+    /* display: none; */
   }
 }
 @media (max-width: 480px) {
-  .banner__one .banner-shape-2 {
-    display: none;
-  }
-  .banner__one .banner-shape-5 {
-    display: none;
-  }
   .banner__one .banner-shape-6 {
-    display: none;
-  }
-  .banner__one .banner-shape-7 {
     display: none;
   }
   .banner__one-content {
@@ -4343,7 +4334,22 @@ Responsive Menu Css
     font-size: 15px;
   }
   .banner__one-image {
-    display: none;
+    /* display: none; */
+    margin: 20px;
+  }
+  .banner__one-image h6 {
+    position: absolute;
+    top: 91%;
+    left: 38%;
+    z-index: 100;
+    font-size: 14px;
+  }
+  .banner__one-image-wrapper .video-play-btn-one{
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    width: 50px;
+    height: 50px; 
   }
 }
 
@@ -4962,6 +4968,7 @@ Responsive Menu Css
     margin: auto;
     width: 100%;
   }
+  
 }
 /*==========================================================================
 * About Area Three CSS
