@@ -7,29 +7,32 @@ export default async function handler(req, res) {
   }
 
   // Récupérer les données envoyées par la requête
-  const { email, firstName, lastName, attributes } = req.body;
+  const { event, order_id, amount, currency, customer, status } = req.body;
+  const { email, first_name: firstName, last_name: lastName } = customer;
 
   // Vérification des données nécessaires
-  if (!email || !firstName || !lastName || !attributes || !attributes.amount || !attributes.currency || !attributes.status) {
-    return res.status(400).json({ error: 'Données manquantes, email, prénom, nom et attributs sont nécessaires.' });
+  if (!email || !firstName || !lastName || !amount || !currency || !status) {
+    return res.status(400).json({ error: 'Données manquantes, email, prénom, nom, montant, devise et statut sont nécessaires.' });
   }
 
   try {
     // Préparer les données du contact à envoyer à Brevo
     const contactData = {
       email,
-      firstName,    
+      firstName,
       lastName,
       attributes: {
-        EMAIL:email,
-        FIRSTNAME:firstName,
-        LASTNAME:lastName,
-        BUDGET_ESTIME: attributes.amount,
-        currency: attributes.currency,
-        STATUS: attributes.status, // Statut de la transaction
+        EMAIL: email,
+        FIRSTNAME: firstName,
+        LASTNAME: lastName,
+        BUDGET_ESTIME: amount, // Montant de la transaction
+        CURRENCY: currency,    // Devise de la transaction
+        STATUS: status,        // Statut de la transaction
+        ORDER_ID: order_id,    // ID de la commande
+        EVENT: event,          // Événement (ex: ORDER_COMPLETED)
       },
-      listIds: [53],  // Remplace par ton propre ID de liste dans Brevo
-      updateEnabled: true,  // Permet la mise à jour des contacts existants
+      listIds: [53],           // Remplace par ton propre ID de liste dans Brevo
+      updateEnabled: true,     // Permet la mise à jour des contacts existants
     };
 
     // Envoi de la requête à l'API Brevo pour ajouter un contact

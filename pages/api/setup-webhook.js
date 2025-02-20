@@ -2,12 +2,13 @@ import axios from 'axios';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
+    // Données à envoyer à l'API Revolut
     const data = JSON.stringify({
-      "url": "https://www.kevin-attallah.com",
-      "events": [
-        "ORDER_COMPLETED",
-        "ORDER_AUTHORISED"
-      ]
+      url: 'https://www.kevin-attallah.com/api/notify-payment', // URL de production
+      events: [
+        'ORDER_COMPLETED',
+        'ORDER_AUTHORISED',
+      ],
     });
 
     const config = {

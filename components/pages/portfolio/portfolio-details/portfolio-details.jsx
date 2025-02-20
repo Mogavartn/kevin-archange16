@@ -24,7 +24,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
   const handlePayment = async () => {
     setIsLoading(true);
     setError(null); // Réinitialise l'erreur avant de faire la requête
-    
+
+    await setupWebhook();
+
     try {
       const response = await fetch('/api/create-order', {
         method: 'POST',
@@ -52,6 +54,21 @@ const PortfolioDetailsMain = ({ singleData }) => {
       setError('Une erreur est survenue. Veuillez réessayer.');
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const setupWebhook = async () => {
+    try {
+      const response = await fetch('/api/setup-webhook', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const data = await response.json();
+      console.log('Webhook configuré avec succès:', data);
+    } catch (error) {
+      console.error('Erreur lors de la configuration du webhook:', error);
     }
   };
 
