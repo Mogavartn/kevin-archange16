@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export default async function handler(req, res) {
+  await createWebhook();
   if (req.method === 'POST') {
     const { amount, currency, description } = req.body;
 
@@ -26,7 +27,7 @@ export default async function handler(req, res) {
         'Authorization': `Bearer ${process.env.REVOLUT_API_KEY}`, // La clé API
         'Revolut-Api-Version': '2024-09-01'
       },
-      data:data
+      data: data
     };
     console.log(data)
     try {
