@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default async function handler(req, res) {
-  await createWebhook();
+ // await createWebhook();
   if (req.method === 'POST') {
     const { amount, currency, description } = req.body;
 
@@ -62,7 +62,7 @@ export default async function handler(req, res) {
 
 const createWebhook = async () => {
   try {
-    const response = await fetch('/api/notify-payment', {
+    const response = await fetch('/api/setup-webhook', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
