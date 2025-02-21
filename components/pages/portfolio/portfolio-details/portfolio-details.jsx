@@ -72,6 +72,23 @@ const PortfolioDetailsMain = ({ singleData }) => {
     }
   };
 
+  const createWebhook = async () => {
+    try {
+      const response = await fetch('/api/setup-webhook', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({}), // Vous pouvez passer des données supplémentaires si nécessaire
+      });
+  
+      const data = await response.json();
+      console.log('Webhook created:', data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
     <div className="skill__two-tab-details-content mt-5 mb-5">
       <div className="row justify-content-center gy-4">
@@ -100,6 +117,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <button onClick={handlePayment} disabled={isLoading} className="btn-one">
                   {isLoading ? 'Traitement...' : 'Acheter'}
                   <i className="fas fa-arrow-right"></i>
+              </button>
+              <button onClick={createWebhook} disabled={isLoading} className="btn-one">
+                  teste
               </button>
               </li>
             </ul>
