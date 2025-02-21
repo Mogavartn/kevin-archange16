@@ -5,9 +5,7 @@ export default async function handler(req, res) {
     try {
       // Données à envoyer à l'API Revolut
       const data = JSON.stringify({
-        url: process.env.NODE_ENV === 'development'
-          ? 'https://abcd1234.ngrok.io/api/notify-payment' // URL publique en développement
-          : 'https://www.kevin-attallah.com/api/notify-payment', // URL de production
+        url: 'https://www.kevin-attallah.com/api/webhook', // URL de production
         events: [
           'ORDER_COMPLETED',
           'ORDER_AUTHORISED',

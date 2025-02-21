@@ -118,9 +118,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
                   {isLoading ? 'Traitement...' : 'Acheter'}
                   <i className="fas fa-arrow-right"></i>
               </button>
-              <button onClick={createWebhook} disabled={isLoading} className="btn-one">
-                  teste
-              </button>
               </li>
             </ul>
             <div className="btn-achat-formation">
