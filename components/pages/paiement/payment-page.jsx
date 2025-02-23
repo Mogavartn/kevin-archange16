@@ -23,23 +23,29 @@ export default function PaymentPage() {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const countryCode = document.getElementById("countryCode").value;
-    const region = document.getElementById("region").value;
     const city = document.getElementById("city").value;
     const streetLine1 = document.getElementById("streetLine1").value;
     const postcode = document.getElementById("postcode").value;
-
+  
+    if (!name || !email || !countryCode || !city || !streetLine1 || !postcode) {
+      alert("Veuillez remplir tous les champs obligatoires.");
+      return null; // Retourner null si des champs sont manquants
+    }
+  
     const formData = {
       name,
       email,
       billingAddress: {
         countryCode,
-        region,
+        region: document.getElementById("region").value, // Optionnel
         city,
         streetLine1,
         postcode,
       },
     };
-    console.log(formData); // Vous pouvez remplacer ceci par l'envoi des données à votre API
+  
+    //console.log("Données du formulaire :", formData); // À des fins de débogage
+    return formData; // Retourner les données pour RevolutCardField
   };
 
   return (
@@ -116,14 +122,15 @@ export default function PaymentPage() {
               {/* Champ de carte Revolut (uniquement pour le mode de paiement par carte) */}
               <div id="card-field"></div>
             </div>
-            <button id="button-submit" type="button" onClick={handleSubmit}>
+            <button id="button-submit" type="button" /* onClick={handleSubmit} */>
               Payer
             </button>
             <div className="mt-5">
               <img src={image1?.src} alt="Visa MasterCard" />
             </div>
             {/* Composant RevolutCardField (uniquement pour le mode de paiement par carte) */}
-            {token && <RevolutCardField token={token} />}
+            {/* {token && <RevolutCardField token={token} />} */}
+            {token && <RevolutCardField token={token} onSubmit={handleSubmit} />}
           </div>
         </div>
       </div>

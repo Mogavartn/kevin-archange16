@@ -35,12 +35,20 @@ export default function RevolutCardField({ token, onSubmit }) {
         },
       });
 
+      document.getElementById("button-submit").addEventListener("click", function () {
+        card.submit()
+      })
+      
       // Gérer la soumission du formulaire
-      document.getElementById("button-submit").addEventListener("click", () => {
+      /* document.getElementById("button-submit").addEventListener("click", () => {
         // Appeler la fonction onSubmit pour récupérer les données du formulaire
         const formData = onSubmit();
-        card.submit(formData);
-      });
+        if (formData) {
+          card.submit(formData);
+        } else {
+          alert("Veuillez remplir tous les champs du formulaire.");
+        }
+      }); */
     });
 
     // Nettoyer l'instance lors du démontage du composant
