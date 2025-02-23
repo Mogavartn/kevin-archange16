@@ -11783,5 +11783,75 @@ image-background {
 .pop-pop-close-btn:hover {
   animation: rotate 0.4s ease 0s;
 }
+/* Page banque*/
 
+.card {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-color-3);
+}
 
+/* styles/globals.css ou un fichier CSS dédié */
+.rc-card-field {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 4px;
+  /* width: 100%; */
+  /*max-width: 400px;*/
+  margin-bottom: 16px;
+}
+
+.rc-card-field--focused {
+  border-color: var(--primary-color-1);
+  box-shadow: 0 0 5px rgba(170, 0, 255, 0.5);
+}
+.Formulaire_de_paiement{
+ width: 100%;
+ align-items: center;
+ padding: 100px 60px;
+ background-color: var(--text-white);
+ border-radius: 20px;
+}
+.Formulaire_de_paiement img{
+  width: 250px;
+  margin-left: 25%;
+}
+
+.Formulaire_de_paiement .project-info .project-info-top {
+  background: var(--primary-color-1);
+  text-align: center;
+  padding: 7px 0;
+}
+.Formulaire_de_paiement .project-info .project-info-top h4 {
+  color: var(--text-white);
+  font-size: 18px;
+}
+.Formulaire_de_paiement .project-info ul {
+  background: var(--bg-white);
+  border-top: 0;
+  border-radius: 0 0 0 10px;
+  list-style-type: none;
+  margin: 0;
+}
+.Formulaire_de_paiement .project-info ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.Formulaire_de_paiement .project-info ul li span {
+  color: var(--color-2);
+  /* margin-left: 10px; */
+  font-weight: 400;
+  text-transform: none;
+}
+.Formulaire_de_paiement .project-info ul li .value {
+  color: var(--primary-color-1);
+  font-size: 22px;
+  font-weight: 600;
+}
+.Formulaire_de_paiement .project-info ul .project-rating i {
+  color: #FBA758;
+  margin-right: 5px;
+}

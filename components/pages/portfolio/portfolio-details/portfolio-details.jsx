@@ -1,91 +1,63 @@
+"use client";
+
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const PortfolioDetailsMain = ({ singleData }) => {
-  const [amount, setAmount] = useState(singleData?.formation?.prix || 0.1 * 100); // Dynamique à partir de singleData
+  const router = useRouter();
+  const [amount, setAmount] = useState(singleData?.formation?.prix || 0.01 * 100); // Montant dynamique
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
-  const [isLoading, setIsLoading] = useState(false); // Pour gérer le statut de chargement
-  const [paymentUrl, setPaymentUrl] = useState(null); // Pour l'URL de paiement
-  const [error, setError] = useState(null); // Pour afficher des erreurs
-  const [showModal, setShowModal] = useState(false); // Gérer l'affichage du pop-up
+  const [isLoading, setIsLoading] = useState(false); // État de chargement
+  const [error, setError] = useState(null); // Gestion des erreurs
 
-  // Informations de l'acheteur
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    address: '',
-    city: 'France', // Ville par défaut
-    postalCode: '',
-  });
+  // Fonction pour créer une commande
+  const createOrder = async () => {
+    // Validation des données
+    if (!amount || amount <= 0) {
+      setError('Le montant de la commande est invalide.');
+      return;
+    }
+    setIsLoading(true); // Activer l'état de chargement
+    setError(null); // Réinitialiser les erreurs
 
-  // Étape de vérification (étape 1 ou 2)
-  const [step, setStep] = useState(1); // Étape 1 : Informations sur l'acheteur, Étape 2 : Vérification
-
-  const handlePayment = async () => {
-    setIsLoading(true);
-    setError(null); // Réinitialise l'erreur avant de faire la requête
-
-    await setupWebhook();
-
+    const orderData = {
+      amount: amount, // Montant de la commande
+      currency: currency, // Devise
+      description: singleData?.formation?.nom
+    };
+    
     try {
+      // Envoi de la requête POST à l'API
       const response = await fetch('/api/create-order', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          amount, // Utilise le prix dynamique
-          currency, // Devise
-          description: singleData?.formation?.nom || 'Formation', // Description dynamique ou valeur par défaut
-        }),
+        body: JSON.stringify(orderData),
       });
-
+      
       const data = await response.json();
 
       if (response.ok) {
-        // Si la commande est créée avec succès, redirige l'utilisateur vers l'URL de paiement
-        setPaymentUrl(data.checkout_url); // Récupère l'URL de paiement de l'API Revolut
-        window.location.href = data.checkout_url; // Redirection automatique vers la page de paiement
+        console.log('Commande créée avec succès:', data);
+
+        // Stocker la réponse de la commande dans localStorage
+        localStorage.setItem("orderResponse", JSON.stringify(data));
+        
+        // Rediriger vers la page de paiement
+        router.push("/paiement");
       } else {
-        setError(data.error || 'Erreur inconnue lors de la création de la commande');
+        console.error('Erreur lors de la création de la commande:', data.error);
+        setError(data.error || 'Une erreur est survenue lors de la création de la commande.');
+        if (data.details) {
+          console.error('Détails de l\'erreur:', data.details);
+        }
       }
     } catch (error) {
-      console.error('Erreur de création de commande:', error);
-      setError('Une erreur est survenue. Veuillez réessayer.');
+      console.error('Erreur réseau ou autre:', error.message);
+      setError('Une erreur réseau est survenue. Veuillez réessayer.');
     } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const setupWebhook = async () => {
-    try {
-      const response = await fetch('/api/setup-webhook', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      const data = await response.json();
-      console.log('Webhook configuré avec succès:', data);
-    } catch (error) {
-      console.error('Erreur lors de la configuration du webhook:', error);
-    }
-  };
-
-  const createWebhook = async () => {
-    try {
-      const response = await fetch('/api/setup-webhook', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({}), // Vous pouvez passer des données supplémentaires si nécessaire
-      });
-  
-      const data = await response.json();
-      console.log('Webhook created:', data);
-    } catch (error) {
-      console.error('Error:', error);
+      setIsLoading(false); // Désactiver l'état de chargement
     }
   };
 
@@ -101,9 +73,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
             <img className="img__full rounded mt-5" src={singleData?.image?.src} alt={singleData?.id} />
           </div>
         </div>
-       
+
         <div className="col-xl-5 project-info-left">
-       
           <div className="project-info">
             <div className="project-info-top">
               <h4>{singleData?.titre}</h4>
@@ -113,36 +84,25 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <li>Durée: <span> {singleData?.formation?.duree}</span></li>
               <li>Prix: <span className="value"> {amount / 100} €</span></li> {/* Affiche le prix dynamique */}
               <li>
-              
-              <button onClick={handlePayment} disabled={isLoading} className="btn-one">
+                <button onClick={createOrder} className="btn-one" disabled={isLoading}>
                   {isLoading ? 'Traitement...' : 'Acheter'}
                   <i className="fas fa-arrow-right"></i>
-              </button>
+                </button>
               </li>
+              {error && <li className="text-danger">{error}</li>} {/* Affichage des erreurs */}
             </ul>
             <div className="btn-achat-formation">
-                <video
-                  src="/assets/video/ANIMATION RATING.webm"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  disablePictureInPicture
-                  controlsList="nodownload nofullscreen noremoteplayback"
-                  className=""
-                              >   
-                </video>
+              <video
+                src="/assets/video/ANIMATION RATING.webm"
+                autoPlay
+                loop
+                muted
+                playsInline
+                disablePictureInPicture
+                controlsList="nodownload nofullscreen noremoteplayback"
+                className=""
+              ></video>
             </div>
-            {paymentUrl && (
-              <div>
-                <p>Paiement réussi! <a href={paymentUrl} target="_blank" rel="noopener noreferrer">Clique ici pour payer</a></p>
-              </div>
-            )}
-            {error && (
-              <div className="error-message" style={{ color: 'red', marginTop: '10px' }}>
-                <p>{error}</p>
-              </div>
-            )}
           </div>
           <div className="project-info mt-20">
             <div className="project-info-top">

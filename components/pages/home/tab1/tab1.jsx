@@ -53,7 +53,7 @@ const Tab = () => {
                     <div class="col-lg-6 col-md-12">
                     <div class="skill__two-tab-title">
                         <div className="">
-                            <Link href="https://www.kevin-attallah.com/formation-creation-entreprise" target="_blank">
+                            <Link href="https://www.formation.kevin-attallah.com/formation-creation-entreprise" target="_blank">
                                 <div className="skill__two-tab nav-link " data-bs-toggle="pill" data-bs-target="#topic-2" role="button">
                                     <span>Je suis autonome</span>
                                 </div> 
@@ -73,7 +73,7 @@ const Tab = () => {
                                         "Outils Concrets Et Clés En Main"
                                         ]}
                                         buttonText="Je lance mon business"
-                                        buttonLink="https://www.kevin-attallah.com/formation-creation-entreprise" class1="btn-one btn-one-busn2"
+                                        buttonLink="https://www.formation.kevin-attallah.com/formation-creation-entreprise" class1="btn-one btn-one-busn2"
                                     />
                             </div>                      
                         </div> 

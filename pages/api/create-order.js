@@ -1,62 +1,64 @@
-import axios from 'axios';
+// pages/api/create-order.js
 
 export default async function handler(req, res) {
- //await createWebhook();
-  if (req.method === 'POST') {
-    const { amount, currency, description } = req.body;
-
-    // Vérifie la validité des données
-    if (!amount || !currency) {
-      console.error('Montant ou devise manquant');
-      return res.status(400).json({ error: 'Montant et devise sont nécessaires' });
+  if (req.method === "POST") {
+    // Parse le corps de la requête en JSON
+    try {
+      req.body = req.body;
+    } catch (error) {
+      return res.status(400).json({ error: 'Invalid JSON body' });
     }
 
-    const data = JSON.stringify({
-      amount,
-      currency,
-      description,
+    // Récupérer les données de la requête
+    const { amount, currency, description } = req.body;
+    // Validation des données
+    if (!amount || !currency) {
+      return res.status(400).json({ error: 'Champs obligatoires manquants : montant et devise' });
+    }
+
+    // Données de la commande
+    const orderData = JSON.stringify({
+      amount: Number(amount), // Convertir en nombre
+      currency: currency.toUpperCase(), // Convertir en majuscules
+      description
+      //capture_mode: 'automatic', // Mode de capture automatique
     });
-
-    const config = {
-      method: 'post',
-      maxBodyLength: Infinity,
-      url: 'https://merchant.revolut.com/api/orders',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Authorization': `Bearer ${process.env.REVOLUT_API_KEY}`, // La clé API
-        'Revolut-Api-Version': '2024-09-01'
-      },
-      data: data
-    };
-    console.log(data)
+    console.log(orderData)
     try {
-      console.log('Envoi de la requête à Revolut...');
-      const response = await axios(config);
-      console.log('Réponse de Revolut:', response.data);
-      res.status(200).json(response.data); // Réponse réussie
-      await createWebhook();
-    } catch (error) {
-      // Gestion détaillée des erreurs
-      console.error('Erreur de création de commande:', error);
+      // Envoyer la requête à l'API Revolut
+      const response = await fetch("https://merchant.revolut.com/api/orders", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization': `Bearer ${process.env.REVOLUT_API_KEY}`,
+          "Revolut-Api-Version": '2024-09-01',
+        },
+        body: orderData,
+      });
 
-      if (error.response) {
-        console.error('Détails de la réponse API Revolut:', error.response.data);
-        res.status(500).json({ 
-          error: 'Erreur lors de la création de la commande',
-          details: error.response.data || error.message 
-        });
+      // Traiter la réponse
+      const data = await response.json();
+
+      if (response.ok) {
+        // Retourner les données de la réponse
+        return res.status(200).json(data);
       } else {
-        console.error('Erreur de connexion à Revolut:', error.message);
-        res.status(500).json({ 
-          error: 'Erreur de connexion à l\'API Revolut',
-          details: error.message 
+        // Retourner les erreurs de l'API Revolut
+        return res.status(response.status).json({
+          error: 'Impossible de créer la commande',
+          details: data,
         });
       }
+    } catch (error) {
+      // Gestion des erreurs réseau ou autres
+      return res.status(500).json({
+        error: 'Internal Server Error',
+        details: error.message,
+      });
     }
   } else {
-    console.error('Méthode non autorisée');
-    res.status(405).json({ error: 'Méthode non autorisée' });
+    // Retourner une erreur si la méthode n'est pas POST
+    return res.status(405).json({ error: 'Method Not Allowed' });
   }
 }
-
