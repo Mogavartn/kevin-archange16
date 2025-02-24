@@ -20,7 +20,7 @@ export default function RevolutCardField({ token, onSubmit }) {
             fontSize: "16px", // Taille de la police
           },
           focused: {
-            color: "#00f", // Couleur du texte lorsque le champ est focus
+            color: "#7222db", // Couleur du texte lorsque le champ est focus
           },
         },
         classes: {
@@ -36,7 +36,7 @@ export default function RevolutCardField({ token, onSubmit }) {
       });
 
       document.getElementById("button-submit").addEventListener("click", function () {
-        card.submit()
+        card.submit(email)
       })
       
       // Gérer la soumission du formulaire

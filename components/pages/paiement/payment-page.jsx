@@ -129,8 +129,8 @@ export default function PaymentPage() {
               <img src={image1?.src} alt="Visa MasterCard" />
             </div>
             {/* Composant RevolutCardField (uniquement pour le mode de paiement par carte) */}
-            {/* {token && <RevolutCardField token={token} />} */}
-            {token && <RevolutCardField token={token} onSubmit={handleSubmit} />}
+            {token && <RevolutCardField token={token} />}
+            {/* token && <RevolutCardField token={token} onSubmit={handleSubmit} /> */}
           </div>
         </div>
       </div>
