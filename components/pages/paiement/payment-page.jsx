@@ -44,8 +44,8 @@ export default function PaymentPage() {
       },
     };
   
-    console.log("Données du formulaire :", formData); // À des fins de débogage
-    return formData; // Retourner les données pour RevolutCardField
+    //console.log("Données du formulaire :", formData); // À des fins de débogage
+    return JSON.stringify(formData); // Retourner les données pour RevolutCardField
   };
 
   return (
