@@ -67,7 +67,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
         <div className="col-xl-7">
           <div className="">
             <h2 className="text-center">{singleData?.titre}</h2>
-            <p>{singleData?.formation?.description?.objectif}</p>
+            <p>{singleData.description}</p>
           </div>
           <div className="image-formation">
             <img className="img__full rounded mt-5" src={singleData?.image?.src} alt={singleData?.id} />
@@ -80,8 +80,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <h4>{singleData?.titre}</h4>
             </div>
             <ul>
-              <li>Type: <span> {singleData?.formation?.type}</span></li>
-              <li>Durée: <span> {singleData?.formation?.duree}</span></li>
+              <li>niveau: <span> {singleData.niveau}</span></li>
+              <li>public: <span> {singleData.public}</span></li>
+              <li>duree: <span> {singleData.duree}</span></li>
               <li>Prix: <span className="value"> {amount / 100} €</span></li> {/* Affiche le prix dynamique */}
               <li>
                 <button onClick={createOrder} className="btn-one" disabled={isLoading}>
@@ -106,19 +107,12 @@ const PortfolioDetailsMain = ({ singleData }) => {
           </div>
           <div className="project-info mt-20">
             <div className="project-info-top">
-              <h4>Profil des apprenants</h4>
+              <h4>Objectifs pedagogiques</h4>
             </div>
             <ul>
               <div>
                 <div>
-                  <h6 className="text-dark fs-5 mb-2">Pour qui :</h6>
-                  {singleData?.formation?.profil_apprenants?.pour_qui?.map((objectif, index) => (
-                    <li key={index}><span>{objectif}</span></li>
-                  ))}
-                </div>
-                <div>
-                  <h6 className="text-dark fs-5 mb-2">Prérequis :</h6>
-                  {singleData?.formation?.profil_apprenants?.prerequis?.map((objectif, index) => (
+                  {singleData?.objectifs_pedagogiques?.map((objectif, index) => (
                     <li key={index}><span>{objectif}</span></li>
                   ))}
                 </div>

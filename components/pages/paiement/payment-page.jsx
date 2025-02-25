@@ -44,7 +44,7 @@ export default function PaymentPage() {
       },
     };
   
-    //console.log("Données du formulaire :", formData); // À des fins de débogage
+    console.log("Données du formulaire :", formData); // À des fins de débogage
     return formData; // Retourner les données pour RevolutCardField
   };
 
@@ -122,15 +122,15 @@ export default function PaymentPage() {
               {/* Champ de carte Revolut (uniquement pour le mode de paiement par carte) */}
               <div id="card-field"></div>
             </div>
-            <button id="button-submit" type="button" /* onClick={handleSubmit} */>
+            <button id="button-submit" type="button" onClick={handleSubmit}>
               Payer
             </button>
             <div className="mt-5">
               <img src={image1?.src} alt="Visa MasterCard" />
             </div>
             {/* Composant RevolutCardField (uniquement pour le mode de paiement par carte) */}
-            {token && <RevolutCardField token={token} />}
-            {/* token && <RevolutCardField token={token} onSubmit={handleSubmit} /> */}
+            {/* token && <RevolutCardField token={token} /> */}
+            {token && <RevolutCardField token={token} onSubmit={handleSubmit} />}
           </div>
         </div>
       </div>

@@ -1,12 +1,13 @@
 import image6 from "../../../public/assets/img/v1/2.jpg";
 
-import dataFormation from '@/components/data/listesFormation';
+import dataFormation from '@/components/data/formationsPrincipales';
 import Link from 'next/link';
 
 
 import { useParams } from 'next/navigation';
 
 const ServicesSingleMain = () => {
+    console.log(useParams)
     const params = useParams();
     const singleFormation = dataFormation.find((formation) => formation.id === params.id);
     return (

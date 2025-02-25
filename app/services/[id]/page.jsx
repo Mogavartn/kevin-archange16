@@ -1,6 +1,6 @@
 "use client"
 import { useParams, useRouter } from "next/navigation";
-import formationsData  from '@/components/data/listesFormation';
+import formationsData  from '@/components/data/formationsPrincipales';
 import PortfolioDetails from "@/components/pages/portfolio/portfolio-details";
 
 

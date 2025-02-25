@@ -34,21 +34,23 @@ export default function RevolutCardField({ token, onSubmit }) {
           alert(`Erreur de paiement : ${message}`);
         },
       });
-
-      document.getElementById("button-submit").addEventListener("click", function () {
+    
+     /*  document.getElementById("button-submit").addEventListener("click", function () {
         card.submit(email)
-      })
+      }) */
       
       // Gérer la soumission du formulaire
-      /* document.getElementById("button-submit").addEventListener("click", () => {
+      document.getElementById("button-submit").addEventListener("click", () => {
         // Appeler la fonction onSubmit pour récupérer les données du formulaire
         const formData = onSubmit();
+        const formData1 = JSON.stringify(formData);
+        console.log("les donnéé:"+JSON.parse(formData1))
         if (formData) {
-          card.submit(formData);
+          card.submit(JSON.parse(formData1));
         } else {
           alert("Veuillez remplir tous les champs du formulaire.");
         }
-      }); */
+      });
     });
 
     // Nettoyer l'instance lors du démontage du composant

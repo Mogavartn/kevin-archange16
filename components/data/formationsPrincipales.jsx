@@ -1,23 +1,28 @@
 import image1 from "../../public/assets/img/portfolio/portfolio-6.jpg";
-import image2 from "../../public/assets/img/portfolio/portfolio-5.jpg";
-import image3 from "../../public/assets/img/portfolio/portfolio-4.jpg";
-import image4 from "../../public/assets/img/portfolio/portfolio-3.jpg";
-import image5 from "../../public/assets/img/portfolio/portfolio-2.jpg";
-import image6 from "../../public/assets/img/portfolio/portfolio-1.jpg";
-import image7 from "../../public/assets/img/portfolio/portfolio-6.jpg";
-import image8 from "../../public/assets/img/portfolio/portfolio-5.jpg";
-import image9 from "../../public/assets/img/portfolio/portfolio-4.jpg";
-import image10 from "../../public/assets/img/portfolio/portfolio-3.jpg";
-import image11 from "../../public/assets/img/portfolio/portfolio-2.jpg";
-import image12 from "../../public/assets/img/portfolio/portfolio-1.jpg";
-import image13 from "../../public/assets/img/portfolio/portfolio-3.jpg";
-import image14 from "../../public/assets/img/portfolio/portfolio-2.jpg";
-import image15 from "../../public/assets/img/portfolio/portfolio-1.jpg";
-import image16 from "../../public/assets/img/portfolio/portfolio-1.jpg";
+import image2 from "../../public/assets/img/v1/02-accompagnement.jpg";
+import image3 from "../../public/assets/img/v1/03-anglais.jpg";
+import image4 from "../../public/assets/img/v1/04-comptable.jpg";
+import image5 from "../../public/assets/img/v1/05 - Administratif.jpg";
+import image6 from "../../public/assets/img/v1/06 - energy.jpg";
+import image7 from "../../public/assets/img/v1/07 - BILAN ECO CARBONE.png";
+import image8 from "../../public/assets/img/v1/08 - CFAO.jpg";
+import image9 from "../../public/assets/img/v1/09 - 3D.png";
+import image10 from "../../public/assets/img/v1/10 - Wordpress.png";
+import image11 from "../../public/assets/img/v1/11 SITE WEB DEBUTANT.png";
+import image12 from "../../public/assets/img/v1/12 - django.png";
+import image13 from "../../public/assets/img/v1/13 - python.png";
+import image14 from "../../public/assets/img/v1/14 - risques naturels.jpg";
+import image15 from "../../public/assets/img/v1/15 - Fiscalité.jpg";
+import image16 from "../../public/assets/img/v1/16 - francais.png";
+import image17 from "../../public/assets/img/v1/17 - Gestion Temps.png";
+import image18 from "../../public/assets/img/v1/18 - stress.jpg";
+import image19 from "../../public/assets/img/v1/19 - comptabilite.png";
+import image20 from "../../public/assets/img/v1/20 - conflits.png";
+import image21 from "../../public/assets/img/v1/21 - fluides.png";
 
-const formations = [
+const formationsData = [
   {
-    "id": "excel-initiation-01",
+    "id": "excel_initiation_01",
     "categorie": "BUREAUTIQUE",
     "titre": "Formation Excel Niveau Initiation",
     "description": "Avec cette formation de niveau débutant, apprenez à réaliser des calculs simples, des tableurs, et des graphiques. Idéal pour les débutants et les utilisateurs intermédiaires, cette formation vous rendra rapidement opérationnel pour tirer le meilleur parti d'Excel dans votre travail quotidien.",
@@ -36,7 +41,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "excel-intermediaire-01",
@@ -58,7 +63,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "excel-avance-01",
@@ -80,7 +85,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "excel-expert-01",
@@ -102,7 +107,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "certification-tosa-excel-2019",
@@ -123,7 +128,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "word-debutant",
@@ -144,7 +149,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "word-intermediaire",
@@ -166,7 +171,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "certification-tosa-word-2019",
@@ -187,7 +192,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "powerpoint-365",
@@ -209,7 +214,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "discover-powerpoint-2019",
@@ -230,7 +235,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "certification-tosa-powerpoint-2019",
@@ -251,7 +256,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "microsoft-office-365-for-windows",
@@ -271,7 +276,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   {
     "id": "discover-onedrive",
@@ -292,7 +297,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "image-url.jpg"
+    "image": image1
   },
   
   {
@@ -314,7 +319,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "anglais-intermediaire-b1-b2",
@@ -334,7 +340,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "anglais-avance-c1-c2",
@@ -354,7 +361,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "anglais-affaires-avance-c1-c2",
@@ -373,7 +381,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "anglais-medical-a1-a2",
@@ -393,7 +402,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "anglais-medical-b1-b2",
@@ -413,7 +423,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "english-second-language-beginner",
@@ -434,7 +445,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Unavailable",
       "sous_titrage": "Unavailable"
-    }
+    },
+    "image": image3
   },
   {
     "id": "english-second-language-intermediate",
@@ -455,7 +467,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Unavailable",
       "sous_titrage": "Unavailable"
-    }
+    },
+    "image": image3
   },
   {
     "id": "english-second-language-advanced",
@@ -476,7 +489,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Unavailable",
       "sous_titrage": "Unavailable"
-    }
+    },
+    "image": image3
   },
   {
     "id": "business-english-second-language",
@@ -495,7 +509,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Unavailable",
       "sous_titrage": "Unavailable"
-    }
+    },
+    "image": image3
   },
   {
     "id": "preparation-examen-anglais-toeic",
@@ -515,7 +530,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "preparation-examen-anglais-cambridge",
@@ -535,7 +551,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "preparation-examen-anglais-ielts",
@@ -555,7 +572,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "preparation-examen-anglais-linguaskill",
@@ -575,7 +593,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "preparation-examen-anglais-toefl",
@@ -595,7 +614,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   
   {
@@ -617,7 +637,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "arabe-debutant-a1-a2",
@@ -638,7 +659,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "arabe-intermediaire-b1-b2",
@@ -658,7 +680,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "chinois-mandarin-pinyin-a1-a2",
@@ -678,7 +701,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "espagnol-debutant-a1-a2",
@@ -699,7 +723,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "espagnol-intermediaire-b1-b2",
@@ -719,7 +744,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "espagnol-avance-c1-c2",
@@ -740,7 +766,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "preparation-examen-espagnol-dele",
@@ -758,7 +785,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "preparation-examen-espagnol-siele",
@@ -778,7 +806,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   
   {
@@ -800,7 +829,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "japonais-debutant-a1-a2",
@@ -822,7 +852,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "langue-des-signes-francaise-a1-a2",
@@ -841,7 +872,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "portugais-debutant-a1-a2",
@@ -862,7 +894,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "russe-debutant-a1-a2",
@@ -883,7 +916,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image3
   },
   {
     "id": "photoshop-cc2023",
@@ -904,7 +938,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "illustrator-cc-2019-2023",
@@ -925,7 +960,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "indesign-cc-2019-2023",
@@ -946,10 +982,9 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
-  
-  
   {
     "id": "bâtir-estime-confiance-soi",
     "categorie": "SOFT SKILLS",
@@ -968,7 +1003,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "gestion-du-stress",
@@ -988,7 +1024,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "utiliser-voix-pour-convaincre",
@@ -1007,7 +1044,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "langage-non-verbal",
@@ -1027,7 +1065,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "secrets-body-language",
@@ -1047,7 +1086,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "maitriser-communication",
@@ -1067,7 +1107,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "se-presenter-10-min",
@@ -1086,9 +1127,9 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
-  
   {
     "id": "recruter-sans-discriminer",
     "categorie": "MANAGEMENT/RH",
@@ -1108,7 +1149,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image2
   },
   {
     "id": "accompagnement-nouveau-salarie",
@@ -1130,7 +1172,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image2
   },
   {
     "id": "gestion-performances-employes",
@@ -1150,7 +1193,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image2
   },
   {
     "id": "stimuler-recompenser-employes",
@@ -1172,7 +1216,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image2
   },
   {
     "id": "comblez-gap-generationnel",
@@ -1192,7 +1237,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image2
   },
   {
     "id": "resolution-des-conflits",
@@ -1212,7 +1258,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image2
   },
   {
     "id": "comprendre-gestion-de-projet",
@@ -1231,7 +1278,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image2
   },
   {
     "id": "maitriser-gestion-de-projet",
@@ -1251,7 +1299,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image2
   },
   {
     "id": "apprendre-a-deleger",
@@ -1270,7 +1319,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image2
   },
   
   {
@@ -1291,7 +1341,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "choisir-bons-outils-aide-decision",
@@ -1311,7 +1362,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "gerer-efficacement-votre-temps",
@@ -1331,7 +1383,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "profiter-pleinement-teletravail",
@@ -1351,7 +1404,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   {
     "id": "initiation-intelligence-artificielle",
@@ -1370,7 +1424,8 @@ const formations = [
     "accessibilite": {
       "audio_description": "Non",
       "sous_titrage": "Non"
-    }
+    },
+    "image": image1
   },
   
   {
@@ -1393,7 +1448,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "comptabilite-initiation.jpg"
+    "image": image1
   },
   {
     "id": "comptabilite-fondamentaux-01",
@@ -1415,7 +1470,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "comptabilite-fondamentaux.jpg"
+    "image": image1
   },
   {
     "id": "gestion-de-paie-01",
@@ -1436,7 +1491,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "gestion-de-paie.jpg"
+    "image": image1
   },
   {
     "id": "calcul-bulletin-paie-01",
@@ -1457,7 +1512,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "calcul-bulletin-paie.jpg"
+    "image": image1
   },
   {
     "id": "prelevement-a-la-source-01",
@@ -1479,7 +1534,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "prelevement-a-la-source.jpg"
+    "image": image1
   },
   {
     "id": "identification-temps-de-travail-01",
@@ -1501,7 +1556,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "identification-temps-de-travail.jpg"
+    "image": image1
   },
   {
     "id": "role-IRP-et-confidentialite-01",
@@ -1523,7 +1578,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "role-IRP-et-confidentialite.jpg"
+    "image": image1
   },
   {
     "id": "calcul-bulletin-paie-variable-01",
@@ -1544,7 +1599,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "calcul-bulletin-paie-variable.jpg"
+    "image": image1
   },
   {
     "id": "calcul-paie-de-depart-01",
@@ -1566,7 +1621,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "calcul-paie-de-depart.jpg"
+    "image": image1
   },
   {
     "id": "calcul-post-paie-01",
@@ -1588,7 +1643,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "calcul-post-paie.jpg"
+    "image": image1
   },
   {
     "id": "oral-blanc-01",
@@ -1608,7 +1663,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "oral-blanc.jpg"
+    "image": image1
   },
   {
     "id": "initiation-metier-secretaire-bureautique",
@@ -1630,7 +1685,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "initiation-metier-secretaire-bureautique.jpg"
+    "image": image1
   },
   
   {
@@ -1653,7 +1708,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "initiation-metier-secretaire-medicale.jpg"
+    "image": image1
   },
   {
     "id": "demarrer-booster-micro-entreprise",
@@ -1675,7 +1730,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "demarrer-booster-micro-entreprise.jpg"
+    "image": image1
   },
   {
     "id": "creation-cabinet-infirmier-liberal",
@@ -1696,7 +1751,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "creation-cabinet-infirmier-liberal.jpg"
+    "image": image1
   },
   {
     "id": "essentiel-de-la-naturopathie",
@@ -1717,9 +1772,8 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "essentiel-de-la-naturopathie.jpg"
+    "image": image1
   },
-  
   {
     "id": "revit-2021-fondamentaux",
     "categorie": "CAO-DAO",
@@ -1739,7 +1793,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "revit-2021-fondamentaux.jpg"
+    "image": image1
   },
   {
     "id": "autocad-2021-fondamentaux",
@@ -1760,7 +1814,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "autocad-2021-fondamentaux.jpg"
+    "image": image1
   },
   {
     "id": "archicad-2021-fondamentaux",
@@ -1782,7 +1836,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "archicad-2021-fondamentaux.jpg"
+    "image": image1
   },
   {
     "id": "sketchup-2021-fondamentaux",
@@ -1805,7 +1859,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "sketchup-2021-fondamentaux.jpg"
+    "image": image1
   },
   
   {
@@ -1828,7 +1882,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "haccp-methode.jpg"
+    "image": image1
   },
   {
     "id": "cybersecurite-entreprise",
@@ -1849,7 +1903,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "cybersecurite-entreprise.jpg"
+    "image": image1
   },
   
   {
@@ -1873,7 +1927,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "html-css-debutant-expert.jpg"
+    "image": image1
   },
   {
     "id": "javascript-fondamentaux",
@@ -1893,7 +1947,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "javascript-fondamentaux.jpg"
+    "image": image1
   },
   {
     "id": "react-redux",
@@ -1915,7 +1969,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "react-redux.jpg"
+    "image": image1
   },
   {
     "id": "devenir-developpeur-python",
@@ -1935,7 +1989,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "devenir-developpeur-python.jpg"
+    "image": image1
   },
   {
     "id": "devenir-developpeur-csharp",
@@ -1956,7 +2010,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "devenir-developpeur-csharp.jpg"
+    "image": image1
   },
   {
     "id": "essentiel-wordpress-woocommerce",
@@ -1978,7 +2032,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "essentiel-wordpress-woocommerce.jpg"
+    "image": image1
   },
   {
     "id": "essentiel-wordpress",
@@ -2001,7 +2055,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "essentiel-wordpress.jpg"
+    "image": image1
   },
   {
     "id": "woocommerce",
@@ -2024,7 +2078,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "woocommerce.jpg"
+    "image": image1
   },
   
   {
@@ -2046,7 +2100,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "storytelling-marketing.jpg"
+    "image": image1
   },
   {
     "id": "surmonter-les-objections",
@@ -2067,7 +2121,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "surmonter-les-objections.jpg"
+    "image": image1
   },
   {
     "id": "formation-email-marketing",
@@ -2090,7 +2144,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "formation-email-marketing.jpg"
+    "image": image1
   },
   {
     "id": "former-un-call-center",
@@ -2113,7 +2167,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "former-un-call-center.jpg"
+    "image": image1
   },
   {
     "id": "dynamisez-vos-presentations-commerciales",
@@ -2134,7 +2188,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "dynamisez-vos-presentations-commerciales.jpg"
+    "image": image1
   },
   {
     "id": "social-selling-petites-entreprises",
@@ -2155,7 +2209,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "social-selling-petites-entreprises.jpg"
+    "image": image1
   },
   {
     "id": "facebook-ads-debutant-a-expert",
@@ -2176,7 +2230,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "facebook-ads-debutant-a-expert.jpg"
+    "image": image1
   },
   {
     "id": "gestion-des-reseaux-sociaux",
@@ -2197,7 +2251,7 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "gestion-des-reseaux-sociaux.jpg"
+    "image": image1
   },
   {
     "id": "google-ads-essentiel",
@@ -2219,16 +2273,15 @@ const formations = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": "google-ads-essentiel.jpg"
+    "image": image1
   },
-  
   {
-    "id": "risque-suicidaire-infirmiere",
+    "id": "risque-suicidaire-01",
     "categorie": "SOINS INFIRMIERS",
     "titre": "Prévention et Prise en Charge Infirmière du Risque Suicidaire",
     "description": "Cette formation sensibilise l’infirmier(ère) et lui donne des outils pour un dépistage et une prise en charge optimale du risque suicidaire. Acquérez les compétences essentielles pour comprendre, prévenir, et intervenir face à la crise suicidaire.",
     "objectifs_pedagogiques": [
-      "Maitriser le vocabulaire relatif à la thématique suicidaire",
+      "Maîtriser le vocabulaire relatif à la thématique suicidaire",
       "Comprendre la typologie de la crise et le cheminement de la crise",
       "Savoir dépister et évaluer une personne à risque",
       "Intervenir auprès des personnes à risque suicidaire",
@@ -2238,38 +2291,36 @@ const formations = [
     "public": "Tous publics",
     "duree": "6h environ",
     "prerequis": "Aucun prérequis",
-    "materiel_necessaire": [
-      "Disposer d'un ordinateur ou d’une tablette",
-      "Une connexion Internet"
-    ],
-    "modalites_evaluation": "Sans audio description ni sous-titrage",
-    "image": "risque-suicidaire-infirmiere.jpg"
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
   },
   {
-    "id": "alzheimer-prise-en-charge-infirmiere",
+    "id": "alzheimer-prise-en-charge-01",
     "categorie": "SOINS INFIRMIERS",
     "titre": "Alzheimer et Prise en Charge Infirmière",
-    "description": "La maladie d’Alzheimer est une maladie neurodégénérative dont les causes ne sont pas formellement identifiées et pour laquelle il n’existe pas de traitement curatif. Cette formation offre une approche complète de la maladie d'Alzheimer, et permet également de développer des compétences d'évaluation et de transmission des informations, tout en explorant différentes orientations possibles dans la prise en charge.",
+    "description": "La maladie d'Alzheimer est une maladie neurodégénérative dont les causes ne sont pas formellement identifiées et pour laquelle il n’existe pas de traitement curatif. Cette formation offre une approche complète de la maladie d'Alzheimer, et permet également de développer des compétences d'évaluation et de transmission des informations, tout en explorant différentes orientations possibles dans la prise en charge.",
     "objectifs_pedagogiques": [
-      "Comprendre l'évolution de la maladie d'Alzheimer.",
-      "Identifier les impacts sociaux et familiaux.",
-      "Accompagner au quotidien les personnes atteintes.",
-      "Reconnaître et évaluer l'évolution des troubles.",
-      "Développer des compétences en communication adaptée."
+      "Comprendre l'évolution de la maladie d'Alzheimer",
+      "Identifier les impacts sociaux et familiaux",
+      "Accompagner au quotidien les personnes atteintes",
+      "Reconnaître et évaluer l'évolution des troubles",
+      "Développer des compétences en communication adaptée"
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
     "duree": "6h environ",
     "prerequis": "Aucun prérequis",
-    "materiel_necessaire": [
-      "Disposer d'un ordinateur ou d’une tablette",
-      "Une connexion Internet"
-    ],
-    "modalites_evaluation": "Sans audio description ni sous-titrage",
-    "image": "alzheimer-prise-en-charge-infirmiere.jpg"
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
   },
   {
-    "id": "prise-en-charge-douleur-infirmiere",
+    "id": "prise-en-charge-douleur-01",
     "categorie": "SOINS INFIRMIERS",
     "titre": "La Prise en Charge Infirmière de la Douleur",
     "description": "De l’évaluation à l’accompagnement du patient, en passant par la mise en place de plan de soin, cette formation vise à apporter aux professionnels de santé les savoirs de base indispensables et les compétences appropriées, pour comprendre et prendre en charge le patient douloureux.",
@@ -2278,58 +2329,454 @@ const formations = [
       "Identifier et évaluer les différents types de douleur avec des outils validés",
       "Connaître les traitements, leurs spécificités et prévenir les effets secondaires",
       "Mettre en place des protocoles de prévention des douleurs induites par les soins",
-      "Assurer la prise en charge en améliorant les pratiques professionnelles."
+      "Assurer la prise en charge en améliorant les pratiques professionnelles"
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
     "duree": "7h environ",
     "prerequis": "Aucun prérequis",
-    "modalites_evaluation": "Sans audio description ni sous-titrage",
-    "image": "prise-en-charge-douleur-infirmiere.jpg"
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
   },
   {
-    "id": "prises-en-charge-plaies-cicatrisation",
+    "id": "plaies-et-cicatrisation-01",
     "categorie": "SOINS INFIRMIERS",
     "titre": "Prise en Charge des Plaies et Cicatrisation",
-    "description": "La formation 'plaies et cicatrisation' aborde tous les aspects de la prise en charge des principales plaies dites complexes. Les différentes familles de pansements, les conseils d’utilisation et les éléments permettant de choisir le pansement adéquat sont étudiés, et ce en respectant le cadre législatif en vigueur.",
+    "description": "La formation « plaies et cicatrisation » aborde tous les aspects de la prise en charge des principales plaies dites complexes. Les différentes familles de pansements, les conseils d’utilisation et les éléments permettant de choisir le pansement adéquat sont étudiés, et ce en respectant le cadre législatif en vigueur.",
     "objectifs_pedagogiques": [
-      "Rappeler les bases théoriques et pratiques de la cicatrisation.",
-      "Actualiser les connaissances sur les principales plaies complexes.",
-      "Maîtriser les modes d'action, indications, contre-indications et utilisations des pansements.",
-      "Choisir et prescrire les dispositifs médicaux adaptés en fonction du type de plaie.",
-      "Optimiser la prise en charge des patients atteints de plaies."
+      "Rappeler les bases théoriques et pratiques de la cicatrisation",
+      "Actualiser les connaissances sur les principales plaies complexes",
+      "Maîtriser les modes d'action, indications, contre-indications et utilisations des pansements",
+      "Choisir et prescrire les dispositifs médicaux adaptés en fonction du type de plaie",
+      "Optimiser la prise en charge des patients atteints de plaies"
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
     "duree": "7h environ",
     "prerequis": "Aucun prérequis",
-    "modalites_evaluation": "Sans audio description ni sous-titrage",
-    "image": "prises-en-charge-plaies-cicatrisation.jpg"
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
   },
   {
-    "id": "abords-vasculaires-soins-a-domicile",
+    "id": "abords-vasculaires-01",
     "categorie": "SOINS INFIRMIERS",
     "titre": "Abords Vasculaires & Soins Infirmiers à Domicile",
-    "description": "La formation 'plaies et cicatrisation' aborde tous les aspects de la prise en charge des principales plaies dites complexes. Les différentes familles de pansements, les conseils d’utilisation et les éléments permettant de choisir le pansement adéquat sont étudiés, et ce en respectant le cadre législatif en vigueur.",
+    "description": "Cette formation aborde tous les aspects de la prise en charge des principales plaies dites complexes. Les différentes familles de pansements, les conseils d’utilisation et les éléments permettant de choisir le pansement adéquat sont étudiés, et ce en respectant le cadre législatif en vigueur.",
     "objectifs_pedagogiques": [
       "Connaître les différents abords vasculaires rencontrés à domicile",
       "Appréhender l’utilisation, les manipulations et les soins infirmiers qui s’y réfèrent",
       "Connaître, pour chaque dispositif, les principes généraux des protocoles de soins",
       "Prévenir les infections et garantir la qualité et la sécurité des soins",
-      "Evaluer ses pratiques et les réajuster si nécessaire."
+      "Evaluer ses pratiques et les réajuster si nécessaire"
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
     "duree": "5h environ",
     "prerequis": "Aucun prérequis",
-    "modalites_evaluation": "Sans audio description ni sous-titrage",
-    "image": "abords-vasculaires-soins-a-domicile.jpg"
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "risque-suicidaire-01",
+    "categorie": "SOINS INFIRMIERS",
+    "titre": "Prévention et Prise en Charge Infirmière du Risque Suicidaire",
+    "description": "Cette formation sensibilise l’infirmier(ère) et lui donne des outils pour un dépistage et une prise en charge optimale du risque suicidaire. Acquérez les compétences essentielles pour comprendre, prévenir, et intervenir face à la crise suicidaire.",
+    "objectifs_pedagogiques": [
+      "Maîtriser le vocabulaire relatif à la thématique suicidaire",
+      "Comprendre la typologie de la crise et le cheminement de la crise",
+      "Savoir dépister et évaluer une personne à risque",
+      "Intervenir auprès des personnes à risque suicidaire",
+      "Connaître les ressources et le réseau afin d’orienter efficacement le patient"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "6h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "alzheimer-prise-en-charge-01",
+    "categorie": "SOINS INFIRMIERS",
+    "titre": "Alzheimer et Prise en Charge Infirmière",
+    "description": "La maladie d'Alzheimer est une maladie neurodégénérative dont les causes ne sont pas formellement identifiées et pour laquelle il n’existe pas de traitement curatif. Cette formation offre une approche complète de la maladie d'Alzheimer, et permet également de développer des compétences d'évaluation et de transmission des informations, tout en explorant différentes orientations possibles dans la prise en charge.",
+    "objectifs_pedagogiques": [
+      "Comprendre l'évolution de la maladie d'Alzheimer",
+      "Identifier les impacts sociaux et familiaux",
+      "Accompagner au quotidien les personnes atteintes",
+      "Reconnaître et évaluer l'évolution des troubles",
+      "Développer des compétences en communication adaptée"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "6h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "prise-en-charge-douleur-01",
+    "categorie": "SOINS INFIRMIERS",
+    "titre": "La Prise en Charge Infirmière de la Douleur",
+    "description": "De l’évaluation à l’accompagnement du patient, en passant par la mise en place de plan de soin, cette formation vise à apporter aux professionnels de santé les savoirs de base indispensables et les compétences appropriées, pour comprendre et prendre en charge le patient douloureux.",
+    "objectifs_pedagogiques": [
+      "Situer la douleur dans la politique de santé publique",
+      "Identifier et évaluer les différents types de douleur avec des outils validés",
+      "Connaître les traitements, leurs spécificités et prévenir les effets secondaires",
+      "Mettre en place des protocoles de prévention des douleurs induites par les soins",
+      "Assurer la prise en charge en améliorant les pratiques professionnelles"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "7h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "plaies-et-cicatrisation-01",
+    "categorie": "SOINS INFIRMIERS",
+    "titre": "Prise en Charge des Plaies et Cicatrisation",
+    "description": "La formation « plaies et cicatrisation » aborde tous les aspects de la prise en charge des principales plaies dites complexes. Les différentes familles de pansements, les conseils d’utilisation et les éléments permettant de choisir le pansement adéquat sont étudiés, et ce en respectant le cadre législatif en vigueur.",
+    "objectifs_pedagogiques": [
+      "Rappeler les bases théoriques et pratiques de la cicatrisation",
+      "Actualiser les connaissances sur les principales plaies complexes",
+      "Maîtriser les modes d'action, indications, contre-indications et utilisations des pansements",
+      "Choisir et prescrire les dispositifs médicaux adaptés en fonction du type de plaie",
+      "Optimiser la prise en charge des patients atteints de plaies"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "7h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "abords-vasculaires-01",
+    "categorie": "SOINS INFIRMIERS",
+    "titre": "Abords Vasculaires & Soins Infirmiers à Domicile",
+    "description": "Cette formation aborde tous les aspects de la prise en charge des principales plaies dites complexes. Les différentes familles de pansements, les conseils d’utilisation et les éléments permettant de choisir le pansement adéquat sont étudiés, et ce en respectant le cadre législatif en vigueur.",
+    "objectifs_pedagogiques": [
+      "Connaître les différents abords vasculaires rencontrés à domicile",
+      "Appréhender l’utilisation, les manipulations et les soins infirmiers qui s’y réfèrent",
+      "Connaître, pour chaque dispositif, les principes généraux des protocoles de soins",
+      "Prévenir les infections et garantir la qualité et la sécurité des soins",
+      "Evaluer ses pratiques et les réajuster si nécessaire"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "5h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  
+  {
+    "id": "kiné-rehab-respiratoire-01",
+    "categorie": "KINÉSITHÉRAPIE",
+    "titre": "Kinésithérapie en Réhabilitation Respiratoire",
+    "description": "Cette formation vous permettra de voir ou revoir les notions d’insuffisance et de réhabilitation respiratoire, l’évaluation et le bilan du patient, le programme de réhabilitation et l’éducation du patient.",
+    "objectifs_pedagogiques": [
+      "Définir et comprendre l’insuffisance respiratoire (IR)",
+      "Connaître les indications, les modalités et les techniques de la réhabilitation",
+      "Savoir utiliser les différents outils d’évaluation pluridisciplinaires et physiques",
+      "Elaborer un programme personnalisé pour le patient en fonction des bilans",
+      "Prescrire les outils d’aide au sevrage tabagique",
+      "Assurer l’éducation thérapeutique du patient"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "7h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "bilan-redflags-kine-respiratoire-01",
+    "categorie": "KINÉSITHÉRAPIE",
+    "titre": "Bilans et Red-Flags en Kiné Respiratoire Ambulatoire",
+    "description": "Cette formation vous permettra de développer ou mettre à jour vos compétences au regard des éléments de bilan et de surveillance des patients insuffisants respiratoires dans le cadre d’une prise en charge de ville ou ambulatoire.",
+    "objectifs_pedagogiques": [
+      "D’appréhender la physiopathologie de l’insuffisance respiratoire chronique",
+      "Réaliser des bilans généraux et spécifiques associés, cliniques et paracliniques",
+      "Exploiter ces éléments pour établir un bilan diagnostic en kiné respiratoire",
+      "Connaître les signes de décompensation et d’urgence et la conduite à tenir"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "7h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "levée-tensions-musculaires-01",
+    "categorie": "KINÉSITHÉRAPIE",
+    "titre": "Levée des Tensions Musculaires",
+    "description": "Les tensions musculaires sont l’une des causes principales de consultation en kinésithérapie. Cette formation vous permettra de repérer et de traiter les tensions musculaires qui accompagnent la plupart des pathologies en rhumatologie notamment de type dégénérative, et tout particulièrement les algies rachidiennes, ainsi que les troubles musculo-squelettiques.",
+    "objectifs_pedagogiques": [
+      "Diagnostiquer, évaluer et traiter les tensions musculaires",
+      "Améliorer leur prise en charge et contribuer à améliorer l’offre de soins",
+      "Mobiliser, en situation de soins, différents savoirs et capacités conformes aux données actuelles de la science et aux publications et recommandations de la HAS",
+      "Concevoir et conduire un projet thérapeutique kinésithérapique adapté au patient"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "7h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "rééducation-pelvi-perinéale-01",
+    "categorie": "KINÉSITHÉRAPIE",
+    "titre": "Rééducation Pelvi-Périnéale Féminine : Les Bases",
+    "description": "Cette formation vous permettra de renforcer vos connaissances anatomiques liées au périnée afin d'améliorer la prise en charge des patientes présentant des troubles en pelvi-périnéologie et notamment des pathologies urinaires. La spécificité de la prise en charge post-partum sera décrite.",
+    "objectifs_pedagogiques": [
+      "Renforcer ses connaissances anatomiques et physiologiques",
+      "Comprendre les troubles urinaires",
+      "Réaliser un bilan adapté",
+      "Améliorer la prise en charge des patientes présentant des troubles urinaires",
+      "Adapter sa prise en charge dans le cas des patientes en post partum"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "6h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "renforcement-abdominal-perinee-01",
+    "categorie": "KINÉSITHÉRAPIE",
+    "titre": "Renforcement Abdominal et Santé du Périnée",
+    "description": "Cette formation vise l’amélioration des connaissances des pratiques diagnostiques et thérapeutiques de la prise en charge des pathologies de la sphère abdominopelvienne. Elle permettra aux kinésithérapeutes d’agir sur le plan fonctionnel de ces pathologies et apporter l’amélioration de la qualité de vie des patients.",
+    "objectifs_pedagogiques": [
+      "Comprendre l'anatomie et la physiopathologie abdominopelvienne",
+      "Maîtriser l'évaluation de la sangle abdominale",
+      "Savoir traiter le diastasis abdominal",
+      "Acquérir des compétences en rééducation abdo-périnéale",
+      "Appliquer des pratiques récentes dans le \"core training\""
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "6h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "pathologies-épaule-01",
+    "categorie": "KINÉSITHÉRAPIE",
+    "titre": "Prise en Charge des Pathologies de l'Épaule",
+    "description": "Perfectionnez votre expertise en épaule avec notre formation ciblée. Explorez l'anatomie, diagnostiquez diverses pathologies, maîtrisez les évaluations cliniques, et apprenez des techniques de traitement kiné adaptées. Acquérez les compétences nécessaires pour personnaliser vos soins face à la diversité des affections de l'épaule.",
+    "objectifs_pedagogiques": [
+      "Comprendre l'anatomie de l‘épaule pour l'évaluation et le traitement",
+      "Identifier et diagnostiquer les pathologies de l‘épaule",
+      "Maîtriser l'évaluation clinique",
+      "Acquérir des compétences de traitement kiné spécifiques, y compris la mise en place de protocoles de soins adaptés"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "7h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "pathologies-genou-01",
+    "categorie": "KINÉSITHÉRAPIE",
+    "titre": "Prise en Charge des Pathologies du Genou",
+    "description": "La problématique du genou réside dans la variété des blessures et des troubles qui peuvent affecter cette articulation cruciale. Les kinésithérapeutes doivent être en mesure de diagnostiquer et de traiter efficacement des problèmes tels que les entorses, les lésions ligamentaires, l'arthrose, et d'autres affections, tout en adaptant leurs protocoles de soins à chaque cas particulier.",
+    "objectifs_pedagogiques": [
+      "Comprendre l'anatomie du genou pour l'évaluation et le traitement",
+      "Identifier et diagnostiquer les pathologies du genou",
+      "Maîtriser l'évaluation clinique",
+      "Acquérir des compétences de traitement kiné spécifiques, y compris la mise en place de protocoles de soins adaptés et éduquer le patient"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "7h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "atm-01",
+    "categorie": "KINÉSITHÉRAPIE",
+    "titre": "Prise en Charge de l'ATM (Articulation Temporo-Mandibulaire)",
+    "description": "L'articulation de l'appareil manducateur est un point d'intérêt majeur pour les kinésithérapeutes, ostéopathes et professionnels de la santé, car ses dysfonctionnements peuvent expliquer diverses pathologies. Cette formation explore les techniques myotensives et manipulatives, complétant ainsi l'évaluation locale et posturale, afin de proposer des solutions thérapeutiques efficaces.",
+    "objectifs_pedagogiques": [
+      "Perfectionner le diagnostic différentiel en excluant les causes céphaliques",
+      "Acquérir une expertise en anatomie et biomécanique pour traiter les dysfonctions",
+      "Structurer une approche méthodique avec un arbre de décision",
+      "Maîtriser des techniques de soins musculaires, articulaires et de rééducation"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "5h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "lombalgie-01",
+    "categorie": "KINÉSITHÉRAPIE",
+    "titre": "Prise en Charge de la Lombalgie",
+    "description": "La problématique du genou réside dans la variété des blessures et des troubles qui peuvent affecter cette articulation cruciale. Les kinésithérapeutes doivent être en mesure de diagnostiquer et de traiter efficacement des problèmes tels que les entorses, les lésions ligamentaires, l'arthrose, et d'autres affections, tout en adaptant leurs protocoles de soins à chaque cas particulier.",
+    "objectifs_pedagogiques": [
+      "Appréhender la complexité de la lombalgie",
+      "Réaliser un bilan complet et efficace grâce à divers outils",
+      "Proposer des exercices d’auto-rééducation",
+      "Mettre en place un protocole de rééducation adapté",
+      "Assurer l‘éducation thérapeutique du patient"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "7h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "cervicalgie-01",
+    "categorie": "KINÉSITHÉRAPIE",
+    "titre": "Prise en Charge de la Cervicalgie",
+    "description": "Avec cette formation, explorez une approche pratique des troubles cervicaux, des douleurs oro-faciales et dorsales. Apprenez des méthodes de bilan efficaces et des traitements simples. Le cours se concentre sur des compétences pratiques pour une gestion concrète des problèmes cervicaux.",
+    "objectifs_pedagogiques": [
+      "Appréhender la complexité de la cervicalgie",
+      "Réaliser un bilan complet et efficace grâce à divers outils",
+      "Proposer des exercices d’auto-rééducation",
+      "Mettre en place un protocole de rééducation adapté",
+      "Assurer l‘éducation thérapeutique du patient"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "7h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "pathologies-traumatiques-cheville-01",
+    "categorie": "KINÉSITHÉRAPIE",
+    "titre": "Rééducation des Pathologies Traumatiques de la Cheville",
+    "description": "Avec cette formation, vous acquerrez les compétences nécessaires pour rééduquer efficacement les pathologies traumatiques de la cheville. De la maîtrise de l'anatomie et de la biomécanique à la réalisation de diagnostics différentiels, vous serez prêt(e) à choisir les meilleures approches de rééducation et à appliquer des contenations adaptées.",
+    "objectifs_pedagogiques": [
+      "Maîtriser l’anatomie et la biomécanique de la cheville",
+      "Réaliser un bilan adapté en fonction de la pathologie",
+      "Maîtriser les différents diagnostiques différentiels",
+      "Savoir adapter la rééducation en fonction de son bilan",
+      "Choisir et réaliser une contention adaptée au traumatisme"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "7h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "gestion-urgence-officine-01",
+    "categorie": "PHARMACIE",
+    "titre": "Gestion de l'Urgence à l'Officine",
+    "description": "En réponse à une situation d’urgence, le pharmacien(ne) peut notamment dispenser certains médicaments, et faire usage de tests rapides d’orientation diagnostique. Cette formation rappelle quelques éléments réglementaires incontournables, propose des solutions d’organisation de l’officine.",
+    "objectifs_pedagogiques": [
+      "Savoir évaluer le degré d’urgence",
+      "Savoir prendre une décision face à une demande de premier recours à l’officine",
+      "Organiser l’officine pour la délivrance en urgence de médicaments",
+      "Renforcer la coopération entre professionnels",
+      "Savoir utiliser le DP (Dossier Pharmaceutique) et le DMP (Dossier Médical Partagé)"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "5h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "bilan-medicament-01",
+    "categorie": "PHARMACIE",
+    "titre": "Bilan de Médication : De la Théorie à la Pratique",
+    "description": "Cette formation vise à optimiser la pratique pharmaceutique en réduisant le risque iatrogène, améliorant l'adhésion du patient, et optimisant l'impact des prescriptions médicamenteuses.",
+    "objectifs_pedagogiques": [
+      "Réduire le risque iatrogène",
+      "Améliorer l’adhésion du patient",
+      "Optimiser l’impact des prescriptions médicamenteuses",
+      "Réduire le gaspillage de médicaments"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "5h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
   }
-
-
-
-
-
 ]
 
-export default formations;
+export default formationsData;
