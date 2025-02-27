@@ -22,7 +22,9 @@ export default function PaymentPage() {
   const handleSubmit = () => {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
-    const countryCode = document.getElementById("countryCode").value;
+    const countryCode = "FR";
+    const phone = document.getElementById("phone").value;
+    const region = document.getElementById("region").value;
     const city = document.getElementById("city").value;
     const streetLine1 = document.getElementById("streetLine1").value;
     const postcode = document.getElementById("postcode").value;
@@ -32,18 +34,20 @@ export default function PaymentPage() {
       return null; // Retourner null si des champs sont manquants
     }
   
-    const formData = {
-      name,
-      email,
+     const formData ={
+      name: name,
+      email: email,
+      phone: phone, // Numéro de téléphone formaté en France
+      cardholderName: name,
       billingAddress: {
-        countryCode,
-        region: document.getElementById("region").value, // Optionnel
-        city,
-        streetLine1,
-        postcode,
-      },
-    };
-  
+          countryCode: countryCode,  // Code pays pour la France
+          region: region,  // Exemple de région en France
+          city: city,  // Exemple de ville en France
+          postcode: postcode,  // Code postal pour Paris
+          streetLine1: streetLine1,  // Exemple d'adresse
+          streetLine2: streetLine1  // Ligne d'adresse complémentaire
+      }
+  }
     //console.log("Données du formulaire :", formData); // À des fins de débogage
     return JSON.stringify(formData); // Retourner les données pour RevolutCardField
   };
@@ -72,11 +76,11 @@ export default function PaymentPage() {
                     />
                   </div>
                   <div className="col-md-6 mb-3">
-                    <label htmlFor="countryCode">Code pays</label>
+                    <label htmlFor="countryCode">Téléphone</label>
                     <input
-                      id="countryCode"
-                      type="text"
-                      placeholder="Code pays"
+                      id="phone"
+                      type="tel"
+                      placeholder="+33612345678"
                       required
                     />
                   </div>

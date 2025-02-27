@@ -2,13 +2,16 @@
 
 import { useEffect, useRef } from "react";
 import RevolutCheckout from "@revolut/checkout";
+import { useRouter } from 'next/navigation';
 
 export default function RevolutCardField({ token, onSubmit }) {
+
+  const router = useRouter();
   const instanceRef = useRef(null);
 
   useEffect(() => {
     // Initialiser le widget Revolut
-    RevolutCheckout(token, "prod").then((instance) => {
+    RevolutCheckout(token, "sandbox").then((instance) => {
       instanceRef.current = instance;
 
       // Créer le champ de carte avec personnalisation
@@ -29,7 +32,12 @@ export default function RevolutCardField({ token, onSubmit }) {
         },
         onSuccess() {
           console.log("Paiement réussi !"); // Log pour débogage
+          const formData = onSubmit();
+          //const formData1 = JSON.parse(formData);
+          sendData(formData);
           alert("Paiement réussi !");
+          router.push("/remerciement");
+          
         },
         onError(message) {
           console.error("Erreur de paiement :", message); // Log pour débogage
@@ -41,53 +49,8 @@ export default function RevolutCardField({ token, onSubmit }) {
         const formData1 = JSON.parse(formData);
         console.log("Données du formulaire :", formData1);
 
-        // Vérifier que les données sont valides
-        /* if (!formData1.name || formData1.email || formData1.countryCode || formData1.city || formData1.postcode || formData1.streetLine1) {
-          alert("Veuillez remplir tous les champs obligatoires."+formData1.name );
-          return;
-        } */
-        //card.submit(formData)
-        card.submit({
-          name: formData1.name,
-          email: formData1.email,
-          phone: "+33612345678", // Numéro de téléphone formaté en France
-          cardholderName: formData1.name,
-          billingAddress: {
-              countryCode: formData1.countryCode,  // Code pays pour la France
-              region: formData1.region,  // Exemple de région en France
-              city: formData1.city,  // Exemple de ville en France
-              postcode: formData1.postcode,  // Code postal pour Paris
-              streetLine1: formData1.streetLine1,  // Exemple d'adresse
-              streetLine2: "Bureau 101"  // Ligne d'adresse complémentaire
-          },
-          shippingAddress: {
-              countryCode: formData1.countryCode,  // Code pays pour la France
-              region: formData1.region,  // Exemple de région en France
-              city: formData1.city,  // Exemple de ville en France
-              postcode: formData1.postcode,  // Code postal pour Marseille
-              streetLine1: formData1.streetLine1,  // Exemple d'adresse
-              streetLine2: "Bureau 101"  // Ligne d'adresse complémentaire
-          }
-      });
+        card.submit(formData1);
       })
-    
-     /*  document.getElementById("button-submit").addEventListener("click", function () {
-        card.submit(email)
-      }) */
-      
-      // Gérer la soumission du formulaire
-      /* document.getElementById("button-submit").addEventListener("click", () => {
-        // Appeler la fonction onSubmit pour récupérer les données du formulaire
-        const formData = onSubmit();
-        card.submit("");
-        const formData1 = JSON.stringify(formData);
-        console.log("les donnéé:"+JSON.parse(formData1))
-        if (formData) {
-          card.submit(email= "example.customer@example.com");
-        } else {
-          alert("Veuillez remplir tous les champs du formulaire.");
-        }
-      }); */
     });
 
     // Nettoyer l'instance lors du démontage du composant
@@ -99,4 +62,30 @@ export default function RevolutCardField({ token, onSubmit }) {
   }, [token, onSubmit]);
 
   return null; // Le widget est géré par Revolut, donc aucun rendu JSX n'est nécessaire
+}
+
+async function sendData(formData) {
+  try {
+    const response = await fetch('/api/sendDataToBrevo', {  // Assurez-vous que ce chemin correspond à votre API
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP: ${response.status}`);
+    }
+
+    const responseData = await response.json();
+    console.log('Réponse de l\'API:', responseData);
+
+    return responseData; // Retourner les données ou gérer la réponse comme nécessaire
+
+  } catch (error) {
+    console.error('Erreur lors de l\'envoi des données:', error);
+    return { error: error.message };
+  }
 }

@@ -809,7 +809,68 @@ const formationsData = [
     },
     "image": image3
   },
-  
+  {
+    "id": "francais-langue-etrangere-fle-a1-a2",
+    "categorie": "LANGUES",
+    "titre": "FRANCAIS LANGUE ETRANGERE (FLE) NIVEAU A1-A2",
+    "description": "Explorez les bases du français au niveau A1-A2 à travers des modules simples et progressifs. Maîtrisez les verbes, les nombres, les temps, les articles, la négation, et plus encore. La préparation au DELF est également incluse pour renforcer vos compétences.",
+    "objectifs_pedagogiques": [
+      "Développer des compétences linguistiques orales et écrites inhérentes à la vie quotidienne et à l’environnement professionnel",
+      "Acquérir des compétences culturelles et socio-langagières visant à faciliter l’intégration sociale et économique",
+      "Enrichir son vocabulaire et éviter les fautes les plus courantes du français dans ses écrits professionnels"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "8h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "francais-langue-etrangere-fle-b1",
+    "categorie": "LANGUES",
+    "titre": "FRANCAIS LANGUE ETRANGERE (FLE) NIVEAU B1",
+    "description": "Découvrez le français au niveau B1 de manière flexible. De l'expression des envies à la préparation au DELF, maîtrisez les compétences essentielles en suivant des modules simples et progressifs.",
+    "objectifs_pedagogiques": [
+      "Développer des compétences linguistiques orales et écrites inhérentes à la vie quotidienne et à l’environnement professionnel",
+      "Acquérir des compétences culturelles et socio-langagières visant à faciliter l’intégration sociale et économique",
+      "Enrichir son vocabulaire et éviter les fautes les plus courantes du français dans ses écrits professionnels"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "8h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image2
+  },
+  {
+    "id": "francais-langue-etrangere-fle-b2",
+    "categorie": "LANGUES",
+    "titre": "FRANCAIS LANGUE ETRANGERE (FLE) NIVEAU B2",
+    "description": "Découvrez le français au niveau B2 de manière flexible. De l'expression des envies à la préparation au DELF, maîtrisez les compétences essentielles en suivant des modules simples et progressifs.",
+    "objectifs_pedagogiques": [
+      "Comprendre et participer à des conversations courantes",
+      "S'exprimer sur des sujets personnels ou professionnels",
+      "Gérer les situations de voyage courantes",
+      "Comprendre des textes écrits courants",
+      "Rédiger des textes simples sur des sujets familiers"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "8h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image3
+  },
   {
     "id": "italien-debutant-a1-a2",
     "categorie": "LANGUES",
@@ -1129,6 +1190,258 @@ const formationsData = [
       "sous_titrage": "Non"
     },
     "image": image1
+  },
+  {
+    "id": "construire-son-personal-branding",
+    "categorie": "SOFT SKILLS",
+    "titre": "CONSTRUIRE SON PERSONAL BRANDING",
+    "description": "Explorez les éléments clés de la construction de votre marque personnelle. De l'importance de la crédibilité à la gestion de votre présence sur les réseaux sociaux, cette formation couvre les aspects essentiels pour renforcer votre influence et réussir dans votre carrière.",
+    "objectifs_pedagogiques": [
+      "Comprendre l'importance de la marque personnelle.",
+      "Développer un personal branding externe et interne.",
+      "Fixer des objectifs pour renforcer sa marque personnelle.",
+      "Maîtriser les stratégies de communication pour le personal branding."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "40 min environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "maitriser-la-pensee-critique",
+    "categorie": "SOFT SKILLS",
+    "titre": "MAITRISER LA PENSÉE CRITIQUE",
+    "description": "Cette formation vous plonge dans l'univers de la pensée critique, vous aidant à comprendre son processus, à éviter les pièges de la prise de décisions, et à développer des compétences essentielles pour un raisonnement approfondi. Explorez les systèmes de pensée critique et créative pour enrichir votre approche intellectuelle.",
+    "objectifs_pedagogiques": [
+      "Maîtriser les fondements de la pensée critique.",
+      "Identifier les différentes formes de pensée et leur interaction.",
+      "Éviter les pièges courants dans la prise de décisions raisonnées.",
+      "Développer les compétences nécessaires pour un esprit critique."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "40 min environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "decouvrir-la-pnl",
+    "categorie": "SOFT SKILLS",
+    "titre": "DÉCOUVRIR LA PNL",
+    "description": "Découvrez la PNL : langage corporel, questions claires, langage hypnotique. Maîtrisez l'art du rapport, créez des résultats concrets et optimisez votre état d'esprit. Une formation pratique pour améliorer votre communication.",
+    "objectifs_pedagogiques": [
+      "Comprendre les concepts fondamentaux de la PNL.",
+      "Maîtriser les présupposés de la PNL pour une approche positive.",
+      "Appliquer les principes des sens selon la PNL dans la communication.",
+      "Utiliser un langage enrichi et précis pour renforcer l'impact de la communication."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "40 min environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "reussir-vos-presentations-pour-convaincre",
+    "categorie": "SOFT SKILLS",
+    "titre": "RÉUSSIR VOS PRÉSENTATIONS POUR CONVAINCRE",
+    "description": "Explorez les fondamentaux de la communication, perfectionnez votre voix et votre discours, favorisez l'harmonie dans les réunions, et renforcez vos compétences en écriture pour une communication efficace.",
+    "objectifs_pedagogiques": [
+      "Maîtriser les bases de la communication verbale et non verbale.",
+      "Développer une voix et un discours positifs.",
+      "Favoriser l'entente et l'optimisation des réunions.",
+      "Surmonter la nervosité et améliorer les compétences en écriture."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "1h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "reussir-votre-presentation-virtuelle",
+    "categorie": "SOFT SKILLS",
+    "titre": "RÉUSSIR VOTRE PRÉSENTATION VIRTUELLE",
+    "description": "Cette formation vous enseigne les clés du succès des présentations virtuelles, en abordant les spécificités, les compétences essentielles, et les outils tels que Zoom, Microsoft Teams, Gotomeeting, et Google Meet.",
+    "objectifs_pedagogiques": [
+      "Comprendre l'importance des présentations virtuelles.",
+      "Reconnaître les différences et les défis spécifiques des présentations virtuelles.",
+      "Acquérir des compétences efficaces de présentation virtuelle",
+      "Maîtriser les outils collaboratifs pour des présentations virtuelles réussies."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "40 min environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "parler-en-public-gerer-la-pression",
+    "categorie": "SOFT SKILLS",
+    "titre": "PARLER EN PUBLIC - GÉRER LA PRESSION",
+    "description": "Perfectionnez votre aptitude à planifier, analyser, gérer le stress et utiliser la communication non verbale pour des présentations percutantes et captivantes avec cette formation concise et efficace.",
+    "objectifs_pedagogiques": [
+      "Planifier et structurer efficacement une présentation.",
+      "Analyser les champs de force pour une communication pertinente.",
+      "Maîtriser la nervosité et capter l'attention de l'auditoire.",
+      "Utiliser un langage corporel efficace pour renforcer le message."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "1h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "gestion-du-stress",
+    "categorie": "SOFT SKILLS",
+    "titre": "GESTION DU STRESS",
+    "description": "Avec ce parcours concis et efficace, découvrez les clés pour comprendre et maîtriser le stress dans ce cours. Identifiez les sources de stress, apprenez des techniques de gestion et développez des stratégies mentales pour vous adapter aux défis quotidiens.",
+    "objectifs_pedagogiques": [
+      "Comprendre les principaux concepts liés au stress.",
+      "Identifier les situations sources de stress dans la vie quotidienne.",
+      "Acquérir des techniques de gestion du stress.",
+      "Appliquer les stratégies mentales pour faire face aux situations stressantes."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "30 min environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "l-ecoute-active",
+    "categorie": "SOFT SKILLS",
+    "titre": "L’ÉCOUTE ACTIVE",
+    "description": "Perfectionnez votre communication en apprenant l'écoute active, la lecture du langage corporel, l'adoption d'une attitude positive, et la promotion de conversations constructives pour des relations solides.",
+    "objectifs_pedagogiques": [
+      "Maîtriser les principes de l'écoute active.",
+      "Comprendre les bases du langage corporel.",
+      "Reconnaître l'importance de l'attitude dans la communication.",
+      "Encourager la conversation pour établir des relations positives."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "30 min environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "conquerir-tous-les-publics",
+    "categorie": "SOFT SKILLS",
+    "titre": "CONQUÉRIR TOUS LES PUBLICS",
+    "description": "Développez des compétences solides en communication et en relations interpersonnelles, améliorez vos aptitudes à converser, identifiez vos forces et adoptez un professionnalisme accru pour maximiser l'efficacité de vos réunions.",
+    "objectifs_pedagogiques": [
+      "Acquérir une compréhension approfondie de la communication interpersonnelle.",
+      "Maîtriser les techniques d'écoute active pour renforcer les relations.",
+      "Appliquer les principes du langage corporel pour communiquer efficacement.",
+      "Faciliter des conversations constructives dans divers contextes professionnels."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "40 min environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "reussir-son-entretien",
+    "categorie": "SOFT SKILLS",
+    "titre": "RÉUSSIR SON ENTRETIEN",
+    "description": "Avec cette formation, perfectionnez vos compétences pour briller lors de vos entretiens, que ce soit en personne ou à distance. Apprenez à vous présenter de manière percutante, à soigner votre image, et à aborder ces moments clés avec confiance et sérénité.",
+    "objectifs_pedagogiques": [
+      "Acquérir les compétences nécessaires pour préparer efficacement un entretien.",
+      "Maîtriser l'art de se présenter de manière concise en cinq minutes.",
+      "Adapter ses compétences pour les entretiens en distanciel et en présentiel.",
+      "Développer des stratégies pour travailler son image et gérer le stress."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "1h10 environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "maitriser-les-relations-publiques",
+    "categorie": "SOFT SKILLS",
+    "titre": "MAITRISER LES RELATIONS PUBLIQUES",
+    "description": "Cette formation sur les relations publiques vous guidera à travers les aspects essentiels de la gestion proactive de l'image et de la communication d'une organisation. De l'élaboration de plans stratégiques à la gestion des médias et aux réseaux sociaux, vous acquerrez les compétences nécessaires pour maîtriser efficacement les relations publiques dans divers contextes.",
+    "objectifs_pedagogiques": [
+      "Comprendre les bases des relations publiques et leur impact sur l'image.",
+      "Acquérir la compétence pour élaborer des plans de relations publiques efficaces.",
+      "Maîtriser la structuration de messages et les interactions avec les médias.",
+      "Gérer les relations publiques et exploiter les réseaux sociaux en situation de crise."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "40 min environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image1
+  },
+  {
+    "id": "intelligence-emotionnelle",
+    "categorie": "SOFT SKILLS",
+    "titre": "INTELLIGENCE ÉMOTIONNELLE",
+    "description": "Enrichissez vos compétences émotionnelles avec cette formation, allant de l'historique de l'intelligence émotionnelle à la définition de votre propre vision, tout en explorant des concepts clés comme l'optimisme et la compréhension émotionnelle.",
+    "objectifs_pedagogiques": [
+      "Définir clairement l'intelligence émotionnelle.",
+      "Approfondir la compréhension de l'optimisme dans ce contexte.",
+      "Acquérir des compétences pour reconnaître et comprendre les émotions.",
+      "Travailler sur sa vision personnelle et son impact sur l'intelligence émotionnelle."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "30 min environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": image12
   },
   {
     "id": "recruter-sans-discriminer",
@@ -1927,7 +2240,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": image11
   },
   {
     "id": "javascript-fondamentaux",
@@ -1947,7 +2260,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": image11
   },
   {
     "id": "react-redux",
@@ -1969,7 +2282,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": image11
   },
   {
     "id": "devenir-developpeur-python",
@@ -1989,7 +2302,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": image11
   },
   {
     "id": "devenir-developpeur-csharp",
@@ -2010,7 +2323,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": image11
   },
   {
     "id": "essentiel-wordpress-woocommerce",
@@ -2032,7 +2345,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": image11
   },
   {
     "id": "essentiel-wordpress",
@@ -2055,7 +2368,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": image11
   },
   {
     "id": "woocommerce",
@@ -2078,7 +2391,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": image11
   },
   
   {
