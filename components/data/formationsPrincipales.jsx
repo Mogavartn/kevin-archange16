@@ -409,7 +409,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": anglais
   },
   {
     "id": "anglais-affaires-avance-c1-c2",
@@ -938,7 +938,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": francais
+    "image": italien
   },
   {
     "id": "japonais-debutant-a1-a2",

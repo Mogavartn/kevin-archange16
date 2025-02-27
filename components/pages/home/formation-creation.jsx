@@ -38,7 +38,7 @@ const FormationCreation = () => {
                             <div className="about__two-content">
                                 <span className="subtitle-one">Créez votre entreprise</span>
                                 <h2>Créez votre entreprise et lancez votre activité avec succès ! 🚀</h2>
-                                <p>On vous montre comment la transformer en business qui cartonne.</p>
+                                <p>On vous montrer comment creer un business qui cartonne..</p>
                                 <div className="about__two-content-service">
                                     <div className="service">
                                         <i className="far fa-check-circle"></i>
@@ -53,7 +53,7 @@ const FormationCreation = () => {
                                         <span>Tarif Unique.</span>
                                     </div>
                                 </div>
-                                <Link href="https://www.kevin-attallah.com/formation-creation-entreprise" className="btn-one" target="_blank">👉 Devenir Entrepreneur</Link>
+                                <Link href="https://www.formation.kevin-attallah.com/formation-creation-entreprise" className="btn-one" target="_blank">👉 Devenir Entrepreneur</Link>
                             </div>
                         </div>
                     </div>

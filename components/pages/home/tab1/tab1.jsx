@@ -34,7 +34,7 @@ const Tab = () => {
                                 <TabContent 
                                 title={`Construisez votre entreprise avec un expert à vos côtés ! 💼`}
                                 description="Profitez d’un accompagnement personnalisé pour chaque étape : de l’idée au lancement. Bénéficiez du soutien dont vous avez besoin pour transformer vos ambitions en succès durable 🚀."
-                                description2="Et cerise sur le gateau, votre formation peut-être financée par votre CPF 💰."
+                                description2="Et cerise sur le gateau, votre formation est peut-être éligible au CPF 💰."
                                 servicesLeft={[
                                   "Plan d’action clair et efficace",
                                   "Conseil stratégique sur mesure"

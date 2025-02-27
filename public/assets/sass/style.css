@@ -376,6 +376,7 @@ p {
   margin: 0;
   color: var(--text-white);
   text-transform: none;
+  text-align: justify;
 }
 
 .t-left {
@@ -4836,7 +4837,7 @@ Responsive Menu Css
   color: var(--primary-color-3);
   margin-bottom: 30px;
   text-transform: none;
-  font-size: 20px;
+  font-size: 25px;
 }
 .about__two-content-service {
   display: block;
@@ -5512,6 +5513,8 @@ Responsive Menu Css
   text-transform: none;
   margin-bottom: -35px;
   padding-top: 10px;
+  padding: 5px 50px;
+  text-align: justify;
 }
 .skill__two-tab-details-content .btn-one-busn1{
   position: relative;
