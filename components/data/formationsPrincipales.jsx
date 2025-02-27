@@ -1,24 +1,71 @@
-import image1 from "../../public/assets/img/portfolio/portfolio-6.jpg";
-import image2 from "../../public/assets/img/v1/02-accompagnement.jpg";
-import image3 from "../../public/assets/img/v1/03-anglais.jpg";
-import image4 from "../../public/assets/img/v1/04-comptable.jpg";
-import image5 from "../../public/assets/img/v1/05 - Administratif.jpg";
-import image6 from "../../public/assets/img/v1/06 - energy.jpg";
-import image7 from "../../public/assets/img/v1/07 - BILAN ECO CARBONE.png";
-import image8 from "../../public/assets/img/v1/08 - CFAO.jpg";
-import image9 from "../../public/assets/img/v1/09 - 3D.png";
-import image10 from "../../public/assets/img/v1/10 - Wordpress.png";
-import image11 from "../../public/assets/img/v1/11 SITE WEB DEBUTANT.png";
-import image12 from "../../public/assets/img/v1/12 - django.png";
-import image13 from "../../public/assets/img/v1/13 - python.png";
-import image14 from "../../public/assets/img/v1/14 - risques naturels.jpg";
-import image15 from "../../public/assets/img/v1/15 - Fiscalité.jpg";
-import image16 from "../../public/assets/img/v1/16 - francais.png";
-import image17 from "../../public/assets/img/v1/17 - Gestion Temps.png";
-import image18 from "../../public/assets/img/v1/18 - stress.jpg";
-import image19 from "../../public/assets/img/v1/19 - comptabilite.png";
-import image20 from "../../public/assets/img/v1/20 - conflits.png";
-import image21 from "../../public/assets/img/v1/21 - fluides.png";
+import portfolioImage6 from "../../public/assets/img/portfolio/portfolio-6.jpg";
+import accompagnement from "../../public/assets/img/v1/02-accompagnement.jpg";
+import anglais from "../../public/assets/img/v1/03-anglais.jpg";
+import comptable from "../../public/assets/img/v1/04-comptable.jpg";
+import administratif from "../../public/assets/img/v1/05 - Administratif.jpg";
+import energy from "../../public/assets/img/v1/06 - energy.jpg";
+import bilanEcoCarbone from "../../public/assets/img/v1/07 - BILAN ECO CARBONE.png";
+import cfaO from "../../public/assets/img/v1/08 - CFAO.jpg";
+import threeD from "../../public/assets/img/v1/09 - 3D.png";
+import wordpress from "../../public/assets/img/v1/10 - Wordpress.png";
+import siteWebDebutant from "../../public/assets/img/v1/11 SITE WEB DEBUTANT.png";
+import django from "../../public/assets/img/v1/12 - django.png";
+import python from "../../public/assets/img/v1/13 - python.png";
+import risquesNaturels from "../../public/assets/img/v1/14 - risques naturels.jpg";
+import fiscalite from "../../public/assets/img/v1/15 - Fiscalité.jpg";
+import francais from "../../public/assets/img/v1/16 - francais.png";
+import gestionTemps from "../../public/assets/img/v1/17 - Gestion Temps.png";
+import stress from "../../public/assets/img/v1/18 - stress.jpg";
+import comptabilite from "../../public/assets/img/v1/19 - comptabilite.png";
+import conflits from "../../public/assets/img/v1/20 - conflits.png";
+import fluides from "../../public/assets/img/v1/21 - fluides.png";
+
+import apprendreADeléguer from "../../public/assets/img/v1/APPRENDRE À DÉLÉGUER.png";
+import arabe from "../../public/assets/img/v1/arabe.png";
+import bodyLangage from "../../public/assets/img/v1/body langage.png";
+import calculerLaPaieDeDépart from "../../public/assets/img/v1/Calculer la Paie de Départ (SDTC).png";
+import calculerLeBulletinDePaie from "../../public/assets/img/v1/Calculer le Bulletin de Paie.png";
+import calculerLesÉlémentsPostPaie from "../../public/assets/img/v1/Calculer les Éléments Post Paie.png";
+import calculerUnBulletinDePaieAvecLesÉlémentsVariables from "../../public/assets/img/v1/Calculer un Bulletin de Paie avec les Éléments Variables.png";
+import chinois from "../../public/assets/img/v1/Chinois.png";
+import choisirLesBonsOutilsDAideALaDécision from "../../public/assets/img/v1/CHOISIR LES BONS OUTILS D’AIDE À LA DÉCISION.png";
+import comprendreLesBasesDeLaGestionDeProjet from "../../public/assets/img/v1/COMPRENDRE LES BASES DE LA GESTION DE PROJET.png";
+import creationCabinetInfirmierLiberal from "../../public/assets/img/v1/Création d'un Cabinet Infirmier Libéral.png";
+import demarrerEtBoosterVotreMicroEntreprise from "../../public/assets/img/v1/Démarrer et Booster votre Micro-Entreprise.png";
+import espagnol from "../../public/assets/img/v1/Espagnol.png";
+import estimeEtConfianceSoi from "../../public/assets/img/v1/estime et confiance soi.jpg";
+import excel from "../../public/assets/img/v1/Excel.png";
+import gestionDePaie from "../../public/assets/img/v1/Gestion de Paie.png";
+import gestionDesPerformancesDesEmployés from "../../public/assets/img/v1/GESTION DES PERFORMANCES DES EMPLOYÉS.png";
+import identifierLeRôleDesIRP from "../../public/assets/img/v1/Identifier le Rôle des IRP et la Notion de Confidentialité.png";
+import identifierLesAménagementsDuTempsDeTravail from "../../public/assets/img/v1/Identifier les Aménagements du Temps de Travail.png";
+import illustrator from "../../public/assets/img/v1/illustrator.png";
+import indesign from "../../public/assets/img/v1/indesign.png";
+import initiationAI from "../../public/assets/img/v1/INITIATION À L'INTELLIGENCE ARTIFICIELLE.png";
+import initiationMetierSecretaireBureautique from "../../public/assets/img/v1/Initiation au Métier de Secrétaire Bureautique.png";
+import initiationMetierSecretaireMedicale from "../../public/assets/img/v1/Initiation au Métier de Secrétaire Médicale.png";
+import italien from "../../public/assets/img/v1/italien.png";
+import japonais from "../../public/assets/img/v1/Japonnais.png";
+import langageNonVerbal from "../../public/assets/img/v1/langage non verbal.png";
+import langueDesSignes from "../../public/assets/img/v1/LANGUE DES SIGNES.png";
+import lesFondementsDeLaMethodeAgile from "../../public/assets/img/v1/LES FONDEMENTS DE LA METHODE AGILE.png";
+import essentielDeLaNaturopathie from "../../public/assets/img/v1/L'Essentiel de la Naturopathie.png";
+import maitriserGestionDeProjet from "../../public/assets/img/v1/MAITRISER LA GESTION DE PROJET.png";
+import maitriserVotreCommunication from "../../public/assets/img/v1/MAÎTRISER VOTRE COMMUNICATION.png";
+import office365 from "../../public/assets/img/v1/Office 365.png";
+import onedrive from "../../public/assets/img/v1/OneDrive.png";
+import oralBlancGestionnaireDePaie from "../../public/assets/img/v1/Oral Blanc - Gestionnaire de Paie.png";
+import photoshop from "../../public/assets/img/v1/Photoshop.png";
+import portugais from "../../public/assets/img/v1/Portugais.png";
+import powerpoint from "../../public/assets/img/v1/PowerPoint.png";
+import prelevementALaSource from "../../public/assets/img/v1/Prélèvement à la Source.png";
+import profiterPleinementDuTélétravail from "../../public/assets/img/v1/PROFITER PLEINEMENT DU TÉLÉTRAVAIL.png";
+import recruterSansDiscriminer from "../../public/assets/img/v1/RECRUTER SANS DISCRIMINER.png";
+import russe from "../../public/assets/img/v1/Russe.png";
+import sePresenterEn10Minutes from "../../public/assets/img/v1/SE PRÉSENTER EN 10 MINUTES.png";
+import stimulerEtRecompenserSesEmployes from "../../public/assets/img/v1/STIMULER ET RÉCOMPENSER SES EMPLOYÉS.png";
+import utiliserSaVoix from "../../public/assets/img/v1/utiliser sa voix.png";
+import word from "../../public/assets/img/v1/Word.png";
 
 const formationsData = [
   {
@@ -41,7 +88,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": excel
   },
   {
     "id": "excel-intermediaire-01",
@@ -63,7 +110,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": excel
   },
   {
     "id": "excel-avance-01",
@@ -85,7 +132,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": excel
   },
   {
     "id": "excel-expert-01",
@@ -107,7 +154,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": excel
   },
   {
     "id": "certification-tosa-excel-2019",
@@ -128,7 +175,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": word
   },
   {
     "id": "word-debutant",
@@ -149,7 +196,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": word
   },
   {
     "id": "word-intermediaire",
@@ -171,7 +218,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": word
   },
   {
     "id": "certification-tosa-word-2019",
@@ -192,7 +239,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": powerpoint
   },
   {
     "id": "powerpoint-365",
@@ -214,7 +261,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": powerpoint
   },
   {
     "id": "discover-powerpoint-2019",
@@ -235,7 +282,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": powerpoint
   },
   {
     "id": "certification-tosa-powerpoint-2019",
@@ -256,7 +303,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": powerpoint
   },
   {
     "id": "microsoft-office-365-for-windows",
@@ -276,7 +323,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": onedrive
   },
   {
     "id": "discover-onedrive",
@@ -297,7 +344,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": onedrive
   },
   
   {
@@ -320,7 +367,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "anglais-intermediaire-b1-b2",
@@ -341,7 +388,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "anglais-avance-c1-c2",
@@ -362,7 +409,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": portfolioImage6
   },
   {
     "id": "anglais-affaires-avance-c1-c2",
@@ -382,7 +429,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "anglais-medical-a1-a2",
@@ -403,7 +450,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "anglais-medical-b1-b2",
@@ -424,7 +471,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "english-second-language-beginner",
@@ -446,7 +493,7 @@ const formationsData = [
       "audio_description": "Unavailable",
       "sous_titrage": "Unavailable"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "english-second-language-intermediate",
@@ -468,7 +515,7 @@ const formationsData = [
       "audio_description": "Unavailable",
       "sous_titrage": "Unavailable"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "english-second-language-advanced",
@@ -490,7 +537,7 @@ const formationsData = [
       "audio_description": "Unavailable",
       "sous_titrage": "Unavailable"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "business-english-second-language",
@@ -510,7 +557,7 @@ const formationsData = [
       "audio_description": "Unavailable",
       "sous_titrage": "Unavailable"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "preparation-examen-anglais-toeic",
@@ -531,7 +578,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "preparation-examen-anglais-cambridge",
@@ -552,7 +599,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "preparation-examen-anglais-ielts",
@@ -573,7 +620,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "preparation-examen-anglais-linguaskill",
@@ -594,7 +641,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "preparation-examen-anglais-toefl",
@@ -615,7 +662,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": anglais
   },
   
   {
@@ -638,7 +685,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": anglais
   },
   {
     "id": "arabe-debutant-a1-a2",
@@ -660,7 +707,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": arabe
   },
   {
     "id": "arabe-intermediaire-b1-b2",
@@ -681,7 +728,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": arabe
   },
   {
     "id": "chinois-mandarin-pinyin-a1-a2",
@@ -702,7 +749,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": chinois
   },
   {
     "id": "espagnol-debutant-a1-a2",
@@ -724,7 +771,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": espagnol
   },
   {
     "id": "espagnol-intermediaire-b1-b2",
@@ -745,7 +792,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": espagnol
   },
   {
     "id": "espagnol-avance-c1-c2",
@@ -767,7 +814,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": espagnol
   },
   {
     "id": "preparation-examen-espagnol-dele",
@@ -786,7 +833,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": espagnol
   },
   {
     "id": "preparation-examen-espagnol-siele",
@@ -807,7 +854,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": espagnol
   },
   {
     "id": "francais-langue-etrangere-fle-a1-a2",
@@ -827,7 +874,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": francais
   },
   {
     "id": "francais-langue-etrangere-fle-b1",
@@ -847,7 +894,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image2
+    "image": francais
   },
   {
     "id": "francais-langue-etrangere-fle-b2",
@@ -869,7 +916,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": francais
   },
   {
     "id": "italien-debutant-a1-a2",
@@ -891,7 +938,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": francais
   },
   {
     "id": "japonais-debutant-a1-a2",
@@ -914,7 +961,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": japonais
   },
   {
     "id": "langue-des-signes-francaise-a1-a2",
@@ -934,7 +981,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": langueDesSignes
   },
   {
     "id": "portugais-debutant-a1-a2",
@@ -956,7 +1003,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": portugais
   },
   {
     "id": "russe-debutant-a1-a2",
@@ -978,7 +1025,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image3
+    "image": russe
   },
   {
     "id": "photoshop-cc2023",
@@ -1000,7 +1047,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": photoshop
   },
   {
     "id": "illustrator-cc-2019-2023",
@@ -1022,7 +1069,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": illustrator
   },
   {
     "id": "indesign-cc-2019-2023",
@@ -1044,7 +1091,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": indesign
   },
   {
     "id": "bâtir-estime-confiance-soi",
@@ -1065,7 +1112,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": estimeEtConfianceSoi
   },
   {
     "id": "gestion-du-stress",
@@ -1086,7 +1133,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": stress
   },
   {
     "id": "utiliser-voix-pour-convaincre",
@@ -1106,7 +1153,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": utiliserSaVoix
   },
   {
     "id": "langage-non-verbal",
@@ -1127,7 +1174,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": langageNonVerbal
   },
   {
     "id": "secrets-body-language",
@@ -1148,7 +1195,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": bodyLangage
   },
   {
     "id": "maitriser-communication",
@@ -1169,7 +1216,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": maitriserVotreCommunication
   },
   {
     "id": "se-presenter-10-min",
@@ -1189,7 +1236,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": sePresenterEn10Minutes
   },
   {
     "id": "construire-son-personal-branding",
@@ -1210,7 +1257,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "maitriser-la-pensee-critique",
@@ -1231,7 +1278,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "decouvrir-la-pnl",
@@ -1252,7 +1299,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "reussir-vos-presentations-pour-convaincre",
@@ -1273,7 +1320,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "reussir-votre-presentation-virtuelle",
@@ -1294,7 +1341,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "parler-en-public-gerer-la-pression",
@@ -1315,7 +1362,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "gestion-du-stress",
@@ -1336,7 +1383,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": stress
   },
   {
     "id": "l-ecoute-active",
@@ -1357,7 +1404,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "conquerir-tous-les-publics",
@@ -1378,7 +1425,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "reussir-son-entretien",
@@ -1389,7 +1436,7 @@ const formationsData = [
       "Acquérir les compétences nécessaires pour préparer efficacement un entretien.",
       "Maîtriser l'art de se présenter de manière concise en cinq minutes.",
       "Adapter ses compétences pour les entretiens en distanciel et en présentiel.",
-      "Développer des stratégies pour travailler son image et gérer le stress."
+      "Développer des stratégies pour travailler son image et gérer le stresss."
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -1399,7 +1446,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "maitriser-les-relations-publiques",
@@ -1420,7 +1467,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "intelligence-emotionnelle",
@@ -1441,7 +1488,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image12
+    "image": portfolioImage6
   },
   {
     "id": "recruter-sans-discriminer",
@@ -1463,7 +1510,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image2
+    "image": recruterSansDiscriminer
   },
   {
     "id": "accompagnement-nouveau-salarie",
@@ -1486,7 +1533,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image2
+    "image": accompagnement
   },
   {
     "id": "gestion-performances-employes",
@@ -1507,7 +1554,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image2
+    "image": gestionDesPerformancesDesEmployés
   },
   {
     "id": "stimuler-recompenser-employes",
@@ -1530,7 +1577,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image2
+    "image": stimulerEtRecompenserSesEmployes
   },
   {
     "id": "comblez-gap-generationnel",
@@ -1551,7 +1598,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image2
+    "image": portfolioImage6
   },
   {
     "id": "resolution-des-conflits",
@@ -1572,7 +1619,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image2
+    "image": conflits
   },
   {
     "id": "comprendre-gestion-de-projet",
@@ -1592,7 +1639,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image2
+    "image": comprendreLesBasesDeLaGestionDeProjet
   },
   {
     "id": "maitriser-gestion-de-projet",
@@ -1613,7 +1660,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image2
+    "image": maitriserGestionDeProjet
   },
   {
     "id": "apprendre-a-deleger",
@@ -1633,7 +1680,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image2
+    "image": apprendreADeléguer
   },
   
   {
@@ -1655,7 +1702,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": lesFondementsDeLaMethodeAgile
   },
   {
     "id": "choisir-bons-outils-aide-decision",
@@ -1676,7 +1723,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": choisirLesBonsOutilsDAideALaDécision
   },
   {
     "id": "gerer-efficacement-votre-temps",
@@ -1697,7 +1744,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": gestionTemps
   },
   {
     "id": "profiter-pleinement-teletravail",
@@ -1718,7 +1765,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": profiterPleinementDuTélétravail
   },
   {
     "id": "initiation-intelligence-artificielle",
@@ -1738,7 +1785,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": initiationAI
   },
   
   {
@@ -1761,7 +1808,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": comptable
   },
   {
     "id": "comptabilite-fondamentaux-01",
@@ -1783,7 +1830,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": comptable
   },
   {
     "id": "gestion-de-paie-01",
@@ -1804,7 +1851,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": gestionDePaie
   },
   {
     "id": "calcul-bulletin-paie-01",
@@ -1825,7 +1872,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": gestionDePaie
   },
   {
     "id": "prelevement-a-la-source-01",
@@ -1847,7 +1894,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": prelevementALaSource
   },
   {
     "id": "identification-temps-de-travail-01",
@@ -1869,7 +1916,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": identifierLesAménagementsDuTempsDeTravail
   },
   {
     "id": "role-IRP-et-confidentialite-01",
@@ -1891,7 +1938,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": identifierLeRôleDesIRP
   },
   {
     "id": "calcul-bulletin-paie-variable-01",
@@ -1912,7 +1959,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": calculerUnBulletinDePaieAvecLesÉlémentsVariables
   },
   {
     "id": "calcul-paie-de-depart-01",
@@ -1934,7 +1981,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": calculerLaPaieDeDépart
   },
   {
     "id": "calcul-post-paie-01",
@@ -1956,7 +2003,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": calculerLesÉlémentsPostPaie
   },
   {
     "id": "oral-blanc-01",
@@ -1976,7 +2023,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": gestionDePaie
   },
   {
     "id": "initiation-metier-secretaire-bureautique",
@@ -1998,7 +2045,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": initiationMetierSecretaireBureautique
   },
   
   {
@@ -2021,7 +2068,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": initiationMetierSecretaireMedicale
   },
   {
     "id": "demarrer-booster-micro-entreprise",
@@ -2043,7 +2090,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": demarrerEtBoosterVotreMicroEntreprise
   },
   {
     "id": "creation-cabinet-infirmier-liberal",
@@ -2064,7 +2111,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": creationCabinetInfirmierLiberal
   },
   {
     "id": "essentiel-de-la-naturopathie",
@@ -2085,7 +2132,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": essentielDeLaNaturopathie
   },
   {
     "id": "revit-2021-fondamentaux",
@@ -2106,7 +2153,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "autocad-2021-fondamentaux",
@@ -2127,7 +2174,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "archicad-2021-fondamentaux",
@@ -2149,7 +2196,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "sketchup-2021-fondamentaux",
@@ -2172,7 +2219,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   
   {
@@ -2195,7 +2242,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "cybersecurite-entreprise",
@@ -2216,7 +2263,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   
   {
@@ -2240,7 +2287,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image11
+    "image": siteWebDebutant
   },
   {
     "id": "javascript-fondamentaux",
@@ -2260,7 +2307,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image11
+    "image": siteWebDebutant
   },
   {
     "id": "react-redux",
@@ -2282,7 +2329,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image11
+    "image": siteWebDebutant
   },
   {
     "id": "devenir-developpeur-python",
@@ -2302,7 +2349,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image11
+    "image": python
   },
   {
     "id": "devenir-developpeur-csharp",
@@ -2323,7 +2370,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image11
+    "image": portfolioImage6
   },
   {
     "id": "essentiel-wordpress-woocommerce",
@@ -2345,7 +2392,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image11
+    "image": wordpress
   },
   {
     "id": "essentiel-wordpress",
@@ -2368,7 +2415,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image11
+    "image": wordpress
   },
   {
     "id": "woocommerce",
@@ -2391,7 +2438,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image11
+    "image": portfolioImage6
   },
   
   {
@@ -2413,7 +2460,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "surmonter-les-objections",
@@ -2434,7 +2481,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "formation-email-marketing",
@@ -2457,7 +2504,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "former-un-call-center",
@@ -2480,7 +2527,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "dynamisez-vos-presentations-commerciales",
@@ -2501,7 +2548,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "social-selling-petites-entreprises",
@@ -2522,7 +2569,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "facebook-ads-debutant-a-expert",
@@ -2543,7 +2590,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "gestion-des-reseaux-sociaux",
@@ -2564,7 +2611,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "google-ads-essentiel",
@@ -2586,7 +2633,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "risque-suicidaire-01",
@@ -2608,7 +2655,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "alzheimer-prise-en-charge-01",
@@ -2630,7 +2677,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "prise-en-charge-douleur-01",
@@ -2652,7 +2699,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "plaies-et-cicatrisation-01",
@@ -2674,7 +2721,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "abords-vasculaires-01",
@@ -2696,7 +2743,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "risque-suicidaire-01",
@@ -2718,7 +2765,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "alzheimer-prise-en-charge-01",
@@ -2740,7 +2787,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "prise-en-charge-douleur-01",
@@ -2762,7 +2809,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "plaies-et-cicatrisation-01",
@@ -2784,7 +2831,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "abords-vasculaires-01",
@@ -2806,7 +2853,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   
   {
@@ -2830,7 +2877,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "bilan-redflags-kine-respiratoire-01",
@@ -2851,7 +2898,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "levée-tensions-musculaires-01",
@@ -2872,7 +2919,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "rééducation-pelvi-perinéale-01",
@@ -2894,7 +2941,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "renforcement-abdominal-perinee-01",
@@ -2916,7 +2963,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "pathologies-épaule-01",
@@ -2937,7 +2984,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "pathologies-genou-01",
@@ -2958,7 +3005,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "atm-01",
@@ -2979,7 +3026,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "lombalgie-01",
@@ -3001,7 +3048,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "cervicalgie-01",
@@ -3023,7 +3070,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "pathologies-traumatiques-cheville-01",
@@ -3045,7 +3092,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "gestion-urgence-officine-01",
@@ -3067,7 +3114,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   },
   {
     "id": "bilan-medicament-01",
@@ -3088,7 +3135,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": image1
+    "image": portfolioImage6
   }
 ]
 
