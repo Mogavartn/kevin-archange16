@@ -11816,6 +11816,12 @@ image-background {
  padding: 100px 60px;
  background-color: var(--text-white);
  border-radius: 20px;
+ display: flex;
+justify-content: space-between;
+}
+.Formulaire_de_paiement .formulaire-gauche,
+.formulaire-droit {
+  width: 48%;
 }
 .Formulaire_de_paiement img{
   width: 200px;
@@ -11857,6 +11863,31 @@ image-background {
 .Formulaire_de_paiement .project-info ul .project-rating i {
   color: #FBA758;
   margin-right: 5px;
+}
+
+/* Mobile : Utilisation de la largeur complète */
+@media (max-width: 768px) {
+  .formulaire-paiement {
+    flex-direction: column; /* Passer en colonne sur les petits écrans */
+  }
+
+  .Formulaire_de_paiement .formulaire-gauche,
+  .formulaire-droit {
+    width: 100%; /* Chaque section prend 100% de la largeur sur mobile */
+    margin-bottom: 20px; /* Ajout d'une marge entre les sections */
+  }
+}
+
+/* Si l'écran fait plus de 768px de large, on revient à un affichage en ligne */
+@media (min-width: 769px) {
+  .Formulaire_de_paiement .formulaire-paiement {
+    flex-direction: row; /* Retour à un affichage en ligne sur grands écrans */
+  }
+
+  .Formulaire_de_paiement .formulaire-gauche,
+  .formulaire-droit {
+    width: 48%; /* Les deux sections partagent l'espace disponible */
+  }
 }
 
 /*******Css page remerciement********/
