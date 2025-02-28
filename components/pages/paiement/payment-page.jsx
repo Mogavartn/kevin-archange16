@@ -9,6 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function PaymentPage() {
   const [token, setToken] = useState(null);
+  const [amount, setAmount] = useState(null);
+  const [description, setDescription] = useState(null);
   const [orderResponse, setOrderResponse] = useState(null);
 
   // Récupérer la réponse de la commande depuis localStorage au chargement de la page
@@ -18,6 +20,9 @@ export default function PaymentPage() {
       const parsedResponse = JSON.parse(storedResponse);
       setOrderResponse(parsedResponse);
       setToken(parsedResponse?.token); // Mettre à jour le token
+      setAmount(parsedResponse?.amount); // Mettre à jour le montant
+      setDescription(parsedResponse?.description); // Mettre à jour le montant
+      console.log("local :" + storedResponse)
     }
   }, []);
 
@@ -25,6 +30,8 @@ export default function PaymentPage() {
   const handleSubmit = () => {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
+    const mount = amount;
+    const formation = description;
     const countryCode = "FR";
     const phone = document.getElementById("phone").value;
     const region = document.getElementById("region").value;
@@ -67,6 +74,8 @@ export default function PaymentPage() {
       email: email,
       phone: phone, // Numéro de téléphone formaté en France
       cardholderName: name,
+      mount: mount,
+      formation: formation,
       billingAddress: {
           countryCode: countryCode,  // Code pays pour la France
           region: region,  // Exemple de région en France

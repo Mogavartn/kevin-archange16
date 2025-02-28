@@ -34,6 +34,7 @@ export default function RevolutCardField({ token, onSubmit }) {
          // console.log("Paiement réussi !"); // Log pour débogage
           const formData = onSubmit();
           //const formData1 = JSON.parse(formData);
+          sendEmail(formData);
           sendData(formData);
           toast.success("Paiement réussi !");
           router.push("/remerciement");
@@ -86,5 +87,33 @@ async function sendData(formData) {
   } catch (error) {
     console.error('Erreur lors de l\'envoi des données:', error);
     return { error: error.message };
+  }
+}
+
+async function sendEmail(formData) {
+  try {
+    // Envoi de la requête à l'API pour envoyer l'email
+    const response = await fetch('/api/payment-received', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    // Vérification du statut de la réponse
+    if (response.ok) {
+      // Si la requête a réussi, vous mettez à jour le status
+      console.log('Votre paiement a été reçu et un e-mail de confirmation a été envoyé.');
+    } else {
+      // Si la réponse du serveur n'est pas correcte, vous affichez un message d'erreur
+      const errorData = await response.json(); // On peut essayer de récupérer un message d'erreur plus détaillé depuis la réponse
+      console.log(errorData?.message || 'Une erreur est survenue lors de l\'envoi de l\'email.');
+    }
+  } catch (error) {
+    // En cas d'erreur de connexion ou autre problème
+    console.error('Erreur lors de l\'envoi de l\'email :', error);
+    console.log('Une erreur est survenue lors de l\'envoi de l\'email.');
   }
 }

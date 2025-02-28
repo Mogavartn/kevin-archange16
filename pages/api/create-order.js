@@ -23,7 +23,7 @@ export default async function handler(req, res) {
       description
       //capture_mode: 'automatic', // Mode de capture automatique
     });
-    console.log(orderData)
+    
     try {
       // Envoyer la requête à l'API Revolut
       const response = await fetch("https://sandbox-merchant.revolut.com/api/orders", {

@@ -23,7 +23,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
     const orderData = {
       amount: amount, // Montant de la commande
       currency: currency, // Devise
-      description: singleData?.formation?.nom
+      description: singleData.titre
     };
     
     try {

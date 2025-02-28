@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   }
  
   // Extraire les données envoyées par la requête
-  const { name, email, phone, cardholderName, billingAddress } = JSON.parse(req.body);
+  const { name, email, mount, formation, phone, cardholderName, billingAddress } = JSON.parse(req.body);
   const { countryCode, region, city, postcode, streetLine1, streetLine2 } = billingAddress;
 
   // Vérification des données nécessaires
@@ -23,6 +23,8 @@ export default async function handler(req, res) {
         EMAIL: email,
         FIRSTNAME: name,
         PHONE_CABINET: phone,
+        JOB_TITLE: formation,
+        NOMBRE_DE_CAS_TOTAL: mount,
         VILLE: city,
         CODE_POSTALE: postcode,
         ADRESS: streetLine1
@@ -30,9 +32,6 @@ export default async function handler(req, res) {
       listIds: [53], // Remplacer par l'ID de votre liste dans Brevo
       updateEnabled: true, // Permet la mise à jour des contacts existants
     };
-
-    console.log('Données envoyées à Brevo:', contactData);
-    console.log('Clé API utilisée:', process.env.SENDINBLUE_API_KEY);
 
     // Envoyer les données à l'API Brevo
     const response = await axios.post('https://api.brevo.com/v3/contacts',
@@ -47,8 +46,6 @@ export default async function handler(req, res) {
       }
     );
 
-    console.log('Réponse de Brevo:', response.data);
-
     // Répondre avec un succès
     return res.status(200).json({
       message: 'Contact ajouté ou mis à jour avec succès dans Brevo',
@@ -59,9 +56,7 @@ export default async function handler(req, res) {
     console.error('Erreur lors de l\'envoi des données à Brevo:', error);
 
     if (error.response) {
-      console.error('Réponse d\'erreur de Brevo:', error.response.data);
-      console.error('Statut de l\'erreur:', error.response.status);
-      console.error('En-têtes de l\'erreur:', error.response.headers);
+      console.error('Réponse d\'erreur de Brevo:');
     } else if (error.request) {
       console.error('Aucune réponse reçue:', error.request);
     } else {
