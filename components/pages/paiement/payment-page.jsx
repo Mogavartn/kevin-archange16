@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import RevolutCardField from "./paiement-formation";
 import image1 from "@/public/assets/img/visamastercard.png";
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function PaymentPage() {
   const [token, setToken] = useState(null);
   const [orderResponse, setOrderResponse] = useState(null);
@@ -28,12 +31,37 @@ export default function PaymentPage() {
     const city = document.getElementById("city").value;
     const streetLine1 = document.getElementById("streetLine1").value;
     const postcode = document.getElementById("postcode").value;
-  
-    if (!name || !email || !countryCode || !city || !streetLine1 || !postcode) {
-      alert("Veuillez remplir tous les champs obligatoires.");
-      return null; // Retourner null si des champs sont manquants
+    
+    if (!name) {
+      toast.error("Nom est obligatoire.");
+      return null;
     }
   
+    if (!email) {
+      toast.error("Email est obligatoire.");
+      return null;
+    }
+  
+    if (!countryCode) {
+      toast.error("Code pays est obligatoire.");
+      //return null;
+    }
+  
+    if (!city) {
+      toast.error("Ville est obligatoire.");
+      //return null;
+    }
+  
+    if (!streetLine1) {
+      toast.error("Adresse est obligatoire.");
+      //return null;
+    }
+  
+    if (!postcode) {
+      toast.error("Code postal est obligatoire.");
+      //return null;
+    }
+    
      const formData ={
       name: name,
       email: email,
@@ -126,7 +154,7 @@ export default function PaymentPage() {
               {/* Champ de carte Revolut (uniquement pour le mode de paiement par carte) */}
               <div id="card-field"></div>
             </div>
-            <button id="button-submit" type="button" onClick={handleSubmit}>
+            <button id="button-submit" type="button" /* onClick={handleSubmit} */ >
               Payer
             </button>
             <div className="mt-5">

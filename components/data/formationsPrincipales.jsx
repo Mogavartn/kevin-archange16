@@ -1094,6 +1094,48 @@ const formationsData = [
     "image": indesign
   },
   {
+    "id": "adobe-premiere-pro-2020-2024",
+    "categorie": "VIDÉO",
+    "titre": "Adobe Premiere Pro 2020-2024",
+    "description": "Cette formation vous guide dans la création et la gestion de projets vidéo, de l'organisation des fichiers à l'exportation finale. Vous découvrirez comment personnaliser l'interface pour un workflow plus efficace. De l'importation des médias au montage des séquences, chaque étape est expliquée en détail pour maîtriser l'essentiel du montage vidéo.",
+    "objectifs_pedagogiques": [
+      "Maîtriser les bases de la création de projets vidéo",
+      "Optimiser son flux de travail dans l'interface de Premiere Pro",
+      "Réaliser un montage vidéo complet",
+      "Exporter et archiver un projet finalisé"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "10h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": siteWebDebutant
+  },
+  {
+    "id": "adobe-after-effects-2020-2024",
+    "categorie": "VIDÉO",
+    "titre": "Adobe After Effects 2020-2024",
+    "description": "Cette formation sur After Effects vous initiera aux concepts essentiels de l'animation et du montage vidéo. Vous apprendrez à maîtriser l'interface, créer des compositions dynamiques, et travailler avec des effets visuels avancés tels que le tracking, le rotoscoping, et les calques 3D. À la fin de la formation, vous serez capable de produire des animations complexes et d'exporter des projets finalisés pour diverses plateformes.",
+    "objectifs_pedagogiques": [
+      "Découvrir et comprendre l'interface d'After Effects",
+      "Créer et animer des compositions et des calques",
+      "Utiliser les masques, effets et outils de retouche vidéo",
+      "Maîtriser l'exportation et la 3D dans After Effects"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "10h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": siteWebDebutant
+  },
+  {
     "id": "bâtir-estime-confiance-soi",
     "categorie": "SOFT SKILLS",
     "titre": "BÂTIR SON ESTIME DE SOI ET SA CONFIANCE EN SOI",
@@ -2244,6 +2286,28 @@ const formationsData = [
     },
     "image": portfolioImage6
   },
+  {
+    "id": "essentiel-rgpd",
+    "categorie": "SECURITE",
+    "titre": "L'ESSENTIEL DU RGPD",
+    "description": "Plongez dans l'univers du RGPD avec notre formation. Explorez les bases du RGPD, comprenez ses motivations et identifiez les parties prenantes. Découvrez l'importance de la conformité et maîtrisez les étapes clés pour y parvenir.",
+    "objectifs_pedagogiques": [
+      "Comprendre les fondements du RGPD.",
+      "Connaître le contexte et les motivations derrière le RGPD.",
+      "Savoir identifier les parties prenantes concernées.",
+      "Appréhender l’intérêt de respecter le RGPD et les risques de la non conformité.",
+      "Maîtriser les différentes étapes pour assurer la conformité au RGPD."
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "2h30 environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": portfolioImage6
+  },  
   {
     "id": "cybersecurite-entreprise",
     "categorie": "SECURITE",

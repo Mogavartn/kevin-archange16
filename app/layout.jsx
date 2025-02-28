@@ -4,7 +4,7 @@ import "./globals.css";
 import { Suspense } from "react";
 import { FacebookPixelEvents } from '@/components/pixel-events';
 import { GoogleAnalytics } from '@next/third-parties/google';
-
+import { ToastContainer } from 'react-toastify';
 export default function RootLayout({ children }) {
     useEffect(() => {
         require('bootstrap/dist/js/bootstrap.min.js');
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
             </head>
             <body>
                 {children}
-
+                <ToastContainer />
                 {/* Suspense est utilisé pour charger Facebook Pixel sans bloquer le rendu */}
                 <Suspense fallback={null}>
                     <FacebookPixelEvents />

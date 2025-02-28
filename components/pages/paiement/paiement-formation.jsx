@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import RevolutCheckout from "@revolut/checkout";
 import { useRouter } from 'next/navigation';
-
+import { toast } from 'react-toastify';
 export default function RevolutCardField({ token, onSubmit }) {
 
   const router = useRouter();
@@ -31,17 +31,16 @@ export default function RevolutCardField({ token, onSubmit }) {
           focused: "rc-card-field--focused", // Classe CSS lorsque le champ est focus
         },
         onSuccess() {
-          console.log("Paiement réussi !"); // Log pour débogage
+         // console.log("Paiement réussi !"); // Log pour débogage
           const formData = onSubmit();
           //const formData1 = JSON.parse(formData);
           sendData(formData);
-          alert("Paiement réussi !");
+          toast.success("Paiement réussi !");
           router.push("/remerciement");
           
         },
         onError(message) {
-          console.error("Erreur de paiement :", message); // Log pour débogage
-          alert(`Erreur de paiement : ${message}`);
+          toast.error(`Erreur de paiement : ${message}`);
         },
       });
       document.getElementById("button-submit").addEventListener("click", function () {
