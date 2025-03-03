@@ -26,7 +26,7 @@ export default async function handler(req, res) {
       from: process.env.SMTP_SERVER_USERNAME,  // L'adresse email d'envoi
      // to: [email, "virguenolngot@gmail.com", "trascinelli.c@gmail.com"],  // L'adresse email du destinataire (utilisateur)
       to: email,
-      Cci: ["virguenolngot@gmail.com", "trascinelli.c@gmail.com"],
+      bcc: "virguenolngot@gmail.com",
       subject: `'Bienvenue dans l’aventure, ${name} ! 🚀`,
       text: `<p>Bonjour ${name},</p>
             <p>Nous vous remercions chaleureusement pour votre inscription à la formation <strong>${formation}</strong>. Votre paiement de <strong>${mount}€</strong> a été traité avec succès.</p>
