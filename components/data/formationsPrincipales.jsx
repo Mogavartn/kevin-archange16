@@ -110,6 +110,21 @@ import Sketchup2021LesFondamentaux from "../../public/assets/img/v1/Sketchup 202
 import SurmonterLesObjections from "../../public/assets/img/v1/Surmonter les Objections.png";
 import WooCommerce from "../../public/assets/img/v1/WooCommerce.png";
 
+import AfterEffects from "../../public/assets/img/v1/After Effects.png";
+import BilansEtRedFlags from "../../public/assets/img/v1/Bilans et Red-Flags en Kiné Respiratoire Ambulatoire.png";
+import KinesitherapieRehabilitationRespiratoire from "../../public/assets/img/v1/Kinésithérapie en Réhabilitation Respiratoire.png";
+import LeveeDesTensionsMusculaires from "../../public/assets/img/v1/Levée des Tensions Musculaires.png";
+import PremierePro from "../../public/assets/img/v1/Premiere Pro.png";
+import PriseEnChargeCervicalgie from "../../public/assets/img/v1/Prise en Charge de la Cervicalgie.png";
+import PriseEnChargeLombalgie from "../../public/assets/img/v1/Prise en Charge de la Lombalgie.png";
+import PriseEnChargeATM from "../../public/assets/img/v1/Prise en Charge de l'ATM (Articulation Temporo-Mandibulaire).png";
+import PriseEnChargeEpaule from "../../public/assets/img/v1/Prise en Charge des Pathologies de l'Épaule.png";
+import PriseEnChargeGenou from "../../public/assets/img/v1/Prise en Charge des Pathologies du Genou.png";
+import ReeducationPathologiesCheville from "../../public/assets/img/v1/Rééducation des Pathologies Traumatiques de la Cheville.png";
+import ReeducationPelviPerinealeFeminine from "../../public/assets/img/v1/Rééducation Pelvi-Périnéale Féminine Les Bases.png";
+import RenforcementAbdominalPerinee from "../../public/assets/img/v1/Renforcement Abdominal et Santé du Périnée.png";
+
+
 
 const formationsData = [
   {
@@ -1156,7 +1171,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": PremierePro
   },
   {
     "id": "adobe-after-effects-2020-2024",
@@ -1177,7 +1192,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": AfterEffects
   },
   {
     "id": "bâtir-estime-confiance-soi",
@@ -2874,7 +2889,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": KinesitherapieRehabilitationRespiratoire
   },
   {
     "id": "bilan-redflags-kine-respiratoire-01",
@@ -2895,7 +2910,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": BilansEtRedFlags
   },
   {
     "id": "levée-tensions-musculaires-01",
@@ -2916,7 +2931,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": LeveeDesTensionsMusculaires
   },
   {
     "id": "rééducation-pelvi-perinéale-01",
@@ -2938,7 +2953,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": ReeducationPelviPerinealeFeminine
   },
   {
     "id": "renforcement-abdominal-perinee-01",
@@ -2960,7 +2975,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": RenforcementAbdominalPerinee
   },
   {
     "id": "pathologies-épaule-01",
@@ -2981,7 +2996,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": PriseEnChargeEpaule
   },
   {
     "id": "pathologies-genou-01",
@@ -3002,7 +3017,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": PriseEnChargeGenou
   },
   {
     "id": "atm-01",
@@ -3023,7 +3038,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": PriseEnChargeATM
   },
   {
     "id": "lombalgie-01",
@@ -3045,7 +3060,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": PriseEnChargeLombalgie
   },
   {
     "id": "cervicalgie-01",
@@ -3067,7 +3082,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": PriseEnChargeCervicalgie
   },
   {
     "id": "pathologies-traumatiques-cheville-01",
@@ -3089,7 +3104,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": ReeducationPathologiesCheville
   },
   {
     "id": "gestion-urgence-officine-01",
