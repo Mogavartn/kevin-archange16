@@ -26,7 +26,7 @@ export default async function handler(req, res) {
     
     try {
       // Envoyer la requête à l'API Revolut
-      const response = await fetch("https://sandbox-merchant.revolut.com/api/orders", {
+      const response = await fetch("https://merchant.revolut.com/api/orders", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

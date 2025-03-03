@@ -11,7 +11,7 @@ export default function RevolutCardField({ token, onSubmit }) {
 
   useEffect(() => {
     // Initialiser le widget Revolut
-    RevolutCheckout(token, "sandbox").then((instance) => {
+    RevolutCheckout(token, "prod").then((instance) => {
       instanceRef.current = instance;
 
       // Créer le champ de carte avec personnalisation
