@@ -67,6 +67,50 @@ import stimulerEtRecompenserSesEmployes from "../../public/assets/img/v1/STIMULE
 import utiliserSaVoix from "../../public/assets/img/v1/utiliser sa voix.png";
 import word from "../../public/assets/img/v1/Word.png";
 
+import AbordsVasculairesEtSoinsInfirmiersADomicile from "../../public/assets/img/v1/Abords Vasculaires & Soins Infirmiers à Domicile.png";
+import AlzheimerEtPriseEnChargeInfirmiere from "../../public/assets/img/v1/Alzheimer et Prise en Charge Infirmière.png";
+import Archicad2021LesFondamentaux from "../../public/assets/img/v1/Archicad 2021 - Les Fondamentaux.png";
+import AutoCAD2021LesFondamentaux from "../../public/assets/img/v1/AutoCAD 2021 - Les Fondamentaux.png";
+import BilanDeMédicationDeLaThéorieALaPratique from "../../public/assets/img/v1/Bilan de Médication De la Théorie à la Pratique.png";
+import CalculerLeBulletinDePaie from "../../public/assets/img/v1/Calculer le Bulletin de Paie.png";
+import COMBLEZLEPAGGENERATIONNEL from "../../public/assets/img/v1/COMBLEZ LE GAP GÉNÉRATIONNEL.png";
+import CONQUERIRTOUSLESPUBLICS from "../../public/assets/img/v1/CONQUÉRIR TOUS LES PUBLICS.png";
+import CONSTRUIRESONPERSONALBRANDING from "../../public/assets/img/v1/CONSTRUIRE SON PERSONAL BRANDING.png";
+import CreerDesSitesInteractifsAvecReactEtRedux from "../../public/assets/img/v1/Créer des Sites Interactifs avec React et Redux.png";
+import DECOUVRIRLAPNL from "../../public/assets/img/v1/DÉCOUVRIR LA PNL.png";
+import DevenirUnDeveloppeurCSharp from "../../public/assets/img/v1/Csharp.png";
+import DynamisezVosPresentationsCommerciales from "../../public/assets/img/v1/Dynamisez vos Présentations Commerciales.png";
+import FacebookAdsDeDebutantAExpertVersion2022 from "../../public/assets/img/v1/Facebook Ads De Débutant à Expert Version 2022.png";
+import FormationEmailMarketing from "../../public/assets/img/v1/Formation Email Marketing.png";
+import FormerUnCallCenter from "../../public/assets/img/v1/Former un Call Center.png";
+import GestionDeLUrgenceALOfficine from "../../public/assets/img/v1/Gestion de l'Urgence à l'Officine.png";
+import GestionDesReseauxSociauxDeDebutantAExpert2022 from "../../public/assets/img/v1/Gestion des Réseaux Sociaux de Débutant à Expert 2022.png";
+import HTML5EtCSS3DeDebutantAExpert from "../../public/assets/img/v1/HTML5 et CSS3 de Débutant à Expert.png";
+import INTELLIGENCEEMOTIONNELLE from "../../public/assets/img/v1/INTELLIGENCE ÉMOTIONNELLE.png";
+import JavaScriptLesFondamentaux from "../../public/assets/img/v1/JavaScript - Les Fondamentaux.png";
+import LECOUTEACTIVE from "../../public/assets/img/v1/L’ÉCOUTE ACTIVE.png";
+import LaCybersécuritéEnEntreprise from "../../public/assets/img/v1/La Cybersécurité en Entreprise.png";
+import LaMethodeHACCP from "../../public/assets/img/v1/La Méthode HACCP.png";
+import LaPriseEnChargeInfirmiereDeLaDouleur from "../../public/assets/img/v1/La Prise en Charge Infirmière de la Douleur.png";
+import LeSocialSellingPourLesPetitesEntreprises from "../../public/assets/img/v1/Le Social Selling pour les Petites Entreprises.png";
+import LeStorytelling from "../../public/assets/img/v1/Le Storytelling.png";
+import LEssentielDeGoogleAds from "../../public/assets/img/v1/L'Essentiel de Google Ads.png";
+import LESSENTIELDURGPD from "../../public/assets/img/v1/L'ESSENTIEL DU RGPD.png";
+import MAITRISERLAPENSEECRITIQUE from "../../public/assets/img/v1/MAITRISER LA PENSÉE CRITIQUE.png";
+import MAITRISERLESRELATIONSPUBLIQUES from "../../public/assets/img/v1/MAITRISER LES RELATIONS PUBLIQUES.png";
+import OralBlancGestionnaireDePaie from "../../public/assets/img/v1/Oral Blanc - Gestionnaire de Paie.png";
+import PARLERENPUBLICGERERLAPRESSION from "../../public/assets/img/v1/PARLER EN PUBLIC - GÉRER LA PRESSION.png";
+import PrevoyanceEtPriseEnChargeInfirmiereDuRisqueSuicidaire from "../../public/assets/img/v1/Prévention et Prise en Charge Infirmière du Risque Suicidaire.png";
+import PriseEnChargeDesPlaiesEtCicatrisation from "../../public/assets/img/v1/Prise en Charge des Plaies et Cicatrisation.png";
+import REUSSIRSONENTRETIEN from "../../public/assets/img/v1/RÉUSSIR SON ENTRETIEN.png";
+import REUSSIRVOSPRÉSENTATIONSPOURCONVAINCRE from "../../public/assets/img/v1/RÉUSSIR VOS PRÉSENTATIONS POUR CONVAINCRE.png";
+import REUSSIRVOTREPRÉSENTATIONVIRTUELLE from "../../public/assets/img/v1/RÉUSSIR VOTRE PRÉSENTATION VIRTUELLE.png";
+import Revit2021LesFondamentaux from "../../public/assets/img/v1/Revit 2021 - Les Fondamentaux.png";
+import Sketchup2021LesFondamentaux from "../../public/assets/img/v1/Sketchup 2021 – Les Fondamentaux.png";
+import SurmonterLesObjections from "../../public/assets/img/v1/Surmonter les Objections.png";
+import WooCommerce from "../../public/assets/img/v1/WooCommerce.png";
+
+
 const formationsData = [
   {
     "id": "excel_initiation_01",
@@ -323,7 +367,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": onedrive
+    "image": office365
   },
   {
     "id": "discover-onedrive",
@@ -1112,7 +1156,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": siteWebDebutant
+    "image": portfolioImage6
   },
   {
     "id": "adobe-after-effects-2020-2024",
@@ -1133,7 +1177,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": siteWebDebutant
+    "image": portfolioImage6
   },
   {
     "id": "bâtir-estime-confiance-soi",
@@ -1299,7 +1343,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": CONSTRUIRESONPERSONALBRANDING
   },
   {
     "id": "maitriser-la-pensee-critique",
@@ -1320,7 +1364,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": MAITRISERLAPENSEECRITIQUE
   },
   {
     "id": "decouvrir-la-pnl",
@@ -1341,7 +1385,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": DECOUVRIRLAPNL
   },
   {
     "id": "reussir-vos-presentations-pour-convaincre",
@@ -1362,7 +1406,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": REUSSIRVOSPRÉSENTATIONSPOURCONVAINCRE
   },
   {
     "id": "reussir-votre-presentation-virtuelle",
@@ -1383,7 +1427,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": REUSSIRVOTREPRÉSENTATIONVIRTUELLE
   },
   {
     "id": "parler-en-public-gerer-la-pression",
@@ -1404,7 +1448,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": PARLERENPUBLICGERERLAPRESSION
   },
   {
     "id": "gestion-du-stress",
@@ -1446,7 +1490,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": LECOUTEACTIVE
   },
   {
     "id": "conquerir-tous-les-publics",
@@ -1467,7 +1511,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": CONQUERIRTOUSLESPUBLICS
   },
   {
     "id": "reussir-son-entretien",
@@ -1488,7 +1532,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": REUSSIRSONENTRETIEN
   },
   {
     "id": "maitriser-les-relations-publiques",
@@ -1509,7 +1553,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": MAITRISERLESRELATIONSPUBLIQUES
   },
   {
     "id": "intelligence-emotionnelle",
@@ -1530,7 +1574,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": INTELLIGENCEEMOTIONNELLE
   },
   {
     "id": "recruter-sans-discriminer",
@@ -1640,7 +1684,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": COMBLEZLEPAGGENERATIONNEL
   },
   {
     "id": "resolution-des-conflits",
@@ -1872,7 +1916,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": comptable
+    "image": comptabilite
   },
   {
     "id": "gestion-de-paie-01",
@@ -1914,7 +1958,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": gestionDePaie
+    "image": CalculerLeBulletinDePaie
   },
   {
     "id": "prelevement-a-la-source-01",
@@ -2065,7 +2109,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": gestionDePaie
+    "image": oralBlancGestionnaireDePaie
   },
   {
     "id": "initiation-metier-secretaire-bureautique",
@@ -2195,7 +2239,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": Revit2021LesFondamentaux
   },
   {
     "id": "autocad-2021-fondamentaux",
@@ -2216,7 +2260,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": AutoCAD2021LesFondamentaux
   },
   {
     "id": "archicad-2021-fondamentaux",
@@ -2238,7 +2282,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": Archicad2021LesFondamentaux
   },
   {
     "id": "sketchup-2021-fondamentaux",
@@ -2261,7 +2305,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": Sketchup2021LesFondamentaux
   },
   
   {
@@ -2284,7 +2328,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": LaMethodeHACCP
   },
   {
     "id": "essentiel-rgpd",
@@ -2306,7 +2350,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": LESSENTIELDURGPD
   },  
   {
     "id": "cybersecurite-entreprise",
@@ -2327,7 +2371,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": LaCybersécuritéEnEntreprise
   },
   
   {
@@ -2351,7 +2395,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": siteWebDebutant
+    "image": HTML5EtCSS3DeDebutantAExpert
   },
   {
     "id": "javascript-fondamentaux",
@@ -2371,7 +2415,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": siteWebDebutant
+    "image": JavaScriptLesFondamentaux
   },
   {
     "id": "react-redux",
@@ -2393,7 +2437,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": siteWebDebutant
+    "image": CreerDesSitesInteractifsAvecReactEtRedux
   },
   {
     "id": "devenir-developpeur-python",
@@ -2434,7 +2478,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": DevenirUnDeveloppeurCSharp
   },
   {
     "id": "essentiel-wordpress-woocommerce",
@@ -2456,7 +2500,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": wordpress
+    "image": WooCommerce
   },
   {
     "id": "essentiel-wordpress",
@@ -2502,7 +2546,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": WooCommerce
   },
   
   {
@@ -2524,7 +2568,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": LeStorytelling
   },
   {
     "id": "surmonter-les-objections",
@@ -2545,7 +2589,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": SurmonterLesObjections
   },
   {
     "id": "formation-email-marketing",
@@ -2568,7 +2612,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": FormationEmailMarketing
   },
   {
     "id": "former-un-call-center",
@@ -2591,7 +2635,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": FormerUnCallCenter
   },
   {
     "id": "dynamisez-vos-presentations-commerciales",
@@ -2612,7 +2656,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": DynamisezVosPresentationsCommerciales
   },
   {
     "id": "social-selling-petites-entreprises",
@@ -2633,7 +2677,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": LeSocialSellingPourLesPetitesEntreprises
   },
   {
     "id": "facebook-ads-debutant-a-expert",
@@ -2654,7 +2698,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": FacebookAdsDeDebutantAExpertVersion2022
   },
   {
     "id": "gestion-des-reseaux-sociaux",
@@ -2675,7 +2719,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": GestionDesReseauxSociauxDeDebutantAExpert2022
   },
   {
     "id": "google-ads-essentiel",
@@ -2697,7 +2741,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": LEssentielDeGoogleAds
   },
   {
     "id": "risque-suicidaire-01",
@@ -2719,7 +2763,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": PrevoyanceEtPriseEnChargeInfirmiereDuRisqueSuicidaire
   },
   {
     "id": "alzheimer-prise-en-charge-01",
@@ -2741,7 +2785,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": AlzheimerEtPriseEnChargeInfirmiere
   },
   {
     "id": "prise-en-charge-douleur-01",
@@ -2763,7 +2807,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": LaPriseEnChargeInfirmiereDeLaDouleur
   },
   {
     "id": "plaies-et-cicatrisation-01",
@@ -2785,7 +2829,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": PriseEnChargeDesPlaiesEtCicatrisation
   },
   {
     "id": "abords-vasculaires-01",
@@ -2807,7 +2851,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": AbordsVasculairesEtSoinsInfirmiersADomicile
   },  
   {
     "id": "kiné-rehab-respiratoire-01",
@@ -3067,7 +3111,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": GestionDeLUrgenceALOfficine
   },
   {
     "id": "bilan-medicament-01",
@@ -3088,7 +3132,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": portfolioImage6
+    "image": BilanDeMédicationDeLaThéorieALaPratique
   }
 ]
 

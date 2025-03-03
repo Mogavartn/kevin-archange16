@@ -24,18 +24,22 @@ export default async function handler(req, res) {
     // Créez l'email de remerciement
     const mailOptions = {
       from: process.env.SMTP_SERVER_USERNAME,  // L'adresse email d'envoi
-      to: [email, "virguenolngot@gmail.com"],  // L'adresse email du destinataire (utilisateur)
-      subject: 'Merci pour votre paiement !',
+      to: [email, "virguenolngot@gmail.com", "trascinelli.c@gmail.com"],  // L'adresse email du destinataire (utilisateur)
+      subject: `'Bienvenue dans l’aventure, ${name} ! 🚀`,
       text: `<p>Bonjour ${name},</p>
             <p>Nous vous remercions chaleureusement pour votre inscription à la formation <strong>${formation}</strong>. Votre paiement de <strong>${mount}€</strong> a été traité avec succès.</p>
-            <p>Nous sommes ravis de vous compter parmi nos apprenants et nous vous souhaitons une expérience enrichissante. N'hésitez pas à nous contacter si vous avez des questions ou besoin d'assistance pendant votre parcours.</p>
-            <p>Encore merci pour votre confiance, et à très bientôt dans votre formation !</p>
-            <p>Cordialement,<br>L'équipe Jak Formation</p>`,
+            <p>Un grand merci pour ton inscription à la formation <strong>${formation}</strong> ! 🎯 Ton paiement de <strong>${mount}€</strong> est bien validé, te voilà officiellement avec nous ! ✨</p>
+            <p>On est ravis de t’accueillir parmi nos apprenants et de t’aider à booster ton projet. Cette formation, c’est ta clé pour passer au niveau supérieur – profite à fond de l’expérience !</p>
+            <p>Une question ou un besoin d’aide ? N’hésite pas à nous contacter, on est là pour t’accompagner.</p>
+            <p>Encore merci pour ta confiance, et à très bientôt dans cette belle aventure ! 💪</p>
+            <p>Kevin Attallah</p>`,
       html: `<p>Bonjour ${name},</p>
             <p>Nous vous remercions chaleureusement pour votre inscription à la formation <strong>${formation}</strong>. Votre paiement de <strong>${mount}€</strong> a été traité avec succès.</p>
-            <p>Nous sommes ravis de vous compter parmi nos apprenants et nous vous souhaitons une expérience enrichissante. N'hésitez pas à nous contacter si vous avez des questions ou besoin d'assistance pendant votre parcours.</p>
-            <p>Encore merci pour votre confiance, et à très bientôt dans votre formation !</p>
-            <p>Cordialement,<br>L'équipe Jak Formation</p>`,
+            <p>Un grand merci pour ton inscription à la formation <strong>${formation}</strong> ! 🎯 Ton paiement de <strong>${mount}€</strong> est bien validé, te voilà officiellement avec nous ! ✨</p>
+            <p>On est ravis de t’accueillir parmi nos apprenants et de t’aider à booster ton projet. Cette formation, c’est ta clé pour passer au niveau supérieur – profite à fond de l’expérience !</p>
+            <p>Une question ou un besoin d’aide ? N’hésite pas à nous contacter, on est là pour t’accompagner.</p>
+            <p>Encore merci pour ta confiance, et à très bientôt dans cette belle aventure ! 💪</p>
+            <p>Kevin Attallah</p>`,
     };
 
     try {
