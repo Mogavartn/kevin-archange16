@@ -34,7 +34,7 @@ const CategoriesMain = () => {
                                     <img className="img__full" src={image1?.src} alt="Création d'entreprise" />
                                 </div>
                                 <div className="services__two-single-service-content formation-solution">
-                                    <h4 className="border">ENTREPRENEURS</h4> 
+                                    <h4>ENTREPRENEURS</h4> 
                                     <Link href={`/categories/Entrepreneur`} className="btn-one mb-20 ml-20">
                                         Voir les formations
                                     </Link>
