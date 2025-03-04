@@ -39,7 +39,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
       const data = await response.json();
 
       if (response.ok) {
-        console.log('Commande créée avec succès:', data);
+        console.log('Commande créée avec succès:');
 
         // Stocker la réponse de la commande dans localStorage
         localStorage.setItem("orderResponse", JSON.stringify(data));

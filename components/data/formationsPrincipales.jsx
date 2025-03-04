@@ -1593,7 +1593,7 @@ const formationsData = [
   },
   {
     "id": "recruter-sans-discriminer",
-    "categorie": "MANAGEMENT/RH",
+    "categorie": "MANAGEMENT_RH",
     "titre": "RECRUTER SANS DISCRIMINER",
     "description": "Appréhendez les pratiques de recrutement équitables et non discriminatoires. Soyez l'agent du changement dans votre entreprise en favorisant l'équité et la diversité grâce à cette formation.",
     "objectifs_pedagogiques": [
@@ -1615,7 +1615,7 @@ const formationsData = [
   },
   {
     "id": "accompagnement-nouveau-salarie",
-    "categorie": "MANAGEMENT/RH",
+    "categorie": "MANAGEMENT_RH",
     "titre": "ACCOMPAGNEMENT D’UN NOUVEAU SALARIÉ",
     "description": "De la définition de l'intégration à la création d'équipes, fixez des objectifs et découvrez des astuces pour rendre votre programme unique. Un parcours rapide et efficace pour optimiser l'engagement des employés.",
     "objectifs_pedagogiques": [
@@ -1638,7 +1638,7 @@ const formationsData = [
   },
   {
     "id": "gestion-performances-employes",
-    "categorie": "MANAGEMENT/RH",
+    "categorie": "MANAGEMENT_RH",
     "titre": "GESTION DES PERFORMANCES DES EMPLOYÉS",
     "description": "Acquérez les compétences clés pour mettre en œuvre un modèle de gestion partagée, fixer des objectifs, et évaluer le rendement de manière efficace. Boostez votre expertise en gestion pour optimiser la performance de votre équipe à l’aide de cette formation concise et efficace.",
     "objectifs_pedagogiques": [
@@ -1659,7 +1659,7 @@ const formationsData = [
   },
   {
     "id": "stimuler-recompenser-employes",
-    "categorie": "MANAGEMENT/RH",
+    "categorie": "MANAGEMENT_RH",
     "titre": "STIMULER ET RÉCOMPENSER SES EMPLOYÉS",
     "description": "Optimisez la performance de votre équipe, et découvrez les bases de l'appréciation et les rouages de la motivation grâce à cette formation concise et efficace.",
     "objectifs_pedagogiques": [
@@ -1682,7 +1682,7 @@ const formationsData = [
   },
   {
     "id": "comblez-gap-generationnel",
-    "categorie": "MANAGEMENT/RH",
+    "categorie": "MANAGEMENT_RH",
     "titre": "COMBLEZ LE GAP GÉNÉRATIONNEL",
     "description": "Explorez les clés de la gestion intergénérationnelle avec cette formation concise et efficace. Explorez l'histoire, trouvez des terrains d'entente, comprenez les générations, recrutez avec créativité, planifiez efficacement, et élaborez des stratégies de maintien en poste. Une approche pratique pour réussir dans la diversité générationnelle au travail.",
     "objectifs_pedagogiques": [
@@ -1703,7 +1703,7 @@ const formationsData = [
   },
   {
     "id": "resolution-des-conflits",
-    "categorie": "MANAGEMENT/RH",
+    "categorie": "MANAGEMENT_RH",
     "titre": "LA RÉSOLUTION DES CONFLITS",
     "description": "Explorez les clés de la gestion des conflits dans cette formation efficace. Apprenez à identifier les types de conflits, à améliorer la communication, et à aider les autres à surmonter les conflits.",
     "objectifs_pedagogiques": [
@@ -1724,7 +1724,7 @@ const formationsData = [
   },
   {
     "id": "comprendre-gestion-de-projet",
-    "categorie": "MANAGEMENT/RH",
+    "categorie": "MANAGEMENT_RH",
     "titre": "COMPRENDRE LES BASES DE LA GESTION DE PROJET",
     "description": "Explorez les fondamentaux de la gestion de projet à travers cette série de cours, de la définition des projets au cycle de vie, en passant par le rôle crucial du chef de projet et les compétences nécessaires pour vendre et présenter un projet.",
     "objectifs_pedagogiques": [
@@ -1744,7 +1744,7 @@ const formationsData = [
   },
   {
     "id": "maitriser-gestion-de-projet",
-    "categorie": "MANAGEMENT/RH",
+    "categorie": "MANAGEMENT_RH",
     "titre": "MAITRISER LA GESTION DE PROJET",
     "description": "Explorez les rouages de la gestion de projet à travers ce cours complet, abordant des aspects tels que la planification, la budgétisation, l'évaluation des risques et la clôture de projet.",
     "objectifs_pedagogiques": [
@@ -1765,7 +1765,7 @@ const formationsData = [
   },
   {
     "id": "apprendre-a-deleger",
-    "categorie": "MANAGEMENT/RH",
+    "categorie": "MANAGEMENT_RH",
     "titre": "APPRENDRE À DÉLÉGUER",
     "description": "Explorez l'art de la délégation à travers ce cours détaillé, couvrant les principes fondamentaux, les choix de délégation et le développement de compétences de délégateur.",
     "objectifs_pedagogiques": [
@@ -1935,7 +1935,7 @@ const formationsData = [
   },
   {
     "id": "gestion-de-paie-01",
-    "categorie": "GESTION DE PAIE",
+    "categorie": "GESTION_DE_PAIE",
     "titre": "Gestion de Paie - Identifier les Règles",
     "description": "Explorez les fondements des métiers liés à la paie, les bases du droit du travail, les meilleures pratiques de veille et les aspects essentiels des contrats de travail.",
     "objectifs_pedagogiques": [
@@ -1956,7 +1956,7 @@ const formationsData = [
   },
   {
     "id": "calcul-bulletin-paie-01",
-    "categorie": "GESTION DE PAIE",
+    "categorie": "GESTION_DE_PAIE",
     "titre": "Calculer le Bulletin de Paie",
     "description": "Maîtrisez les calculs de bulletins de paie, collectez les informations nécessaires et gérez les relations avec les organismes sociaux.",
     "objectifs_pedagogiques": [
@@ -1977,7 +1977,7 @@ const formationsData = [
   },
   {
     "id": "prelevement-a-la-source-01",
-    "categorie": "GESTION DE PAIE",
+    "categorie": "GESTION_DE_PAIE",
     "titre": "Prélèvement à la Source",
     "description": "Comprenez la réforme du prélèvement à la source, ses calculs et l'application du Compte Individualisé (CI).",
     "objectifs_pedagogiques": [
@@ -1999,7 +1999,7 @@ const formationsData = [
   },
   {
     "id": "identification-temps-de-travail-01",
-    "categorie": "GESTION DE PAIE",
+    "categorie": "GESTION_DE_PAIE",
     "titre": "Identifier les Aménagements du Temps de Travail",
     "description": "Explorez la gestion du temps de travail, de la mensualisation aux spécificités des horaires et des conventions de forfait.",
     "objectifs_pedagogiques": [
@@ -2021,7 +2021,7 @@ const formationsData = [
   },
   {
     "id": "role-IRP-et-confidentialite-01",
-    "categorie": "GESTION DE PAIE",
+    "categorie": "GESTION_DE_PAIE",
     "titre": "Identifier le Rôle des IRP et la Notion de Confidentialité",
     "description": "Plongez dans les bases du droit du travail, couvrant les instances représentatives, les procédures de licenciement, et le RGPD.",
     "objectifs_pedagogiques": [
@@ -2043,7 +2043,7 @@ const formationsData = [
   },
   {
     "id": "calcul-bulletin-paie-variable-01",
-    "categorie": "GESTION DE PAIE",
+    "categorie": "GESTION_DE_PAIE",
     "titre": "Calculer un Bulletin de Paie avec les Éléments Variables",
     "description": "Maîtrisez les aspects de la gestion des ressources humaines, des heures supplémentaires aux congés, en passant par les arrêts maladie.",
     "objectifs_pedagogiques": [
@@ -2064,7 +2064,7 @@ const formationsData = [
   },
   {
     "id": "calcul-paie-de-depart-01",
-    "categorie": "GESTION DE PAIE",
+    "categorie": "GESTION_DE_PAIE",
     "titre": "Calculer la Paie de Départ (SDTC)",
     "description": "Explorez les procédures liées au départ d'un salarié, comprenant les indemnités de congés payés, de préavis, et autres indemnités.",
     "objectifs_pedagogiques": [
@@ -2086,7 +2086,7 @@ const formationsData = [
   },
   {
     "id": "calcul-post-paie-01",
-    "categorie": "GESTION DE PAIE",
+    "categorie": "GESTION_DE_PAIE",
     "titre": "Calculer les Éléments Post Paie",
     "description": "Découvrez la DSN, le contrôle des charges sociales, la retraite supplémentaire, et la comptabilisation de la paie.",
     "objectifs_pedagogiques": [
@@ -2108,7 +2108,7 @@ const formationsData = [
   },
   {
     "id": "oral-blanc-01",
-    "categorie": "GESTION DE PAIE",
+    "categorie": "GESTION_DE_PAIE",
     "titre": "Oral Blanc - Gestionnaire de Paie",
     "description": "Préparez-vous à l'examen de gestionnaire de paie en simulant un oral blanc et en renforçant vos compétences de présentation.",
     "objectifs_pedagogiques": [
@@ -2128,7 +2128,7 @@ const formationsData = [
   },
   {
     "id": "initiation-metier-secretaire-bureautique",
-    "categorie": "SECRÉTARIAT BUREAUTIQUE",
+    "categorie": "SECRETARIAT_BUREAUTIQUE",
     "titre": "Initiation au Métier de Secrétaire Bureautique",
     "description": "Accueil, gestion de l’organisation, maîtrise des outils bureautiques, cette formation de 14h vous permettra d’acquérir les bases du métier de secrétaire. Elle vous donnera une première approche du métier et vous incitera à envisager une formation plus approfondie pour obtenir un titre professionnel de secrétaire.",
     "objectifs_pedagogiques": [
@@ -2151,7 +2151,7 @@ const formationsData = [
   
   {
     "id": "initiation-metier-secretaire-medicale",
-    "categorie": "SECRÉTARIAT MÉDICAL",
+    "categorie": "SECRÉTARIAT_MÉDICAL",
     "titre": "Initiation au Métier de Secrétaire Médicale",
     "description": "Cette formation introductive offre une introduction approfondie au métier de secrétaire médical, couvrant le secrétariat, le système médico-social, la biologie, l'imagerie médicale, et la préparation au concours.",
     "objectifs_pedagogiques": [
@@ -2173,7 +2173,7 @@ const formationsData = [
   },
   {
     "id": "demarrer-booster-micro-entreprise",
-    "categorie": "RECONVERSION PROFESSIONNELLE",
+    "categorie": "Entrepreneur",
     "titre": "Démarrer et Booster votre Micro-Entreprise",
     "description": "Avec cette formation, le porteur de projet sera en capacité d'appréhender les fondamentaux de la micro-entreprise, de créer sa micro-entreprise, de gérer sa comptabilité, sa trésorerie et le paiement de ses impôts. Il pourra également utiliser les outils à sa disposition, tels que les réseaux sociaux pour développer son activité.",
     "objectifs_pedagogiques": [
@@ -2195,7 +2195,7 @@ const formationsData = [
   },
   {
     "id": "creation-cabinet-infirmier-liberal",
-    "categorie": "RECONVERSION PROFESSIONNELLE",
+    "categorie": "RECONVERSION_PROFESSIONNELLE",
     "titre": "Création d'un Cabinet Infirmier Libéral",
     "description": "Cette formation aborde les aspects essentiels de l'installation et de la gestion d'une pratique libérale, couvrant les aspects juridiques, fiscaux, la gestion de cabinet, et la protection sociale. Elle offre une base solide pour les professionnels cherchant à réussir dans le domaine libéral.",
     "objectifs_pedagogiques": [
@@ -2216,7 +2216,7 @@ const formationsData = [
   },
   {
     "id": "essentiel-de-la-naturopathie",
-    "categorie": "RECONVERSION PROFESSIONNELLE",
+    "categorie": "RECONVERSION_PROFESSIONNELLE",
     "titre": "L'Essentiel de la Naturopathie",
     "description": "Cette formation offre une exploration approfondie des fondements de la naturopathie, dotant les apprenants des connaissances essentielles pour promouvoir le bien-être holistique. Grâce à des modules variés, elle permet d'acquérir des compétences pratiques en gestion de l'énergie, équilibre acido-basique, utilisation des plantes médicinales, favorisant ainsi une approche complète de la santé naturelle.",
     "objectifs_pedagogiques": [
@@ -2391,7 +2391,7 @@ const formationsData = [
   
   {
     "id": "html-css-debutant-expert",
-    "categorie": "DEVELOPPEMENT WEB",
+    "categorie": "DEVELOPPEMENT_WEB",
     "titre": "HTML5 et CSS3 de Débutant à Expert",
     "description": "Que vous vouliez créer un site web, ou utiliser un CMS comme WordPress ou développer des applications web, vous aurez besoin obligatoirement de passer par ces langages ! Vous apprendrez les bases de ces langages, puis les fonctionnalités avancées, enfin, nous réaliserons un site internet de présentation et nous le publierons en ligne chez un hébergeur gratuit afin de partager votre profil au plus grand nombre sur la toile.",
     "objectifs_pedagogiques": [
@@ -2414,7 +2414,7 @@ const formationsData = [
   },
   {
     "id": "javascript-fondamentaux",
-    "categorie": "DEVELOPPEMENT WEB",
+    "categorie": "DEVELOPPEMENT_WEB",
     "titre": "JavaScript - Les Fondamentaux",
     "description": "JavaScript est un langage informatique qui permet de dynamiser les sites Internet. Il s’associe donc à l’HTML et au CSS dans la création des pages web. Avec Javascript, vous pourrez par exemple modifier l’apparence d’un contenu sans repasser par le serveur, animer des images, contrôler du contenu multimédia. Avec cette formation, faites l’acquisition des notions de base de JavaScript et améliorer votre employabilité.",
     "objectifs_pedagogiques": [
@@ -2434,7 +2434,7 @@ const formationsData = [
   },
   {
     "id": "react-redux",
-    "categorie": "DEVELOPPEMENT WEB",
+    "categorie": "DEVELOPPEMENT_WEB",
     "titre": "Créer des Sites Interactifs avec React et Redux",
     "description": "Découvrez React, la bibliothèque JavaScript incontournable pour le développement web moderne. Apprenez ses fondamentaux, maîtrisez des concepts avancés tels que Redux, et appliquez vos compétences à travers des projets pratiques.",
     "objectifs_pedagogiques": [
@@ -2456,7 +2456,7 @@ const formationsData = [
   },
   {
     "id": "devenir-developpeur-python",
-    "categorie": "DEVELOPPEMENT WEB",
+    "categorie": "DEVELOPPEMENT_WEB",
     "titre": "Devenir un Développeur Python",
     "description": "Python est le nouveau langage de programmation en vogue, utilisé pour diverses applications : l’écriture de programmes, la manipulation de volumes importants de données, les serveurs web et même les nano ordinateurs Raspberry Pi. Que vous soyez un programmeur débutant ou expérimenté, cette formation vous fournira les compétences de base dans le langage Python.",
     "objectifs_pedagogiques": [
@@ -2476,7 +2476,7 @@ const formationsData = [
   },
   {
     "id": "devenir-developpeur-csharp",
-    "categorie": "DEVELOPPEMENT WEB",
+    "categorie": "DEVELOPPEMENT_WEB",
     "titre": "Devenir un Développeur C#",
     "description": "Dans cette formation, vous apprendrez les bases du C#, puis progressivement vous monterez en compétences pour enfin maîtriser ce fabuleux langage de programmation. Des questionnaires ainsi que des ateliers pratiques (avec corrigé) vous permettrons de tester vos compétences tout au long de cette formation. À la fin de ce cours, vous serez capable d’utiliser le C# et de créer des applications sous Mac, Windows ou encore Unity.",
     "objectifs_pedagogiques": [
@@ -2497,7 +2497,7 @@ const formationsData = [
   },
   {
     "id": "essentiel-wordpress-woocommerce",
-    "categorie": "DEVELOPPEMENT WEB",
+    "categorie": "DEVELOPPEMENT_WEB",
     "titre": "L’Essentiel de WordPress 5 et WooCommerce",
     "description": "WordPress est un logiciel libre utilisé pour créer des sites, des blogs ou des applications. Avec l’extension WooCommerce faites de votre site une boutique en ligne. Apprenez les fondamentaux pour créer un site web et une boutique en ligne personnalisés avec cette formation pour débutant.",
     "objectifs_pedagogiques": [
@@ -2519,7 +2519,7 @@ const formationsData = [
   },
   {
     "id": "essentiel-wordpress",
-    "categorie": "DEVELOPPEMENT WEB",
+    "categorie": "DEVELOPPEMENT_WEB",
     "titre": "L’Essentiel de WordPress 5",
     "description": "WordPress est un logiciel libre utilisé pour créer des sites, des blogs ou des applications. Apprenez les fondamentaux pour créer un site web avec cette formation pour débutant.",
     "objectifs_pedagogiques": [
@@ -2542,7 +2542,7 @@ const formationsData = [
   },
   {
     "id": "woocommerce",
-    "categorie": "DEVELOPPEMENT WEB",
+    "categorie": "DEVELOPPEMENT_WEB",
     "titre": "WooCommerce",
     "description": "Avec cette formation, apprenez les fondamentaux essentiels pour créer une boutique en ligne personnalisée avec l'extension WooCommerce. Vous développerez les compétences nécessaires pour concrétiser vos idées dans le domaine du e-commerce.",
     "objectifs_pedagogiques": [
@@ -2566,7 +2566,7 @@ const formationsData = [
   
   {
     "id": "storytelling-marketing",
-    "categorie": "VENTE / MARKETING DIGITAL",
+    "categorie": "VENTE_MARKETING_DIGITAL",
     "titre": "Le Storytelling",
     "description": "Explorez le pouvoir du storytelling dans le marketing à travers notre cours. Maîtrisez la boîte à outils du marketing narratif, apprenez les notions essentielles de la narration, perfectionnez votre communication client, et développez une histoire captivante pour affiner votre marque.",
     "objectifs_pedagogiques": [
@@ -2587,7 +2587,7 @@ const formationsData = [
   },
   {
     "id": "surmonter-les-objections",
-    "categorie": "VENTE / MARKETING DIGITAL",
+    "categorie": "VENTE_MARKETING_DIGITAL",
     "titre": "Surmonter les Objections",
     "description": "Cette formation dynamique 'Surmonter les objections' vise à renforcer vos compétences en communication, à anticiper et traiter efficacement les objections clients, ainsi qu'à conclure avec succès vos ventes en identifiant les signaux d'achat. Un programme essentiel pour maximiser votre impact commercial.",
     "objectifs_pedagogiques": [
@@ -2608,7 +2608,7 @@ const formationsData = [
   },
   {
     "id": "formation-email-marketing",
-    "categorie": "VENTE / MARKETING DIGITAL",
+    "categorie": "VENTE_MARKETING_DIGITAL",
     "titre": "Formation Email Marketing",
     "description": "Le marketing par courriel, aussi appelé Emailing, existera toujours. Il est essentiel pour les spécialistes du marketing, ainsi que les gérants de petites entreprises, les coachs, les consultants. Dans ce cours, vous apprendrez l’essentiel de la planification, de la création, et de la réalisation de campagnes de marketing par courriel réussies.",
     "objectifs_pedagogiques": [
@@ -2631,7 +2631,7 @@ const formationsData = [
   },
   {
     "id": "former-un-call-center",
-    "categorie": "VENTE / MARKETING DIGITAL",
+    "categorie": "VENTE_MARKETING_DIGITAL",
     "titre": "Former un Call Center",
     "description": "Le marketing par courriel, aussi appelé Emailing, existera toujours. Il est essentiel pour les spécialistes du marketing, ainsi que les gérants de petites entreprises, les coachs, les consultants. Dans ce cours, vous apprendrez l’essentiel de la planification, de la création, et de la réalisation de campagnes de marketing par courriel réussies.",
     "objectifs_pedagogiques": [
@@ -2654,7 +2654,7 @@ const formationsData = [
   },
   {
     "id": "dynamisez-vos-presentations-commerciales",
-    "categorie": "VENTE / MARKETING DIGITAL",
+    "categorie": "VENTE_MARKETING_DIGITAL",
     "titre": "Dynamisez vos Présentations Commerciales",
     "description": "Explorez l'art de rédiger des propositions convaincantes, recevez des conseils d'experts pour une correction efficace, perfectionnez vos compétences en présentation, et découvrez les secrets d'une tenue professionnelle. Une formation pratique pour exceller dans la communication d'affaires.",
     "objectifs_pedagogiques": [
@@ -2675,7 +2675,7 @@ const formationsData = [
   },
   {
     "id": "social-selling-petites-entreprises",
-    "categorie": "VENTE / MARKETING DIGITAL",
+    "categorie": "VENTE_MARKETING_DIGITAL",
     "titre": "Le Social Selling pour les Petites Entreprises",
     "description": "Optimisez votre approche de vente en ligne avec cette formation concrète et efficace. Explorez les étapes clés du social selling, de la recherche à l'établissement de relations, en passant par le partage de contenu. Adaptez ces stratégies à votre petite entreprise pour maximiser votre succès dans le monde numérique en constante évolution.",
     "objectifs_pedagogiques": [
@@ -2696,7 +2696,7 @@ const formationsData = [
   },
   {
     "id": "facebook-ads-debutant-a-expert",
-    "categorie": "VENTE / MARKETING DIGITAL",
+    "categorie": "VENTE_MARKETING_DIGITAL",
     "titre": "Facebook Ads : De Débutant à Expert Version 2022",
     "description": "De nos jours, le marketing sur les médias sociaux est devenu un indispensable dans la réflexion marketing d’une entreprise. Découvrez à travers cette formation d’actualité, comment adapter votre communication d’entreprise sur les réseaux, comment gagner du temps et optimiser vos actions au quotidien, et comment fédérer vos clients autour de votre entreprise et de vos produits.",
     "objectifs_pedagogiques": [
@@ -2717,7 +2717,7 @@ const formationsData = [
   },
   {
     "id": "gestion-des-reseaux-sociaux",
-    "categorie": "VENTE / MARKETING DIGITAL",
+    "categorie": "VENTE_MARKETING_DIGITAL",
     "titre": "Gestion des Réseaux Sociaux de Débutant à Expert 2022",
     "description": "Les réseaux sociaux sont devenus un outil incontournable dans la commercialisation des biens et services. Cette formation vous permettra d’acquérir les compétences fondamentales afin d’utiliser au mieux les réseaux sociaux dans une perspective professionnelle.",
     "objectifs_pedagogiques": [
@@ -2738,7 +2738,7 @@ const formationsData = [
   },
   {
     "id": "google-ads-essentiel",
-    "categorie": "VENTE / MARKETING DIGITAL",
+    "categorie": "VENTE_MARKETING_DIGITAL",
     "titre": "L'Essentiel de Google Ads",
     "description": "Que vous souhaitiez faire connaître vos produits ou services, votre marque, votre entreprise, votre site web, Google Ads est la solution incontournable qui vous permettra d’améliorer votre visibilité sur internet. Avec cette formation, apprenez à créer, optimiser et suivre vos performances de campagne dans la durée avec Google Ads.",
     "objectifs_pedagogiques": [
@@ -2760,7 +2760,7 @@ const formationsData = [
   },
   {
     "id": "risque-suicidaire-01",
-    "categorie": "SOINS INFIRMIERS",
+    "categorie": "SOINS_INFIRMIERS",
     "titre": "Prévention et Prise en Charge Infirmière du Risque Suicidaire",
     "description": "Cette formation sensibilise l’infirmier(ère) et lui donne des outils pour un dépistage et une prise en charge optimale du risque suicidaire. Acquérez les compétences essentielles pour comprendre, prévenir, et intervenir face à la crise suicidaire.",
     "objectifs_pedagogiques": [
@@ -2782,7 +2782,7 @@ const formationsData = [
   },
   {
     "id": "alzheimer-prise-en-charge-01",
-    "categorie": "SOINS INFIRMIERS",
+    "categorie": "SOINS_INFIRMIERS",
     "titre": "Alzheimer et Prise en Charge Infirmière",
     "description": "La maladie d'Alzheimer est une maladie neurodégénérative dont les causes ne sont pas formellement identifiées et pour laquelle il n’existe pas de traitement curatif. Cette formation offre une approche complète de la maladie d'Alzheimer, et permet également de développer des compétences d'évaluation et de transmission des informations, tout en explorant différentes orientations possibles dans la prise en charge.",
     "objectifs_pedagogiques": [
@@ -2804,7 +2804,7 @@ const formationsData = [
   },
   {
     "id": "prise-en-charge-douleur-01",
-    "categorie": "SOINS INFIRMIERS",
+    "categorie": "SOINS_INFIRMIERS",
     "titre": "La Prise en Charge Infirmière de la Douleur",
     "description": "De l’évaluation à l’accompagnement du patient, en passant par la mise en place de plan de soin, cette formation vise à apporter aux professionnels de santé les savoirs de base indispensables et les compétences appropriées, pour comprendre et prendre en charge le patient douloureux.",
     "objectifs_pedagogiques": [
@@ -2826,7 +2826,7 @@ const formationsData = [
   },
   {
     "id": "plaies-et-cicatrisation-01",
-    "categorie": "SOINS INFIRMIERS",
+    "categorie": "SOINS_INFIRMIERS",
     "titre": "Prise en Charge des Plaies et Cicatrisation",
     "description": "La formation « plaies et cicatrisation » aborde tous les aspects de la prise en charge des principales plaies dites complexes. Les différentes familles de pansements, les conseils d’utilisation et les éléments permettant de choisir le pansement adéquat sont étudiés, et ce en respectant le cadre législatif en vigueur.",
     "objectifs_pedagogiques": [
@@ -2848,7 +2848,7 @@ const formationsData = [
   },
   {
     "id": "abords-vasculaires-01",
-    "categorie": "SOINS INFIRMIERS",
+    "categorie": "SOINS_INFIRMIERS",
     "titre": "Abords Vasculaires & Soins Infirmiers à Domicile",
     "description": "Cette formation aborde tous les aspects de la prise en charge des principales plaies dites complexes. Les différentes familles de pansements, les conseils d’utilisation et les éléments permettant de choisir le pansement adéquat sont étudiés, et ce en respectant le cadre législatif en vigueur.",
     "objectifs_pedagogiques": [
@@ -2869,8 +2869,8 @@ const formationsData = [
     "image": AbordsVasculairesEtSoinsInfirmiersADomicile
   },  
   {
-    "id": "kiné-rehab-respiratoire-01",
-    "categorie": "KINÉSITHÉRAPIE",
+    "id": "kine-rehab-respiratoire-01",
+    "categorie": "KINESITHERAPIE",
     "titre": "Kinésithérapie en Réhabilitation Respiratoire",
     "description": "Cette formation vous permettra de voir ou revoir les notions d’insuffisance et de réhabilitation respiratoire, l’évaluation et le bilan du patient, le programme de réhabilitation et l’éducation du patient.",
     "objectifs_pedagogiques": [
@@ -2893,7 +2893,7 @@ const formationsData = [
   },
   {
     "id": "bilan-redflags-kine-respiratoire-01",
-    "categorie": "KINÉSITHÉRAPIE",
+    "categorie": "KINESITHERAPIE",
     "titre": "Bilans et Red-Flags en Kiné Respiratoire Ambulatoire",
     "description": "Cette formation vous permettra de développer ou mettre à jour vos compétences au regard des éléments de bilan et de surveillance des patients insuffisants respiratoires dans le cadre d’une prise en charge de ville ou ambulatoire.",
     "objectifs_pedagogiques": [
@@ -2913,8 +2913,8 @@ const formationsData = [
     "image": BilansEtRedFlags
   },
   {
-    "id": "levée-tensions-musculaires-01",
-    "categorie": "KINÉSITHÉRAPIE",
+    "id": "levee-tensions-musculaires-01",
+    "categorie": "KINESITHERAPIE",
     "titre": "Levée des Tensions Musculaires",
     "description": "Les tensions musculaires sont l’une des causes principales de consultation en kinésithérapie. Cette formation vous permettra de repérer et de traiter les tensions musculaires qui accompagnent la plupart des pathologies en rhumatologie notamment de type dégénérative, et tout particulièrement les algies rachidiennes, ainsi que les troubles musculo-squelettiques.",
     "objectifs_pedagogiques": [
@@ -2934,8 +2934,8 @@ const formationsData = [
     "image": LeveeDesTensionsMusculaires
   },
   {
-    "id": "rééducation-pelvi-perinéale-01",
-    "categorie": "KINÉSITHÉRAPIE",
+    "id": "reeducation-pelvi-perineale-01",
+    "categorie": "KINESITHERAPIE",
     "titre": "Rééducation Pelvi-Périnéale Féminine : Les Bases",
     "description": "Cette formation vous permettra de renforcer vos connaissances anatomiques liées au périnée afin d'améliorer la prise en charge des patientes présentant des troubles en pelvi-périnéologie et notamment des pathologies urinaires. La spécificité de la prise en charge post-partum sera décrite.",
     "objectifs_pedagogiques": [
@@ -2957,7 +2957,7 @@ const formationsData = [
   },
   {
     "id": "renforcement-abdominal-perinee-01",
-    "categorie": "KINÉSITHÉRAPIE",
+    "categorie": "KINESITHERAPIE",
     "titre": "Renforcement Abdominal et Santé du Périnée",
     "description": "Cette formation vise l’amélioration des connaissances des pratiques diagnostiques et thérapeutiques de la prise en charge des pathologies de la sphère abdominopelvienne. Elle permettra aux kinésithérapeutes d’agir sur le plan fonctionnel de ces pathologies et apporter l’amélioration de la qualité de vie des patients.",
     "objectifs_pedagogiques": [
@@ -2978,8 +2978,8 @@ const formationsData = [
     "image": RenforcementAbdominalPerinee
   },
   {
-    "id": "pathologies-épaule-01",
-    "categorie": "KINÉSITHÉRAPIE",
+    "id": "pathologies-epaule-01",
+    "categorie": "KINESITHERAPIE",
     "titre": "Prise en Charge des Pathologies de l'Épaule",
     "description": "Perfectionnez votre expertise en épaule avec notre formation ciblée. Explorez l'anatomie, diagnostiquez diverses pathologies, maîtrisez les évaluations cliniques, et apprenez des techniques de traitement kiné adaptées. Acquérez les compétences nécessaires pour personnaliser vos soins face à la diversité des affections de l'épaule.",
     "objectifs_pedagogiques": [
@@ -3000,7 +3000,7 @@ const formationsData = [
   },
   {
     "id": "pathologies-genou-01",
-    "categorie": "KINÉSITHÉRAPIE",
+    "categorie": "KINESITHERAPIE",
     "titre": "Prise en Charge des Pathologies du Genou",
     "description": "La problématique du genou réside dans la variété des blessures et des troubles qui peuvent affecter cette articulation cruciale. Les kinésithérapeutes doivent être en mesure de diagnostiquer et de traiter efficacement des problèmes tels que les entorses, les lésions ligamentaires, l'arthrose, et d'autres affections, tout en adaptant leurs protocoles de soins à chaque cas particulier.",
     "objectifs_pedagogiques": [
@@ -3021,7 +3021,7 @@ const formationsData = [
   },
   {
     "id": "atm-01",
-    "categorie": "KINÉSITHÉRAPIE",
+    "categorie": "KINESITHERAPIE",
     "titre": "Prise en Charge de l'ATM (Articulation Temporo-Mandibulaire)",
     "description": "L'articulation de l'appareil manducateur est un point d'intérêt majeur pour les kinésithérapeutes, ostéopathes et professionnels de la santé, car ses dysfonctionnements peuvent expliquer diverses pathologies. Cette formation explore les techniques myotensives et manipulatives, complétant ainsi l'évaluation locale et posturale, afin de proposer des solutions thérapeutiques efficaces.",
     "objectifs_pedagogiques": [
@@ -3042,7 +3042,7 @@ const formationsData = [
   },
   {
     "id": "lombalgie-01",
-    "categorie": "KINÉSITHÉRAPIE",
+    "categorie": "KINESITHERAPIE",
     "titre": "Prise en Charge de la Lombalgie",
     "description": "La problématique du genou réside dans la variété des blessures et des troubles qui peuvent affecter cette articulation cruciale. Les kinésithérapeutes doivent être en mesure de diagnostiquer et de traiter efficacement des problèmes tels que les entorses, les lésions ligamentaires, l'arthrose, et d'autres affections, tout en adaptant leurs protocoles de soins à chaque cas particulier.",
     "objectifs_pedagogiques": [
@@ -3064,7 +3064,7 @@ const formationsData = [
   },
   {
     "id": "cervicalgie-01",
-    "categorie": "KINÉSITHÉRAPIE",
+    "categorie": "KINESITHERAPIE",
     "titre": "Prise en Charge de la Cervicalgie",
     "description": "Avec cette formation, explorez une approche pratique des troubles cervicaux, des douleurs oro-faciales et dorsales. Apprenez des méthodes de bilan efficaces et des traitements simples. Le cours se concentre sur des compétences pratiques pour une gestion concrète des problèmes cervicaux.",
     "objectifs_pedagogiques": [
@@ -3086,7 +3086,7 @@ const formationsData = [
   },
   {
     "id": "pathologies-traumatiques-cheville-01",
-    "categorie": "KINÉSITHÉRAPIE",
+    "categorie": "KINESITHERAPIE",
     "titre": "Rééducation des Pathologies Traumatiques de la Cheville",
     "description": "Avec cette formation, vous acquerrez les compétences nécessaires pour rééduquer efficacement les pathologies traumatiques de la cheville. De la maîtrise de l'anatomie et de la biomécanique à la réalisation de diagnostics différentiels, vous serez prêt(e) à choisir les meilleures approches de rééducation et à appliquer des contenations adaptées.",
     "objectifs_pedagogiques": [
