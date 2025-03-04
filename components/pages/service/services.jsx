@@ -41,7 +41,7 @@ const ServicesMain = () => {
                         {Object.keys(groupedServices).length > 0 ? (
                             Object.keys(groupedServices).map((category, index) => (
                                 <div key={index} className="col-xl-12">
-                                    <h3 className="category-title mb-3">{category}</h3> {/* Titre de la catégorie */}
+                                    <h3 className="category-title mb-3">{category.replace(/_/g, ' ').toUpperCase()}</h3> {/* Titre de la catégorie */}
                                     <div className="row gy-4">
                                         {groupedServices[category].map((data, id) => (
                                             <div className="col-xl-4 col-lg-4 col-md-6" key={id}>

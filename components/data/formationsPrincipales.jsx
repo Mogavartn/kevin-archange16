@@ -123,6 +123,7 @@ import PriseEnChargeGenou from "../../public/assets/img/v1/Prise en Charge des P
 import ReeducationPathologiesCheville from "../../public/assets/img/v1/Rééducation des Pathologies Traumatiques de la Cheville.png";
 import ReeducationPelviPerinealeFeminine from "../../public/assets/img/v1/Rééducation Pelvi-Périnéale Féminine Les Bases.png";
 import RenforcementAbdominalPerinee from "../../public/assets/img/v1/Renforcement Abdominal et Santé du Périnée.png";
+import allemant from "../../public/assets/img/v1/allemant.jpg";
 
 
 
@@ -744,7 +745,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": anglais
+    "image": allemant
   },
   {
     "id": "arabe-debutant-a1-a2",
@@ -1154,7 +1155,7 @@ const formationsData = [
   },
   {
     "id": "adobe-premiere-pro-2020-2024",
-    "categorie": "VIDÉO",
+    "categorie": "VIDEO",
     "titre": "Adobe Premiere Pro 2020-2024",
     "description": "Cette formation vous guide dans la création et la gestion de projets vidéo, de l'organisation des fichiers à l'exportation finale. Vous découvrirez comment personnaliser l'interface pour un workflow plus efficace. De l'importation des médias au montage des séquences, chaque étape est expliquée en détail pour maîtriser l'essentiel du montage vidéo.",
     "objectifs_pedagogiques": [
@@ -1175,7 +1176,7 @@ const formationsData = [
   },
   {
     "id": "adobe-after-effects-2020-2024",
-    "categorie": "VIDÉO",
+    "categorie": "VIDEO",
     "titre": "Adobe After Effects 2020-2024",
     "description": "Cette formation sur After Effects vous initiera aux concepts essentiels de l'animation et du montage vidéo. Vous apprendrez à maîtriser l'interface, créer des compositions dynamiques, et travailler avec des effets visuels avancés tels que le tracking, le rotoscoping, et les calques 3D. À la fin de la formation, vous serez capable de produire des animations complexes et d'exporter des projets finalisés pour diverses plateformes.",
     "objectifs_pedagogiques": [
@@ -1891,7 +1892,7 @@ const formationsData = [
   
   {
     "id": "comptabilite-initiation-01",
-    "categorie": "COMPTABILITÉ",
+    "categorie": "COMPTABILITE",
     "titre": "Comptabilité - Initiation",
     "description": "Ce parcours de formation vous permettra d’acquérir les fondamentaux techniques de la comptabilité, incluant le bilan, le résultat, le débit-crédit, la TVA, et les SIG.",
     "objectifs_pedagogiques": [
@@ -1913,7 +1914,7 @@ const formationsData = [
   },
   {
     "id": "comptabilite-fondamentaux-01",
-    "categorie": "COMPTABILITÉ",
+    "categorie": "COMPTABILITE",
     "titre": "Comptabilité - Les Fondamentaux",
     "description": "Découvrez les fondamentaux de la comptabilité, du débutant au perfectionnement, en abordant des concepts clés de la comptabilité d'entreprise.",
     "objectifs_pedagogiques": [

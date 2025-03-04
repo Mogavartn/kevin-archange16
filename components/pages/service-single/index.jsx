@@ -9,6 +9,7 @@ import CategorieSingleMain from "./services-single";
 const CategorieSingle = ({serviceDetails}) => {
     const words = serviceDetails?.id.split(' ');
     const firstAndSecondWord = words?.slice(0, 2).join(' ');
+    console.log(firstAndSecondWord);
     return (
         <>
             <SEO pageTitle={serviceDetails?.title} />            
