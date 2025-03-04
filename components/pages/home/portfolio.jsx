@@ -1,4 +1,4 @@
-import formationData from "@/components/data/formationsPrincipales";
+import formationData from "@/components/data/categoriesPrincipale";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
 import Link from "next/link";
@@ -49,7 +49,7 @@ const Portfolio = () => {
                     </div>
                     <div className="col-xl-3 col-lg-4">
                         <div className="portfolio__one-content-right text-lg-end">
-                            <Link href="/services" className="btn-one">Toutes Nos Formations<i className="fas fa-arrow-right"></i></Link>
+                            <Link href="/categories" className="btn-one">Toutes Nos Formations<i className="fas fa-arrow-right"></i></Link>
                         </div>
                     </div>
                 </div>
@@ -58,10 +58,10 @@ const Portfolio = () => {
                 <Swiper modules={[Navigation, EffectFade, Autoplay]} {...slideControl} className="py-5">
                     {formationData?.map((data, id) => (
                         <SwiperSlide key={id} className="portfolio__one-single-portfolio single-portfolio">
-                            <Link href={`/services/${data.id}`}>
+                            <Link href={`/categories/${data.categorie}`}>
                             <img src={data.image.src} alt="image" />
                             <div className="portfolio__one-single-portfolio-content">
-                                <h4>{data.titre}</h4>
+                                <h4>{data.categorie}</h4>
                                 <span>{data.subtitle}</span>
                             </div>
                             </Link>
