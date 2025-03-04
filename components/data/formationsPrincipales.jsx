@@ -234,7 +234,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": word
+    "image": excel
   },
   {
     "id": "word-debutant",
@@ -298,7 +298,7 @@ const formationsData = [
       "audio_description": "Non",
       "sous_titrage": "Non"
     },
-    "image": powerpoint
+    "image": word
   },
   {
     "id": "powerpoint-365",
@@ -2348,7 +2348,7 @@ const formationsData = [
   {
     "id": "essentiel-rgpd",
     "categorie": "SECURITE",
-    "titre": "L'ESSENTIEL DU RGPD",
+    "titre": "L'essentiel du RGPD",
     "description": "Plongez dans l'univers du RGPD avec notre formation. Explorez les bases du RGPD, comprenez ses motivations et identifiez les parties prenantes. Découvrez l'importance de la conformité et maîtrisez les étapes clés pour y parvenir.",
     "objectifs_pedagogiques": [
       "Comprendre les fondements du RGPD.",
