@@ -29,7 +29,7 @@ const CategorieSingleMain = () => {
                                         </div>
                                         <div className="services__two-single-service-content formation-solution">
                                             <h4>{formation.titre}</h4> {/* Titre de la formation */}
-                                            <Link href={`/services/${formation.id}`} className="btn-one mb-20 ml-20">
+                                            <Link href={formation.lien ? formation.lien : `/services/${formation.id}`} className="btn-one mb-20 ml-20">
                                                 Voir plus
                                             </Link>
                                         </div>

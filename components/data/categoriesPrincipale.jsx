@@ -59,7 +59,7 @@ const categoriesData = [
   },
   {
     "id": "comptabilite-initiation-01",
-    "categorie": "COMPTABILITÉ",
+    "categorie": "COMPTABILITE",
     "image": comptabiliteImage
   },
   {
@@ -74,7 +74,7 @@ const categoriesData = [
   },
   {
     "id": "initiation-metier-secretaire-medicale",
-    "categorie": "SECRÉTARIAT_MÉDICAL",
+    "categorie": "SECRETARIAT_MEDICAL",
     "image": secretaireMedicalImage
   },
   {

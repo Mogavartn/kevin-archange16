@@ -124,6 +124,8 @@ import ReeducationPathologiesCheville from "../../public/assets/img/v1/Rééduca
 import ReeducationPelviPerinealeFeminine from "../../public/assets/img/v1/Rééducation Pelvi-Périnéale Féminine Les Bases.png";
 import RenforcementAbdominalPerinee from "../../public/assets/img/v1/Renforcement Abdominal et Santé du Périnée.png";
 import allemant from "../../public/assets/img/v1/allemant.jpg";
+import creationentreprise from "../../public/assets/img/v1/créationentreprise.jpg";
+
 
 
 
@@ -1197,7 +1199,7 @@ const formationsData = [
   },
   {
     "id": "bâtir-estime-confiance-soi",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "BÂTIR SON ESTIME DE SOI ET SA CONFIANCE EN SOI",
     "description": "Renforcez votre estime de soi, gagnez en confiance et apprenez les clés de l'affirmation de soi. Bâtissez votre autonomie et découvrez comment créer la vie que vous souhaitez. Rejoignez-nous pour ce parcours enrichissant vers une meilleure version de vous-même.",
     "objectifs_pedagogiques": [
@@ -1218,7 +1220,7 @@ const formationsData = [
   },
   {
     "id": "gestion-du-stress",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "GESTION DU STRESS",
     "description": "Avec ce parcours concis et efficace, découvrez les clés pour comprendre et maîtriser le stress dans ce cours. Identifiez les sources de stress, apprenez des techniques de gestion et développez des stratégies mentales pour vous adapter aux défis quotidiens.",
     "objectifs_pedagogiques": [
@@ -1239,7 +1241,7 @@ const formationsData = [
   },
   {
     "id": "utiliser-voix-pour-convaincre",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "UTILISER SA VOIX POUR CONVAINCRE",
     "description": "Découvrez les secrets de l'utilisation persuasive de votre voix dans ce cours. Explorez les bases physiologiques, maîtrisez l'art de convaincre par la voix, explorez la dimension corporelle et apprenez à perfectionner votre expression vocale.",
     "objectifs_pedagogiques": [
@@ -1259,7 +1261,7 @@ const formationsData = [
   },
   {
     "id": "langage-non-verbal",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "LE LANGAGE NON VERBAL",
     "description": "Explorez les nuances de la communication non verbale avec ce cours. Maîtrisez l'art des expressions faciales, découvrez le pouvoir du sourire et du contact visuel, adoptez une posture affirmée, et apprenez à décoder le langage non verbal des autres. Des compétences essentielles pour une communication impactante.",
     "objectifs_pedagogiques": [
@@ -1280,7 +1282,7 @@ const formationsData = [
   },
   {
     "id": "secrets-body-language",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "LES SECRETS DU BODY LANGAGE",
     "description": "Développez votre compréhension du langage corporel, améliorez votre présence avec des exercices pratiques et découvrez l'impact de votre posture et de votre apparence dans cette formation.",
     "objectifs_pedagogiques": [
@@ -1301,7 +1303,7 @@ const formationsData = [
   },
   {
     "id": "maitriser-communication",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "MAÎTRISER VOTRE COMMUNICATION",
     "description": "Ce cours dynamique vise à renforcer vos compétences en communication pour établir des relations positives. Explorez la conscience de soi, surmontez les obstacles à une communication efficace, et développez des aptitudes essentielles telles que la capacité à poser des questions, l'écoute active, la lecture du langage corporel, et l'adaptation aux divers styles de communication.",
     "objectifs_pedagogiques": [
@@ -1322,7 +1324,7 @@ const formationsData = [
   },
   {
     "id": "se-presenter-10-min",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "SE PRÉSENTER EN 10 MINUTES",
     "description": "Optimisez vos compétences en présentation avec ce cours dédié à l'identification des points de convergence essentiels. Apprenez à sélectionner les éléments clés, à rédiger et peaufiner une présentation percutante, et adoptez un plan stratégique pour accroître votre succès lors de vos interventions.",
     "objectifs_pedagogiques": [
@@ -1342,7 +1344,7 @@ const formationsData = [
   },
   {
     "id": "construire-son-personal-branding",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "CONSTRUIRE SON PERSONAL BRANDING",
     "description": "Explorez les éléments clés de la construction de votre marque personnelle. De l'importance de la crédibilité à la gestion de votre présence sur les réseaux sociaux, cette formation couvre les aspects essentiels pour renforcer votre influence et réussir dans votre carrière.",
     "objectifs_pedagogiques": [
@@ -1363,7 +1365,7 @@ const formationsData = [
   },
   {
     "id": "maitriser-la-pensee-critique",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "MAITRISER LA PENSÉE CRITIQUE",
     "description": "Cette formation vous plonge dans l'univers de la pensée critique, vous aidant à comprendre son processus, à éviter les pièges de la prise de décisions, et à développer des compétences essentielles pour un raisonnement approfondi. Explorez les systèmes de pensée critique et créative pour enrichir votre approche intellectuelle.",
     "objectifs_pedagogiques": [
@@ -1384,7 +1386,7 @@ const formationsData = [
   },
   {
     "id": "decouvrir-la-pnl",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "DÉCOUVRIR LA PNL",
     "description": "Découvrez la PNL : langage corporel, questions claires, langage hypnotique. Maîtrisez l'art du rapport, créez des résultats concrets et optimisez votre état d'esprit. Une formation pratique pour améliorer votre communication.",
     "objectifs_pedagogiques": [
@@ -1405,7 +1407,7 @@ const formationsData = [
   },
   {
     "id": "reussir-vos-presentations-pour-convaincre",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "RÉUSSIR VOS PRÉSENTATIONS POUR CONVAINCRE",
     "description": "Explorez les fondamentaux de la communication, perfectionnez votre voix et votre discours, favorisez l'harmonie dans les réunions, et renforcez vos compétences en écriture pour une communication efficace.",
     "objectifs_pedagogiques": [
@@ -1426,7 +1428,7 @@ const formationsData = [
   },
   {
     "id": "reussir-votre-presentation-virtuelle",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "RÉUSSIR VOTRE PRÉSENTATION VIRTUELLE",
     "description": "Cette formation vous enseigne les clés du succès des présentations virtuelles, en abordant les spécificités, les compétences essentielles, et les outils tels que Zoom, Microsoft Teams, Gotomeeting, et Google Meet.",
     "objectifs_pedagogiques": [
@@ -1447,7 +1449,7 @@ const formationsData = [
   },
   {
     "id": "parler-en-public-gerer-la-pression",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "PARLER EN PUBLIC - GÉRER LA PRESSION",
     "description": "Perfectionnez votre aptitude à planifier, analyser, gérer le stress et utiliser la communication non verbale pour des présentations percutantes et captivantes avec cette formation concise et efficace.",
     "objectifs_pedagogiques": [
@@ -1468,7 +1470,7 @@ const formationsData = [
   },
   {
     "id": "gestion-du-stress",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "GESTION DU STRESS",
     "description": "Avec ce parcours concis et efficace, découvrez les clés pour comprendre et maîtriser le stress dans ce cours. Identifiez les sources de stress, apprenez des techniques de gestion et développez des stratégies mentales pour vous adapter aux défis quotidiens.",
     "objectifs_pedagogiques": [
@@ -1489,7 +1491,7 @@ const formationsData = [
   },
   {
     "id": "l-ecoute-active",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "L’ÉCOUTE ACTIVE",
     "description": "Perfectionnez votre communication en apprenant l'écoute active, la lecture du langage corporel, l'adoption d'une attitude positive, et la promotion de conversations constructives pour des relations solides.",
     "objectifs_pedagogiques": [
@@ -1510,7 +1512,7 @@ const formationsData = [
   },
   {
     "id": "conquerir-tous-les-publics",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "CONQUÉRIR TOUS LES PUBLICS",
     "description": "Développez des compétences solides en communication et en relations interpersonnelles, améliorez vos aptitudes à converser, identifiez vos forces et adoptez un professionnalisme accru pour maximiser l'efficacité de vos réunions.",
     "objectifs_pedagogiques": [
@@ -1531,7 +1533,7 @@ const formationsData = [
   },
   {
     "id": "reussir-son-entretien",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "RÉUSSIR SON ENTRETIEN",
     "description": "Avec cette formation, perfectionnez vos compétences pour briller lors de vos entretiens, que ce soit en personne ou à distance. Apprenez à vous présenter de manière percutante, à soigner votre image, et à aborder ces moments clés avec confiance et sérénité.",
     "objectifs_pedagogiques": [
@@ -1552,7 +1554,7 @@ const formationsData = [
   },
   {
     "id": "maitriser-les-relations-publiques",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "MAITRISER LES RELATIONS PUBLIQUES",
     "description": "Cette formation sur les relations publiques vous guidera à travers les aspects essentiels de la gestion proactive de l'image et de la communication d'une organisation. De l'élaboration de plans stratégiques à la gestion des médias et aux réseaux sociaux, vous acquerrez les compétences nécessaires pour maîtriser efficacement les relations publiques dans divers contextes.",
     "objectifs_pedagogiques": [
@@ -1573,7 +1575,7 @@ const formationsData = [
   },
   {
     "id": "intelligence-emotionnelle",
-    "categorie": "SOFT SKILLS",
+    "categorie": "SOFT_SKILLS",
     "titre": "INTELLIGENCE ÉMOTIONNELLE",
     "description": "Enrichissez vos compétences émotionnelles avec cette formation, allant de l'historique de l'intelligence émotionnelle à la définition de votre propre vision, tout en explorant des concepts clés comme l'optimisme et la compréhension émotionnelle.",
     "objectifs_pedagogiques": [
@@ -2152,7 +2154,7 @@ const formationsData = [
   
   {
     "id": "initiation-metier-secretaire-medicale",
-    "categorie": "SECRÉTARIAT_MÉDICAL",
+    "categorie": "SECRETARIAT_MEDICAL",
     "titre": "Initiation au Métier de Secrétaire Médicale",
     "description": "Cette formation introductive offre une introduction approfondie au métier de secrétaire médical, couvrant le secrétariat, le système médico-social, la biologie, l'imagerie médicale, et la préparation au concours.",
     "objectifs_pedagogiques": [
@@ -2171,6 +2173,30 @@ const formationsData = [
       "sous_titrage": "Non"
     },
     "image": initiationMetierSecretaireMedicale
+  },
+  {
+    "id": "demarrer-booster-micro-entreprise",
+    "categorie": "Entrepreneur",
+    "titre": "Créez votre ENTREPRISE et Lancez votre ACTIVITÉ avec SUCCÈS ! 🚀",
+    "description": "Avec cette formation, le porteur de projet sera en capacité d'appréhender les fondamentaux de la micro-entreprise, de créer sa micro-entreprise, de gérer sa comptabilité, sa trésorerie et le paiement de ses impôts. Il pourra également utiliser les outils à sa disposition, tels que les réseaux sociaux pour développer son activité.",
+    "objectifs_pedagogiques": [
+      "Connaitre le fonctionnement de la micro-entreprise (fiscal et social)",
+      "Elaborer son projet de création d'entreprise",
+      "Mettre en place une organisation administrative et comptable",
+      "Préparer les démarches et le dossier d'immatriculation",
+      "Apprendre à utiliser les réseaux sociaux pour booster sa micro-entreprise"
+    ],
+    "niveau": "Initiation",
+    "public": "Tous publics",
+    "duree": "11h environ",
+    "prerequis": "Aucun prérequis",
+    "accessibilite": {
+      "audio_description": "Non",
+      "sous_titrage": "Non"
+    },
+    "image": creationentreprise,
+    "lien":"https://www.formation.kevin-attallah.com/formation-creation-entreprise",
+    "target ":"_blank"
   },
   {
     "id": "demarrer-booster-micro-entreprise",
