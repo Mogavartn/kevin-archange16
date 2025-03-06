@@ -38,7 +38,7 @@ const FormationCreation = () => {
                             <div className="about__two-content">
                                 <span className="subtitle-one">Créez votre entreprise</span>
                                 <h2>Créez votre entreprise et lancez votre activité avec succès ! 🚀</h2>
-                                <p>On vous montre comment créer un business qui cartonne..</p>
+                                <p className="text-start">On vous montre comment créer un business qui cartonne.</p>
                                 <div className="about__two-content-service">
                                     <div className="service">
                                         <i className="far fa-check-circle"></i>

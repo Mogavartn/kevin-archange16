@@ -2195,7 +2195,7 @@ const formationsData = [
       "sous_titrage": "Non"
     },
     "image": creationentreprise,
-    "lien":"https://www.formation.kevin-attallah.com/formation-creation-entreprise",
+    "lien":"/business",
     "target ":"_blank"
   },
   {
