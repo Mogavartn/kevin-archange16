@@ -13,7 +13,7 @@ const ChooseFour = () => {
                             <div className="why-choose-us__three-title">
                                 <span className="subtitle-one">Prêt à réussir avec nous ?</span>
                                 <h2>Une méthode qui a fait ses preuves 🔥</h2>
-                                <p>Avec plus de 2 100 entrepreneurs accompagnés, notre méthode basée sur l’Ikigai vous aide à
+                                <p>Avec plus de 2 100 entrepreneurs accompagnés, notre méthode basée sur l’Ikigaï vous aide à
                                 connecter votre passion, vos talents et vos valeurs. <br/> Bonus ? 🎁 <br />Des solutions de financement
                                 accessibles 💰 , parfois sans reste à charge !</p>
                             </div>
