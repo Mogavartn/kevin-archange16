@@ -115,26 +115,6 @@ body {
   background-size: 100%; /* Taille initiale de l'image (100%) */
   position: relative;
 }
-@media (max-width: 768px) {
-  body {
-  overflow-x: hidden; /* Empêche les débordements horizontaux */
-  text-transform: capitalize;
-  background:var(--primary-color-1) url(../img/video/2560x1440-bgT1.webp) no-repeat center center fixed;
-  background-size: 10000%; /* Taille initiale de l'image (100%) */
-  position: relative;
-  }
-}
-@media (max-width: 480px) {
-  body {
-    
-    overflow-x: hidden; /* Empêche les débordements horizontaux */
-  text-transform: capitalize;
-  background:var(--primary-color-1) url(../img/video/2560x1440-bgT1.webp) no-repeat center center fixed;
-  background-size: 10000%; /* Taille initiale de l'image (100%) */
-  position: relative;
-
-  }
-}
 #contentAccueil {
   position: relative;
   background: url(../img/video/2560x1440-bgT1.webp) no-repeat center center fixed;
@@ -376,7 +356,6 @@ p {
   margin: 0;
   color: var(--text-white);
   text-transform: none;
-  text-align: justify;
 }
 
 .t-left {
@@ -396,11 +375,25 @@ p {
     font-size: 45px;
     line-height: 55px;
   }
+  body {
+    overflow-x: hidden; /* Empêche les débordements horizontaux */
+    text-transform: capitalize;
+    background:var(--primary-color-1) url(../img/video/2560x1440-bgT1.webp) no-repeat center center fixed;
+    background-size: 10000%; /* Taille initiale de l'image (100%) */
+    position: relative;
+  }
 }
 @media (max-width: 767px) {
   h2 {
     font-size: 38px;
     line-height: 50px;
+  }
+  body {
+    overflow-x: hidden; /* Empêche les débordements horizontaux */
+    text-transform: capitalize;
+    background:var(--primary-color-1) url(../img/video/2560x1440-bgT1.webp) no-repeat center center fixed;
+    background-size: 10000%; /* Taille initiale de l'image (100%) */
+    position: relative;
   }
 }
 @media (max-width: 420px) {
@@ -411,6 +404,13 @@ p {
   h3 {
     font-size: 28px;
     line-height: 38px;
+  }
+  body {
+    overflow-x: hidden; /* Empêche les débordements horizontaux */
+    text-transform: capitalize;
+    background:var(--primary-color-1) url(../img/video/2560x1440-bgT1.webp) no-repeat center center fixed;
+    background-size: 10000%; /* Taille initiale de l'image (100%) */
+    position: relative;
   }
 }
 @media (max-width: 359px) {
@@ -433,6 +433,13 @@ p {
   h6 {
     font-size: 18px;
     line-height: 28px;
+  }
+  body {
+    overflow-x: hidden; /* Empêche les débordements horizontaux */
+    text-transform: capitalize;
+    background:var(--primary-color-1) url(../img/video/2560x1440-bgT1.webp) no-repeat center center fixed;
+    background-size: 10000%; /* Taille initiale de l'image (100%) */
+    position: relative;
   }
 }
 /*==========================================================================
@@ -5500,7 +5507,7 @@ Responsive Menu Css
   padding: 20px 50px;
 }
 .skill__two-tab-details-content h2 {
-  font-size: 42px;
+  font-size: 40px;
   margin-bottom: 0px;
   text-transform: none;  
 }
@@ -5514,7 +5521,6 @@ Responsive Menu Css
   margin-bottom: -35px;
   padding-top: 10px;
   padding: 5px 50px;
-  text-align: justify;
 }
 .skill__two-tab-details-content .btn-one-busn1{
   position: relative;
