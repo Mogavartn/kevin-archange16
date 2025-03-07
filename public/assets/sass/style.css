@@ -372,7 +372,7 @@ p {
 
 @media (max-width: 1399px) {
   h2 {
-    font-size: 45px;
+    font-size: 30px;
     line-height: 55px;
   }
   body {
@@ -385,7 +385,7 @@ p {
 }
 @media (max-width: 767px) {
   h2 {
-    font-size: 38px;
+    font-size: 27px;
     line-height: 50px;
   }
   body {
@@ -398,7 +398,7 @@ p {
 }
 @media (max-width: 420px) {
   h2 {
-    font-size: 31px;
+    font-size: 27px;
     line-height: 41px;
   }
   h3 {
@@ -4350,14 +4350,14 @@ Responsive Menu Css
     top: 91%;
     left: 38%;
     z-index: 100;
-    font-size: 14px;
+    font-size: 10px;
   }
   .banner__one-image-wrapper .video-play-btn-one{
     position: absolute;
     top: 86%;
     left: 50%;
-    width: 50px;
-    height: 50px; 
+    width: 35px;
+    height: 35px; 
   }
 }
 
