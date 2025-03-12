@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 
 const PortfolioDetailsMain = ({ singleData }) => {
   const router = useRouter();
-  const [amount, setAmount] = useState(singleData?.formation?.prix || 0.01 * 100); // Montant dynamique
+  const [amount, setAmount] = useState(singleData?.formation?.prix || 69 * 100); // Montant dynamique
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // État de chargement
   const [error, setError] = useState(null); // Gestion des erreurs
