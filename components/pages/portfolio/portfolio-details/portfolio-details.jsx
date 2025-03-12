@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 
 const PortfolioDetailsMain = ({ singleData }) => {
   const router = useRouter();
-  const [amount, setAmount] = useState(singleData?.formation?.prix || 69 * 100); // Montant dynamique
+  const [amount, setAmount] = useState(singleData?.formation?.prix || 69); // Montant dynamique
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // État de chargement
   const [error, setError] = useState(null); // Gestion des erreurs
@@ -83,7 +83,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <li>niveau: <span> {singleData.niveau}</span></li>
               <li>public: <span> {singleData.public}</span></li>
               <li>duree: <span> {singleData.duree}</span></li>
-              <li>Prix: <span className="value"> {amount / 100} €</span></li> {/* Affiche le prix dynamique */}
+              <li>Prix: <span className="value"> {amount} €</span></li> {/* Affiche le prix dynamique */}
               <li>
                 <button onClick={createOrder} className="btn-one" disabled={isLoading}>
                   {isLoading ? 'Traitement...' : 'Acheter'}
