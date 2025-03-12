@@ -10,7 +10,7 @@ const ScrollAnimationBackground = () => {
 
     // Animation de l'arrière-plan : passer de 100% à 200% de taille lentement
     gsap.to("body", {
-      backgroundSize: "300%", // On veut que l'arrière-plan atteigne 200% à la fin du défilement
+      backgroundSize: "1200%", // On veut que l'arrière-plan atteigne 200% à la fin du défilement
       ease: "bounce.out", // Effet de rebond à la fin de l'animation
       scrollTrigger: {
         trigger: "body", // Le déclencheur est l'élément body

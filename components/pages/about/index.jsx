@@ -10,10 +10,14 @@ import Features from "../home/features";
 import Testimonial from "../home/testimonial";
 import ChooseFour from "../home/choose-us";
 import WorkArea from "../home/work";
+import ScrollAnimationBackground from "@/components/ScrollAnimationBackground";
 
 const AboutUs = () => {
     return (
       <>
+        {/* <div>
+              <ScrollAnimationBackground />
+          </div> */}
         <SEO pageTitle="À propos de nous" />
         <HeaderOne />
         <BreadCrumb title="À propos de nous" innerTitle="À propos dde nous" />
