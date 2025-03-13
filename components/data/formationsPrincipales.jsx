@@ -1,4 +1,3 @@
-import portfolioImage6 from "../../public/assets/img/portfolio/portfolio-6.jpg";
 import accompagnement from "../../public/assets/img/v1/02-accompagnement.jpg";
 import anglais from "../../public/assets/img/v1/03-anglais.jpg";
 import comptable from "../../public/assets/img/v1/04-comptable.jpg";
