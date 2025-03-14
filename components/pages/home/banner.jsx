@@ -33,7 +33,7 @@ const BannerOne = () => {
                                 <div className="grid grid-cols-1 gap-10 justify-content-between">
                                     <Link href="/business" className="btn-two mb-10  teste">👉 Je veux lancer mon business
                                     </Link>
-                                    <Link href="/services" className="btn-one ml-10 ">👉 Je veux me former
+                                    <Link href="/categories" className="btn-one ml-10 ">👉 Je veux me former
                                     </Link>                                
                                 </div>                                
                             </div>
