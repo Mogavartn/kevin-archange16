@@ -1,6 +1,6 @@
 import image1 from "../../../public/assets/img/about/about-three.png";
 import image2 from "../../../public/assets/img/about/about-two-2.png";
-import image3 from "../../../public/assets/img/about/about-two-3.png";
+import image3 from "../../../public/assets/img/about/about-two-3.webp";
 import Link from "next/link";
 
 const FormationCreation = () => {
@@ -53,7 +53,7 @@ const FormationCreation = () => {
                                         <span>Tarif Unique.</span>
                                     </div>
                                 </div>
-                                <Link href="https://www.formation.kevin-attallah.com/formation-creation-entreprise" className="btn-one" target="_blank">👉 Devenir Entrepreneur</Link>
+                                <Link href="/categories/Entrepreneur" className="btn-one">👉 Devenir Entrepreneur</Link>
                             </div>
                         </div>
                     </div>

@@ -2176,7 +2176,7 @@ const formationsData = [
   {
     "id": "demarrer-booster-micro-entreprise",
     "categorie": "Entrepreneur",
-    "titre": "Créez votre ENTREPRISE et Lancez votre ACTIVITÉ avec SUCCÈS ! 🚀",
+    "titre": "Démarrer et Booster votre Micro-Entreprise",
     "description": "Avec cette formation, le porteur de projet sera en capacité d'appréhender les fondamentaux de la micro-entreprise, de créer sa micro-entreprise, de gérer sa comptabilité, sa trésorerie et le paiement de ses impôts. Il pourra également utiliser les outils à sa disposition, tels que les réseaux sociaux pour développer son activité.",
     "objectifs_pedagogiques": [
       "Connaitre le fonctionnement de la micro-entreprise (fiscal et social)",
