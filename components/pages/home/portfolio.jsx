@@ -61,7 +61,7 @@ const Portfolio = () => {
                             <Link href={`/categories/${data.categorie}`}>
                             <img src={data.image.src} alt="image" />
                             <div className="portfolio__one-single-portfolio-content">
-                                <h4>{data.categorie}</h4>
+                                <h4>{data.categorie.replace(/_/g, ' ').toUpperCase()}</h4>
                                 <span>{data.subtitle}</span>
                             </div>
                             </Link>
