@@ -3,8 +3,8 @@ import SEO from "@/components/data/seo";
 import HeaderOne from "@/components/layout/headers/header/header-one";
 import BreadCrumb from "../../common/breadcrumb";
 import ThreeColumns from "./three-columns";
-import FooterOne from "@/components/layout/footers/footer-one";
 import ScrollToTop from "../../common/scroll/scroll-to-top";
+import FooterThree from "@/components/layout/footers/footer-three";
 
 const PortfolioThreeColumns = () => {
     return (
@@ -13,7 +13,7 @@ const PortfolioThreeColumns = () => {
             <HeaderOne />
             <BreadCrumb title="03 Columns" innerTitle="Portfolio Grid" />
             <ThreeColumns />        
-            <FooterOne />          
+            <FooterThree />          
             <ScrollToTop />
         </>
     );

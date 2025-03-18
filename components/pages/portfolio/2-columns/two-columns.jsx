@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import portfolioData from '../../../data/listesFormation';
+import portfolioData from '../../../data/categoriesPrincipale';
 import Link from 'next/link';
 
 const showPortfolioItem = 4;

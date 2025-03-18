@@ -2,10 +2,10 @@
 import SEO from "@/components/data/seo";
 import HeaderOne from "@/components/layout/headers/header-one";
 import BreadCrumb from "../../common/breadcrumb";
-import FooterOne from "@/components/layout/footers/footer-one";
 import FourColumns from "./four-columns";
 import ScrollToTop from "../../common/scroll/scroll-to-top";
 import SwitchTab from "../../common/dark-light";
+import FooterThree from "@/components/layout/footers/footer-three";
 
 const PortfolioFourColumns = () => {
     return (
@@ -15,7 +15,7 @@ const PortfolioFourColumns = () => {
             <HeaderOne />
             <BreadCrumb title="04 Columns" innerTitle="Portfolio Grid" />
             <FourColumns />        
-            <FooterOne />     
+            <FooterThree />     
             <ScrollToTop />     
         </>
     );
