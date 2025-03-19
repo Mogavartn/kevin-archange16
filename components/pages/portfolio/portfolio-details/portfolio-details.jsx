@@ -2,6 +2,11 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import testimonialBg from "../../../../public/assets/img/testimonial/testimonial.png";
+import Link from 'next/link';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Autoplay, Navigation} from 'swiper/modules';
+import quoteIcon from "../../../../public/assets/img/testimonial/testimonial-quote.png";
 
 const PortfolioDetailsMain = ({ singleData }) => {
   const router = useRouter();
@@ -61,12 +66,38 @@ const PortfolioDetailsMain = ({ singleData }) => {
     }
   };
 
+    const slideControl = {
+      loop: true,
+      spaceBetween: 30,
+      slidesPerView: 1,
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },			
+      autoplay: {
+          delay: 4000,
+          reverseDirection: false,
+          disableOnInteraction: false,
+      },
+      breakpoints: {
+          768: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+          },
+          1200: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+          },
+      }
+  };
+
   return (
     <div className="skill__two-tab-details-content mt-5 mb-5">
-      <div className="row justify-content-center gy-4">
+      <div className="row justify-content-center gy-4 ">
         <div className="col-xl-7">
           <div className="">
             <h2 className="text-center">{singleData?.titre}</h2>
+            <p className="mb-1 fw-bold fs-5">{singleData.description1}</p>
             <p>{singleData.description}</p>
           </div>
           <div className="image-formation">
@@ -86,10 +117,12 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <li>Prix: <span className="value"> {amount} €</span></li> {/* Affiche le prix dynamique */}
               <li>
                 <button onClick={createOrder} className="btn-one" disabled={isLoading}>
-                  {isLoading ? 'Traitement...' : 'Acheter'}
-                  <i className="fas fa-arrow-right"></i>
+                  {isLoading ? 'Traitement...' : 'Acheter Maintenant 🔥'}
+                  {/* <i className="fas fa-arrow-right"></i> */}
                 </button>
+                <p className="Bonus">Bonus : Inscrivez-vous aujourd’hui et recevez un guide gratuit des 100 phrases essentielles en anglais !</p>
               </li>
+             
               {error && <li className="text-danger">{error}</li>} {/* Affichage des erreurs */}
             </ul>
             <div className="btn-achat-formation">
@@ -107,7 +140,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
           </div>
           <div className="project-info mt-20">
             <div className="project-info-top">
-              <h4>Objectifs pedagogiques</h4>
+              <h4>Ce que vous allez maîtriser :</h4>
             </div>
             <ul>
               <div>
@@ -121,6 +154,63 @@ const PortfolioDetailsMain = ({ singleData }) => {
           </div>
         </div>
       </div>
+
+    {/*   <div className="row">
+                    <div className="col-xl-6 col-lg-6">
+                        <div className="testimonial__two-left" style={{backgroundImage: `url(${testimonialBg.src})`}}></div>
+                    </div>
+                    <div className="col-xl-6 col-lg-6">
+                        <div className="testimonial__two-right">
+                        <Swiper modules={[EffectFade, Autoplay, Navigation]} {...slideControl}>
+                            <SwiperSlide>
+                                <div className="single-slider">
+                                    <div className="single-slider-user">
+                                        <div className="single-slider-user-name">
+                                            <h4>Nasir Al Shakib</h4>
+                                            <span>Content Creator</span>
+                                        </div>
+                                    </div>
+									<p>Their product exceeded his my ro expectationsa  The the quality and attention to  moutstandin an  and it has become an essential active</p>
+                                    <div className="single-slider-user-rating mt-30">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star not-rated"></i>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="single-slider">
+                                    <div className="single-slider-user">
+                                        <div className="single-slider-user-name">
+                                            <h4>Devon Lane</h4>
+                                            <span>Marketing</span>
+                                        </div>
+                                    </div>
+									<p>Their product exceeded his my ro expectationsa  The the quality and attention to  moutstandin an  and it has become an essential active</p>
+                                    <div className="single-slider-user-rating mt-30">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star not-rated"></i>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
+                            <div className="testimonial__two-right-bottom">
+                                <div className="slider-arrow">
+                                    <i className="swiper-button-prev fas fa-arrow-left"></i>
+                                    <i className="swiper-button-next fas fa-arrow-right"></i>
+                                </div>
+							<div className="slider-quote">
+								<img src={quoteIcon.src} alt="image" />
+							</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
     </div>
   );
 };

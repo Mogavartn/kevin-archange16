@@ -5520,7 +5520,15 @@ Responsive Menu Css
   text-transform: none;
   margin-bottom: -35px;
   padding-top: 10px;
-  padding: 5px 50px;
+  padding: 5px 5px;
+}
+.skill__two-tab-details-content .Bonus{
+  color: var(--primary-color-3);
+  text-transform: none;
+  font-size: 13px;  
+  padding-top: 10px;
+  padding: 5px 5px;
+  font-style: italic;
 }
 .skill__two-tab-details-content .btn-one-busn1{
   position: relative;
