@@ -1,20 +1,20 @@
 "use client"
 import { useParams, useRouter } from "next/navigation";
-import dataFormation from '@/components/data/formationsPrincipales';
-
+import portfolioData from '@/components/data/categoriesPrincipale';
 import CategorieSingle from "@/components/pages/service-single";
 
 
 const ServiceDetails = () => {
-   // Récupération des paramètres d'URL
-   const params = useParams();
-   const categoryId = params.id; // L'ID de la catégorie est passé dans l'URL
+    const params = useParams();
+    const singleData = portfolioData?.find((portfolio) => portfolio.categorie === params.id);
+    const router = useRouter();
+    if (!singleData) {
+        return router.push("/404-error");
+    }
 
-   // Filtrer les formations par catégorie
-   const formationsInCategory = dataFormation.filter((formation) => formation.categorie === categoryId);
     return (
         <>
-            <CategorieSingle singleData={formationsInCategory}/>
+            <CategorieSingle singleData={singleData}/>
         </>
     );
 };

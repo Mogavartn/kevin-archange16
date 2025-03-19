@@ -6,15 +6,14 @@ import ScrollToTop from "../common/scroll/scroll-to-top";
 import FooterThree from "@/components/layout/footers/footer-three";
 import CategorieSingleMain from "./services-single";
 
-const CategorieSingle = ({serviceDetails}) => {
-    const words = serviceDetails?.id.split(' ');
+const CategorieSingle = ({singleData}) => {
+    const words = singleData?.categorie.split(' ');
     const firstAndSecondWord = words?.slice(0, 2).join(' ');
-    console.log(firstAndSecondWord);
     return (
         <>
-            <SEO pageTitle={serviceDetails?.title} />            
+            <SEO pageTitle={firstAndSecondWord} />            
             <HeaderOne />
-            <BreadCrumb title={firstAndSecondWord} innerTitle={serviceDetails?.title} />
+            <BreadCrumb title={firstAndSecondWord} innerTitle={firstAndSecondWord} />
             <CategorieSingleMain firstAndSecondWord={firstAndSecondWord}/>
             <FooterThree />
             <ScrollToTop />
