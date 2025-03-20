@@ -114,7 +114,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 controlsList="nodownload nofullscreen noremoteplayback"
                 className=""
               ></video> */}
-              <Temoignage />
+              <Temoignage className="temoignage" />
             </div>
           </div>
           <div className="project-info mt-20">

@@ -5554,12 +5554,11 @@ Responsive Menu Css
 .skill__two-tab-details-content .project-info .btn-achat-formation{
   width: 50%;
   position: absolute;
-  top: -20%;
+  top: -10%;
   right: -30px;
-  margin: 20px;
 }
-.btn-achat-formation {
-  /*margin: 50px;*/
+.btn-achat-formation .temoignage{
+  border: 1px #fff solid;
 }
 .skill__two-tab-details-content .project-info .project-info-top {
   background: var(--primary-color-1);

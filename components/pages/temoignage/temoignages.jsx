@@ -29,16 +29,16 @@ const Temoignage = () => {
 				slidesPerView: 1
 			},
 			992: {
-				slidesPerView: 3
+				slidesPerView: 1
 			},
 			1200: {
-				slidesPerView: 3
+				slidesPerView: 1
 			},
 		}
     };
 
     return (
-        <div className=" section-padding">
+        <div className="portfolio__one section-padding">
             <div className="container custom__container">
                 <Swiper modules={[Navigation, EffectFade, Autoplay]} {...slideControl} className="py-5">
                     {formationData?.map((data, id) => (
@@ -49,6 +49,7 @@ const Temoignage = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+                {/* Flèches de navigation */}
             </div>
         </div>
     );
