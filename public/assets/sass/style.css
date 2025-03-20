@@ -5742,6 +5742,12 @@ Responsive Menu Css
     margin-bottom: 0px;
     text-transform: none;  
   }
+  .skill__two-tab-details-content .project-info .btn-achat-formation{
+    width: 50%;
+    position: absolute;
+    top: -10%;
+    right: -30px;
+  }
 }
 
 .skill__two-tab-details_profil_des_apprenants{
@@ -6410,6 +6416,12 @@ Responsive Menu Css
 @media (max-width: 480px) {
   .portfolio__one-content-right p {
     font-size: 15px;
+  }
+  .portfolio__one-single-portfolio .img {
+    width: 80%;
+    height: 35%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 /*==========================================================================
