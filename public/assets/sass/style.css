@@ -5554,11 +5554,12 @@ Responsive Menu Css
 .skill__two-tab-details-content .project-info .btn-achat-formation{
   width: 50%;
   position: absolute;
-  top: 15%;
-  right: -20px;
+  top: -10%;
+  right: -30px;
+  margin: 20px;
 }
-.btn-achat-formation video{
-  width: 80%;
+.btn-achat-formation {
+  /*margin: 50px;*/
 }
 .skill__two-tab-details-content .project-info .project-info-top {
   background: var(--primary-color-1);
@@ -6294,7 +6295,7 @@ Responsive Menu Css
 * Portfolio One Style
 ==========================================================================*/
 .portfolio__one {
-  background: var(--color-6);
+  /* background: var(--color-6); */
 }
 .portfolio__one .custom__container {
   max-width: 1745px;
@@ -6316,8 +6317,8 @@ Responsive Menu Css
      object-fit: cover;
 }
 .portfolio__one-single-portfolio .img {
-  width: 85%;
-  height: 100%;
+  width: 80%;
+  height: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }

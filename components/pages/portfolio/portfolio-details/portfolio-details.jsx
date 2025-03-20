@@ -104,7 +104,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
               {error && <li className="text-danger">{error}</li>} {/* Affichage des erreurs */}
             </ul>
             <div className="btn-achat-formation">
-              <video
+            {/*   <video
                 src="/assets/video/ANIMATION RATING.webm"
                 autoPlay
                 loop
@@ -113,7 +113,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 disablePictureInPicture
                 controlsList="nodownload nofullscreen noremoteplayback"
                 className=""
-              ></video>
+              ></video> */}
+              <Temoignage />
             </div>
           </div>
           <div className="project-info mt-20">
@@ -132,7 +133,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
           </div>
         </div>
       </div>
-        <Temoignage />
     </div>
   );
 };

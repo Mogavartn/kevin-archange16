@@ -8,7 +8,7 @@ console.log(formationData);
 const Temoignage = () => {
     const slideControl = {
 		spaceBetween: 35,
-		slidesPerView: 3,
+		slidesPerView: 1,
 		centeredSlides: true,
         speed: 5000,
         loop: true,
