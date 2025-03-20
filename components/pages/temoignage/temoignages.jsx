@@ -44,7 +44,7 @@ const Temoignage = () => {
                     {formationData?.map((data, id) => (
                         <SwiperSlide key={id} className="portfolio__one-single-portfolio single-portfolio">
                             <Link href={`/categories/${data.categorie}`}>
-                            <img src={data.image.src} alt="image" />
+                            <img className="img" src={data.image.src} alt="image" />
                             </Link>
                         </SwiperSlide>
                     ))}
