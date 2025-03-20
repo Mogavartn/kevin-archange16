@@ -10,7 +10,7 @@ const Temoignage = () => {
 		spaceBetween: 35,
 		slidesPerView: 3,
 		centeredSlides: true,
-        speed: 2000,
+        speed: 5000,
         loop: true,
         autoplay: {
             delay: 1000,
