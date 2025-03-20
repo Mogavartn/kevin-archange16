@@ -100,7 +100,10 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 </button>
                 {(singleData?.id === 'anglais-debutant-a1-a2' ||
                   singleData?.id === 'anglais-intermediaire-b1-b2' ||
-                  singleData?.id === 'anglais-avance-c1-c2') && (
+                  singleData?.id === 'anglais-avance-c1-c2' ||
+                  singleData?.id === 'anglais-medical-a1-a2' ||
+                  singleData?.id === 'anglais-medical-b1-b2' ||
+                  singleData?.id === 'english-second-language-beginner') && (
                   <p className="Bonus">
                     Bonus : Inscrivez-vous aujourd’hui et recevez un guide gratuit des 100 phrases essentielles en anglais !
                   </p>
