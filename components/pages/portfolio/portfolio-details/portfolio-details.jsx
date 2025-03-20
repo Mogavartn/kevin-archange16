@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Navigation} from 'swiper/modules';
 import quoteIcon from "../../../../public/assets/img/testimonial/testimonial-quote.png";
+import Temoignage from '../../temoignage/temoignages';
 
 const PortfolioDetailsMain = ({ singleData }) => {
   const router = useRouter();
@@ -14,6 +15,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // État de chargement
   const [error, setError] = useState(null); // Gestion des erreurs
+  const [showPopup, setShowPopup] = useState(false); // État pour afficher la popup
+
 
   // Fonction pour créer une commande
   const createOrder = async () => {
@@ -64,31 +67,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
     } finally {
       setIsLoading(false); // Désactiver l'état de chargement
     }
-  };
-
-    const slideControl = {
-      loop: true,
-      spaceBetween: 30,
-      slidesPerView: 1,
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },			
-      autoplay: {
-          delay: 4000,
-          reverseDirection: false,
-          disableOnInteraction: false,
-      },
-      breakpoints: {
-          768: {
-              slidesPerView: 1,
-              spaceBetween: 30,
-          },
-          1200: {
-              slidesPerView: 1,
-              spaceBetween: 30,
-          },
-      }
   };
 
   return (
@@ -154,63 +132,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
           </div>
         </div>
       </div>
-
-    {/*   <div className="row">
-                    <div className="col-xl-6 col-lg-6">
-                        <div className="testimonial__two-left" style={{backgroundImage: `url(${testimonialBg.src})`}}></div>
-                    </div>
-                    <div className="col-xl-6 col-lg-6">
-                        <div className="testimonial__two-right">
-                        <Swiper modules={[EffectFade, Autoplay, Navigation]} {...slideControl}>
-                            <SwiperSlide>
-                                <div className="single-slider">
-                                    <div className="single-slider-user">
-                                        <div className="single-slider-user-name">
-                                            <h4>Nasir Al Shakib</h4>
-                                            <span>Content Creator</span>
-                                        </div>
-                                    </div>
-									<p>Their product exceeded his my ro expectationsa  The the quality and attention to  moutstandin an  and it has become an essential active</p>
-                                    <div className="single-slider-user-rating mt-30">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star not-rated"></i>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="single-slider">
-                                    <div className="single-slider-user">
-                                        <div className="single-slider-user-name">
-                                            <h4>Devon Lane</h4>
-                                            <span>Marketing</span>
-                                        </div>
-                                    </div>
-									<p>Their product exceeded his my ro expectationsa  The the quality and attention to  moutstandin an  and it has become an essential active</p>
-                                    <div className="single-slider-user-rating mt-30">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star not-rated"></i>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        </Swiper>
-                            <div className="testimonial__two-right-bottom">
-                                <div className="slider-arrow">
-                                    <i className="swiper-button-prev fas fa-arrow-left"></i>
-                                    <i className="swiper-button-next fas fa-arrow-right"></i>
-                                </div>
-							<div className="slider-quote">
-								<img src={quoteIcon.src} alt="image" />
-							</div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+        <Temoignage />
     </div>
   );
 };
