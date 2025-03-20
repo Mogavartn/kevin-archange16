@@ -5,50 +5,74 @@ import ModalVideo from "react-modal-video";
 import Link from "next/link";
 
 const BannerOne = () => {
-  // État pour la modale vidéo
   const [openVideo, setOpenVideo] = useState(false);
 
-  // Initialisation du Meta Pixel pour ViewContent
   useEffect(() => {
-    if (window.fbq) {
-      window.fbq("track", "ViewContent", {
-        content_name: "Bannière Accueil",
-        content_category: "Accueil",
-        content_ids: ["banner-1"],
-        value: 0.0, // Pas de valeur monétaire ici, ajustez si nécessaire
-        currency: "EUR",
-      });
-    }
+    console.log("Début de useEffect");
+    const waitForFbq = setInterval(() => {
+      if (window.fbq) {
+        console.log("fbq détecté dans useEffect");
+        window.fbq("track", "ViewContent", {
+          content_name: "Bannière Accueil",
+          content_category: "Accueil",
+          content_ids: ["banner-1"],
+          value: 0.0,
+          currency: "EUR",
+        });
+        console.log("ViewContent envoyé pour la bannière");
+        clearInterval(waitForFbq);
+      } else {
+        console.log("fbq non détecté, en attente...");
+      }
+    }, 100);
+
+    return () => {
+      console.log("Nettoyage de useEffect");
+      clearInterval(waitForFbq);
+    };
   }, []);
 
-  // Fonction pour ouvrir la modale vidéo et suivre l'événement
   const openVideoModal = () => {
     setOpenVideo(true);
+    console.log("Clic sur vidéo");
     if (window.fbq) {
+      console.log("fbq détecté pour vidéo");
       window.fbq("track", "ViewContent", {
         content_name: "Vidéo Ikigaï",
         content_category: "Vidéo",
         content_ids: ["video-ikigai"],
       });
+      console.log("ViewContent envoyé pour la vidéo");
+    } else {
+      console.warn("fbq non disponible pour la vidéo");
     }
   };
 
-  // Gestionnaires de clics pour les liens
-  const handleBusinessClick = () => {
+  const handleBusinessClick = (e) => {
+    console.log("Clic sur 'Lancer mon business'");
     if (window.fbq) {
+      console.log("fbq détecté pour business");
       window.fbq("track", "Lead", {
         content_name: "Lancer mon business",
         content_category: "Business",
       });
+      console.log("Lead envoyé pour business");
+    } else {
+      console.warn("fbq non disponible pour business");
     }
   };
 
-  const handleFormationClick = () => {
+  const handleFormationClick = (e) => {
+    console.log("Clic sur 'Me former'");
     if (window.fbq) {
+      console.log("fbq détecté pour formation");
       window.fbq("track", "Lead", {
         content_name: "Me former",
         content_category: "Formation",
       });
+      console.log("Lead envoyé pour formation");
+    } else {
+      console.warn("fbq non disponible pour formation");
     }
   };
 
@@ -83,14 +107,14 @@ const BannerOne = () => {
                   <Link
                     href="/business"
                     className="btn-two mb-10 teste"
-                    onClick={handleBusinessClick} // Ajout du gestionnaire de clic
+                    onClick={handleBusinessClick}
                   >
                     👉 Je veux lancer mon business
                   </Link>
                   <Link
                     href="/categories"
                     className="btn-one ml-10"
-                    onClick={handleFormationClick} // Ajout du gestionnaire de clic
+                    onClick={handleFormationClick}
                   >
                     👉 Je veux me former
                   </Link>

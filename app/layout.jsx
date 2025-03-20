@@ -30,31 +30,33 @@ export default function RootLayout({ children }) {
                 />
                 <script src="//app.quickreviewer.com/proof/webproof/qrv2.js" defer></script>
                 <link rel='icon' type='image/png' href='../favicon.ico' />
+
                 <script
-                    id="facebook-pixel"
+                    id="meta-pixel"
                     strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
                         __html: `
-                            !function(f,b,e,v,n,t,s)
-                            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                            n.queue=[];t=b.createElement(e);t.async=!0;
-                            t.src=v;s=b.getElementsByTagName(e)[0];
-                            s.parentNode.insertBefore(t,s)}(window, document,'script',
-                            'https://connect.facebook.net/en_US/fbevents.js');
-                            fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}');
-                            fbq('track', 'PageView');
+                        !function(f,b,e,v,n,t,s)
+                        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                        n.queue=[];t=b.createElement(e);t.async=!0;
+                        t.src=v;s=b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t,s)}(window,document,'script',
+                        'https://connect.facebook.net/en_US/fbevents.js');
+                        fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}'); // Votre Pixel ID
+                        fbq('track', 'PageView');
                         `,
                     }}
                 />
+                
             </head>
             <body>
                 {children}
                 <ToastContainer />
                 {/* Suspense est utilisé pour charger Facebook Pixel sans bloquer le rendu */}
                 <Suspense fallback={null}>
-                    <FacebookPixelEvents />
+                    {/* <FacebookPixelEvents /> */}
                 </Suspense>
                 <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_PIXEL_ID} />
             </body>
