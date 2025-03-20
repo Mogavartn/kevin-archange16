@@ -98,22 +98,18 @@ const PortfolioDetailsMain = ({ singleData }) => {
                   {isLoading ? 'Traitement...' : 'Acheter Maintenant 🔥'}
                   {/* <i className="fas fa-arrow-right"></i> */}
                 </button>
-                <p className="Bonus">Bonus : Inscrivez-vous aujourd’hui et recevez un guide gratuit des 100 phrases essentielles en anglais !</p>
+                {(singleData?.id === 'anglais-debutant-a1-a2' ||
+                  singleData?.id === 'anglais-intermediaire-b1-b2' ||
+                  singleData?.id === 'anglais-avance-c1-c2') && (
+                  <p className="Bonus">
+                    Bonus : Inscrivez-vous aujourd’hui et recevez un guide gratuit des 100 phrases essentielles en anglais !
+                  </p>
+                )}
               </li>
              
               {error && <li className="text-danger">{error}</li>} {/* Affichage des erreurs */}
             </ul>
             <div className="btn-achat-formation">
-            {/*   <video
-                src="/assets/video/ANIMATION RATING.webm"
-                autoPlay
-                loop
-                muted
-                playsInline
-                disablePictureInPicture
-                controlsList="nodownload nofullscreen noremoteplayback"
-                className=""
-              ></video> */}
               <Temoignage className="temoignage" />
             </div>
           </div>
