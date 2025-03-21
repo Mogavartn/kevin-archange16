@@ -139,7 +139,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                             checked={selectedPacks['anglais-debutant-a1-a2']}
                             onChange={() => handleCheckboxChange('anglais-debutant-a1-a2')}
                           />
-                          Pack Anglais Débutant + Intermédiaire (A1-A2 + B1-B2) à prix réduit
+                          En choisissant le Pack Anglais Débutant + Intermédiaire
                         </label>
                       </td>
                       </tr>
@@ -153,7 +153,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                               checked={selectedPacks['anglais-intermediaire-b1-b2']}
                               onChange={() => handleCheckboxChange('anglais-intermediaire-b1-b2')}
                             />
-                            Pack Anglais Intermédiaire + Avancé (B1-B2 + C1-C2) à prix réduit
+                             En choisissant le Pack Anglais Débutant + Intermédiaire + Avancé
                             </label>
                         </td>
                       </tr>
