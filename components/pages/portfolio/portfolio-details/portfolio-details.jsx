@@ -163,16 +163,29 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 )}
 
                 {singleData?.id === 'anglais-intermediaire-b1-b2' && (
-                  <div class="form-check">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        checked={selectedPacks['anglais-intermediaire-b1-b2']}
-                        onChange={() => handleCheckboxChange('anglais-intermediaire-b1-b2')}
-                      />
-                      Pack Anglais Intermédiaire + Avancé (B1-B2 + C1-C2) à prix réduit
-                    </label>
+                  <div class="table">
+                     <table class="styled-table">
+                      <thead>
+                        <tr>
+                          <th className="text-center">Économisez $10,00 soit 12 % de réduction</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                        <td>
+                          <label class="form-check-label" for="flexCheckDefault">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              checked={selectedPacks['anglais-intermediaire-b1-b2']}
+                              onChange={() => handleCheckboxChange('anglais-intermediaire-b1-b2')}
+                            />
+                            En choisissant le Pack Anglais Intermédiaire + Avancé 
+                          </label>
+                        </td>
+                        </tr>
+                      </tbody>
+                     </table>
                   </div>
                 )}
 
