@@ -40,12 +40,10 @@ const Temoignage = () => {
     return (
         <div className="portfolio__one section-padding">
             <div className="container custom__container">
-                <Swiper modules={[Navigation, EffectFade, Autoplay]} {...slideControl} className="py-5">
+                <Swiper modules={[Navigation, EffectFade, Autoplay]} {...slideControl} className="py-5 px-2">
                     {formationData?.map((data, id) => (
                         <SwiperSlide key={id} className="portfolio__one-single-portfolio single-portfolio">
-                            <Link href={`/categories/${data.categorie}`}>
                             <img className="img" src={data.image.src} alt="image" />
-                            </Link>
                         </SwiperSlide>
                     ))}
                 </Swiper>

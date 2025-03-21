@@ -5555,7 +5555,7 @@ Responsive Menu Css
   width: 50%;
   position: absolute;
   top: -10%;
-  right: -30px;
+  right: -70px;
 }
 .btn-achat-formation .temoignage{
   border: 1px #fff solid;
@@ -6300,7 +6300,7 @@ Responsive Menu Css
 * Portfolio One Style
 ==========================================================================*/
 .portfolio__one {
-  /* background: var(--color-6); */
+ /*  background: var(--color-6); */
 }
 .portfolio__one .custom__container {
   max-width: 1745px;
@@ -6322,7 +6322,7 @@ Responsive Menu Css
      object-fit: cover;
 }
 .portfolio__one-single-portfolio .img {
-  width: 80%;
+  width: 70%;
   height: 50%;
   -o-object-fit: cover;
      object-fit: cover;
