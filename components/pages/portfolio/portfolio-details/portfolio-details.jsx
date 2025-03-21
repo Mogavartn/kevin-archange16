@@ -1,22 +1,43 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import testimonialBg from "../../../../public/assets/img/testimonial/testimonial.png";
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay, Navigation} from 'swiper/modules';
+import { EffectFade, Autoplay, Navigation } from 'swiper/modules';
 import quoteIcon from "../../../../public/assets/img/testimonial/testimonial-quote.png";
 import Temoignage from '../../temoignage/temoignages';
 
 const PortfolioDetailsMain = ({ singleData }) => {
   const router = useRouter();
-  const [amount, setAmount] = useState(singleData?.formation?.prix || 69); // Montant dynamique
+  const [amount, setAmount] = useState(singleData?.formation?.prix || 69); // Montant initial
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // État de chargement
   const [error, setError] = useState(null); // Gestion des erreurs
-  const [showPopup, setShowPopup] = useState(false); // État pour afficher la popup
+  const [selectedPacks, setSelectedPacks] = useState({
+    'anglais-debutant-a1-a2': false,
+    'anglais-intermediaire-b1-b2': false,
+    'anglais-avance-c1-c2': false,
+  });
 
+  // Fonction pour gérer les changements de cases à cocher
+  const handleCheckboxChange = (id) => {
+    setSelectedPacks((prevState) => {
+      const newState = { ...prevState, [id]: !prevState[id] };
+
+      // Calculer le nouveau montant en fonction des cases cochées
+      let newAmount = singleData?.formation?.prix || 69; // Montant initial
+      const checkedPacksCount = Object.values(newState).filter((checked) => checked).length;
+
+      // Incrémenter de 10€ par case cochée
+      newAmount += checkedPacksCount * 10;
+
+      setAmount(newAmount); // Mettre à jour le montant
+
+      return newState;
+    });
+  };
 
   // Fonction pour créer une commande
   const createOrder = async () => {
@@ -31,9 +52,10 @@ const PortfolioDetailsMain = ({ singleData }) => {
     const orderData = {
       amount: amount, // Montant de la commande
       currency: currency, // Devise
-      description: singleData.titre
+      description: singleData.titre,
+      selectedPacks, // Ajouter les packs sélectionnés à la commande
     };
-    
+
     try {
       // Envoi de la requête POST à l'API
       const response = await fetch('/api/create-order', {
@@ -43,7 +65,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
         },
         body: JSON.stringify(orderData),
       });
-      
+
       const data = await response.json();
 
       if (response.ok) {
@@ -51,7 +73,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
 
         // Stocker la réponse de la commande dans localStorage
         localStorage.setItem("orderResponse", JSON.stringify(data));
-        
+
         // Rediriger vers la page de paiement
         router.push("/paiement");
       } else {
@@ -94,22 +116,74 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <li>duree: <span> {singleData.duree}</span></li>
               <li>Prix: <span className="value"> {amount} €</span></li> {/* Affiche le prix dynamique */}
               <li>
-                <button onClick={createOrder} className="btn-one" disabled={isLoading}>
-                  {isLoading ? 'Traitement...' : 'Acheter Maintenant 🔥'}
-                  {/* <i className="fas fa-arrow-right"></i> */}
+                <button onClick={createOrder} className="btn-one mb-4" disabled={isLoading}>
+                  {isLoading ? 'Traitement...' : 'Acheter Maintenant 🔥'}
                 </button>
+                
+                {/* Ajout des cases à cocher pour les packs */}
+                {singleData?.id === 'anglais-debutant-a1-a2' && (
+                  <div class="table">
+                    <table class="styled-table">
+                    <thead>
+                      <tr>
+                        <th className="text-center">Économisez $10,00 soit 12 % de réduction</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                      <td>
+                        <label class="form-check-label" for="flexCheckDefault">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            checked={selectedPacks['anglais-debutant-a1-a2']}
+                            onChange={() => handleCheckboxChange('anglais-debutant-a1-a2')}
+                          />
+                          Pack Anglais Débutant + Intermédiaire (A1-A2 + B1-B2) à prix réduit
+                        </label>
+                      </td>
+                      </tr>
+                      <tr>
+  
+                        <td>
+                            <label class="form-check-label" for="flexCheckDefault">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              checked={selectedPacks['anglais-intermediaire-b1-b2']}
+                              onChange={() => handleCheckboxChange('anglais-intermediaire-b1-b2')}
+                            />
+                            Pack Anglais Intermédiaire + Avancé (B1-B2 + C1-C2) à prix réduit
+                            </label>
+                        </td>
+                      </tr>
+                    </tbody>
+                    </table>
+                  </div>
+                )}
+
+                {singleData?.id === 'anglais-intermediaire-b1-b2' && (
+                  <div class="form-check">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        checked={selectedPacks['anglais-intermediaire-b1-b2']}
+                        onChange={() => handleCheckboxChange('anglais-intermediaire-b1-b2')}
+                      />
+                      Pack Anglais Intermédiaire + Avancé (B1-B2 + C1-C2) à prix réduit
+                    </label>
+                  </div>
+                )}
+
                 {(singleData?.id === 'anglais-debutant-a1-a2' ||
                   singleData?.id === 'anglais-intermediaire-b1-b2' ||
-                  singleData?.id === 'anglais-avance-c1-c2' ||
-                  singleData?.id === 'anglais-medical-a1-a2' ||
-                  singleData?.id === 'anglais-medical-b1-b2' ||
-                  singleData?.id === 'english-second-language-beginner') && (
+                  singleData?.id === 'anglais-avance-c1-c2') && (
                   <p className="Bonus">
                     Bonus : Inscrivez-vous aujourd’hui et recevez un guide gratuit des 100 phrases essentielles en anglais !
                   </p>
                 )}
               </li>
-             
               {error && <li className="text-danger">{error}</li>} {/* Affichage des erreurs */}
             </ul>
             <div className="btn-achat-formation">
@@ -118,7 +192,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
           </div>
           <div className="project-info mt-20">
             <div className="project-info-top">
-              <h4>Ce que vous allez maîtriser :</h4>
+              <h4>Ce que vous allez maîtriser :</h4>
             </div>
             <ul>
               <div>

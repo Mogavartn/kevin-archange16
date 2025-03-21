@@ -5672,6 +5672,66 @@ Responsive Menu Css
   margin: 0 15px;
 }
 
+.project-info .checkbox-table-container {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du tableau */
+.project-info .styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Styles pour les cellules du tableau */
+.project-info .styled-table th, .styled-table td {
+  padding: 12px 20px;
+  text-align: left;
+}
+
+/* Style de l'en-tête du tableau */
+.project-info .styled-table th {
+  background-color: var(--primary-color-1);
+  color: white;
+  font-size: 16px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+/* Style pour les lignes paires du tableau */
+.project-info .styled-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Effet de survol sur les lignes du tableau */
+.project-info .styled-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Style pour les labels des cases à cocher */
+.project-info .form-check-label {
+  font-size: 14px;
+  color: #333;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Espacement autour des cases à cocher */
+.project-info .form-check-input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Effet de focus sur les cases à cocher */
+.project-info .form-check-input:focus {
+  outline: none;
+  box-shadow: 0 0 3px #4CAF50;
+}
+
+
 @media (max-width: 1399px) {
   .skill__two-tab {
     padding: 35px 0 30px 40px;
