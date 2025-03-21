@@ -115,11 +115,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <li>public: <span> {singleData.public}</span></li>
               <li>duree: <span> {singleData.duree}</span></li>
               <li>Prix: <span className="value"> {amount} €</span></li> {/* Affiche le prix dynamique */}
-              <li>
-                <button onClick={createOrder} className="btn-one mb-4" disabled={isLoading}>
-                  {isLoading ? 'Traitement...' : 'Acheter Maintenant 🔥'}
-                </button>
-                
+              <li className="mt-5">
                 {/* Ajout des cases à cocher pour les packs */}
                 {singleData?.id === 'anglais-debutant-a1-a2' && (
                   <div class="table">
@@ -189,13 +185,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
                   </div>
                 )}
 
-                {(singleData?.id === 'anglais-debutant-a1-a2' ||
-                  singleData?.id === 'anglais-intermediaire-b1-b2' ||
-                  singleData?.id === 'anglais-avance-c1-c2') && (
-                  <p className="Bonus">
-                    Bonus : Inscrivez-vous aujourd’hui et recevez un guide gratuit des 100 phrases essentielles en anglais !
-                  </p>
-                )}
+                <button onClick={createOrder} className="btn-one mb-4" disabled={isLoading}>
+                  {isLoading ? 'Traitement...' : 'Acheter Maintenant 🔥'}
+                </button>
               </li>
               {error && <li className="text-danger">{error}</li>} {/* Affichage des erreurs */}
             </ul>

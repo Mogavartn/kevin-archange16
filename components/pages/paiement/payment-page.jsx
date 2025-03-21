@@ -158,6 +158,13 @@ export default function PaymentPage() {
                     <ul>
                       <li>Formation: <span>{orderResponse?.description}</span></li>
                       <li>Prix: <span className="value">{orderResponse?.amount} €</span></li>
+                      <li><span>        {(orderResponse?.description === 'Anglais - Débutant (A1-A2)' ||
+                      orderResponse?.description === 'anglais-intermediaire-b1-b2' ||
+                      orderResponse?.description === 'anglais-avance-c1-c2') && (
+                      
+                        "Bonus : Inscrivez-vous aujourd’hui et recevez un guide gratuit des 100 phrases essentielles en anglais !"
+                 
+                )}</span></li>
                     </ul>
                   </div>
                   <div className="row mt-1">
