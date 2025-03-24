@@ -24,10 +24,20 @@ const PortfolioDetailsMain = ({ singleData }) => {
     setSelectedPacks((prevState) => {
       const newState = { ...prevState, [id]: !prevState[id] };
       let newAmount = singleData?.formation?.prix || 99; // Montant initial
-      const checkedPacksCount = Object.values(newState).filter((checked) => checked).length;
-      newAmount += checkedPacksCount * 10;
-      setAmount(newAmount); // Mettre à jour le montant
-      return newState;
+      let newpromoAmount = singleData?.formation?.prix || 69; // Montant initial
+      // Calculer l'ajustement du montant basé sur les packs sélectionnés
+    if (newState['anglais-debutant-a1-a2']) {
+      newAmount += 99; // Ajouter 130 si 'anglais-debutant-a1-a2' est coché
+      newpromoAmount += 30; // Ajouter 130 si 'anglais-debutant-a1-a2' est coché
+    }
+    if (newState['anglais-intermediaire-b1-b2']) {
+      newAmount += 198; // Ajouter 150 si 'anglais-intermediaire-b1-b2' est coché
+      newpromoAmount += 70; // Ajouter 150 si 'anglais-intermediaire-b1-b2' est coché
+    }
+
+    setAmount(newAmount); // Mettre à jour le montant
+    setpromoAmount(newpromoAmount); // Mettre à jour le montant
+    return newState;
     });
   };
 
