@@ -135,7 +135,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <li>
                 Prix: <span className="value text-muted text-decoration-line-through">{amount} € </span>
                 {singleData?.id === 'anglais-debutant-a1-a2' && (
-                  <span className="h3 text-success fw-bold">  { promoAmount} €</span>
+                  <span className="h3 text-success fw-bold">&nbsp;&nbsp;{ promoAmount} €</span>
                 )}
               </li>
               <li>
