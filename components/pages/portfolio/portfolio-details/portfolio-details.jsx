@@ -180,9 +180,11 @@ const PortfolioDetailsMain = ({ singleData }) => {
                   </div>
                 )}
 
+              <div className="d-flex justify-content-center">
                 <button onClick={createOrder} className="btn-one" disabled={isLoading}>
                   {isLoading ? 'Traitement...' : 'Acheter Maintenant 🔥'}
                 </button>
+              </div>
 
                 {selectedPacks['anglais-intermediaire-b1-b2'] && (
                   <p className="text-primary-emphasis mt-3">
