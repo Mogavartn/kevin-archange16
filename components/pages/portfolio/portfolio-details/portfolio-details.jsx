@@ -247,8 +247,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
               {error && <li className="text-danger">{error}</li>}
             </ul>
 
-            <div className="btn-achat-formation">
-              <Temoignage className="temoignage" />
+            <div className="btn-achat-formation ">
+              <Temoignage className="" />
             </div>
           </div>
 
