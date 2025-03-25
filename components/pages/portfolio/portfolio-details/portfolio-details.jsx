@@ -253,7 +253,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
                     Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
                   </p>
                 )}
-
                 {error && <li className="text-danger">{error}</li>}
             </div>
           </div>
@@ -268,7 +267,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
               ))}
             </ul>
           </div>
-          
+
         </div>
       </div>
     </div>
