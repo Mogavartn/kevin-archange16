@@ -156,7 +156,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                     <table className="styled-table">
                       <thead>
                         <tr>
-                          <th className="text-center">Économisez $10,00 soit 12 % de réduction</th>
+                          <th className="text-center">Payez moins avec nos Packs Exclusifs !</th>
                         </tr>
                       </thead>
                       <tbody>
