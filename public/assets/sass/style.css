@@ -6361,7 +6361,7 @@ Responsive Menu Css
 * Portfolio One Style
 ==========================================================================*/
 .portfolio__one {
- /*  background: var(--color-6); */
+  background: var(--color-6);
 }
 .portfolio__one .custom__container {
   max-width: 1745px;
@@ -6478,13 +6478,88 @@ Responsive Menu Css
   .portfolio__one-content-right p {
     font-size: 15px;
   }
-  .portfolio__one-single-portfolio .img {
-    width: 80%;
-    height: 35%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
 }
+/*==========================================================================
+* Portfolio Avis Style
+==========================================================================*/
+.portfolio__avis{
+  padding: 0px;
+ }
+ .portfolio__avis-content-left h2 {
+   margin: auto;
+   text-transform: none;
+ }
+ .portfolio__avis-single-portfolio {
+   position: relative;
+   border-radius: 30px;
+   overflow: hidden;
+   transition: all 0.3s linear;
+ }
+ .custom__container{
+  margin-top: 100px;
+  margin-right: 100px;
+ }
+ .portfolio__avis-single-portfolio img {
+   width: 70%;
+   height: 100%;
+   -o-object-fit: cover;
+      object-fit: cover;
+ }
+ 
+ @media (max-width: 1399px) {
+   .portfolio__avis-content-right p {
+     margin-left: 0;
+   }
+   .portfolio__avis-content-right a {
+     margin-left: 0;
+   }
+   .portfolio__avis-single-portfolio-content h4 {
+     font-size: 28px;
+   }
+ }
+ @media (max-width: 1199px) {
+   .portfolio__avis-content-left {
+     margin-bottom: 0;
+   }
+   .portfolio__avis-content-left h2 {
+     margin: 0;
+   }
+ }
+ @media (max-width: 992px) {
+   .portfolio__avis .swiper-slide {
+     transform: scale(1);
+   }
+   .portfolio__avis .swiper-slide.swiper-slide-active {
+     transform: scale(1);
+   }
+ }
+ @media (max-width: 767px) {
+   .portfolio__avis-single-portfolio {
+     width: auto;
+     margin-bottom: 30px;
+   }
+   .portfolio__avis-single-portfolio.active {
+     width: auto;
+     height: 365px;
+   }
+   .portfolio__avis-single-portfolio:last-child {
+     margin: 0;
+   }
+   .portfolio__avis-single-portfolio-content h4 {
+     font-size: 25px;
+   }
+ }
+ @media (max-width: 480px) {
+   .portfolio__avis-content-right p {
+     font-size: 15px;
+   }
+   .portfolio__avis-single-portfolio .img {
+     width: 80%;
+     height: 35%;
+     -o-object-fit: cover;
+        object-fit: cover;
+   }
+ }
 /*==========================================================================
 * Portfolio Two CSS
 ==========================================================================*/

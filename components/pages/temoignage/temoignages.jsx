@@ -38,12 +38,12 @@ const Temoignage = () => {
     };
 
     return (
-        <div className="portfolio__one section-padding">
+        <div className="portfolio__avis">
             <div className="container custom__container">
-                <Swiper modules={[Navigation, EffectFade, Autoplay]} {...slideControl} className="py-5 px-2">
+                <Swiper modules={[Navigation, EffectFade, Autoplay]} {...slideControl} className="">
                     {formationData?.map((data, id) => (
-                        <SwiperSlide key={id} className="portfolio__one-single-portfolio single-portfolio">
-                            <img className="img" src={data.image.src} alt="image" />
+                        <SwiperSlide key={id} className="portfolio__avis-single-portfolio single-portfolio">
+                            <img className="" src={data.image.src} alt="image" />
                         </SwiperSlide>
                     ))}
                 </Swiper>

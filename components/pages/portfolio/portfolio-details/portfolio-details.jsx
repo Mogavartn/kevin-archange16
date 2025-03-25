@@ -10,6 +10,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
   const [timeLeft, setTimeLeft] = useState(48 * 60 * 60); // 48h en secondes
   const [normalAmount, setnormalAmount] = useState(99); // Montant initial
   const [promoAmount, setpromoAmount] = useState(69); // Montant initial
+  const [porcentage, setporcentage] = useState(30); // Montant initial
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // État de chargement
   const [error, setError] = useState(null); // Gestion des erreurs
@@ -36,19 +37,32 @@ const PortfolioDetailsMain = ({ singleData }) => {
   
       let newnormalAmount = singleData?.formation?.prix || 99; // Montant initial
       let newpromoAmount = singleData?.formation?.prix || 69; // Montant initial
+      let newporcentage = 30; // Montant initial
   
       // Calculer l'ajustement du montant basé sur les packs sélectionnés
       if (newState['anglais-debutant + intermediaire']) {
         newnormalAmount += 99; // Ajouter 99 si 'anglais-debutant + intermediaire' est coché
         newpromoAmount += 30; // Ajouter 30 si 'anglais-debutant + intermediaire' est coché
+        newporcentage = 50;
       }
+
+      // Calculer l'ajustement du montant basé sur les packs sélectionnés
+      if (newState['anglais intermediaire + Avancé']) {
+        newnormalAmount += 99; // Ajouter 99 si 'anglais-debutant + intermediaire' est coché
+        newpromoAmount += 30; // Ajouter 30 si 'anglais-debutant + intermediaire' est coché
+        newporcentage = 50;
+      }
+
       if (newState['anglais-debutant, intermediaire + Avancé']) {
         newnormalAmount += 198; // Ajouter 198 si 'anglais-debutant, intermediaire + Avancé' est coché
         newpromoAmount += 70; // Ajouter 70 si 'anglais-debutant, intermediaire + Avancé' est coché
+        newporcentage = 53;
       }
   
       setnormalAmount(newnormalAmount); // Mettre à jour le montant
       setpromoAmount(newpromoAmount); // Mettre à jour le montant
+      setporcentage (newporcentage); // Montant initial
+
       return newState;
     });
   };
@@ -151,16 +165,12 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <li>duree: <span>{singleData.duree}</span></li>
               <li>
                 Prix: <span className="value text-muted text-decoration-line-through">{normalAmount} € </span>
-                {singleData?.id === 'anglais-debutant-a1-a2' && (
                   <span className="h3 text-success fw-bold">&nbsp;&nbsp;{promoAmount} €</span>
-                )}
               </li>
               <li>
-                {singleData?.id === 'anglais-debutant-a1-a2' && (
                   <p className="text-secondary fs-6">
                     Dépêche-toi, offre limitée ! <span className="fs-6 text-danger font-monospace mb-4">⏳ {formatTime(timeLeft)} restantes</span>
                   </p>
-                )}
               </li>
               <li className="mt-5">
                 {singleData?.id === 'anglais-debutant-a1-a2' && (
@@ -168,11 +178,40 @@ const PortfolioDetailsMain = ({ singleData }) => {
                     <table className="styled-table">
                       <thead>
                         <tr>
-                          <th className="text-center">Payez moins avec nos Packs Exclusifs !</th>
+                          <th className="text-center">Payez moins avec nos Packs Exclusifs ! <br/> <span className="text-danger fw-bold">{porcentage}% de Remise</span> </th>
                         </tr>
                       </thead>
                       <tbody>
                         {['anglais-debutant + intermediaire', 'anglais-debutant, intermediaire + Avancé'].map((id) => (
+                          <tr key={id}>
+                            <td>
+                              <label className="form-check-label">
+                                <input
+                                  type="checkbox"
+                                  className="form-check-input"
+                                  checked={selectedPacks[id]}
+                                  onChange={() => handleCheckboxChange(id)}
+                                />
+                                En choisissant le Pack {id.replace('-', ' ')}
+                              </label>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
+                {singleData?.id === 'anglais-intermediaire-b1-b2' && (
+                  <div className="table">
+                    <table className="styled-table">
+                      <thead>
+                        <tr>
+                          <th className="text-center">Payez moins avec nos Packs Exclusifs ! <br/> <span className="text-danger fw-bold">{porcentage}% de Remise</span> </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {['anglais intermediaire + Avancé'].map((id) => (
                           <tr key={id}>
                             <td>
                               <label className="form-check-label">

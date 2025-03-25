@@ -415,10 +415,10 @@ const formationsData = [
     "description1": "👉 Parlez anglais dès les premières leçons avec notre formation 100% en ligne (A1-A2) !",
     "description": "Rejoignez les 2100+ apprenants qui ont déjà progressé avec nos cours et gagnez en confiance pour voyager, travailler ou échanger avec des anglophones.",
     "objectifs_pedagogiques": [
-      "✅ Construisez des phrases correctes en anglais sans stress",
-      "✅ Maîtrisez les mots essentiels pour vous débrouiller au quotidien",
-      "✅ Exprimez-vous dans des situations courantes (voyages, travail, loisirs)",
-      "✅ Présentez-vous avec aisance en anglais",
+      "✅ Construisez des phrases correctes en anglais sans stress.",
+      "✅ Maîtrisez les mots essentiels pour vous débrouiller au quotidien.",
+      "✅ Exprimez-vous dans des situations courantes (voyages, travail, loisirs).",
+      "✅ Présentez-vous avec aisance en anglais.",
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -434,12 +434,13 @@ const formationsData = [
     "id": "anglais-intermediaire-b1-b2",
     "categorie": "LANGUES",
     "titre": "Anglais - Intermédiaire (B1-B2)",
-    "description": "Cette formation en Anglais, 100% en ligne, de niveau B1-B2 s’adresse aux apprenants désirant acquérir un niveau intermédiaire en anglais.",
+    "description1":"👉 Passez au niveau supérieur avec notre formation 100% en ligne (B1-B2) !",
+    "description": "Rejoignez les 2100+ apprenants qui ont déjà progressé avec nos cours et devenez autonome pour communiquer en anglais dans la plupart des situations du quotidien, que ce soit pour voyager, travailler ou échanger avec aisance.",
     "objectifs_pedagogiques": [
-      "Comprendre les points essentiels d’une discussion quand un langage clair et standard est utilisé",
-      "Être autonome dans la plupart des situations où la langue cible est parlée",
-      "Pouvoir produire un discours simple et cohérent sur des sujets familiers",
-      "Savoir raconter un événement, une expérience"
+      "✅ Comprenez les idées principales d’une conversation claire et standard sans effort.",
+      "✅ Devenez indépendant dans les situations courantes où l’anglais est parlé.",
+      "✅ Exprimez-vous avec un discours simple et cohérent sur des sujets qui vous tiennent à cœur.",
+      "✅ Racontez vos expériences ou événements avec confiance et clarté."
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -455,12 +456,13 @@ const formationsData = [
     "id": "anglais-avance-c1-c2",
     "categorie": "LANGUES",
     "titre": "Anglais - Avancé (C1-C2)",
-    "description": "Cette formation en Anglais, 100% en ligne, de niveau C1-C2 s’adresse aux apprenants désirant acquérir un niveau avancé en anglais.",
+    "description1":"👉 Maîtrisez l’anglais comme un pro avec notre formation 100% en ligne (C1-C2) !",
+    "description": "Rejoignez les 2100+ apprenants qui ont déjà perfectionné leurs compétences avec nos cours et atteignez un niveau d’excellence pour briller dans vos projets personnels ou professionnels, en toute fluidité.",
     "objectifs_pedagogiques": [
-      "Maîtriser les temps verbaux du présent, passé, et futur.",
-      "Utiliser correctement le future perfect et future perfect continuous.",
-      "Réviser les temps passés, futurs, et conditionnels.",
-      "Acquérir une expertise dans le futur continu et approfondir les structures conditionnelles."
+      "✅ MJonglez avec les temps verbaux (présent, passé, futur) en toute aisance.",
+      "✅ Utilisez le future perfect et le future perfect continuous comme un natif.",
+      "✅ Parlez avec précision grâce à une maîtrise approfondie des conditionnels et du futur continu.",
+      "✅ Exprimez des idées complexes et nuancées sans aucune hésitation."
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -478,9 +480,9 @@ const formationsData = [
     "titre": "Anglais des Affaires Avancé (C1-C2)",
     "description": "Formation en Anglais des affaires de niveau C1-C2 pour développer des compétences en communication professionnelle.",
     "objectifs_pedagogiques": [
-      "Comprendre des audios ou des conversations et saisir des significations implicites dans le domaine des affaires",
-      "S’exprimer spontanément avec aisance dans une relation professionnelle ou commerciale",
-      "Être capable de comprendre ou de rédiger avec aisance des documents professionnels"
+      "✅ Comprendre des audios ou des conversations et saisir des significations implicites dans le domaine des affaires",
+      "✅ S’exprimer spontanément avec aisance dans une relation professionnelle ou commerciale",
+      "✅ Être capable de comprendre ou de rédiger avec aisance des documents professionnels"
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -498,10 +500,10 @@ const formationsData = [
     "titre": "Anglais Médical (A1-A2)",
     "description": "Acquérez les bases de la communication médicale en anglais, de la salutation à la compréhension de documents médicaux.",
     "objectifs_pedagogiques": [
-      "Acquérir les fondamentaux de la conjugaison et de la grammaire anglaises",
-      "Acquérir les bases du vocabulaire anglais et du vocabulaire médical",
-      "Comprendre et utiliser des expressions courantes et quotidiennes",
-      "Communiquer de façon simple dans un contexte de soins."
+      "✅ Acquérir les fondamentaux de la conjugaison et de la grammaire anglaises",
+      "✅ Acquérir les bases du vocabulaire anglais et du vocabulaire médical",
+      "✅ Comprendre et utiliser des expressions courantes et quotidiennes",
+      "✅ Communiquer de façon simple dans un contexte de soins."
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -519,10 +521,10 @@ const formationsData = [
     "titre": "Anglais Médical (B1-B2)",
     "description": "Formation pour les apprenants ayant les bases de l'anglais et souhaitant approfondir leurs connaissances dans le domaine médical.",
     "objectifs_pedagogiques": [
-      "Comprendre les points essentiels d’une discussion quand un langage clair et standard est utilisé",
-      "Pouvoir produire un discours simple et cohérent sur des sujets familiers et dans des domaines d’intérêt",
-      "Communiquer dans le domaine médical",
-      "Savoir raconter un événement, une expérience."
+      "✅ Comprendre les points essentiels d’une discussion quand un langage clair et standard est utilisé",
+      "✅ Pouvoir produire un discours simple et cohérent sur des sujets familiers et dans des domaines d’intérêt",
+      "✅ Communiquer dans le domaine médical",
+      "✅ Savoir raconter un événement, une expérience."
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -540,11 +542,11 @@ const formationsData = [
     "titre": "English as a Second Language - Beginner Level",
     "description": "This course covers the basics of the English language, including countries, nationalities, personal descriptions, family and friends, daily life, and time-related vocabulary.",
     "objectifs_pedagogiques": [
-      "Develop a fundamental understanding of the English language",
-      "Learn to express countries and nationalities in English",
-      "Describe oneself and discuss family and friends in English",
-      "Explore topics related to daily life and routines.",
-      "Gain proficiency in discussing time and schedules in English"
+      "✅ Develop a fundamental understanding of the English language",
+      "✅ Learn to express countries and nationalities in English",
+      "✅ Describe oneself and discuss family and friends in English",
+      "✅ Explore topics related to daily life and routines.",
+      "✅ Gain proficiency in discussing time and schedules in English"
     ],
     "niveau": "Beginner",
     "public": "All",
@@ -562,11 +564,11 @@ const formationsData = [
     "titre": "English as a Second Language - Intermediate Level",
     "description": "This comprehensive course covers a wide range of English language skills, from developing conversational abilities to discussing current events, leisure activities, and grammar.",
     "objectifs_pedagogiques": [
-      "Develop conversational and communication skills in English",
-      "Explore current events and engage in discussions",
-      "Expand your vocabulary related to food, beverages, and leisure activities.",
-      "Gain a better understanding of grammar and tenses in English",
-      "Learn to express plans, arrange meetings, and discuss job-related topics in English."
+      "✅ Develop conversational and communication skills in English",
+      "✅ Explore current events and engage in discussions",
+      "✅ Expand your vocabulary related to food, beverages, and leisure activities.",
+      "✅ Gain a better understanding of grammar and tenses in English",
+      "✅ Learn to express plans, arrange meetings, and discuss job-related topics in English."
     ],
     "niveau": "Beginner",
     "public": "All",
@@ -584,11 +586,11 @@ const formationsData = [
     "titre": "English as a Second Language - Advanced Level",
     "description": "This comprehensive course covers advanced English language skills, focusing on grammar, tense usage, and communication.",
     "objectifs_pedagogiques": [
-      "Master the English tense system and avoid common present tense mistakes.",
-      "Understand and apply narrative tenses for effective storytelling.",
-      "Learn about diverse phrase types and their roles in sentences.",
-      "Proficiently use various future forms to express future events.",
-      "Gain expertise in English grammar, covering sentence structures."
+      "✅ Master the English tense system and avoid common present tense mistakes.",
+      "✅ Understand and apply narrative tenses for effective storytelling.",
+      "✅ Learn about diverse phrase types and their roles in sentences.",
+      "✅ Proficiently use various future forms to express future events.",
+      "✅ Gain expertise in English grammar, covering sentence structures."
     ],
     "niveau": "Beginner",
     "public": "All",
@@ -606,9 +608,9 @@ const formationsData = [
     "titre": "Business English as a Second Language",
     "description": "This course hones professional skills, including resume writing, job interviews, communication (email, meetings, presentations, and reports), customer service, negotiation, and workplace dynamics.",
     "objectifs_pedagogiques": [
-      "Develop strong resume and cover letter writing skills for effective job applications",
-      "Acquire proficiency in communication through written and verbal channels",
-      "Gain a deeper understanding of workplace dynamics, customer service, negotiation, and various job-related situations."
+      "✅ Develop strong resume and cover letter writing skills for effective job applications",
+      "✅ Acquire proficiency in communication through written and verbal channels",
+      "✅ Gain a deeper understanding of workplace dynamics, customer service, negotiation, and various job-related situations."
     ],
     "niveau": "Beginner",
     "public": "All",
@@ -626,10 +628,10 @@ const formationsData = [
     "titre": "Préparation à l'Examen Anglais TOEIC",
     "description": "Formation pour se préparer efficacement à l'examen TOEIC, incluant les sections Listening, Reading, et Speaking.",
     "objectifs_pedagogiques": [
-      "Maîtriser les bases du TOEIC.",
-      "Exceller dans les sections Listening et Reading du TOEIC.",
-      "Perfectionner l'expression orale pour la section Speaking.",
-      "Appliquer des stratégies de résolution de problèmes pour réussir le TOEIC."
+      "✅ Maîtriser les bases du TOEIC.",
+      "✅ Exceller dans les sections Listening et Reading du TOEIC.",
+      "✅ Perfectionner l'expression orale pour la section Speaking.",
+      "✅ Appliquer des stratégies de résolution de problèmes pour réussir le TOEIC."
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -647,10 +649,10 @@ const formationsData = [
     "titre": "Préparation à l'Examen Anglais Cambridge",
     "description": "Formation pour se préparer à l'examen Cambridge, en approfondissant la compréhension des sections Speaking et Writing.",
     "objectifs_pedagogiques": [
-      "Acquérir une compréhension approfondie de l'examen Cambridge",
-      "Se familiariser avec les sections Speaking et Writing de l'examen",
-      "Appliquer des stratégies efficaces de résolution de problèmes",
-      "Améliorer les compétences en expression orale et écrite"
+      "✅ Acquérir une compréhension approfondie de l'examen Cambridge",
+      "✅ Se familiariser avec les sections Speaking et Writing de l'examen",
+      "✅ Appliquer des stratégies efficaces de résolution de problèmes",
+      "✅ Améliorer les compétences en expression orale et écrite"
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -668,10 +670,10 @@ const formationsData = [
     "titre": "Préparation à l'Examen Anglais IELTS",
     "description": "Formation pour se préparer à l'examen IELTS, axée sur la réussite des sections Speaking et Writing.",
     "objectifs_pedagogiques": [
-      "Acquérir une compréhension approfondie de l'examen IELTS",
-      "Se familiariser avec les sections Speaking et Writing de l'examen",
-      "Appliquer des stratégies efficaces de résolution de problèmes",
-      "Améliorer les compétences en expression orale et écrite"
+      "✅ Acquérir une compréhension approfondie de l'examen IELTS",
+      "✅ Se familiariser avec les sections Speaking et Writing de l'examen",
+      "✅ Appliquer des stratégies efficaces de résolution de problèmes",
+      "✅ Améliorer les compétences en expression orale et écrite"
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -689,10 +691,10 @@ const formationsData = [
     "titre": "Préparation à l'Examen Anglais Linguaskill",
     "description": "Formation pour se préparer à l'examen Linguaskill, incluant les sections Speaking et Writing.",
     "objectifs_pedagogiques": [
-      "Acquérir une compréhension approfondie de l'examen Linguaskill",
-      "Se familiariser avec les sections Speaking et Writing de l'examen",
-      "Appliquer des stratégies efficaces de résolution de problèmes",
-      "Améliorer les compétences en expression orale et écrite"
+      "✅ Acquérir une compréhension approfondie de l'examen Linguaskill",
+      "✅ Se familiariser avec les sections Speaking et Writing de l'examen",
+      "✅ Appliquer des stratégies efficaces de résolution de problèmes",
+      "✅ Améliorer les compétences en expression orale et écrite"
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -711,9 +713,9 @@ const formationsData = [
     "description": "Formation pour se préparer à l'examen TOEFL, visant les sections Speaking et Writing.",
     "objectifs_pedagogiques": [
       "Acquérir une compréhension approfondie de l'examen TOEFL",
-      "Se familiariser avec les sections Speaking et Writing de l'examen",
-      "Appliquer des stratégies efficaces de résolution de problèmes",
-      "Améliorer les compétences en expression orale et écrite"
+      "✅ Se familiariser avec les sections Speaking et Writing de l'examen",
+      "✅ Appliquer des stratégies efficaces de résolution de problèmes",
+      "✅ Améliorer les compétences en expression orale et écrite"
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
