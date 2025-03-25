@@ -22,25 +22,37 @@ const PortfolioDetailsMain = ({ singleData }) => {
   // Fonction pour gérer les changements de cases à cocher
   const handleCheckboxChange = (id) => {
     setSelectedPacks((prevState) => {
-      const newState = { ...prevState, [id]: !prevState[id] };
+      const newState = { ...prevState };
+  
+      if (id === 'anglais-debutant + intermediaire' && !newState[id]) {
+        // Si l'utilisateur coche la case 'anglais-debutant + intermediaire', décocher l'autre case
+        newState['anglais-debutant, intermediaire + Avancé'] = false;
+      } else if (id === 'anglais-debutant, intermediaire + Avancé' && !newState[id]) {
+        // Si l'utilisateur coche la case 'anglais-debutant, intermediaire + Avancé', décocher l'autre case
+        newState['anglais-debutant + intermediaire'] = false;
+      }
+  
+      newState[id] = !newState[id]; // Inverser l'état de la case actuellement cliquée
+  
       let newnormalAmount = singleData?.formation?.prix || 99; // Montant initial
       let newpromoAmount = singleData?.formation?.prix || 69; // Montant initial
-
+  
       // Calculer l'ajustement du montant basé sur les packs sélectionnés
       if (newState['anglais-debutant + intermediaire']) {
-        newnormalAmount += 99; // Ajouter 130 si 'anglais-debutant-a1-a2' est coché
-        newpromoAmount += 30; // Ajouter 130 si 'anglais-debutant-a1-a2' est coché
+        newnormalAmount += 99; // Ajouter 99 si 'anglais-debutant + intermediaire' est coché
+        newpromoAmount += 30; // Ajouter 30 si 'anglais-debutant + intermediaire' est coché
       }
       if (newState['anglais-debutant, intermediaire + Avancé']) {
-        newnormalAmount += 198; // Ajouter 150 si 'anglais-intermediaire-b1-b2' est coché
-        newpromoAmount += 70; // Ajouter 150 si 'anglais-intermediaire-b1-b2' est coché
+        newnormalAmount += 198; // Ajouter 198 si 'anglais-debutant, intermediaire + Avancé' est coché
+        newpromoAmount += 70; // Ajouter 70 si 'anglais-debutant, intermediaire + Avancé' est coché
       }
-
+  
       setnormalAmount(newnormalAmount); // Mettre à jour le montant
       setpromoAmount(newpromoAmount); // Mettre à jour le montant
       return newState;
     });
   };
+  
 
   // Fonction pour créer une commande
   const createOrder = async () => {
