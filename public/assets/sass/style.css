@@ -5551,14 +5551,29 @@ Responsive Menu Css
   border-radius: 10px 10px 10px 10px;
   overflow: hidden;
 }
-.skill__two-tab-details-content .project-info .btn-achat-formation{
+.skill__two-tab-details-content .project-info /* .btn-achat-formation{
   width: 50%;
   position: absolute;
   top: -17%;
   right: -50px;
-}
+} */
 .btn-achat-formation .temoignage{
   border: 1px #000000 solid;
+}
+.project-info .project-info-top-content{
+  background: var(--bg-white);
+  border: 1px solid var(--color-4);
+  border-top: 0;
+  padding: 23px 30px;
+  border-radius: 0 0 0 10px;
+  list-style-type: none;
+  margin: 0;
+}
+.project-info-top-content .btn-achat-formation{
+  width: 50%;
+  position: absolute;
+  top: -17%;
+  right: -50px;
 }
 .skill__two-tab-details-content .project-info .project-info-top {
   background: var(--primary-color-1);
@@ -6483,6 +6498,7 @@ Responsive Menu Css
 * Portfolio Avis Style
 ==========================================================================*/
 .portfolio__avis{
+ position: absolute;
   padding: 0px;
  }
  .portfolio__avis-content-left h2 {
@@ -6490,17 +6506,16 @@ Responsive Menu Css
    text-transform: none;
  }
  .portfolio__avis-single-portfolio {
-   position: relative;
    border-radius: 30px;
    overflow: hidden;
    transition: all 0.3s linear;
  }
  .custom__container{
-  margin-top: 100px;
-  margin-right: 100px;
+  margin-top: 150px;
+  margin-right: 150px;
  }
  .portfolio__avis-single-portfolio img {
-   width: 80%;
+   width: 12%;
    height: 80%;
    -o-object-fit: cover;
       object-fit: cover;
@@ -6517,11 +6532,11 @@ Responsive Menu Css
      font-size: 28px;
    }
    .custom__container{
-    margin-top: 100px;
+    margin-top: 150px;
     margin-right: 100px;
    }
    .portfolio__avis-single-portfolio img {
-     width: 80%;
+     width: 12%;
      height: 80%;
      -o-object-fit: cover;
         object-fit: cover;
@@ -6535,11 +6550,11 @@ Responsive Menu Css
      margin: 0;
    }
    .custom__container{
-    margin-top: 100px;
+    margin-top: 150px;
     margin-right: 50px;
    }
    .portfolio__avis-single-portfolio img {
-     width: 50%;
+     width: 14%;
      height: 80%;
      -o-object-fit: cover;
         object-fit: cover;
@@ -6553,11 +6568,11 @@ Responsive Menu Css
      transform: scale(1);
    }
    .custom__container{
-    margin-top: 100px;
+    margin-top: 150px;
     margin-right: 100px;
    }
    .portfolio__avis-single-portfolio img {
-     width: 60%;
+     width: 12%;
      height: 80%;
      -o-object-fit: cover;
         object-fit: cover;
@@ -6579,11 +6594,11 @@ Responsive Menu Css
      font-size: 25px;
    }
    .custom__container{
-    margin-top: 100px;
+    margin-top: 150px;
     margin-right: 100px;
    }
    .portfolio__avis-single-portfolio img {
-     width: 67%;
+     width: 12%;
      height: 80%;
      -o-object-fit: cover;
         object-fit: cover;
@@ -6594,7 +6609,7 @@ Responsive Menu Css
      font-size: 15px;
    }
    .portfolio__avis-single-portfolio .img {
-     width: 80%;
+     width: 60%;
      height: 35%;
      -o-object-fit: cover;
         object-fit: cover;
@@ -6604,7 +6619,7 @@ Responsive Menu Css
     margin-right: 100px;
    }
    .portfolio__avis-single-portfolio img {
-     width: 80%;
+     width: 12%;
      height: 80%;
      -o-object-fit: cover;
         object-fit: cover;

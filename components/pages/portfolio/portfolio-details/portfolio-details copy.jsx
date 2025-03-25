@@ -149,8 +149,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
         </div>
 
         <div className="col-xl-5 project-info-left">
-          <div className="project-info">
-            <div className="project-info-top">
+          <div className="project-info ">
+
+            <div className="project-info-top border border-danger-subtle border-4">
               <h4>
                 {['anglais-debutant-a1-a2', 'anglais-intermediaire-b1-b2', 'anglais-avance-c1-c2'].includes(singleData?.id) ? (
                   <span className="text-danger">Offre Spéciale !</span>
@@ -159,31 +160,22 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 )}
               </h4>
             </div>
-            <div className="project-info-top-content">
-                <div className="d-flex justify-content-around">
-                  <div className="1">
-                   <ul>
-                   <li>niveau: <span>{singleData.niveau}</span></li>
-                    <li>public: <span>{singleData.public}</span></li>
-                    <li>duree: <span>{singleData.duree}</span></li>
-                    <li>
-                      Prix: <span className="value text-muted text-decoration-line-through">{normalAmount} € </span>
-                        <span className="h3 text-success fw-bold">&nbsp;&nbsp;{promoAmount} €</span>
-                    </li>
-                    <li>
-                        <p className="text-secondary fs-6">
-                          Dépêche-toi, offre limitée ! <span className="fs-6 text-danger font-monospace mb-4">⏳ {formatTime(timeLeft)} restantes</span>
-                        </p>
-                    </li>
-                   </ul>
-                  </div>
-                  <div className="">
-                      <div className="btn-achat-formation">
-                          <Temoignage className="" />
-                      </div>
-                  </div>
-                </div>
 
+            <ul className="d-flex justify-content-between">
+              <div>
+              <li>niveau: <span>{singleData.niveau}</span></li>
+              <li>public: <span>{singleData.public}</span></li>
+              <li>duree: <span>{singleData.duree}</span></li>
+              <li>
+                Prix: <span className="value text-muted text-decoration-line-through">{normalAmount} € </span>
+                  <span className="h3 text-success fw-bold">&nbsp;&nbsp;{promoAmount} €</span>
+              </li>
+              <li>
+                  <p className="text-secondary fs-6">
+                    Dépêche-toi, offre limitée ! <span className="fs-6 text-danger font-monospace mb-4">⏳ {formatTime(timeLeft)} restantes</span>
+                  </p>
+              </li>
+              <li className="mt-5 border">
                 {singleData?.id === 'anglais-debutant-a1-a2' && (
                   <div className="table">
                     <table className="styled-table">
@@ -241,7 +233,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
                     </table>
                   </div>
                 )}
-
               <div className="d-flex justify-content-center">
                 <button onClick={createOrder} className="btn-one" disabled={isLoading}>
                   {isLoading ? 'Traitement...' : 'Acheter Maintenant 🔥'}
@@ -253,9 +244,17 @@ const PortfolioDetailsMain = ({ singleData }) => {
                     Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
                   </p>
                 )}
-
-                {error && <li className="text-danger">{error}</li>}
-            </div>
+              </li>
+              {error && <li className="text-danger">{error}</li>}
+              </div>
+              <div>
+                <div className="btn-achat-formation ">
+                  <Temoignage className="" />
+                </div>
+              </div>
+              
+            </ul>
+           
           </div>
 
           <div className="project-info mt-20">
@@ -268,7 +267,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
               ))}
             </ul>
           </div>
-          
         </div>
       </div>
     </div>
