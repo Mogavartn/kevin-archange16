@@ -8,8 +8,8 @@ import Temoignage from '../../temoignage/temoignages';
 const PortfolioDetailsMain = ({ singleData }) => {
   const router = useRouter();
   const [timeLeft, setTimeLeft] = useState(48 * 60 * 60); // 48h en secondes
-  const [amount, setAmount] = useState(99); // Montant initial
-  const [promoAmount, setpromoAmount] = useState( 69); // Montant initial
+  const [normalAmount, setnormalAmount] = useState(99); // Montant initial
+  const [promoAmount, setpromoAmount] = useState(69); // Montant initial
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // État de chargement
   const [error, setError] = useState(null); // Gestion des erreurs
@@ -23,39 +23,44 @@ const PortfolioDetailsMain = ({ singleData }) => {
   const handleCheckboxChange = (id) => {
     setSelectedPacks((prevState) => {
       const newState = { ...prevState, [id]: !prevState[id] };
-      let newAmount = singleData?.formation?.prix || 99; // Montant initial
+      let newnormalAmount = singleData?.formation?.prix || 99; // Montant initial
       let newpromoAmount = singleData?.formation?.prix || 69; // Montant initial
-      // Calculer l'ajustement du montant basé sur les packs sélectionnés
-    if (newState['anglais-debutant-a1-a2']) {
-      newAmount += 99; // Ajouter 130 si 'anglais-debutant-a1-a2' est coché
-      newpromoAmount += 30; // Ajouter 130 si 'anglais-debutant-a1-a2' est coché
-    }
-    if (newState['anglais-intermediaire-b1-b2']) {
-      newAmount += 198; // Ajouter 150 si 'anglais-intermediaire-b1-b2' est coché
-      newpromoAmount += 70; // Ajouter 150 si 'anglais-intermediaire-b1-b2' est coché
-    }
 
-    setAmount(newAmount); // Mettre à jour le montant
-    setpromoAmount(newpromoAmount); // Mettre à jour le montant
-    return newState;
+      // Calculer l'ajustement du montant basé sur les packs sélectionnés
+      if (newState['anglais-debutant + intermediaire']) {
+        newnormalAmount += 99; // Ajouter 130 si 'anglais-debutant-a1-a2' est coché
+        newpromoAmount += 30; // Ajouter 130 si 'anglais-debutant-a1-a2' est coché
+      }
+      if (newState['anglais-debutant, intermediaire + Avancé']) {
+        newnormalAmount += 198; // Ajouter 150 si 'anglais-intermediaire-b1-b2' est coché
+        newpromoAmount += 70; // Ajouter 150 si 'anglais-intermediaire-b1-b2' est coché
+      }
+
+      setnormalAmount(newnormalAmount); // Mettre à jour le montant
+      setpromoAmount(newpromoAmount); // Mettre à jour le montant
+      return newState;
     });
   };
 
   // Fonction pour créer une commande
   const createOrder = async () => {
-    if (!amount || amount <= 0) {
+    const finalAmount = promoAmount < normalAmount ? promoAmount : normalAmount; // Choisir le prix promo ou le prix normal selon la promo
+    if (finalAmount <= 0) {
       setError('Le montant de la commande est invalide.');
       return;
     }
+
     setIsLoading(true); 
     setError(null); 
 
     const orderData = {
-      amount,
+      amount: finalAmount, // Utiliser le montant final
       currency,
       description: singleData.titre,
-      selectedPacks,
+      //selectedPacks,
     };
+
+    console.log(JSON.stringify(orderData));
 
     try {
       const response = await fetch('/api/create-order', {
@@ -133,9 +138,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
               <li>public: <span>{singleData.public}</span></li>
               <li>duree: <span>{singleData.duree}</span></li>
               <li>
-                Prix: <span className="value text-muted text-decoration-line-through">{amount} € </span>
+                Prix: <span className="value text-muted text-decoration-line-through">{normalAmount} € </span>
                 {singleData?.id === 'anglais-debutant-a1-a2' && (
-                  <span className="h3 text-success fw-bold">&nbsp;&nbsp;{ promoAmount} €</span>
+                  <span className="h3 text-success fw-bold">&nbsp;&nbsp;{promoAmount} €</span>
                 )}
               </li>
               <li>
@@ -155,7 +160,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {['anglais-debutant-a1-a2', 'anglais-intermediaire-b1-b2'].map((id) => (
+                        {['anglais-debutant + intermediaire', 'anglais-debutant, intermediaire + Avancé'].map((id) => (
                           <tr key={id}>
                             <td>
                               <label className="form-check-label">
