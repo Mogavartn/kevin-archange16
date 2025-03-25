@@ -5723,6 +5723,7 @@ Responsive Menu Css
 .project-info .form-check-input {
   margin-right: 10px;
   cursor: pointer;
+  border: 2px var(--primary-color-1) solid;
 }
 
 /* Effet de focus sur les cases à cocher */
