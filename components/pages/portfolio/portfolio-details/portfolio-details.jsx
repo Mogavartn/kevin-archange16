@@ -69,6 +69,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
       newPromoAmount += 30;
       newPercentage = 50;
       newEconomie = 99;
+      newduree = 30;
     }
 
     if (selectedPacks['anglais-debutant, intermediaire + Avancé']) {
@@ -224,6 +225,39 @@ const PortfolioDetailsMain = ({ singleData }) => {
                     </thead>
                     <tbody>
                       {['anglais-debutant + intermediaire', 'anglais-debutant, intermediaire + Avancé'].map((id) => (
+                        <tr key={id}>
+                          <td>
+                            <label className="form-check-label">
+                              <input
+                                type="checkbox"
+                                className="form-check-input"
+                                checked={selectedPacks[id]}
+                                onChange={() => handleCheckboxChange(id)}
+                              />
+                              En choisissant le Pack {id.replace('-', ' ')}
+                            </label>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+               {/* Affichage des packs selon les formations */}
+               {singleData?.id === 'anglais-intermediaire-b1-b2' && (
+                <div className="table">
+                  <table className="styled-table">
+                    <thead>
+                      <tr>
+                        <th className="text-center">
+                          Payez moins avec nos Packs Exclusifs ! <br />
+                          <span className="h6 text-danger fw-bold">{percentage}% DE REMISE ! VOUS ÉCONOMISEZ {economie} € !</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {['anglais-intermediaire + Avancé'].map((id) => (
                         <tr key={id}>
                           <td>
                             <label className="form-check-label">
