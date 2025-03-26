@@ -218,7 +218,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                       <tr>
                         <th className="text-center">
                           Payez moins avec nos Packs Exclusifs ! <br />
-                          <span className="h6 text-danger fw-bold">{percentage}% de remise et Vous économisez {economie} Euros</span>
+                          <span className="h6 text-danger fw-bold">{percentage}% DE REMISE ! VOUS ÉCONOMISEZ {economie} € !</span>
                         </th>
                       </tr>
                     </thead>
