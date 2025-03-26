@@ -5564,7 +5564,7 @@ Responsive Menu Css
   background: var(--bg-white);
   border: 1px solid var(--color-4);
   border-top: 0;
-  padding: 23px 30px;
+  padding: 23px 10px;
   border-radius: 0 0 0 10px;
   list-style-type: none;
   margin: 0;
@@ -5574,6 +5574,13 @@ Responsive Menu Css
   position: absolute;
   top: -17%;
   right: -50px;
+}
+.project-info-top-content .project-info-top-content-liste .liste {
+  border-top: 0;
+  padding: 30px 0px;
+  border-radius: 0 0 0 10px;
+  list-style-type: none;
+  margin: 0;
 }
 .skill__two-tab-details-content .project-info .project-info-top {
   background: var(--primary-color-1);
@@ -5586,9 +5593,8 @@ Responsive Menu Css
 }
 .skill__two-tab-details-content .project-info ul {
   background: var(--bg-white);
-  /* border: 1px solid var(--color-4); */
   border-top: 0;
-  padding: 23px 30px;
+  padding: 23px 0px;
   border-radius: 0 0 0 10px;
   list-style-type: none;
   margin: 0;
@@ -5638,7 +5644,6 @@ Responsive Menu Css
 }
 .skill__two-tab-details-content-service .project-info ul {
   background: var(--bg-white);
-  border: 1px solid var(--color-4);
   border-top: 0;
   padding: 23px 30px;
   border-radius: 0 0 0 10px;
@@ -6615,11 +6620,11 @@ Responsive Menu Css
         object-fit: cover;
    }
    .custom__container{
-    margin-top: 100px;
-    margin-right: 100px;
+    margin-top: 150px;
+    margin-right: 150px;
    }
    .portfolio__avis-single-portfolio img {
-     width: 12%;
+     width: 8%;
      height: 80%;
      -o-object-fit: cover;
         object-fit: cover;

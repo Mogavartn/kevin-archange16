@@ -161,8 +161,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
             </div>
             <div className="project-info-top-content">
                 <div className="d-flex justify-content-around">
-                  <div className="1">
-                   <ul>
+                  <div className="project-info-top-content-liste">
+                   <ul className="liste">
                    <li>niveau: <span>{singleData.niveau}</span></li>
                     <li>public: <span>{singleData.public}</span></li>
                     <li>duree: <span>{singleData.duree}</span></li>
@@ -261,7 +261,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
             <div className="project-info-top">
               <h4>Ce que vous allez maîtriser :</h4>
             </div>
-            <ul>
+            <ul className="p-5">
               {singleData?.objectifs_pedagogiques?.map((objectif, index) => (
                 <li key={index}><span>{objectif}</span></li>
               ))}
