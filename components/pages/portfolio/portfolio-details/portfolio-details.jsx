@@ -2,88 +2,82 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import Temoignage from '../../temoignage/temoignages';
 
 const PortfolioDetailsMain = ({ singleData }) => {
   const router = useRouter();
   const [timeLeft, setTimeLeft] = useState(48 * 60 * 60); // 48h en secondes
-  const [normalAmount, setnormalAmount] = useState(99); // Montant initial
-  const [promoAmount, setpromoAmount] = useState(69); // Montant initial
-  const [porcentage, setporcentage] = useState(30); // Montant initial
+  const [normalAmount, setNormalAmount] = useState(99); // Montant initial
+  const [promoAmount, setPromoAmount] = useState(69); // Montant initial
+  const [percentage, setPercentage] = useState(30); // Pourcentage de remise
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // État de chargement
   const [error, setError] = useState(null); // Gestion des erreurs
   const [selectedPacks, setSelectedPacks] = useState({
-    'anglais-debutant-a1-a2': false,
-    'anglais-intermediaire-b1-b2': false,
-    'anglais-avance-c1-c2': false,
+    'anglais-debutant + intermediaire': false,
+    'anglais-intermediaire + Avancé': false,
+    'anglais-debutant, intermediaire + Avancé': false,
   });
 
   // Fonction pour gérer les changements de cases à cocher
   const handleCheckboxChange = (id) => {
     setSelectedPacks((prevState) => {
       const newState = { ...prevState };
-  
+
       if (id === 'anglais-debutant + intermediaire' && !newState[id]) {
-        // Si l'utilisateur coche la case 'anglais-debutant + intermediaire', décocher l'autre case
         newState['anglais-debutant, intermediaire + Avancé'] = false;
       } else if (id === 'anglais-debutant, intermediaire + Avancé' && !newState[id]) {
-        // Si l'utilisateur coche la case 'anglais-debutant, intermediaire + Avancé', décocher l'autre case
         newState['anglais-debutant + intermediaire'] = false;
       }
-  
+
       newState[id] = !newState[id]; // Inverser l'état de la case actuellement cliquée
-  
-      let newnormalAmount = singleData?.formation?.prix || 99; // Montant initial
-      let newpromoAmount = singleData?.formation?.prix || 69; // Montant initial
-      let newporcentage = 30; // Montant initial
-  
-      // Calculer l'ajustement du montant basé sur les packs sélectionnés
+
+      let newNormalAmount = singleData?.formation?.prix || 99; // Montant initial
+      let newPromoAmount = singleData?.formation?.prix || 69; // Montant initial
+      let newPercentage = 30; // Pourcentage initial
+
+      // Calculer les ajustements des montants en fonction des packs sélectionnés
       if (newState['anglais-debutant + intermediaire']) {
-        newnormalAmount += 99; // Ajouter 99 si 'anglais-debutant + intermediaire' est coché
-        newpromoAmount += 30; // Ajouter 30 si 'anglais-debutant + intermediaire' est coché
-        newporcentage = 50;
+        newNormalAmount += 99;
+        newPromoAmount += 30;
+        newPercentage = 50;
       }
 
-      // Calculer l'ajustement du montant basé sur les packs sélectionnés
-      if (newState['anglais intermediaire + Avancé']) {
-        newnormalAmount += 99; // Ajouter 99 si 'anglais-debutant + intermediaire' est coché
-        newpromoAmount += 30; // Ajouter 30 si 'anglais-debutant + intermediaire' est coché
-        newporcentage = 50;
+      if (newState['anglais-intermediaire + Avancé']) {
+        newNormalAmount += 99;
+        newPromoAmount += 30;
+        newPercentage = 50;
       }
 
       if (newState['anglais-debutant, intermediaire + Avancé']) {
-        newnormalAmount += 198; // Ajouter 198 si 'anglais-debutant, intermediaire + Avancé' est coché
-        newpromoAmount += 70; // Ajouter 70 si 'anglais-debutant, intermediaire + Avancé' est coché
-        newporcentage = 53;
+        newNormalAmount += 198;
+        newPromoAmount += 70;
+        newPercentage = 53;
       }
-  
-      setnormalAmount(newnormalAmount); // Mettre à jour le montant
-      setpromoAmount(newpromoAmount); // Mettre à jour le montant
-      setporcentage (newporcentage); // Montant initial
+
+      setNormalAmount(newNormalAmount); // Mettre à jour le montant normal
+      setPromoAmount(newPromoAmount); // Mettre à jour le montant promo
+      setPercentage(newPercentage); // Mettre à jour le pourcentage
 
       return newState;
     });
   };
-  
 
   // Fonction pour créer une commande
   const createOrder = async () => {
-    const finalAmount = promoAmount < normalAmount ? promoAmount : normalAmount; // Choisir le prix promo ou le prix normal selon la promo
+    const finalAmount = promoAmount < normalAmount ? promoAmount : normalAmount; // Choisir le prix promo ou normal
     if (finalAmount <= 0) {
       setError('Le montant de la commande est invalide.');
       return;
     }
 
-    setIsLoading(true); 
-    setError(null); 
+    setIsLoading(true);
+    setError(null);
 
     const orderData = {
       amount: finalAmount, // Utiliser le montant final
       currency,
       description: singleData.titre,
-      //selectedPacks,
     };
 
     console.log(JSON.stringify(orderData));
@@ -100,7 +94,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
       const data = await response.json();
 
       if (response.ok) {
-        console.log('Commande créée avec succès:');
+        console.log('Commande créée avec succès');
         localStorage.setItem("orderResponse", JSON.stringify(data));
         router.push("/paiement");
       } else {
@@ -160,10 +154,10 @@ const PortfolioDetailsMain = ({ singleData }) => {
               </h4>
             </div>
             <div className="project-info-top-content">
-                <div className="d-flex justify-content-around">
-                  <div className="project-info-top-content-liste">
-                   <ul className="liste">
-                   <li>niveau: <span>{singleData.niveau}</span></li>
+              <div className="d-flex justify-content-around">
+                <div className="project-info-top-content-liste">
+                  <ul className="liste">
+                    <li>niveau: <span>{singleData.niveau}</span></li>
                     <li>public: <span>{singleData.public}</span></li>
                     <li>duree: <span>{singleData.duree}</span></li>
                     <li>
@@ -171,76 +165,83 @@ const PortfolioDetailsMain = ({ singleData }) => {
                         <span className="h3 text-success fw-bold">&nbsp;&nbsp;{promoAmount} €</span>
                     </li>
                     <li>
-                        <p className="text-secondary fs-6">
-                          Dépêche-toi, offre limitée ! <span className="fs-6 text-danger font-monospace mb-4">⏳ {formatTime(timeLeft)} restantes</span>
-                        </p>
+                      <p className="text-secondary fs-6">
+                        Dépêche-toi, offre limitée ! <span className="fs-6 text-danger font-monospace mb-4">⏳ {formatTime(timeLeft)} restantes</span>
+                      </p>
                     </li>
-                   </ul>
-                  </div>
-                  <div className="">
-                      <div className="btn-achat-formation">
-                          <Temoignage className="" />
-                      </div>
+                  </ul>
+                </div>
+                <div className="">
+                  <div className="btn-achat-formation">
+                    <Temoignage className="" />
                   </div>
                 </div>
+              </div>
 
-                {singleData?.id === 'anglais-debutant-a1-a2' && (
-                  <div className="table">
-                    <table className="styled-table">
-                      <thead>
-                        <tr>
-                          <th className="text-center">Payez moins avec nos Packs Exclusifs ! <br/> <span className="text-danger fw-bold">{porcentage}% de Remise</span> </th>
+              {/* Affichage des packs selon les formations */}
+              {singleData?.id === 'anglais-debutant-a1-a2' && (
+                <div className="table">
+                  <table className="styled-table">
+                    <thead>
+                      <tr>
+                        <th className="text-center">
+                          Payez moins avec nos Packs Exclusifs ! <br />
+                          <span className="text-danger fw-bold">{percentage}% de remise</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {['anglais-debutant + intermediaire', 'anglais-debutant, intermediaire + Avancé'].map((id) => (
+                        <tr key={id}>
+                          <td>
+                            <label className="form-check-label">
+                              <input
+                                type="checkbox"
+                                className="form-check-input"
+                                checked={selectedPacks[id]}
+                                onChange={() => handleCheckboxChange(id)}
+                              />
+                              En choisissant le Pack {id.replace('-', ' ')}
+                            </label>
+                          </td>
                         </tr>
-                      </thead>
-                      <tbody>
-                        {['anglais-debutant + intermediaire', 'anglais-debutant, intermediaire + Avancé'].map((id) => (
-                          <tr key={id}>
-                            <td>
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                  checked={selectedPacks[id]}
-                                  onChange={() => handleCheckboxChange(id)}
-                                />
-                                En choisissant le Pack {id.replace('-', ' ')}
-                              </label>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
 
-                {singleData?.id === 'anglais-intermediaire-b1-b2' && (
-                  <div className="table">
-                    <table className="styled-table">
-                      <thead>
-                        <tr>
-                          <th className="text-center">Payez moins avec nos Packs Exclusifs ! <br/> <span className="text-danger fw-bold">{porcentage}% de Remise</span> </th>
+              {singleData?.id === 'anglais-intermediaire-b1-b2' && (
+                <div className="table">
+                  <table className="styled-table">
+                    <thead>
+                      <tr>
+                        <th className="text-center">
+                          Payez moins avec nos Packs Exclusifs ! <br />
+                          <span className="text-danger fw-bold">{percentage}% de remise</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {['anglais-intermediaire + Avancé'].map((id) => (
+                        <tr key={id}>
+                          <td>
+                            <label className="form-check-label">
+                              <input
+                                type="checkbox"
+                                className="form-check-input"
+                                checked={selectedPacks[id]}
+                                onChange={() => handleCheckboxChange(id)}
+                              />
+                              En choisissant le Pack {id.replace('-', ' ')}
+                            </label>
+                          </td>
                         </tr>
-                      </thead>
-                      <tbody>
-                        {['anglais intermediaire + Avancé'].map((id) => (
-                          <tr key={id}>
-                            <td>
-                              <label className="form-check-label">
-                                <input
-                                  type="checkbox"
-                                  className="form-check-input"
-                                  checked={selectedPacks[id]}
-                                  onChange={() => handleCheckboxChange(id)}
-                                />
-                                En choisissant le Pack {id.replace('-', ' ')}
-                              </label>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
 
               <div className="d-flex justify-content-center">
                 <button onClick={createOrder} className="btn-one" disabled={isLoading}>
@@ -248,12 +249,12 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 </button>
               </div>
 
-                {selectedPacks['anglais-intermediaire-b1-b2'] && (
-                  <p className="text-primary-emphasis mt-3">
-                    Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
-                  </p>
-                )}
-                {error && <li className="text-danger">{error}</li>}
+              {selectedPacks['anglais-debutant, intermediaire + Avancé'] && (
+                <p className="text-primary-emphasis mb-3 mt-2">
+                  Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
+                </p>
+              )}
+              {error && <li className="text-danger">{error}</li>}
             </div>
           </div>
 
@@ -267,7 +268,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
               ))}
             </ul>
           </div>
-
         </div>
       </div>
     </div>
