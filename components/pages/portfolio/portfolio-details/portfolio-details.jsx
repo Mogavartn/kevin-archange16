@@ -6,10 +6,12 @@ import Temoignage from '../../temoignage/temoignages';
 
 const PortfolioDetailsMain = ({ singleData }) => {
   const router = useRouter();
-  const [timeLeft, setTimeLeft] = useState(48 * 60 * 60); // 48h en secondes
+  const [timeLeft, setTimeLeft] = useState(48 * 60 * 60); // Initialisation par défaut
   const [normalAmount, setNormalAmount] = useState(99); // Montant initial
   const [promoAmount, setPromoAmount] = useState(69); // Montant initial
   const [percentage, setPercentage] = useState(30); // Pourcentage de remise
+  const [economie, seteconomie] = useState(30); // Economie
+  const [duree, setduree] = useState(15); // Durée
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // État de chargement
   const [error, setError] = useState(null); // Gestion des erreurs
@@ -24,6 +26,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
     setSelectedPacks((prevState) => {
       const newState = { ...prevState };
 
+      // Désélectionner les autres packs en fonction de l'id sélectionné
       if (id === 'anglais-debutant + intermediaire' && !newState[id]) {
         newState['anglais-debutant, intermediaire + Avancé'] = false;
       } else if (id === 'anglais-debutant, intermediaire + Avancé' && !newState[id]) {
@@ -32,35 +35,51 @@ const PortfolioDetailsMain = ({ singleData }) => {
 
       newState[id] = !newState[id]; // Inverser l'état de la case actuellement cliquée
 
-      let newNormalAmount = singleData?.formation?.prix || 99; // Montant initial
-      let newPromoAmount = singleData?.formation?.prix || 69; // Montant initial
-      let newPercentage = 30; // Pourcentage initial
+      // Calculer les montants et autres valeurs en fonction des packs sélectionnés
+      const { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree } = calculateAmounts(newState);
 
-      // Calculer les ajustements des montants en fonction des packs sélectionnés
-      if (newState['anglais-debutant + intermediaire']) {
-        newNormalAmount += 99;
-        newPromoAmount += 30;
-        newPercentage = 50;
-      }
-
-      if (newState['anglais-intermediaire + Avancé']) {
-        newNormalAmount += 99;
-        newPromoAmount += 30;
-        newPercentage = 50;
-      }
-
-      if (newState['anglais-debutant, intermediaire + Avancé']) {
-        newNormalAmount += 198;
-        newPromoAmount += 70;
-        newPercentage = 53;
-      }
-
-      setNormalAmount(newNormalAmount); // Mettre à jour le montant normal
-      setPromoAmount(newPromoAmount); // Mettre à jour le montant promo
-      setPercentage(newPercentage); // Mettre à jour le pourcentage
+      setNormalAmount(newNormalAmount);
+      setPromoAmount(newPromoAmount);
+      setPercentage(newPercentage);
+      seteconomie(newEconomie);
+      setduree(newduree);
 
       return newState;
     });
+  };
+
+  // Fonction pour calculer les montants, remises et durée
+  const calculateAmounts = (selectedPacks) => {
+    let newNormalAmount = 99;
+    let newPromoAmount = 69;
+    let newPercentage = 30;
+    let newEconomie = 30;
+    let newduree = 15;
+
+    if (selectedPacks['anglais-debutant + intermediaire']) {
+      newNormalAmount += 99;
+      newPromoAmount += 30;
+      newPercentage = 50;
+      newEconomie = 99;
+      newduree = 30;
+    }
+
+    if (selectedPacks['anglais-intermediaire + Avancé']) {
+      newNormalAmount += 99;
+      newPromoAmount += 30;
+      newPercentage = 50;
+      newEconomie = 99;
+    }
+
+    if (selectedPacks['anglais-debutant, intermediaire + Avancé']) {
+      newNormalAmount += 198;
+      newPromoAmount += 70;
+      newPercentage = 53;
+      newEconomie = 158;
+      newduree = 45;
+    }
+
+    return { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree };
   };
 
   // Fonction pour créer une commande
@@ -111,10 +130,23 @@ const PortfolioDetailsMain = ({ singleData }) => {
 
   // Utilisation de useEffect pour démarrer un timer qui décrémente chaque seconde
   useEffect(() => {
+    const savedTimeLeft = localStorage.getItem("timeLeft");
+    if (savedTimeLeft) {
+      setTimeLeft(parseInt(savedTimeLeft, 10));
+    }
+
     const timer = setInterval(() => {
-      setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0)); 
+      setTimeLeft((prevTime) => {
+        const newTime = prevTime > 0 ? prevTime - 1 : 0;
+        if (newTime === 0) {
+          clearInterval(timer); // Stoppe le timer à zéro
+        }
+        localStorage.setItem("timeLeft", newTime);
+        return newTime;
+      });
     }, 1000);
-    return () => clearInterval(timer);
+
+    return () => clearInterval(timer); // Cleanup
   }, []);
 
   // Fonction pour formater le temps restant en heures:minutes:secondes
@@ -159,10 +191,10 @@ const PortfolioDetailsMain = ({ singleData }) => {
                   <ul className="liste">
                     <li>niveau: <span>{singleData.niveau}</span></li>
                     <li>public: <span>{singleData.public}</span></li>
-                    <li>duree: <span>{singleData.duree}</span></li>
+                    <li>duree: <span>{duree} h environ</span></li>
                     <li>
                       Prix: <span className="value text-muted text-decoration-line-through">{normalAmount} € </span>
-                        <span className="h3 text-success fw-bold">&nbsp;&nbsp;{promoAmount} €</span>
+                        <span className="h3 text-danger fw-bold">&nbsp;&nbsp;{promoAmount} €</span>
                     </li>
                     <li>
                       <p className="text-secondary fs-6">
@@ -186,7 +218,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                       <tr>
                         <th className="text-center">
                           Payez moins avec nos Packs Exclusifs ! <br />
-                          <span className="text-danger fw-bold">{percentage}% de remise</span>
+                          <span className="h6 text-danger fw-bold">{percentage}% de remise et Vous économisez {economie} Euros</span>
                         </th>
                       </tr>
                     </thead>
@@ -211,36 +243,10 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 </div>
               )}
 
-              {singleData?.id === 'anglais-intermediaire-b1-b2' && (
-                <div className="table">
-                  <table className="styled-table">
-                    <thead>
-                      <tr>
-                        <th className="text-center">
-                          Payez moins avec nos Packs Exclusifs ! <br />
-                          <span className="text-danger fw-bold">{percentage}% de remise</span>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {['anglais-intermediaire + Avancé'].map((id) => (
-                        <tr key={id}>
-                          <td>
-                            <label className="form-check-label">
-                              <input
-                                type="checkbox"
-                                className="form-check-input"
-                                checked={selectedPacks[id]}
-                                onChange={() => handleCheckboxChange(id)}
-                              />
-                              En choisissant le Pack {id.replace('-', ' ')}
-                            </label>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
+              {selectedPacks['anglais-debutant, intermediaire + Avancé'] && (
+                <p className="text-danger text-center fs-6 mb-1 mt-1">
+                  Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
+                </p>
               )}
 
               <div className="d-flex justify-content-center">
@@ -248,12 +254,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
                   {isLoading ? 'Traitement...' : 'Acheter Maintenant 🔥'}
                 </button>
               </div>
-
-              {selectedPacks['anglais-debutant, intermediaire + Avancé'] && (
-                <p className="text-primary-emphasis mb-3 mt-2">
-                  Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
-                </p>
-              )}
               {error && <li className="text-danger">{error}</li>}
             </div>
           </div>

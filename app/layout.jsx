@@ -2,7 +2,6 @@
 import { useEffect } from 'react';
 import "./globals.css";
 import { Suspense } from "react";
-import { FacebookPixelEvents } from '@/components/pixel-events';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { ToastContainer } from 'react-toastify';
 
@@ -20,6 +19,18 @@ export default function RootLayout({ children }) {
             console.error('Pixel ID de Facebook manquant ! Assurez-vous qu\'il est correctement défini dans .env.local');
         }
     }, []);
+
+   /*  useEffect(() => {
+        // Initialisation du Pixel Facebook
+        if (typeof window !== 'undefined') {
+          window.fbq = window.fbq || function(){(window.fbq.q=window.fbq.q||[]).push(arguments)};
+          window.fbq('init', 'VOTRE_ID_PIXEL_FACEBOOK');
+          
+          // Track initial pageview
+          window.fbq('track', 'PageView');
+        }
+      }, []); */
+      
 
     return (
         <html lang="en">
@@ -49,7 +60,6 @@ export default function RootLayout({ children }) {
                         `,
                     }}
                 />
-                
             </head>
             <body>
                 {children}

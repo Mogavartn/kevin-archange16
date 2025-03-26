@@ -26,5 +26,8 @@
     "react-toastify": "^11.0.5",
     "sharp": "^0.33.5",
     "swiper": "^11.1.5"
+  },
+  "devDependencies": {
+    "@types/facebook-pixel": "^0.0.31"
   }
 }

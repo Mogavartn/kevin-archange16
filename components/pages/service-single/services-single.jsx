@@ -1,15 +1,27 @@
 //import image6 from "../../../public/assets/img/v1/2.jpg";
 import dataFormation from '@/components/data/formationsPrincipales';
+import useFacebookPixel from '@/components/hooks/useFacebookPixel';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+/* import useFacebookPixel from '../hooks/useFacebookPixel'; */
 
 const CategorieSingleMain = () => {
+    /* const { trackAddToCart, trackViewContent, trackPurchase } = useFacebookPixel(); */
     // Récupération des paramètres d'URL
     const params = useParams();
     const categoryId = params.id; // L'ID de la catégorie est passé dans l'URL
 
     // Filtrer les formations par catégorie
     const formationsInCategory = dataFormation.filter((formation) => formation.categorie === categoryId);
+
+   /*  useEffect(() => {
+        trackViewContent({
+          content_ids: formationsInCategory.id,
+          content_type: formationsInCategory.titre,
+          value: 0,
+          currency: 'USD',
+        });
+      }, [trackViewContent]); */
 
     return (
         <>
