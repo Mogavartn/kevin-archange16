@@ -104,20 +104,32 @@ const BannerOne = () => {
                   <br />🔥 Prêt à transformer vos idées en succès ? 🔥
                 </p>
                 <div className="grid grid-cols-1 gap-10 justify-content-between">
-                  <Link
-                    href="/business"
-                    className="btn-two mb-10 teste"
-                    onClick={handleBusinessClick}
-                  >
-                    👉 Je veux lancer mon business
-                  </Link>
-                  <Link
-                    href="/categories"
-                    className="btn-one ml-10"
-                    onClick={handleFormationClick}
-                  >
-                    👉 Je veux me former
-                  </Link>
+                   <div className="">
+                      <Link
+                        href="/business"
+                        className="btn-two mb-10 teste"
+                        onClick={handleBusinessClick}
+                      >
+                        👉 Je veux lancer mon business
+                      </Link>
+                      <Link
+                        href="/categories"
+                        className="btn-one ml-10"
+                        onClick={handleFormationClick}
+                      >
+                        👉 Je veux me former
+                      </Link>
+                   </div>
+                   <div className="d-flex justify-content-center align-items-center h-100 mt-2">
+                      <Link
+                        href="https://meet.brevo.com/kevin-a2ta2l/faites-le-point-sur-votre-avenir-professionnel-avec-un-bilan-de-competences-"
+                        target="_blank"
+                        className="btn-one ml-10 text-center "
+                        onClick={handleFormationClick}
+                      >
+                        👉 Faire mon Bilan de Compétences
+                      </Link>
+                   </div>
                 </div>
               </div>
             </div>
