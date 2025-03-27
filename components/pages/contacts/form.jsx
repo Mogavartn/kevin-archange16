@@ -43,6 +43,17 @@ const FormArea = () => {
 
       if (response.status === 200) {
         setStatusMessage('Message envoyé avec succès !');
+
+        // Facebook Pixel: Suivi de l'événement "Lead" ou un événement personnalisé
+        if (typeof window !== "undefined" && window.fbq) {
+          window.fbq('track', 'Lead', {
+            content_name: 'Formulaire de Contact',
+            content_category: 'Contact',
+            value: 0.0,
+            currency: 'EUR',
+            email: formData.email,
+          });
+        }
       } else {
         setStatusMessage('Une erreur est survenue.');
       }

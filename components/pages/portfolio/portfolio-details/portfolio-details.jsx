@@ -129,32 +129,46 @@ const PortfolioDetailsMain = ({ singleData }) => {
     }
   };
 
-  // Utilisation de useEffect pour démarrer un timer qui décrémente chaque seconde
   useEffect(() => {
-    const savedTimeLeft = localStorage.getItem("timeLeft");
-    if (savedTimeLeft) {
-      setTimeLeft(parseInt(savedTimeLeft, 10));
-    }
+    // On récupère la date d'expiration de localStorage, si elle existe
+    const savedEndTime = localStorage.getItem('endTime');
+    
+    // Si une date d'expiration existe, on l'utilise. Sinon, on en crée une à partir de l'heure actuelle.
+    let endTime = savedEndTime ? parseInt(savedEndTime, 10) : Date.now() + 48 * 3600000; // Par exemple, 1 heure à partir de l'heure actuelle
 
+    // On sauvegarde cette date limite dans le localStorage
+    localStorage.setItem('endTime', endTime);
+
+    // Fonction pour calculer le temps restant
+    const calculateTimeLeft = () => {
+      const now = Date.now();
+      const timeRemaining = endTime - now;
+      return timeRemaining > 0 ? Math.floor(timeRemaining / 1000) : 0;
+    };
+
+    // Initialisation du temps restant à partir de la date d'expiration
+    setTimeLeft(calculateTimeLeft());
+
+    // On met en place un intervalle pour mettre à jour le temps restant chaque seconde
     const timer = setInterval(() => {
-      setTimeLeft((prevTime) => {
-        const newTime = prevTime > 0 ? prevTime - 1 : 0;
-        if (newTime === 0) {
-          clearInterval(timer); // Stoppe le timer à zéro
-        }
-        localStorage.setItem("timeLeft", newTime);
-        return newTime;
-      });
+      const newTimeLeft = calculateTimeLeft();
+      setTimeLeft(newTimeLeft);
+
+      // Si le temps est écoulé, on arrête le timer définitivement
+      if (newTimeLeft === 0) {
+        clearInterval(timer);
+      }
     }, 1000);
 
-    return () => clearInterval(timer); // Cleanup
-  }, []);
+    // Nettoyage du timer au démontage du composant
+    return () => clearInterval(timer);
+  }, []); // L'effet ne se déclenche qu'une fois au montage du composant
 
   // Fonction pour formater le temps restant en heures:minutes:secondes
   const formatTime = (seconds) => {
-    const h = String(Math.floor(seconds / 3600)).padStart(2, "0");
-    const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, "0");
-    const s = String(seconds % 60).padStart(2, "0");
+    const h = String(Math.floor(seconds / 3600)).padStart(2, '0');
+    const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+    const s = String(seconds % 60).padStart(2, '0');
     return `${h}:${m}:${s}`;
   };
 

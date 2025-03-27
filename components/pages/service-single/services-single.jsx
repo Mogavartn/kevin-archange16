@@ -1,12 +1,9 @@
-//import image6 from "../../../public/assets/img/v1/2.jpg";
-import dataFormation from '@/components/data/formationsPrincipales';
-import useFacebookPixel from '@/components/hooks/useFacebookPixel';
-import Link from 'next/link';
+import { useEffect } from 'react';
 import { useParams } from 'next/navigation';
-/* import useFacebookPixel from '../hooks/useFacebookPixel'; */
+import dataFormation from '@/components/data/formationsPrincipales';
+import Link from 'next/link';
 
 const CategorieSingleMain = () => {
-    /* const { trackAddToCart, trackViewContent, trackPurchase } = useFacebookPixel(); */
     // Récupération des paramètres d'URL
     const params = useParams();
     const categoryId = params.id; // L'ID de la catégorie est passé dans l'URL
@@ -14,14 +11,34 @@ const CategorieSingleMain = () => {
     // Filtrer les formations par catégorie
     const formationsInCategory = dataFormation.filter((formation) => formation.categorie === categoryId);
 
-   /*  useEffect(() => {
-        trackViewContent({
-          content_ids: formationsInCategory.id,
-          content_type: formationsInCategory.titre,
-          value: 0,
-          currency: 'USD',
-        });
-      }, [trackViewContent]); */
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.fbq) {
+            if (!window.fbq.isInitialized) {
+                window.fbq('init', 'YOUR_PIXEL_ID'); // Remplace par ton ID de pixel
+                window.fbq.isInitialized = true;  // Marque comme initialisé
+            }
+    
+            // Événement ViewContent
+            window.fbq('track', 'ViewContent', {
+                content_name: `Page de Formations - ${categoryId}`,
+                content_category: 'Formations',
+                value: 0.0,
+                currency: 'EUR',
+            });
+        }
+    }, [categoryId]);  // Exécuter à chaque changement de catégorie
+
+    /* // Fonction de suivi des clics sur "Voir plus"
+    const trackClickFormation = (formation) => {
+        if (typeof window !== 'undefined' && window.fbq) {
+            window.fbq('track', 'ViewContent', {
+                content_name: formation.titre,
+                content_category: 'Formations',
+                value: 0.0,
+                currency: 'EUR',
+            });
+        }
+    }; */
 
     return (
         <>
@@ -41,7 +58,11 @@ const CategorieSingleMain = () => {
                                         </div>
                                         <div className="services__two-single-service-content formation-solution">
                                             <h4>{formation.titre}</h4> {/* Titre de la formation */}
-                                            <Link href={formation.lien ? formation.lien : `/services/${formation.id}`} className="btn-one mb-20 ml-20">
+                                            <Link
+                                                href={formation.lien ? formation.lien : `/services/${formation.id}`}
+                                                className="btn-one mb-20 ml-20"
+                                                onClick={() => trackClickFormation(formation)} // Suivi du clic
+                                            >
                                                 Voir plus
                                             </Link>
                                         </div>

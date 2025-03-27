@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import servicesData from '@/components/data/categoriesPrincipale';
 import image1 from "@/public/assets/img/v1/CREATION-ENTREPRISE.jpg";
+import { useEffect } from 'react';
 
 const CategoriesMain = () => {
     // Vérification et regroupement des services par catégorie
@@ -12,6 +13,21 @@ const CategoriesMain = () => {
         acc[categorie].push(service);
         return acc;
     }, {}) : {};  // Si servicesData est null ou undefined, utiliser un objet vide
+
+    useEffect(() => {
+        // Vérification si l'événement a déjà été envoyé
+        if (typeof window !== "undefined" && window.fbq && !window.hasTrackedViewContent) {
+            window.fbq('track', 'ViewContent', {
+                content_name: 'Page de formation', // Nom du contenu ou de la page
+                content_category: 'Formations', // Catégorie de contenu
+                value: 0.0,  // Valeur, tu peux ajuster si nécessaire
+                currency: 'EUR', // Devise de la valeur
+            });
+
+            // Marquer l'événement comme envoyé
+            window.hasTrackedViewContent = true;
+        }
+    }, []); // L'effet est exécuté une fois lors du montage du composant
 
     return (
         <>

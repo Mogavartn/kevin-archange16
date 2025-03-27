@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         // Initialisation du Pixel Facebook
         if (typeof window !== 'undefined') {
           window.fbq = window.fbq || function(){(window.fbq.q=window.fbq.q||[]).push(arguments)};
-          window.fbq('init', 'VOTRE_ID_PIXEL_FACEBOOK');
+          window.fbq('init', process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID);
           
           // Track initial pageview
           window.fbq('track', 'PageView');

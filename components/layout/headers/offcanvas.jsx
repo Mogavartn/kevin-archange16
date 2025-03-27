@@ -2,7 +2,6 @@ import Link from 'next/link';
 import logo2 from "../../../public/assets/img/logo-2.png";
 import Social from '@/components/data/social';
 import React, { useState, useEffect, useRef } from 'react';
-import FormArea from '@/components/pages/contacts/form';
 
 const SideBar = ({ isOpen, setIsOpen }) => {
     // Référence au sidebar pour détecter les clics en dehors
@@ -55,12 +54,22 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 setMessage('Votre email a été envoyé avec succès !');
                 setEmail('');
 
+                // Facebook Pixel : Suivi de l'événement "Subscribe" (Démarrage de l'abonnement à la newsletter)
+                if (typeof window !== "undefined" && window.fbq) {
+                    window.fbq('track', 'Subscribe', {
+                        content_name: 'Newsletter',
+                        content_category: 'Abonnement',
+                        value: 0.0,
+                        currency: 'EUR',
+                        email: email, // Optionnel: Envoi de l'email de l'utilisateur pour un suivi plus détaillé
+                    });
+                }
+
                 setTimeout(() => {
                     setMessage('');
                 }, 3000);
             } else {
                 setMessage(`Erreur: ${data.message}`);
-
                 setTimeout(() => {
                     setMessage('');
                 }, 3000);
@@ -98,7 +107,6 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                                 </div>
                             </div>
                         </div>
-                       
                     </div>
                 </div>
                 <h5 className="text-start mb-4 pl-15">Notre Newsletter</h5>
@@ -116,12 +124,12 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                                  <button type="submit" disabled={loading}>
                                     {loading ? 'Envoi...' : <i className="fas fa-paper-plane"></i>}
                                 </button>
-                                </form>
-                                {message && (
-                                    <div style={{ color: message.includes('succès') ? 'white' : 'red' }}>
-                                        {message}
-                                    </div>
-                                )}
+                            </form>
+                            {message && (
+                                <div style={{ color: message.includes('succès') ? 'white' : 'red' }}>
+                                    {message}
+                                </div>
+                            )}
                         </div>
                         <h5 className="text-start mb-4 pl-15">Restez Connecté</h5>
                         <div className="sidebar__reseau pl-15">
