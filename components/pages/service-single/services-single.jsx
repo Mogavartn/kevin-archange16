@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
-import { useParams } from 'next/navigation';
-import dataFormation from '@/components/data/formationsPrincipales';
+import React from 'react';
 import Link from 'next/link';
+import dataFormation from '@/components/data/formationsPrincipales';
+import { useParams } from 'next/navigation';
+import useFacebookPixel from '@/components/hooks/useFacebookPixel';  // Si tu as un hook personnalisé pour gérer le pixel
 
 const CategorieSingleMain = () => {
     // Récupération des paramètres d'URL
@@ -11,34 +12,18 @@ const CategorieSingleMain = () => {
     // Filtrer les formations par catégorie
     const formationsInCategory = dataFormation.filter((formation) => formation.categorie === categoryId);
 
-    useEffect(() => {
-        if (typeof window !== 'undefined' && window.fbq) {
-            if (!window.fbq.isInitialized) {
-                window.fbq('init', 'YOUR_PIXEL_ID'); // Remplace par ton ID de pixel
-                window.fbq.isInitialized = true;  // Marque comme initialisé
-            }
-    
-            // Événement ViewContent
-            window.fbq('track', 'ViewContent', {
-                content_name: `Page de Formations - ${categoryId}`,
-                content_category: 'Formations',
-                value: 0.0,
-                currency: 'EUR',
-            });
-        }
-    }, [categoryId]);  // Exécuter à chaque changement de catégorie
-
-    /* // Fonction de suivi des clics sur "Voir plus"
-    const trackClickFormation = (formation) => {
+    // Fonction pour envoyer l'événement ViewContent à Facebook Pixel
+    const handleFormationClick = (formation) => {
         if (typeof window !== 'undefined' && window.fbq) {
             window.fbq('track', 'ViewContent', {
                 content_name: formation.titre,
                 content_category: 'Formations',
-                value: 0.0,
+                content_ids: [formation.id],
+                value: 0.0, // Tu peux définir une valeur si nécessaire
                 currency: 'EUR',
             });
         }
-    }; */
+    };
 
     return (
         <>
@@ -58,10 +43,10 @@ const CategorieSingleMain = () => {
                                         </div>
                                         <div className="services__two-single-service-content formation-solution">
                                             <h4>{formation.titre}</h4> {/* Titre de la formation */}
-                                            <Link
-                                                href={formation.lien ? formation.lien : `/services/${formation.id}`}
+                                            <Link 
+                                                href={formation.lien ? formation.lien : `/services/${formation.id}`} 
                                                 className="btn-one mb-20 ml-20"
-                                                onClick={() => trackClickFormation(formation)} // Suivi du clic
+                                                onClick={() => handleFormationClick(formation)} // Appel à la fonction quand l'utilisateur clique
                                             >
                                                 Voir plus
                                             </Link>

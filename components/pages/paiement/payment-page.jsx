@@ -85,6 +85,9 @@ export default function PaymentPage() {
           streetLine2: streetLine1  // Ligne d'adresse complémentaire
       }
   }
+  if (window.fbq) {
+    fbq("track", "AddPaymentInfo");
+  }
     //console.log("Données du formulaire :", formData); // À des fins de débogage
     return JSON.stringify(formData); // Retourner les données pour RevolutCardField
   };

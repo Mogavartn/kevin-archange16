@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 import RevolutCheckout from "@revolut/checkout";
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
+
+
 export default function RevolutCardField({ token, onSubmit }) {
 
   const router = useRouter();
@@ -36,6 +38,15 @@ export default function RevolutCardField({ token, onSubmit }) {
           //const formData1 = JSON.parse(formData);
           sendEmail(formData);
           sendData(formData);
+
+          // Déclenche l'événement de succès de paiement dans Facebook Pixel
+          if (window.fbq) {
+            fbq('track', 'Purchase', {
+              value: formData.mount,   // Montant de la transaction (par exemple formData.mount)
+              currency: 'EUR'          // Devise de la transaction, peut être modifié en fonction de votre besoin (ex: EUR, USD)
+            });
+          }
+          
           toast.success("Paiement réussi !");
           router.push("/remerciement");
           

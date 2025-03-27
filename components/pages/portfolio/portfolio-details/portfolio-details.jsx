@@ -91,6 +91,17 @@ const PortfolioDetailsMain = ({ singleData }) => {
       return;
     }
 
+    // Ajouter un événement Facebook Pixel pour le suivi "AddToCart" juste avant la création de la commande
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'AddToCart', {
+        content_name: singleData.titre,
+        content_category: 'Formations',
+        content_ids: [singleData.id],
+        value: finalAmount,
+        currency: currency,
+      });
+    }
+
     setIsLoading(true);
     setError(null);
 
