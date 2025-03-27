@@ -21,8 +21,10 @@ const PortfolioDetailsMain = ({ singleData }) => {
     'anglais-debutant, intermediaire + Avancé': false,
   });
 
+  const [selectedPackTitle, setSelectedPackTitle] = useState('');
+
   // Fonction pour gérer les changements de cases à cocher
-  const handleCheckboxChange = (id) => {
+  const handleCheckboxChange = (id, title) => {
     setSelectedPacks((prevState) => {
       const newState = { ...prevState };
 
@@ -34,6 +36,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
       }
 
       newState[id] = !newState[id]; // Inverser l'état de la case actuellement cliquée
+
+      // Mettre à jour le titre du pack sélectionné
+      setSelectedPackTitle(newState[id] ? title : '');
 
       // Calculer les montants et autres valeurs en fonction des packs sélectionnés
       const { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree } = calculateAmounts(newState);
@@ -108,7 +113,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
     const orderData = {
       amount: finalAmount, // Utiliser le montant final
       currency,
-      description: singleData.titre,
+      description: selectedPackTitle || singleData.titre, // Choisir entre le titre du pack sélectionné ou celui de la formation
     };
 
     console.log(JSON.stringify(orderData));
@@ -141,14 +146,11 @@ const PortfolioDetailsMain = ({ singleData }) => {
   };
 
   useEffect(() => {
-    // On récupère la date d'expiration de localStorage, si elle existe
+    // Récupérer la date d'expiration depuis localStorage ou calculer une nouvelle date
     const savedEndTime = localStorage.getItem('endTime');
-    
-    // Si une date d'expiration existe, on l'utilise. Sinon, on en crée une à partir de l'heure actuelle.
-    let endTime = savedEndTime ? parseInt(savedEndTime, 10) : Date.now() + 48 * 3600000; // Par exemple, 1 heure à partir de l'heure actuelle
+    let endTime = savedEndTime ? parseInt(savedEndTime, 10) : Date.now() + 72 * 3600000; // 48 heures à partir de maintenant
 
-    // On sauvegarde cette date limite dans le localStorage
-    localStorage.setItem('endTime', endTime);
+    localStorage.setItem('endTime', endTime); // Sauvegarder dans localStorage
 
     // Fonction pour calculer le temps restant
     const calculateTimeLeft = () => {
@@ -157,25 +159,25 @@ const PortfolioDetailsMain = ({ singleData }) => {
       return timeRemaining > 0 ? Math.floor(timeRemaining / 1000) : 0;
     };
 
-    // Initialisation du temps restant à partir de la date d'expiration
+    // Mettre à jour le temps restant
     setTimeLeft(calculateTimeLeft());
 
-    // On met en place un intervalle pour mettre à jour le temps restant chaque seconde
+    // Mise en place du timer pour mettre à jour le temps restant toutes les secondes
     const timer = setInterval(() => {
       const newTimeLeft = calculateTimeLeft();
       setTimeLeft(newTimeLeft);
 
-      // Si le temps est écoulé, on arrête le timer définitivement
-      if (newTimeLeft === 0) {
+      // Arrêter le timer lorsque le temps est écoulé
+      if (newTimeLeft <= 0) {
         clearInterval(timer);
       }
     }, 1000);
 
-    // Nettoyage du timer au démontage du composant
+    // Nettoyage du timer lors du démontage du composant
     return () => clearInterval(timer);
-  }, []); // L'effet ne se déclenche qu'une fois au montage du composant
+  }, []);
 
-  // Fonction pour formater le temps restant en heures:minutes:secondes
+  // Fonction pour formater le temps restant en hh:mm:ss
   const formatTime = (seconds) => {
     const h = String(Math.floor(seconds / 3600)).padStart(2, '0');
     const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
@@ -257,7 +259,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                                 type="checkbox"
                                 className="form-check-input"
                                 checked={selectedPacks[id]}
-                                onChange={() => handleCheckboxChange(id)}
+                                onChange={() => handleCheckboxChange(id, `Pack ${id.replace('-', ' ')}`)}
                               />
                               En choisissant le Pack {id.replace('-', ' ')}
                             </label>
@@ -269,8 +271,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 </div>
               )}
 
-               {/* Affichage des packs selon les formations */}
-               {singleData?.id === 'anglais-intermediaire-b1-b2' && (
+              {/* Affichage des packs selon les formations */}
+              {singleData?.id === 'anglais-intermediaire-b1-b2' && (
                 <div className="table">
                   <table className="styled-table">
                     <thead>
@@ -290,7 +292,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                                 type="checkbox"
                                 className="form-check-input"
                                 checked={selectedPacks[id]}
-                                onChange={() => handleCheckboxChange(id)}
+                                onChange={() => handleCheckboxChange(id, `Pack ${id.replace('-', ' ')}`)}
                               />
                               En choisissant le Pack {id.replace('-', ' ')}
                             </label>
