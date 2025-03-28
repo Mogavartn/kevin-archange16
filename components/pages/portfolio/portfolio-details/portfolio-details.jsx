@@ -147,37 +147,42 @@ const PortfolioDetailsMain = ({ singleData }) => {
 
   useEffect(() => {
     // Récupérer la date d'expiration depuis localStorage ou calculer une nouvelle date
-    localStorage.clear();
     const savedEndTime = localStorage.getItem('endTime');
-    let endTime = savedEndTime ? parseInt(savedEndTime, 10) : Date.now() + 1 * 3600000; // 48 heures à partir de maintenant
-
-    localStorage.setItem('endTime', endTime); // Sauvegarder dans localStorage
-
+    
+    // Si endTime n'est pas présent dans localStorage, calculez-le
+    let endTime = savedEndTime ? parseInt(savedEndTime, 10) : Date.now() + 1 * 3600000; // 1 heure à partir de maintenant
+  
+    // Sauvegarder uniquement si endTime était absent pour éviter de le réinitialiser à chaque fois
+    if (!savedEndTime) {
+      localStorage.setItem('endTime', endTime); // Sauvegarder dans localStorage
+    }
+  
     // Fonction pour calculer le temps restant
     const calculateTimeLeft = () => {
       const now = Date.now();
       const timeRemaining = endTime - now;
       return timeRemaining > 0 ? Math.floor(timeRemaining / 1000) : 0;
     };
-
+  
     // Mettre à jour le temps restant
     setTimeLeft(calculateTimeLeft());
-
+  
     // Mise en place du timer pour mettre à jour le temps restant toutes les secondes
     const timer = setInterval(() => {
       const newTimeLeft = calculateTimeLeft();
       setTimeLeft(newTimeLeft);
-
+  
       // Arrêter le timer lorsque le temps est écoulé
       if (newTimeLeft <= 0) {
         clearInterval(timer);
       }
     }, 1000);
-
+  
     // Nettoyage du timer lors du démontage du composant
     return () => clearInterval(timer);
   }, []);
-
+  
+  
   // Fonction pour formater le temps restant en hh:mm:ss
   const formatTime = (seconds) => {
     const h = String(Math.floor(seconds / 3600)).padStart(2, '0');
@@ -264,14 +269,17 @@ const PortfolioDetailsMain = ({ singleData }) => {
                               />
                               En choisissant le Pack {id.replace('-', ' ')}
                             </label>
+                            {/* Bonus text only for 'anglais-debutant, intermediaire + Avancé' */}
+                            {id === 'anglais-debutant, intermediaire + Avancé' && (
+                              <span className="text-danger text-center  mb-1 mt-1 ms-3"> <br/>
+                                Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
+                              </span>
+                            )}
                           </td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
-                  <p className="text-danger text-center fs-6 mb-1 mt-1">
-                  Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
-                </p>
                 </div>
               )}
 
