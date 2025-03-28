@@ -148,7 +148,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
   useEffect(() => {
     // Récupérer la date d'expiration depuis localStorage ou calculer une nouvelle date
     const savedEndTime = localStorage.getItem('endTime');
-    let endTime = savedEndTime ? parseInt(savedEndTime, 10) : Date.now() + 72 * 3600000; // 48 heures à partir de maintenant
+    let endTime = savedEndTime ? parseInt(savedEndTime, 10) : Date.now() + 1 * 3600000; // 48 heures à partir de maintenant
 
     localStorage.setItem('endTime', endTime); // Sauvegarder dans localStorage
 
@@ -268,6 +268,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
                       ))}
                     </tbody>
                   </table>
+                  <p className="text-danger text-center fs-6 mb-1 mt-1">
+                  Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
+                </p>
                 </div>
               )}
 
@@ -304,11 +307,11 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 </div>
               )}
 
-              {selectedPacks['anglais-debutant, intermediaire + Avancé'] && (
+              {/* {singleData?.id === 'anglais-intermediaire-b1-b2' && (
                 <p className="text-danger text-center fs-6 mb-1 mt-1">
                   Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
                 </p>
-              )}
+              )} */}
 
               <div className="d-flex justify-content-center">
                 <button onClick={createOrder} className="btn-one" disabled={isLoading}>
