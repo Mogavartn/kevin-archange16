@@ -271,7 +271,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                             </label>
                             {/* Bonus text only for 'anglais-debutant, intermediaire + Avancé' */}
                             {id === 'anglais-debutant, intermediaire + Avancé' && (
-                              <span className="text-danger text-center  mb-1 mt-1 ms-3"> <br/>
+                              <span className="text-danger  mb-1 mt-1 ms-3"> <br/>
                                 Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
                               </span>
                             )}

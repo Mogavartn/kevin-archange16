@@ -5582,6 +5582,9 @@ Responsive Menu Css
   list-style-type: none;
   margin: 0;
 }
+.project-info-top-content span{
+  text-transform: none;
+}
 .skill__two-tab-details-content .project-info .project-info-top {
   background: var(--primary-color-1);
   text-align: center;
