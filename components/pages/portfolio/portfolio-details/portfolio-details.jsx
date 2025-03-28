@@ -147,6 +147,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
 
   useEffect(() => {
     // Récupérer la date d'expiration depuis localStorage ou calculer une nouvelle date
+    localStorage.clear();
     const savedEndTime = localStorage.getItem('endTime');
     let endTime = savedEndTime ? parseInt(savedEndTime, 10) : Date.now() + 1 * 3600000; // 48 heures à partir de maintenant
 
