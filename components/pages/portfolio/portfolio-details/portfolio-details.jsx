@@ -64,24 +64,24 @@ const PortfolioDetailsMain = ({ singleData }) => {
     if (selectedPacks['anglais-debutant + intermediaire']) {
       newNormalAmount = 198;
       newPromoAmount = 138;
-      newPercentage = 50;
-      newEconomie = 99;
+      newPercentage = 30;
+      newEconomie = 60;
       newduree = 30;
     }
 
     if (selectedPacks['anglais-intermediaire + Avancé']) {
       newNormalAmount = 198;
       newPromoAmount = 138;
-      newPercentage = 50;
-      newEconomie = 99;
+      newPercentage = 30;
+      newEconomie = 60;
       newduree = 30;
     }
 
     if (selectedPacks['anglais-debutant, intermediaire + Avancé']) {
       newNormalAmount = 297;
       newPromoAmount = 148;
-      newPercentage = 53;
-      newEconomie = 158;
+      newPercentage = 50;
+      newEconomie = 149;
       newduree = 45;
     }
 
