@@ -12,9 +12,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
   const [percentage, setPercentage] = useState(30); // Pourcentage de remise
   const [economie, seteconomie] = useState(30); // Economie
   const [duree, setduree] = useState(15); // Durée
-  const [remise, setremise] = useState(0); // Durée
-  const [remisep, setremisep] = useState(0); // Durée
-  const [remiseec, setremiseec] = useState(0); // Durée
+  const [remise, setremise] = useState(99); // Durée
+  const [remisep, setremisep] = useState(null); // Durée
+  const [remiseec, setremiseec] = useState(null); // Durée
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // État de chargement
   const [error, setError] = useState(null); // Gestion des erreurs
@@ -44,13 +44,16 @@ const PortfolioDetailsMain = ({ singleData }) => {
       setSelectedPackTitle(newState[id] ? title : '');
 
       // Calculer les montants et autres valeurs en fonction des packs sélectionnés
-      const { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree } = calculateAmounts(newState);
+      const { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree,newremise, newremisep, newremiseec } = calculateAmounts(newState);
 
       setNormalAmount(newNormalAmount);
       setPromoAmount(newPromoAmount);
       setPercentage(newPercentage);
       seteconomie(newEconomie);
       setduree(newduree);
+      setremise(newremise);
+      setremisep(newremisep);
+      setremiseec(newremiseec);
 
       return newState;
     });
@@ -64,9 +67,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
     let newEconomie = 30;
     let newduree = 15;
 
-    let newremise;
-    let newremisep;
-    let newremiseec;
+    let newremise = 99;
+    let newremisep = null;
+    let newremiseec = null;
 
     if (selectedPacks['anglais-debutant + intermediaire']) {
       newNormalAmount += 99;
@@ -77,7 +80,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
 
       newremise =138
       newremisep =30 
-      newremiseec = 60
+      newremiseec = 198
     }
 
     if (selectedPacks['anglais-intermediaire + Avancé']) {
@@ -89,7 +92,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
 
       newremise =138
       newremisep =30 
-      newremiseec = 60
+      newremiseec = 198
     }
 
     if (selectedPacks['anglais-debutant, intermediaire + Avancé']) {
@@ -101,10 +104,10 @@ const PortfolioDetailsMain = ({ singleData }) => {
 
       newremise = 148;
       newremisep = 50;
-      newremiseec = 149;
+      newremiseec = 297;
     }
 
-    return { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree };
+    return { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree, newremise, newremisep, newremiseec };
   };
 
   // Fonction pour créer une commande
@@ -130,10 +133,14 @@ const PortfolioDetailsMain = ({ singleData }) => {
     setError(null);
 
     const orderData = {
-      amount: timeLeft > 0 ? promoAmount : normalAmount,
-      currency,
+      amount: timeLeft > 0 
+        ? promoAmount // Si en promotion, on utilise le prix promo
+        : (remise !== null ? remise : finalAmount), // Si pas en promotion, utiliser remiseec s'il est défini, sinon finalAmount
+      currency: 'EUR',
       description: selectedPackTitle || singleData.titre, // Choisir entre le titre du pack sélectionné ou celui de la formation
     };
+    
+    
 
     console.log(JSON.stringify(orderData));
 
@@ -257,7 +264,18 @@ const PortfolioDetailsMain = ({ singleData }) => {
                           <span className="h3 text-danger fw-bold">&nbsp;&nbsp;{promoAmount} €</span>
                         </>
                       ) : (
-                        <span className="h3 text-muted fw-bold">&nbsp;{normalAmount} €</span> // Affichage du prix normal uniquement lorsque le compte à rebours est fini
+                        <>
+                          {remiseec !== null ? (
+                            <>
+                              <span className="value text-muted text-decoration-line-through">
+                                &nbsp;{normalAmount} €
+                              </span>
+                              <span className="h3 text-danger fw-bold">&nbsp;&nbsp;{remise} €</span>
+                            </>
+                          ) : (
+                            <span className="h3 text-muted fw-bold">&nbsp;{normalAmount} €</span>
+                          )}
+                        </>
                       )}
                     </li>
                     <li>
@@ -291,7 +309,15 @@ const PortfolioDetailsMain = ({ singleData }) => {
                             <span className="h6 text-danger fw-bold">
                               {percentage}% DE REMISE ! VOUS ÉCONOMISEZ {economie} €
                             </span>
-                          ) : null}
+                          ) : 
+                          <>
+                          {remisep !== null && (
+                            <span className="h6 text-danger fw-bold">
+                              {remisep}% DE REMISE ! VOUS ÉCONOMISEZ
+                            </span>
+                          )}
+                          </>
+                        }
                         </th>
                       </tr>
                     </thead>
