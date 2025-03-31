@@ -111,7 +111,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
     setError(null);
 
     const orderData = {
-      amount: finalAmount, // Utiliser le montant final
+      amount: timeLeft > 0 ? promoAmount : normalAmount,
       currency,
       description: selectedPackTitle || singleData.titre, // Choisir entre le titre du pack sélectionné ou celui de la formation
     };
