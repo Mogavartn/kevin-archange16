@@ -12,6 +12,9 @@ const PortfolioDetailsMain = ({ singleData }) => {
   const [percentage, setPercentage] = useState(30); // Pourcentage de remise
   const [economie, seteconomie] = useState(30); // Economie
   const [duree, setduree] = useState(15); // Durée
+  const [remise, setremise] = useState(0); // Durée
+  const [remisep, setremisep] = useState(0); // Durée
+  const [remiseec, setremiseec] = useState(0); // Durée
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // État de chargement
   const [error, setError] = useState(null); // Gestion des erreurs
@@ -61,28 +64,44 @@ const PortfolioDetailsMain = ({ singleData }) => {
     let newEconomie = 30;
     let newduree = 15;
 
+    let newremise;
+    let newremisep;
+    let newremiseec;
+
     if (selectedPacks['anglais-debutant + intermediaire']) {
-      newNormalAmount = 198;
-      newPromoAmount = 138;
-      newPercentage = 30;
-      newEconomie = 60;
+      newNormalAmount += 99;
+      newPromoAmount += 30;
+      newPercentage = 50;
+      newEconomie = 99;
       newduree = 30;
+
+      newremise =138
+      newremisep =30 
+      newremiseec = 60
     }
 
     if (selectedPacks['anglais-intermediaire + Avancé']) {
-      newNormalAmount = 198;
-      newPromoAmount = 138;
-      newPercentage = 30;
-      newEconomie = 60;
+      newNormalAmount += 99;
+      newPromoAmount += 30;
+      newPercentage = 50;
+      newEconomie = 99;
       newduree = 30;
+
+      newremise =138
+      newremisep =30 
+      newremiseec = 60
     }
 
     if (selectedPacks['anglais-debutant, intermediaire + Avancé']) {
-      newNormalAmount = 297;
-      newPromoAmount = 148;
-      newPercentage = 50;
-      newEconomie = 149;
+      newNormalAmount += 198;
+      newPromoAmount += 70;
+      newPercentage = 53;
+      newEconomie = 158;
       newduree = 45;
+
+      newremise = 148;
+      newremisep = 50;
+      newremiseec = 149;
     }
 
     return { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree };
@@ -345,12 +364,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 </div>
               )}
 
-              {/* {singleData?.id === 'anglais-intermediaire-b1-b2' && (
-                <p className="text-danger text-center fs-6 mb-1 mt-1">
-                  Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
-                </p>
-              )} */}
-
+              
               <div className="d-flex justify-content-center">
                 <button onClick={createOrder} className="btn-one" disabled={isLoading}>
                   {isLoading ? 'Traitement...' : 'Acheter Maintenant 🔥'}
