@@ -62,24 +62,24 @@ const PortfolioDetailsMain = ({ singleData }) => {
     let newduree = 15;
 
     if (selectedPacks['anglais-debutant + intermediaire']) {
-      newNormalAmount += 99;
-      newPromoAmount += 30;
+      newNormalAmount = 198;
+      newPromoAmount = 138;
       newPercentage = 50;
       newEconomie = 99;
       newduree = 30;
     }
 
     if (selectedPacks['anglais-intermediaire + Avancé']) {
-      newNormalAmount += 99;
-      newPromoAmount += 30;
+      newNormalAmount = 198;
+      newPromoAmount = 138;
       newPercentage = 50;
       newEconomie = 99;
       newduree = 30;
     }
 
     if (selectedPacks['anglais-debutant, intermediaire + Avancé']) {
-      newNormalAmount += 198;
-      newPromoAmount += 70;
+      newNormalAmount = 297;
+      newPromoAmount = 148;
       newPercentage = 53;
       newEconomie = 158;
       newduree = 45;
@@ -211,13 +211,17 @@ const PortfolioDetailsMain = ({ singleData }) => {
         <div className="col-xl-5 project-info-left">
           <div className="project-info">
             <div className="project-info-top">
-              <h4>
-                {['anglais-debutant-a1-a2', 'anglais-intermediaire-b1-b2', 'anglais-avance-c1-c2'].includes(singleData?.id) ? (
+            <h4>
+              {timeLeft > 0 ? (
+                ['anglais-debutant-a1-a2', 'anglais-intermediaire-b1-b2', 'anglais-avance-c1-c2'].includes(singleData?.id) ? (
                   <span className="text-danger">Offre Spéciale !</span>
                 ) : (
                   singleData?.titre
-                )}
-              </h4>
+                )
+              ) : (
+                singleData?.titre
+              )}
+            </h4>
             </div>
             <div className="project-info-top-content">
               <div className="d-flex justify-content-around">
@@ -227,13 +231,25 @@ const PortfolioDetailsMain = ({ singleData }) => {
                     <li>public: <span>{singleData.public}</span></li>
                     <li>duree: <span>{duree} h environ</span></li>
                     <li>
-                      Prix: <span className="value text-muted text-decoration-line-through">{normalAmount} € </span>
-                        <span className="h3 text-danger fw-bold">&nbsp;&nbsp;{promoAmount} €</span>
+                    Prix:
+                      {timeLeft > 0 ? (
+                        <>
+                          <span className="value text-muted text-decoration-line-through">&nbsp;{normalAmount} € </span>
+                          <span className="h3 text-danger fw-bold">&nbsp;&nbsp;{promoAmount} €</span>
+                        </>
+                      ) : (
+                        <span className="h3 text-muted fw-bold">&nbsp;{normalAmount} €</span> // Affichage du prix normal uniquement lorsque le compte à rebours est fini
+                      )}
                     </li>
                     <li>
-                      <p className="text-secondary fs-6">
-                        Dépêche-toi, offre limitée ! <span className="fs-6 text-danger font-monospace mb-4">⏳ {formatTime(timeLeft)} restantes</span>
-                      </p>
+                    {timeLeft > 0 ? (
+                        <p className="text-secondary fs-6">
+                          Dépêche-toi, offre limitée ! <span className="fs-6 text-danger font-monospace mb-4">⏳ {formatTime(timeLeft)} restantes</span>
+                        </p>
+                      ) : (
+                        // Optionnellement, vous pouvez ajouter un message indiquant que l'offre est terminée lorsque le compte à rebours est à 00:00:00
+                        <p className="text-secondary fs-6 text-muted"></p>
+                      )}
                     </li>
                   </ul>
                 </div>
@@ -252,7 +268,11 @@ const PortfolioDetailsMain = ({ singleData }) => {
                       <tr>
                         <th className="text-center">
                           Payez moins avec nos Packs Exclusifs ! <br />
-                          <span className="h6 text-danger fw-bold">{percentage}% DE REMISE ! VOUS ÉCONOMISEZ {economie} € !</span>
+                          {timeLeft > 0 ? (
+                            <span className="h6 text-danger fw-bold">
+                              {percentage}% DE REMISE ! VOUS ÉCONOMISEZ {economie} €
+                            </span>
+                          ) : null}
                         </th>
                       </tr>
                     </thead>
@@ -271,8 +291,13 @@ const PortfolioDetailsMain = ({ singleData }) => {
                             </label>
                             {/* Bonus text only for 'anglais-debutant, intermediaire + Avancé' */}
                             {id === 'anglais-debutant, intermediaire + Avancé' && (
-                              <span className="text-danger  mb-1 mt-1 ms-3"> <br/>
-                                Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
+                              <span className="text-danger text-center fs-6 mb-1 mt-1 ms-3"><br/>
+                              {timeLeft > 0 ? (
+                                <span>
+                                  Bonus : Inscrivez-vous aujourd'hui et recevez un guide gratuit des 100 phrases essentielles en anglais!
+                                </span>
+                              ) : null}
+
                               </span>
                             )}
                           </td>
@@ -291,7 +316,11 @@ const PortfolioDetailsMain = ({ singleData }) => {
                       <tr>
                         <th className="text-center">
                           Payez moins avec nos Packs Exclusifs ! <br />
-                          <span className="h6 text-danger fw-bold">{percentage}% DE REMISE ! VOUS ÉCONOMISEZ {economie} € !</span>
+                          {timeLeft > 0 ? (
+                            <span className="h6 text-danger fw-bold">
+                              {percentage}% DE REMISE ! VOUS ÉCONOMISEZ {economie} €
+                            </span>
+                          ) : null}
                         </th>
                       </tr>
                     </thead>
