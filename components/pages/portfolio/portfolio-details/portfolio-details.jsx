@@ -15,6 +15,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
   const [remise, setremise] = useState(99); // Durée
   const [remisep, setremisep] = useState(null); // Durée
   const [remiseec, setremiseec] = useState(null); // Durée
+  const [remisereste, setremisereste] = useState(null); // Durée
   const [currency, setCurrency] = useState('EUR'); // Devise par défaut
   const [isLoading, setIsLoading] = useState(false); // État de chargement
   const [error, setError] = useState(null); // Gestion des erreurs
@@ -44,7 +45,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
       setSelectedPackTitle(newState[id] ? title : '');
 
       // Calculer les montants et autres valeurs en fonction des packs sélectionnés
-      const { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree,newremise, newremisep, newremiseec } = calculateAmounts(newState);
+      const { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree,newremise, newremisep, newremiseec, newremisereste } = calculateAmounts(newState);
 
       setNormalAmount(newNormalAmount);
       setPromoAmount(newPromoAmount);
@@ -54,6 +55,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
       setremise(newremise);
       setremisep(newremisep);
       setremiseec(newremiseec);
+      setremisereste(newremisereste);
 
       return newState;
     });
@@ -70,6 +72,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
     let newremise = 99;
     let newremisep = null;
     let newremiseec = null;
+    let newremisereste =null;
 
     if (selectedPacks['anglais-debutant + intermediaire']) {
       newNormalAmount += 99;
@@ -81,6 +84,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
       newremise =138
       newremisep =30 
       newremiseec = 198
+      newremisereste = 60
     }
 
     if (selectedPacks['anglais-intermediaire + Avancé']) {
@@ -93,6 +97,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
       newremise =138
       newremisep =30 
       newremiseec = 198
+      newremisereste = 60
     }
 
     if (selectedPacks['anglais-debutant, intermediaire + Avancé']) {
@@ -105,9 +110,10 @@ const PortfolioDetailsMain = ({ singleData }) => {
       newremise = 148;
       newremisep = 50;
       newremiseec = 297;
+      newremisereste = 149
     }
 
-    return { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree, newremise, newremisep, newremiseec };
+    return { newNormalAmount, newPromoAmount, newPercentage, newEconomie, newduree, newremise, newremisep, newremiseec, newremisereste };
   };
 
   // Fonction pour créer une commande
@@ -313,7 +319,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
                           <>
                           {remisep !== null && (
                             <span className="h6 text-danger fw-bold">
-                              {remisep}% DE REMISE ! VOUS ÉCONOMISEZ
+                              {remisep}% DE REMISE ! VOUS ÉCONOMISEZ {remisereste} €
                             </span>
                           )}
                           </>
@@ -359,13 +365,21 @@ const PortfolioDetailsMain = ({ singleData }) => {
                   <table className="styled-table">
                     <thead>
                       <tr>
-                        <th className="text-center">
+                      <th className="text-center">
                           Payez moins avec nos Packs Exclusifs ! <br />
                           {timeLeft > 0 ? (
                             <span className="h6 text-danger fw-bold">
                               {percentage}% DE REMISE ! VOUS ÉCONOMISEZ {economie} €
                             </span>
-                          ) : null}
+                          ) : 
+                          <>
+                          {remisep !== null && (
+                            <span className="h6 text-danger fw-bold">
+                              {remisep}% DE REMISE ! VOUS ÉCONOMISEZ {remisereste} €
+                            </span>
+                          )}
+                          </>
+                        }
                         </th>
                       </tr>
                     </thead>
