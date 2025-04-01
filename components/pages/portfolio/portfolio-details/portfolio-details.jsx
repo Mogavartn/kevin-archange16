@@ -369,13 +369,13 @@ const PortfolioDetailsMain = ({ singleData }) => {
                           Payez moins avec nos Packs Exclusifs ! <br />
                           {timeLeft > 0 ? (
                             <span className="h6 text-danger fw-bold">
-                              {percentage}% DE REMISE ! VOUS ÉCONOMISEZ {economie} €
+                              {percentage} % DE REMISE ! VOUS ÉCONOMISEZ {economie} €
                             </span>
                           ) : 
                           <>
                           {remisep !== null && (
                             <span className="h6 text-danger fw-bold">
-                              {remisep}% DE REMISE ! VOUS ÉCONOMISEZ {remisereste} €
+                              {remisep} % DE REMISE ! VOUS ÉCONOMISEZ {remisereste} €
                             </span>
                           )}
                           </>
