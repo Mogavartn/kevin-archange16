@@ -46,7 +46,7 @@ const FormationCreation = () => {
                                     </div>
                                     <div className="service">
                                         <i className="far fa-check-circle"></i>
-                                        <span>Contenu direct, sans  sans bla-bla.</span>
+                                        <span>Contenu direct, sans bla-bla.</span>
                                     </div>
                                     <div className="service">
                                         <i className="far fa-check-circle"></i>

@@ -146,9 +146,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
       description: selectedPackTitle || singleData.titre, // Choisir entre le titre du pack sélectionné ou celui de la formation
     };
     
-    
-
-    console.log(JSON.stringify(orderData));
 
     try {
       const response = await fetch('/api/create-order', {

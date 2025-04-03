@@ -102,7 +102,7 @@ const FooterThree = () => {
                     </div>
                     <div className="col-xl-4 col-md-6 col-sm-5 sm-mb-30">
                         <div className="footer__three-widget border-one">
-                            <h4 className="ml-60">Resources​</h4>
+                            <h4 className="ml-60">Ressources​</h4>
                             <div className="footer__three-widget-solution">
                                 <ul>
 									<li><Link href="/services"><i className="far fa-chevron-double-right"></i>Formations</Link></li>
