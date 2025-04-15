@@ -118,7 +118,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
 
   // Fonction pour créer une commande
   const createOrder = async () => {
-    const finalAmount = promoAmount * 100 < normalAmount ? promoAmount * 100 : normalAmount * 100; // Choisir le prix promo ou normal
+    const finalAmount = promoAmount < normalAmount ? promoAmount : normalAmount; // Choisir le prix promo ou normal
     if (finalAmount <= 0) {
       setError('Le montant de la commande est invalide.');
       return;

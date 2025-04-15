@@ -160,7 +160,7 @@ export default function PaymentPage() {
                 <div className="project-info mb-5">
                     <ul>
                       <li>Formation: <span>{orderResponse?.description}</span></li>
-                      <li>Prix: <span className="value">{orderResponse?.amount} €</span></li>
+                      <li>Prix: <span className="value">{orderResponse?.amount / 100} €</span></li>
                       <li><span></span></li>
                     </ul>
                   </div>
