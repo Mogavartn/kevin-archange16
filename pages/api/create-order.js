@@ -18,14 +18,14 @@ export default async function handler(req, res) {
 
     // Données de la commande
     const orderData = JSON.stringify({
-      amount: Number(amount), // Convertir en nombre
+      amount: Number(amount) * 100, // Convertir en nombre
       currency: currency.toUpperCase(), // Convertir en majuscules
       description
       //capture_mode: 'automatic', // Mode de capture automatique
     });
     
     try {
-      // Envoyer la requête à l'API Revolut
+      // Envoyer la requête à l'API Revolut https://sandbox-merchant.revolut.com/api/orders https://merchant.revolut.com/api/orders
       const response = await fetch("https://merchant.revolut.com/api/orders", {
         method: "POST",
         headers: {
