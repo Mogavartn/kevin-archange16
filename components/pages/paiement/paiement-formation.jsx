@@ -12,7 +12,7 @@ export default function RevolutCardField({ token, onSubmit }) {
   const instanceRef = useRef(null);
 
   useEffect(() => {
-    // Initialiser le widget Revolut
+    // Initialiser le widget Revolut sandbox prod
     RevolutCheckout(token, "prod").then((instance) => {
       instanceRef.current = instance;
 
