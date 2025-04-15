@@ -28,13 +28,13 @@ export default async function handler(req, res) {
       to: email,
       bcc: "trascinelli.c@gmail.com",
       subject: `Bienvenue dans l’aventure, ${name} ! 🚀`,
-      text: `<p>Un grand merci pour ton inscription à la formation ${formation} ! 🎯 Ton paiement de <strong>${mount}€</strong> est bien validé, te voilà officiellement avec nous ! ✨</p>
+      text: `<p>Un grand merci pour ton inscription à la formation ${formation} ! 🎯 Ton paiement de <strong>${mount / 100} €</strong> est bien validé, te voilà officiellement avec nous ! ✨</p>
       <p>On est ravis de t’accueillir parmi nos apprenants et de t’aider à booster ton projet. Cette formation, c’est ta clé pour passer au niveau supérieur – profite à fond de l’expérience !</p>
       <p>Tu recevras les identifiants sous 48h ouvrables.</p>
       <p>Une question ou un besoin d’aide ? N’hésite pas à nous contacter, on est là pour t’accompagner.</p>
       <p>Encore merci pour ta confiance, et à très bientôt dans cette belle aventure ! 💪</p>
       <p>Kevin Attallah</p>`,
-      html: `<p>Un grand merci pour ton inscription à la formation ${formation} ! 🎯 Ton paiement de <strong>${mount}€</strong> est bien validé, te voilà officiellement avec nous ! ✨</p>
+      html: `<p>Un grand merci pour ton inscription à la formation ${formation} ! 🎯 Ton paiement de <strong>${mount / 100} €</strong> est bien validé, te voilà officiellement avec nous ! ✨</p>
       <p>On est ravis de t’accueillir parmi nos apprenants et de t’aider à booster ton projet. Cette formation, c’est ta clé pour passer au niveau supérieur – profite à fond de l’expérience !</p>
       <p>Tu recevras les identifiants sous 48h ouvrables.</p>
       <p>Une question ou un besoin d’aide ? N’hésite pas à nous contacter, on est là pour t’accompagner.</p>
