@@ -118,7 +118,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
 
   // Fonction pour créer une commande
   const createOrder = async () => {
-    const finalAmount = promoAmount < normalAmount ? promoAmount : normalAmount; // Choisir le prix promo ou normal
+    const finalAmount = promoAmount * 100 < normalAmount ? promoAmount * 100 : normalAmount * 100; // Choisir le prix promo ou normal
     if (finalAmount <= 0) {
       setError('Le montant de la commande est invalide.');
       return;
@@ -173,6 +173,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
       setIsLoading(false);
     }
   };
+
+  console.log(JSON.stringify(createOrder)); 
 
   useEffect(() => {
     // Récupérer la date d'expiration depuis localStorage ou calculer une nouvelle date
