@@ -23,6 +23,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
     'anglais-debutant + intermediaire': false,
     'anglais-intermediaire + Avancé': false,
     'anglais-debutant, intermediaire + Avancé': false,
+    'compta-initiation + Les Fondamentaux': false,
+    'compta-pack complet': false,
   });
 
   const [selectedPackTitle, setSelectedPackTitle] = useState('');
@@ -32,11 +34,15 @@ const PortfolioDetailsMain = ({ singleData }) => {
     setSelectedPacks((prevState) => {
       const newState = { ...prevState };
 
-      // Désélectionner les autres packs en fonction de l'id sélectionné
-      if (id === 'anglais-debutant + intermediaire' && !newState[id]) {
+      // Désélectionner certains packs si nécessaire
+      if (
+        (id === 'anglais-debutant + intermediaire' || id === 'compta-initiation + Les Fondamentaux') &&
+        !newState[id]
+      ) {
         newState['anglais-debutant, intermediaire + Avancé'] = false;
       } else if (id === 'anglais-debutant, intermediaire + Avancé' && !newState[id]) {
         newState['anglais-debutant + intermediaire'] = false;
+        newState['anglais-intermediaire + Avancé'] = false;
       }
 
       newState[id] = !newState[id]; // Inverser l'état de la case actuellement cliquée
@@ -87,7 +93,8 @@ const PortfolioDetailsMain = ({ singleData }) => {
       newremisereste = 60
     }
 
-    if (selectedPacks['anglais-intermediaire + Avancé']) {
+    if (selectedPacks['anglais-intermediaire + Avancé'] ||
+      selectedPacks['compta-initiation + Les Fondamentaux']) {
       newNormalAmount += 99;
       newPromoAmount += 30;
       newPercentage = 50;
@@ -244,7 +251,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
             <div className="project-info-top">
             <h4>
               {timeLeft > 0 ? (
-                ['anglais-debutant-a1-a2', 'anglais-intermediaire-b1-b2', 'anglais-avance-c1-c2'].includes(singleData?.id) ? (
+                ['anglais-debutant-a1-a2', 'anglais-intermediaire-b1-b2', 'anglais-avance-c1-c2','comptabilite-initiation-01'].includes(singleData?.id) ? (
                   <span className="text-danger">Offre Spéciale !</span>
                 ) : (
                   singleData?.titre
@@ -402,6 +409,43 @@ const PortfolioDetailsMain = ({ singleData }) => {
                   </table>
                 </div>
               )}
+
+            {/* Affichage des packs pour la formation Comptabilité (si promo encore active) */}
+{singleData?.id === 'comptabilite-initiation-01' && timeLeft > 0 && (
+  <div className="table">
+    <table className="styled-table">
+      <thead>
+        <tr>
+          <th className="text-center">
+            Profitez de notre Offre Pack Spéciale ! <br />
+            <span className="h6 text-danger fw-bold">
+              {percentage} % DE REMISE ! VOUS ÉCONOMISEZ {economie} €
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {['compta-initiation + Les Fondamentaux'].map((id) => (
+          <tr key={id}>
+            <td>
+              <label className="form-check-label">
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  checked={selectedPacks[id]}
+                  onChange={() =>
+                    handleCheckboxChange(id, `Pack ${id.replace('-', ' ')}`)}
+                />
+                En choisissant le Pack {id.replace('-', ' ')}
+              </label>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+)}
+
 
               
               <div className="d-flex justify-content-center">

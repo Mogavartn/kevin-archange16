@@ -1897,13 +1897,14 @@ const formationsData = [
     "id": "comptabilite-initiation-01",
     "categorie": "COMPTABILITE",
     "titre": "Comptabilité - Initiation",
-    "description": "Ce parcours de formation vous permettra d’acquérir les fondamentaux techniques de la comptabilité, incluant le bilan, le résultat, le débit-crédit, la TVA, et les SIG.",
+    "description1":"👉 Lancez-vous dans la comptabilité avec notre formation 100% en ligne !",
+    "description": "Rejoignez les milliers d’apprenants qui ont déjà acquis les bases avec nos cours et maîtrisez les fondamentaux pour gérer les comptes d’une entreprise avec assurance.",
     "objectifs_pedagogiques": [
-      "Comprendre et analyser un bilan comptable",
-      "Savoir passer une écriture et déterminer un résultat comptable",
-      "Réaliser un inventaire comptable et mettre à jour les comptes de stocks",
-      "Comprendre et appliquer les mécanismes de la TVA",
-      "Analyser des SIG et déterminer le BFR"
+      "✅ Comprendre et analyser un bilan comptable.",
+      "✅ Savoir passer une écriture et déterminer un résultat comptable.",
+      "✅ Réaliser un inventaire comptable et mettre à jour les comptes de stocks.",
+      "✅ Comprendre et appliquer les mécanismes de la TVA.",
+      "✅ Analyser des SIG et déterminer le BFR."
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
@@ -1919,13 +1920,14 @@ const formationsData = [
     "id": "comptabilite-fondamentaux-01",
     "categorie": "COMPTABILITE",
     "titre": "Comptabilité - Les Fondamentaux",
-    "description": "Découvrez les fondamentaux de la comptabilité, du débutant au perfectionnement, en abordant des concepts clés de la comptabilité d'entreprise.",
+    "description1":"👉 Approfondissez vos compétences en comptabilité avec notre formation 100% en ligne !",
+    "description": "Rejoignez les milliers d’apprenants qui ont perfectionné leurs connaissances avec nos cours et devenez autonome pour gérer les opérations comptables courantes d’une entreprise.",
     "objectifs_pedagogiques": [
-      "Comprendre et analyser un bilan comptable",
-      "Savoir passer une écriture et déterminer un résultat comptable",
-      "Réaliser un inventaire comptable et mettre à jour les comptes de stocks",
-      "Comprendre et appliquer les mécanismes de la TVA",
-      "Analyser des SIG et déterminer le BFR"
+      "✅ Comprendre et analyser un bilan comptable avec aisance.",
+      "✅ Passer des écritures complexes et calculer un résultat comptable précis.",
+      "✅ Gérer un inventaire comptable et actualiser les comptes de stocks efficacement.",
+      "✅ Maîtriser les mécanismes de la TVA dans diverses situations.",
+      "✅ Analyser des SIG et calculer le BFR pour optimiser la gestion financière."
     ],
     "niveau": "Initiation",
     "public": "Tous publics",
