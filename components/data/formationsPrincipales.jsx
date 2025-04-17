@@ -459,7 +459,7 @@ const formationsData = [
     "description1":"👉 Maîtrisez l’anglais comme un pro avec notre formation 100% en ligne (C1-C2) !",
     "description": "Rejoignez les 2100+ apprenants qui ont déjà perfectionné leurs compétences avec nos cours et atteignez un niveau d’excellence pour briller dans vos projets personnels ou professionnels, en toute fluidité.",
     "objectifs_pedagogiques": [
-      "✅ MJonglez avec les temps verbaux (présent, passé, futur) en toute aisance.",
+      "✅ Maîtriser les temps verbaux (présent, passé, futur) en toute aisance.",
       "✅ Utilisez le future perfect et le future perfect continuous comme un natif.",
       "✅ Parlez avec précision grâce à une maîtrise approfondie des conditionnels et du futur continu.",
       "✅ Exprimez des idées complexes et nuancées sans aucune hésitation."
