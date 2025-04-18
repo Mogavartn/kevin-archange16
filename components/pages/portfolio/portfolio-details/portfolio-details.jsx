@@ -411,7 +411,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
               )}
 
             {/* Affichage des packs pour la formation Comptabilité (si promo encore active) */}
-            {singleData?.id === 'comptabilite-initiation-01' && timeLeft > 0 && (
+            {singleData?.id === 'comptabilite-initiation-01' && (
               <div className="table">
                 <table className="styled-table">
                   <thead>
