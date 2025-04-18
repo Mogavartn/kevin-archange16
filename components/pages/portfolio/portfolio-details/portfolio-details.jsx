@@ -131,17 +131,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
       return;
     }
 
-    // Ajouter un événement Facebook Pixel pour le suivi "AddToCart" juste avant la création de la commande
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'AddToCart', {
-        content_name: singleData.titre,
-        content_category: 'Formations',
-        content_ids: [singleData.id],
-        value: finalAmount,
-        currency: currency,
-      });
-    }
-
+   
     setIsLoading(true);
     setError(null);
 
@@ -152,6 +142,17 @@ const PortfolioDetailsMain = ({ singleData }) => {
       currency: 'EUR',
       description: selectedPackTitle || singleData.titre, // Choisir entre le titre du pack sélectionné ou celui de la formation
     };
+
+     // Ajouter un événement Facebook Pixel pour le suivi "AddToCart" juste avant la création de la commande
+     if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'AddToCart', {
+        content_name: singleData.titre,
+        content_category: 'Formations',
+        content_ids: [singleData.id],
+        value: orderData.amount,
+        currency: currency,
+      });
+    }
     
 
     try {
@@ -181,7 +182,7 @@ const PortfolioDetailsMain = ({ singleData }) => {
     }
   };
 
-  console.log(JSON.stringify(createOrder)); 
+  //console.log(JSON.stringify(createOrder)); 
 
   useEffect(() => {
     // Récupérer la date d'expiration depuis localStorage ou calculer une nouvelle date
@@ -228,7 +229,6 @@ const PortfolioDetailsMain = ({ singleData }) => {
     const s = String(seconds % 60).padStart(2, '0');
     return `${h}:${m}:${s}`;
   };
-
   return (
     <div className="skill__two-tab-details-content mt-5 mb-5">
       <div className="row justify-content-center gy-4">
@@ -411,43 +411,41 @@ const PortfolioDetailsMain = ({ singleData }) => {
               )}
 
             {/* Affichage des packs pour la formation Comptabilité (si promo encore active) */}
-{singleData?.id === 'comptabilite-initiation-01' && timeLeft > 0 && (
-  <div className="table">
-    <table className="styled-table">
-      <thead>
-        <tr>
-          <th className="text-center">
-            Profitez de notre Offre Pack Spéciale ! <br />
-            <span className="h6 text-danger fw-bold">
-              {percentage} % DE REMISE ! VOUS ÉCONOMISEZ {economie} €
-            </span>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {['compta-initiation + Les Fondamentaux'].map((id) => (
-          <tr key={id}>
-            <td>
-              <label className="form-check-label">
-                <input
-                  type="checkbox"
-                  className="form-check-input"
-                  checked={selectedPacks[id]}
-                  onChange={() =>
-                    handleCheckboxChange(id, `Pack ${id.replace('-', ' ')}`)}
-                />
-                En choisissant le Pack {id.replace('-', ' ')}
-              </label>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-)}
+            {singleData?.id === 'comptabilite-initiation-01' && timeLeft > 0 && (
+              <div className="table">
+                <table className="styled-table">
+                  <thead>
+                    <tr>
+                      <th className="text-center">
+                        Profitez de notre Offre Pack Spéciale ! <br />
+                        <span className="h6 text-danger fw-bold">
+                          {percentage} % DE REMISE ! VOUS ÉCONOMISEZ {economie} €
+                        </span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {['compta-initiation + Les Fondamentaux'].map((id) => (
+                      <tr key={id}>
+                        <td>
+                          <label className="form-check-label">
+                            <input
+                              type="checkbox"
+                              className="form-check-input"
+                              checked={selectedPacks[id]}
+                              onChange={() =>
+                                handleCheckboxChange(id, `Pack ${id.replace('-', ' ')}`)}
+                            />
+                            En choisissant le Pack {id.replace('-', ' ')}
+                          </label>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
 
-
-              
               <div className="d-flex justify-content-center">
                 <button onClick={createOrder} className="btn-one" disabled={isLoading}>
                   {isLoading ? 'Traitement...' : 'Acheter Maintenant 🔥'}
