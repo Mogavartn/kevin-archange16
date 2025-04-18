@@ -416,12 +416,22 @@ const PortfolioDetailsMain = ({ singleData }) => {
                 <table className="styled-table">
                   <thead>
                     <tr>
-                      <th className="text-center">
-                        Profitez de notre Offre Pack Spéciale ! <br />
-                        <span className="h6 text-danger fw-bold">
-                          {percentage} % DE REMISE ! VOUS ÉCONOMISEZ {economie} €
-                        </span>
-                      </th>
+                    <th className="text-center">
+                          Payez moins avec nos Packs Exclusifs ! <br />
+                          {timeLeft > 0 ? (
+                            <span className="h6 text-danger fw-bold">
+                              {percentage} % DE REMISE ! VOUS ÉCONOMISEZ {economie} €
+                            </span>
+                          ) : 
+                          <>
+                          {remisep !== null && (
+                            <span className="h6 text-danger fw-bold">
+                              {remisep} % DE REMISE ! VOUS ÉCONOMISEZ {remisereste} €
+                            </span>
+                          )}
+                          </>
+                        }
+                        </th>
                     </tr>
                   </thead>
                   <tbody>

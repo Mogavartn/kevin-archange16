@@ -23,14 +23,19 @@ import videoImage from "../../public/assets/img/categories/VIDEO.png";
 
 const categoriesData = [
   {
-    "id": "excel_initiation_01",
-    "categorie": "BUREAUTIQUE",
-    "image": bureautiqueImage
-  },
-  {
     "id": "anglais-debutant-a1-a2",
     "categorie": "LANGUES",
     "image": languesImage
+  },
+  {
+    "id": "comptabilite-initiation-01",
+    "categorie": "COMPTABILITE",
+    "image": comptabiliteImage
+  },
+  {
+    "id": "excel_initiation_01",
+    "categorie": "BUREAUTIQUE",
+    "image": bureautiqueImage
   },
   {
     "id": "photoshop-cc2023",
@@ -56,11 +61,6 @@ const categoriesData = [
     "id": "fondements-methode-agile",
     "categorie": "PRODUCTIVITE",
     "image": productiviteImage
-  },
-  {
-    "id": "comptabilite-initiation-01",
-    "categorie": "COMPTABILITE",
-    "image": comptabiliteImage
   },
   {
     "id": "gestion-de-paie-01",

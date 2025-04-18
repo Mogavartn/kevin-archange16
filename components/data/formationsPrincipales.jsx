@@ -2593,7 +2593,6 @@ const formationsData = [
     },
     "image": WooCommerce
   },
-  
   {
     "id": "storytelling-marketing",
     "categorie": "VENTE_MARKETING_DIGITAL",
